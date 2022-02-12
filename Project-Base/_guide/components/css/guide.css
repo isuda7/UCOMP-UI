@@ -79,7 +79,7 @@ ul.g-desc > li:before {content:''; position:absolute; left:0; top:10px; display:
 .acco.demo1 .acco-title {display:flex; position:relative; align-items:center; width:100%; padding:15px 20px; color:#222; text-align:left;}
 .acco.demo1 .acco-title .acco-tit {flex:1 1 auto;}
 .acco.demo1 .acco-toggle {position:absolute; top:50%; right:20px; width:30px; height:30px; border-radius:50%; transform:translateY(-50%); text-indent:-9999px;}
-.acco.demo1 .acco-toggle span {width:12px; height:8px; background:url(demo/ico_toggle01.png) no-repeat -12px 0;}
+.acco.demo1 .acco-toggle span {width:12px; height:8px; background:url(../demo/ico_toggle01.png) no-repeat -12px 0;}
 .acco.demo1 .acco-toggle:disabled {color:#999;}
 .acco.demo1 .acco-cont {padding:15px 20px; background-color:#ffffff;}
 .acco.demo1 .acco-item + .acco-item .acco-title {border-top:1px solid #ddd;}
@@ -90,7 +90,7 @@ ul.g-desc > li:before {content:''; position:absolute; left:0; top:10px; display:
 input.input.demo1 {height:40px; line-height:1.5; padding:0 10px; border:1px solid #ddd; border-radius:0;}
 input.input:focus,input.input:hover,input.input.is-focused {border-color:#0089b3;}
 
-.select.demo1 {height:40px; padding:0 30px 0 10px; border:1px solid #ddd; background:url('demo/ico_select01_black.png') no-repeat right 10px center;}
+.select.demo1 {height:40px; padding:0 30px 0 10px; border:1px solid #ddd; background:url('../demo/ico_select01_black.png') no-repeat right 10px center;}
 .select[aria-readonly='true'].demo1 {pointer-events:none; background-color:#f7f7f7;}
 .select:disabled.demo1 {background-color:#f7f7f7;}
 textarea.input.demo1 {line-height:1.5; padding:0 10px; border:1px solid #ddd; border-radius:0;}
@@ -191,4 +191,4 @@ textarea.input.demo1.is-focused {border-color:#0089b3;}
 .popup.demo1 .popup-foot {flex:none; padding:15px 20px;}
 .popup.demo1 .popup-close {position:absolute; right:2px; top:0; width:50px; height:50px; display:flex; align-items:center; justify-content:center;}
 .popup.demo1 .popup-close .btn-close {width:100%; height:100%;}
-.popup.demo1 .popup-close .btn-close span {width:15px; height:15px; background:url(demo/ico_close01.png) no-repeat -15px 0; text-indent:-9999px;}
+.popup.demo1 .popup-close .btn-close span {width:15px; height:15px; background:url(../demo/ico_close01.png) no-repeat -15px 0; text-indent:-9999px;}
