@@ -1,0 +1,48 @@
+{
+  "name": "react-ui-semantic",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-day-picker": "7.4.0",
+    "react-dom": "^17.0.2",
+    "react-id-swiper": "^2.4.0",
+    "react-player": "^2.6.2",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "^3.4.4",
+    "semantic-ui-calendar-react": "^0.15.3",
+    "semantic-ui-react": "^2.1.1",
+    "swiper": "^5.4.5"
+  },
+  "scripts": {
+    "start": "set NODE_OPTIONS=\"--max-old-space-size=10192\" && craco start",
+    "start:mac": "NODE_OPTIONS=\"--max-old-space-size=10192\" craco start",
+    "build": "set NODE_OPTIONS=\"--max-old-space-size=10192\" && craco build",
+    "build:mac": "NODE_OPTIONS=\"--max-old-space-size=10192\" craco build",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      ">0.2%",
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "http://mysuni.fun/MO2/REACT/",
+  "devDependencies": {
+    "@craco/craco": "^5.5.0",
+    "@semantic-ui-react/craco-less": "1.1.0",
+    "semantic-ui-less": "2.4.1"
+  }
+}
