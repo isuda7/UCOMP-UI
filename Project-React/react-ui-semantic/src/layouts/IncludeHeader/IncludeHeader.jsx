@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import {} from 'semantic-ui-react'
 import './style.css'
 
-
-export default class UserHeader extends Component {
+class UserHeader extends Component {
     render() {
         return (
             <header className='header'>
@@ -12,3 +10,4 @@ export default class UserHeader extends Component {
         )   
     }
 }
+export default UserHeader

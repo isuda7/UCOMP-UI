@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {HashRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import React from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 // PageList
 import PageList from './guide/PageList';
@@ -24,7 +24,7 @@ import Template02 from './guide/Prototype/Template02';
 import Template02NoData from './guide/Prototype/Template02/indexNoData';
 
 // Layout
-import GuideLayout from './guide/Elements/layout/GuideLayout';
+import GuideLayout from './guide/Elements/layouts/GuideLayout';
 import UserLayout from './layouts/UserLayout/UserLayout';
 import UserLayoutMain from './layouts/UserLayoutMain/UserLayoutMain';
 import UserLayoutBlank from './layouts/UserLayoutBlank/UserLayoutBlank';
@@ -32,49 +32,45 @@ import UserLayoutBlank from './layouts/UserLayoutBlank/UserLayoutBlank';
 // Main
 import MainIndex from './views/Main/MainIndex';
 
-// Sub
+const Router = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                {/* Pagelist */}
+                <Route path="/" element={<UserLayoutBlank />}>
+                    <Route index element={<PageList />} />
+                    <Route path="/pagelist/indexGuide" element={<PageListGuide />} />
+                </Route>
 
-class App extends Component {
-    render() {
-        return (
-            <Router>
-                <Switch>
-                    {/* Guide */}
-                    <UserLayoutBlank exact path="/" component={PageList}/>
-                    <UserLayoutBlank exact path="/guide/PageList/indexGuide" component={PageListGuide}/>
-                    <GuideLayout path="/guide/guideAll" component={GuideAll}/>
-                    <GuideLayout path="/guide/elementsGroup" component={ElementPageGroup}/>
-                    <GuideLayout path="/guide/section" component={SectionPage}/>
-                    <GuideLayout path="/guide/forms" component={FormPage}/>
-                    <GuideLayout path="/guide/tables" component={TablePage}/>
-                    <GuideLayout path="/guide/cards" component={CardPage}/>
-                    <GuideLayout path="/guide/lists" component={ListPage}/>
-                    <GuideLayout path="/guide/tabs" component={TabPage}/>
-                    <GuideLayout path="/guide/accordions" component={AccordionPage}/>
-                    <GuideLayout path="/guide/modals" component={ModalPage}/>
-                    <GuideLayout path="/guide/etcGroup" component={EtcPageGroup}/>
-                    
+                {/* Guide */}
+                <Route path="/guide/" element={<GuideLayout />}>
+                    <Route path="guideAll" element={<GuideAll />}/>
+                    <Route path="elementsGroup" element={<ElementPageGroup />}/>
+                    <Route path="section" element={<SectionPage />}/>
+                    <Route path="forms" element={<FormPage />}/>
+                    <Route path="tables" element={<TablePage />}/>
+                    <Route path="cards" element={<CardPage />}/>
+                    <Route path="lists" element={<ListPage />}/>
+                    <Route path="tabs" element={<TabPage />}/>
+                    <Route path="accordions" element={<AccordionPage />}/>
+                    <Route path="modals" element={<ModalPage />}/>
+                    <Route path="etcGroup" element={<EtcPageGroup />}/>
+                </Route>
+                
+                {/* Main */}
+                <Route path="/main/" element={<UserLayoutMain />}>
+                    <Route path="mainIndex" element={<MainIndex />}/>
+                </Route>
+
+                {/* Sub */}
+                <Route path="/guide/" element={<UserLayout />}>
                     {/* Prototype */}
-                    <UserLayout path="/guide/Prototype/Template01" component={Template01}/>
-                    <UserLayout path="/guide/Prototype/Template02" component={Template02}/>
-                    <UserLayout path="/guide/Prototype/Template02NoData" component={Template02NoData}/>
-
-                    {/* Login */}
-                    {/* <Route path="/login/login-index" component={PrivacyAgree}/> */}
-
-                    {/* Main */}
-                    <UserLayoutMain path="/main/main-index" component={MainIndex}/>
-
-                    {/* UserLayout */}
-                    {/* <UserLayout path="/search/search-all-filter-disable" component={SearchAllFilterDisable}/> */}
-
-                    {/* CategoryLayout */}
-                    {/* <UserLayoutSearch path="/searchTotal/search-result-new" component={SearchResultNew}/> */}
-
-                </Switch>
-            </Router>
-        )
-    }
+                    <Route path="/guide/prototype/Template01" element={<Template01/>}/>
+                    <Route path="/guide/prototype/Template02" element={<Template02/>}/>
+                    <Route path="/guide/prototype/Template02NoData" element={<Template02NoData/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
-
-export default App;
+export default Router;

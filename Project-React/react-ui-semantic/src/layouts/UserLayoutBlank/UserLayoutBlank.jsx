@@ -1,15 +1,9 @@
-import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-class UserLayoutBlank extends Component {
-  render() {
-    const { component: Component, ...rest } = this.props;
-    return (
-      <Route {...rest} render={(matchProps) => (
-        <Component {...matchProps} />
-      )} />
-    );
-  }
+const UserLayoutBlank = ({children}) => {
+  return (
+    <Outlet />
+  );
 }
-
 export default UserLayoutBlank;

@@ -8,7 +8,7 @@ class PageList extends Component {
     render() {
         return (
             <div className="ia-wrap">
-                <iframe src='/#/main/main-index' frameBorder='0' height='100%' name='reactFrame'></iframe>
+                <iframe src='/main/mainIndex' frameBorder='0' height='100%' name='reactFrame'></iframe>
                 <div className='index-page bg-white'>
                     <Segment basic>
                         <Gnb />
@@ -39,7 +39,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/main/main-index' target='reactFrame'>
+                                        <Link to='/main/mainIndex'>
                                             <span>Main</span>
                                         </Link>
                                     </Table.Cell>
@@ -47,8 +47,8 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/main/main-index' target='reactFrame'>
-                                            /main/main-index
+                                        <Link to='/main/mainIndex' target='reactFrame'>
+                                            /main/mainIndex
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -64,7 +64,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>Mypage</span>
                                         </Link>
                                     </Table.Cell>
@@ -72,7 +72,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /Mypage/
                                         </Link>
                                     </Table.Cell>
@@ -89,7 +89,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>Category</span>
                                         </Link>
                                     </Table.Cell>
@@ -97,7 +97,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /Category/
                                         </Link>
                                     </Table.Cell>
@@ -114,7 +114,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>Certification</span>
                                         </Link>
                                     </Table.Cell>
@@ -122,7 +122,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /Certification/
                                         </Link>
                                     </Table.Cell>
@@ -139,7 +139,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>Community</span>
                                         </Link>
                                     </Table.Cell>
@@ -147,7 +147,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /Community/
                                         </Link>
                                     </Table.Cell>
@@ -164,7 +164,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>My Learning</span>
                                         </Link>
                                     </Table.Cell>
@@ -172,7 +172,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /My Learning/
                                         </Link>
                                     </Table.Cell>
@@ -189,7 +189,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             <span>Search</span>
                                         </Link>
                                     </Table.Cell>
@@ -197,7 +197,7 @@ class PageList extends Component {
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='' target='reactFrame'>
+                                        <Link to='/main/mainIndex' target='reactFrame'>
                                             /Search/
                                         </Link>
                                     </Table.Cell>

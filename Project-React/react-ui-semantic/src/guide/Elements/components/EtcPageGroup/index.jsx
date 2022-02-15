@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 // Page
 import {
-    PiePage,
+    PiePage, PopupPage
 } from '..'
 
 class EtcPageGroup extends Component {
@@ -10,6 +10,10 @@ class EtcPageGroup extends Component {
             <>
                 {/* Pie */}
                 <PiePage />
+
+                {/* Popups */}
+                <PopupPage />
+
             </>
         )
     }

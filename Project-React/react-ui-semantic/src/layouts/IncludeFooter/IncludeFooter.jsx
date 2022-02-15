@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import {} from 'semantic-ui-react'
 
-export default class UserFooterV2 extends Component {
+class UserFooter extends Component {
     render() {
         return (
             <footer className="footer">
@@ -10,3 +9,4 @@ export default class UserFooterV2 extends Component {
         )
     }
 }
+export default UserFooter

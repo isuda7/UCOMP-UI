@@ -8,7 +8,7 @@ class PageList extends Component {
     render() {
         return (
             <div className="ia-wrap">
-                <iframe src='/#/guide/guideAll' frameBorder='0' height='100%' name='reactFrame'></iframe>
+                <iframe src='/guide/guideAll' frameBorder='0' height='100%' name='reactFrame'></iframe>
                 <div className='index-page bg-white'>
                     <Segment basic>
                         <Gnb />
@@ -39,7 +39,7 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/guideAll' target='reactFrame'>
+                                        <Link to='guideAll' target='reactFrame'>
                                             <span>전체보기</span>
                                         </Link>
                                     </Table.Cell>

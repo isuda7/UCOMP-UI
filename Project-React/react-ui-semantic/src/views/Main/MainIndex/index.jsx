@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Container} from "semantic-ui-react";
 import {VisualSection} from './components';
 import './style.css';
 
-const MainIndex = () => (
-    <Container as={'main'}>
-        <div className='content'>
-            <VisualSection/>
-        </div>
-    </Container>
-);
+class MainIndex extends Component {
+    render() {
+        return (
+            <Container as={'main'}>
+                <div className='content'>
+                VisualSection
+                    {/* <VisualSection/> */}
+                </div>
+            </Container>
+        )
+    }
+}
 export default MainIndex

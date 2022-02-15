@@ -15,7 +15,6 @@ import {
     GuidePage,
 } from './components'
 
-console.log(window.location.hash);
 class GuideAll extends Component {
     render() {
         return (

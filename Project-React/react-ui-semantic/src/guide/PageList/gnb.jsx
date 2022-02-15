@@ -7,9 +7,11 @@ class Gnb extends Component {
         return (
             <nav className='gnb'>
                 <Link to="/" className='ui button primary'>Index</Link>
-                <Link to="/guide/PageList/indexGuide" className='ui button primary'>Guide</Link>
+                <Link to="/pageList/indexGuide" className='ui button primary'>Guide</Link>
             </nav>
         )
     }
 }
+
+
 export default Gnb
