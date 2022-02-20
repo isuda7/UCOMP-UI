@@ -21,7 +21,6 @@ import EtcPageGroup from './guide/StyleGuide/Pages/EtcPageGroup';
 // Guide Templates
 import Template01 from './guide/Prototype/Template01';
 import Template02 from './guide/Prototype/Template02';
-import Template02NoData from './guide/Prototype/Template02/indexNoData';
 
 // Layout
 import LayoutGuide from './layouts/LayoutGuide';
@@ -31,6 +30,17 @@ import LayoutBlank from './layouts/LayoutBlank/';
 
 // Main
 import MainIndex from './views/Main/MainIndex/';
+
+// ReactHocks
+import ReactHooksUseState from './views/ReactHooks/UseState/';
+import ReactHooksUseEffect from './views/ReactHooks/UseEffect/';
+import ReactHooksUseContext from './views/ReactHooks/UseContext/';
+import ReactHooksUseReducer from './views/ReactHooks/UseReducer/';
+import ReactHooksUseMemo from './views/ReactHooks/UseMemo/';
+import ReactHooksUseCallback from './views/ReactHooks/UseCallback/';
+import ReactHooksUseRef from './views/ReactHooks/UseRef/';
+import ReactHooksUseInputs from './views/ReactHooks/UseInputs/';
+import ReactHooksUsePromise from './views/ReactHooks/UsePromise/';
 
 const Router = () => {
     return (
@@ -56,18 +66,27 @@ const Router = () => {
                     <Route path="Modals" element={<ModalPage />}/>
                     <Route path="EtcGroup" element={<EtcPageGroup />}/>
                 </Route>
-                
+
                 {/* Main */}
-                <Route path="/Main/" element={<LayoutMain />}>
-                    <Route path="MainIndex" element={<MainIndex />}/>
+                <Route path="/" element={<LayoutMain />}>
+                    <Route path="/Main/MainIndex" element={<MainIndex />}/>
                 </Route>
 
-                {/* Sub */}
-                <Route path="/guide/" element={<LayoutSub />}>
+                <Route path="/" element={<LayoutSub />}>
                     {/* Prototype */}
-                    <Route path="Prototype/Template01" element={<Template01/>}/>
-                    <Route path="Prototype/Template02" element={<Template02/>}/>
-                    <Route path="Prototype/Template02NoData" element={<Template02NoData/>}/>
+                    <Route path="/guide/Prototype/Template01" element={<Template01/>}/>
+                    <Route path="/guide/Prototype/Template02" element={<Template02/>}/>
+                    
+                    {/* ReactHooks */}
+                    <Route path="/ReactHooks/UseState" element={<ReactHooksUseState/>} />
+                    <Route path="/ReactHooks/UseEffect" element={<ReactHooksUseEffect/>} />
+                    <Route path="/ReactHooks/UseContext" element={<ReactHooksUseContext/>} />
+                    <Route path="/ReactHooks/UseReducer" element={<ReactHooksUseReducer/>} />
+                    <Route path="/ReactHooks/UseMemo" element={<ReactHooksUseMemo/>} />
+                    <Route path="/ReactHooks/UseCallback" element={<ReactHooksUseCallback/>} />
+                    <Route path="/ReactHooks/UseRef" element={<ReactHooksUseRef/>} />
+                    <Route path="/ReactHooks/UseInputs" element={<ReactHooksUseInputs/>} />
+                    <Route path="/ReactHooks/UsePromise" element={<ReactHooksUsePromise/>} />
                 </Route>
             </Routes>
         </BrowserRouter>

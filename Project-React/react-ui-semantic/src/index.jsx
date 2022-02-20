@@ -1,4 +1,5 @@
 
+import './variables.css';
 import './index.css';
 import "semantic-ui-less/semantic.less";
 

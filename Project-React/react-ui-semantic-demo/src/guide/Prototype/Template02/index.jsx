@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import {Section01, Section02} from './components';
+import {Container} from "semantic-ui-react";
+import {ContentHead, ContentBody} from './components';
 import './style.css';
 
-class Template02 extends Component {
+class Template01 extends Component {
     render() {
         return (
-            <>
-                <Section01 />
-                <Section02 />
-            </>
+            <Container role="main" as={'main'}>
+                <ContentHead />
+                <ContentBody />
+            </Container>
         )
     }
 }
-
-export default Template02
+export default Template01

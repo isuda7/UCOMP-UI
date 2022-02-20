@@ -5,7 +5,7 @@ class SubFooter extends Component {
     render() {
         return (
             <footer className="footer">
-                user footer
+                Sub Footer
             </footer>
         )
     }

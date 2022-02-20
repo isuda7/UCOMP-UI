@@ -21,7 +21,6 @@ import EtcPageGroup from './guide/StyleGuide/Pages/EtcPageGroup';
 // Guide Templates
 import Template01 from './guide/Prototype/Template01';
 import Template02 from './guide/Prototype/Template02';
-import Template02NoData from './guide/Prototype/Template02/indexNoData';
 
 // Layout
 import LayoutGuide from './layouts/LayoutGuide';
@@ -31,6 +30,9 @@ import LayoutBlank from './layouts/LayoutBlank/';
 
 // Main
 import MainIndex from './views/Main/MainIndex/';
+
+// Sub
+import Sample from './views/Sample/';
 
 const Router = () => {
     return (
@@ -43,31 +45,29 @@ const Router = () => {
                 </Route>
 
                 {/* Guide */}
-                <Route path="/guide/" element={<LayoutGuide />}>
-                    <Route path="GuideAll" element={<GuideAll />}/>
-                    <Route path="ElementsGroup" element={<ElementPageGroup />}/>
-                    <Route path="Section" element={<SectionPage />}/>
-                    <Route path="Forms" element={<FormPage />}/>
-                    <Route path="Tables" element={<TablePage />}/>
-                    <Route path="Cards" element={<CardPage />}/>
-                    <Route path="Lists" element={<ListPage />}/>
-                    <Route path="Tabs" element={<TabPage />}/>
-                    <Route path="Accordions" element={<AccordionPage />}/>
-                    <Route path="Modals" element={<ModalPage />}/>
-                    <Route path="EtcGroup" element={<EtcPageGroup />}/>
+                <Route path="/" element={<LayoutGuide />}>
+                    <Route path="/guide/GuideAll" element={<GuideAll />}/>
+                    <Route path="/guide/ElementsGroup" element={<ElementPageGroup />}/>
+                    <Route path="/guide/Section" element={<SectionPage />}/>
+                    <Route path="/guide/Forms" element={<FormPage />}/>
+                    <Route path="/guide/Tables" element={<TablePage />}/>
+                    <Route path="/guide/Cards" element={<CardPage />}/>
+                    <Route path="/guide/Lists" element={<ListPage />}/>
+                    <Route path="/guide/Tabs" element={<TabPage />}/>
+                    <Route path="/guide/Accordions" element={<AccordionPage />}/>
+                    <Route path="/guide/Modals" element={<ModalPage />}/>
+                    <Route path="/guide/EtcGroup" element={<EtcPageGroup />}/>
                 </Route>
                 
                 {/* Main */}
-                <Route path="/Main/" element={<LayoutMain />}>
-                    <Route path="MainIndex" element={<MainIndex />}/>
+                <Route path="/" element={<LayoutMain />}>
+                    <Route path="/Main/MainIndex" element={<MainIndex />}/>
                 </Route>
 
                 {/* Sub */}
-                <Route path="/guide/" element={<LayoutSub />}>
-                    {/* Prototype */}
-                    <Route path="Prototype/Template01" element={<Template01/>}/>
-                    <Route path="Prototype/Template02" element={<Template02/>}/>
-                    <Route path="Prototype/Template02NoData" element={<Template02NoData/>}/>
+                <Route path="/" element={<LayoutSub />}>
+                    {/* Sample */}
+                    <Route path="/Sample/" element={<Sample/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

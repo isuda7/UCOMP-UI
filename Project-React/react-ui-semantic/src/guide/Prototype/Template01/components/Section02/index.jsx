@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import {Header} from "semantic-ui-react";
+import './style.css';
 
 class Section02 extends Component {
     render() {
         return (
-            <section className='section 이름' aria-labelledby='Section02Title'>
-                <div className='section-header'>
-                    <Header as={'h2'} id="Section02Title">Heading2</Header>
+            <section className='sec' aria-labelledby='Section02'>
+                <div className='sec-head'>
+                    <h2 id="Section02">Heading2</h2>
                 </div>
-                <div className='section-body'>
-                    <p>Template01 Section 02 Area</p>
+                <div className='sec-body'>
+                    Section02
                 </div>
             </section>
         )

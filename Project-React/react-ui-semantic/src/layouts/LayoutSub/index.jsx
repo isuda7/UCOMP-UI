@@ -5,7 +5,7 @@ import './style.css';
 
 const LayoutSub = ({children}) => {
   return (
-    <div className='main-wrapper'>
+    <div className='sub-wrapper'>
       <SubHeader/>
       <Outlet />
       <SubFooter/>

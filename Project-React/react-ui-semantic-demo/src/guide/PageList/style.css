@@ -50,6 +50,9 @@
   .index-page .table .link-address {
     color: #999;
   }
+  .index-page .table .link-address a::before {
+    content:attr(href);
+  }
   .index-page .text-bold {
     font-weight: bold;
   }

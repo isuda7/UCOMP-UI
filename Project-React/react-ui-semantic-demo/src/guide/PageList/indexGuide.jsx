@@ -38,160 +38,100 @@ class PageList extends Component {
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='guideAll' target='reactFrame'>
-                                            <span>전체보기</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>전체보기</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/GuideAll' target='reactFrame'>
-                                            /guide/guideAll
-                                        </Link>
+                                        <Link to='/guide/GuideAll' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/ElementsGroup' target='reactFrame'>
-                                            <span>Buttons, Icons, Labels, Badges, Diviers</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Buttons, Icons, Labels, Badges, Diviers</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/ElementsGroup' target='reactFrame'>
-                                            /guide/ElementsGroup
-                                        </Link>
+                                        <Link to='/guide/ElementsGroup' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Forms' target='reactFrame'>
-                                            <span>Forms</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Forms</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Forms' target='reactFrame'>
-                                            /guide/Forms
-                                        </Link>
+                                        <Link to='/guide/Forms' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Tables' target='reactFrame'>
-                                            <span>Tables</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Tables</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Tables' target='reactFrame'>
-                                            /guide/Tables
-                                        </Link>
+                                        <Link to='/guide/Tables' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Cards' target='reactFrame'>
-                                            <span>Cards</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Cards</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Cards' target='reactFrame'>
-                                            /guide/Cards
-                                        </Link>
+                                        <Link to='/guide/Cards' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Lists' target='reactFrame'>
-                                            <span>Bullets, Gorups</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Bullets, Gorups</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Lists' target='reactFrame'>
-                                            /guide/Lists
-                                        </Link>
+                                        <Link to='/guide/Lists' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Tabs' target='reactFrame'>
-                                            <span>Tabs, Steps</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Tabs, Steps</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Tabs' target='reactFrame'>
-                                            /guide/Tabs
-                                        </Link>
+                                        <Link to='/guide/Tabs' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Accordions' target='reactFrame'>
-                                            <span>Accordions</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Accordions</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Accordions' target='reactFrame'>
-                                            /guide/Accordions
-                                        </Link>
+                                        <Link to='/guide/Accordions' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Modals' target='reactFrame'>
-                                            <span>Alert, Confirm, Center, Bottom, Full</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Alert, Confirm, Center, Bottom, Full</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Modals' target='reactFrame'>
-                                            /guide/Modals
-                                        </Link>
+                                        <Link to='/guide/Modals' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/EtcGroup' target='reactFrame'>
-                                            <span>ETC</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>ETC</Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/EtcGroup' target='reactFrame'>
-                                            /guide/EtcGroup
-                                        </Link>
+                                        <Link to='/guide/EtcGroup' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -205,54 +145,36 @@ class PageList extends Component {
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Prototype/Template01' target='reactFrame'>
-                                            <span>Basic</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Basic</Table.Cell>
                                     <Table.Cell textAlign='center'>
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Prototype/Template01' target='reactFrame'>
-                                        /guide/Prototype/Template01
-                                        </Link>
+                                        <Link to='/guide/Prototype/Template01' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Prototype/Template02' target='reactFrame'>
-                                            <span>Board - Card</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Board - Card</Table.Cell>
                                     <Table.Cell textAlign='center'>
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Prototype/Template02' target='reactFrame'>
-                                        /guide/Prototype/Template02
-                                        </Link>
+                                        <Link to='/guide/Prototype/Template02' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
-                                    <Table.Cell>
-                                        <Link to='/guide/Prototype/Template02NoData' target='reactFrame'>
-                                            <span>Board - Card - NoData</span>
-                                        </Link>
-                                    </Table.Cell>
+                                    <Table.Cell>Board - Card - NoData</Table.Cell>
                                     <Table.Cell textAlign='center'>
                                         {/* (<span>AL-MA-10</span>) */}
                                     </Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/Prototype/Template02NoData' target='reactFrame'>
-                                        /guide/Prototype/Template02NoData
-                                        </Link>
+                                        <Link to='/guide/Prototype/Template02NoData' target='reactFrame'/>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
                                     <Table.Cell></Table.Cell>
