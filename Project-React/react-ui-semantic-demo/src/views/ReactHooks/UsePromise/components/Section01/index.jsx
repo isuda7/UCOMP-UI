@@ -6,7 +6,7 @@ class Section01 extends Component {
         return (
             <section className='sec' aria-labelledby='Section01'>
                 <div className='sec-head'>
-                    <h2 id="Section01">Heading2</h2>
+                    <h3 id="Section01">Heading3</h3>
                 </div>
                 <div className='sec-body'>
                     Section01
