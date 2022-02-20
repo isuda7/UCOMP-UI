@@ -1,0 +1,5 @@
+/*******************************
+     User Global Variables
+*******************************/
+@static-url : '../../../resources';
+@pageFont: 'Noto Sans KR', 'sans-serif', 'Apple SD Gothic Neo', 'AppleGothic', 'Apple Gothic', '-apple-system', sans-serif;
