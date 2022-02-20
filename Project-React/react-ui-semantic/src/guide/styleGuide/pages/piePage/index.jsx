@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Pie} from "../../../../custom-ui/components";
+import {Pie} from "../../../../components";
 
 class PiePage extends Component {
     render() {

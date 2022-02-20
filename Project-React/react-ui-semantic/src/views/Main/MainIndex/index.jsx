@@ -8,8 +8,7 @@ class MainIndex extends Component {
         return (
             <Container as={'main'}>
                 <div className='content'>
-                VisualSection
-                    {/* <VisualSection/> */}
+                    <VisualSection/>
                 </div>
             </Container>
         )

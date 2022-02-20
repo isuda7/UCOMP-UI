@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import {Header} from "semantic-ui-react";
+import './style.css';
 
 class VisualSection extends Component {
     render() {
         return (
-            <section className='section visual' aria-labelledby='VisualSectionTitle'>
-                <div className='section-header'>
-                    <Header as={'h2'} id="VisualSectionTitle">Heading2</Header>
+            <section className='sec visual-sec' aria-labelledby='VisualSecTitle'>
+                <div className='sec-head'>
+                    <h2 id="VisualSecTitle">Heading2</h2>
                 </div>
-                <div className='section-body'>
+                <div className='sec-body'>
                     Visual Section
                 </div>
             </section>

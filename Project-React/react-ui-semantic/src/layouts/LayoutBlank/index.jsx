@@ -1,9 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const UserLayoutBlank = ({children}) => {
+const LayoutBlank = ({children}) => {
   return (
     <Outlet />
   );
 }
-export default UserLayoutBlank;
+export default LayoutBlank;

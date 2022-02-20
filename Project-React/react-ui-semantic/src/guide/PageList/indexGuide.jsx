@@ -8,7 +8,7 @@ class PageList extends Component {
     render() {
         return (
             <div className="ia-wrap">
-                <iframe src='/guide/guideAll' frameBorder='0' height='100%' name='reactFrame'></iframe>
+                <iframe src='/guide/guideAll' frameBorder='0' height='760px' name='reactFrame'></iframe>
                 <div className='index-page bg-white'>
                     <Segment basic>
                         <Gnb />
@@ -120,7 +120,7 @@ class PageList extends Component {
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
                                         <Link to='/guide/lists' target='reactFrame'>
-                                            <span>Bullets, Items</span>
+                                            <span>Bullets, Gorups</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>

@@ -13,7 +13,7 @@ import {
     PopupPage,
     ModalPage,
     GuidePage,
-} from './components'
+} from './pages'
 
 class GuideAll extends Component {
     render() {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
+import './style.css';
 
-class UserFooter extends Component {
+class SubFooter extends Component {
     render() {
         return (
             <footer className="footer">
@@ -9,4 +10,4 @@ class UserFooter extends Component {
         )
     }
 }
-export default UserFooter
+export default SubFooter

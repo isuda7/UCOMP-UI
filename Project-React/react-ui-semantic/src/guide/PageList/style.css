@@ -1,16 +1,16 @@
 .ia-wrap {
   display:flex;
   min-height:100%;
+  background-color: #f6f6f6;
 }
 .ia-wrap iframe {
   flex:none;
   width:375px;
-  height:100vh;
+  height:760px;
 }
 .ia-wrap .index-page {
   flex:1 1 auto;
   width:100%;
-  background-color: #f6f6f6;
 }
 .ia-wrap .index-page .gnb .ui.button {
   font-weight: 700;

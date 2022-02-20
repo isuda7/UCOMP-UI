@@ -2,42 +2,42 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 // PageList
-import PageList from './guide/PageList';
-import PageListGuide from './guide/PageList/indexGuide';
+import PageList from './guide/pageList';
+import PageListGuide from './guide/pageList/indexGuide';
 
 // Guide Components
-import GuideAll from './guide/Elements';
-import ElementPageGroup from './guide/Elements/components/ElementPageGroup';
-import SectionPage from './guide/Elements/components/SectionPage';
-import FormPage from './guide/Elements/components/FormPage';
-import TablePage from './guide/Elements/components/TablePage';
-import CardPage from './guide/Elements/components/CardPage';
-import ListPage from './guide/Elements/components/ListPage';
-import TabPage from './guide/Elements/components/TabPage';
-import AccordionPage from './guide/Elements/components/AccordionPage';
-import ModalPage from './guide/Elements/components/ModalPage';
-import EtcPageGroup from './guide/Elements/components/EtcPageGroup';
+import GuideAll from './guide/styleGuide';
+import ElementPageGroup from './guide/styleGuide/pages/elementPageGroup';
+import SectionPage from './guide/styleGuide/pages/sectionPage';
+import FormPage from './guide/styleGuide/pages/formPage';
+import TablePage from './guide/styleGuide/pages/tablePage';
+import CardPage from './guide/styleGuide/pages/cardPage';
+import ListPage from './guide/styleGuide/pages/listPage';
+import TabPage from './guide/styleGuide/pages/tabPage';
+import AccordionPage from './guide/styleGuide/pages/accordionPage';
+import ModalPage from './guide/styleGuide/pages/modalPage';
+import EtcPageGroup from './guide/styleGuide/pages/etcPageGroup';
 
 // Guide Templates
-import Template01 from './guide/Prototype/Template01';
-import Template02 from './guide/Prototype/Template02';
-import Template02NoData from './guide/Prototype/Template02/indexNoData';
+import Template01 from './guide/prototype/template01';
+import Template02 from './guide/prototype/template02';
+import Template02NoData from './guide/prototype/template02/indexNoData';
 
 // Layout
-import GuideLayout from './guide/Elements/layouts/GuideLayout';
-import UserLayout from './layouts/UserLayout/UserLayout';
-import UserLayoutMain from './layouts/UserLayoutMain/UserLayoutMain';
-import UserLayoutBlank from './layouts/UserLayoutBlank/UserLayoutBlank';
+import GuideLayout from './guide/styleGuide/layouts/guideLayout';
+import LayoutSub from './layouts/LayoutSub/';
+import LayoutMain from './layouts/LayoutMain/';
+import LayoutBlank from './layouts/LayoutBlank/';
 
 // Main
-import MainIndex from './views/Main/MainIndex';
+import MainIndex from './views/Main/MainIndex/';
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
                 {/* Pagelist */}
-                <Route path="/" element={<UserLayoutBlank />}>
+                <Route path="/" element={<LayoutBlank />}>
                     <Route index element={<PageList />} />
                     <Route path="/pagelist/indexGuide" element={<PageListGuide />} />
                 </Route>
@@ -58,12 +58,12 @@ const Router = () => {
                 </Route>
                 
                 {/* Main */}
-                <Route path="/main/" element={<UserLayoutMain />}>
+                <Route path="/main/" element={<LayoutMain />}>
                     <Route path="mainIndex" element={<MainIndex />}/>
                 </Route>
 
                 {/* Sub */}
-                <Route path="/guide/" element={<UserLayout />}>
+                <Route path="/guide/" element={<LayoutSub />}>
                     {/* Prototype */}
                     <Route path="/guide/prototype/Template01" element={<Template01/>}/>
                     <Route path="/guide/prototype/Template02" element={<Template02/>}/>

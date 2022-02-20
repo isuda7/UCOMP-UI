@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 import {Popup, Button} from "semantic-ui-react";
 
-const PopupExample = () => (
-    <Popup content='Add users to your feed' trigger={<Button icon='add' />} />
-)
-
 class PopupPage extends Component {
     render() {
         return (

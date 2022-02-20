@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import './style.css'
+import './style.css';
 
-class UserHeader extends Component {
+class SubHeader extends Component {
     render() {
         return (
             <header className='header'>
@@ -10,4 +10,4 @@ class UserHeader extends Component {
         )   
     }
 }
-export default UserHeader
+export default SubHeader

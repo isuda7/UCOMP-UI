@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import '../style.css';
 
-const GuideLayout = ({children}) => {
+const guideLayout = ({children}) => {
   return (
     <div className="g-wrap">
         <header>
@@ -14,4 +14,4 @@ const GuideLayout = ({children}) => {
     </div>
   );
 }
-export default GuideLayout;
+export default guideLayout;

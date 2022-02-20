@@ -1,6 +1,4 @@
 
-import 'react-app-polyfill/ie11'; // For IE 9-11 support
-import 'react-app-polyfill/stable';
 import './index.css';
 import "semantic-ui-less/semantic.less";
 
@@ -14,7 +12,7 @@ if (agent.indexOf("msie") != -1 || agent.indexOf("rv:11.0") != -1) {
     document.body.classList.add("msie");
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.body);
 
 
     

@@ -15,10 +15,8 @@
     "swiper": "^5.4.5"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=\"--max-old-space-size=10192\" && craco start",
-    "start:mac": "NODE_OPTIONS=\"--max-old-space-size=10192\" craco start",
-    "build": "set NODE_OPTIONS=\"--max-old-space-size=10192\" && craco build",
-    "build:mac": "NODE_OPTIONS=\"--max-old-space-size=10192\" craco build",
+    "start": "craco start",
+    "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
   },
@@ -39,7 +37,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://mysuni.fun/MO2/REACT/",
+  "homepage": "http://mysuni.fun/",
   "devDependencies": {
     "@craco/craco": "^5.5.0",
     "@semantic-ui-react/craco-less": "1.1.0",
