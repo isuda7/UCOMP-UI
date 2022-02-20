@@ -45,7 +45,7 @@ class PageList extends Component {
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/guideAll' target='reactFrame'>
+                                        <Link to='/guide/GuideAll' target='reactFrame'>
                                             /guide/guideAll
                                         </Link>
                                     </Table.Cell>
@@ -55,14 +55,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/elementsGroup' target='reactFrame'>
+                                        <Link to='/guide/ElementsGroup' target='reactFrame'>
                                             <span>Buttons, Icons, Labels, Badges, Diviers</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/elementsGroup' target='reactFrame'>
-                                            /guide/elementsGroup
+                                        <Link to='/guide/ElementsGroup' target='reactFrame'>
+                                            /guide/ElementsGroup
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -71,14 +71,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/forms' target='reactFrame'>
+                                        <Link to='/guide/Forms' target='reactFrame'>
                                             <span>Forms</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/forms' target='reactFrame'>
-                                            /guide/forms
+                                        <Link to='/guide/Forms' target='reactFrame'>
+                                            /guide/Forms
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -87,14 +87,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/tables' target='reactFrame'>
+                                        <Link to='/guide/Tables' target='reactFrame'>
                                             <span>Tables</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/tables' target='reactFrame'>
-                                            /guide/tables
+                                        <Link to='/guide/Tables' target='reactFrame'>
+                                            /guide/Tables
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -103,14 +103,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/cards' target='reactFrame'>
+                                        <Link to='/guide/Cards' target='reactFrame'>
                                             <span>Cards</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/cards' target='reactFrame'>
-                                            /guide/cards
+                                        <Link to='/guide/Cards' target='reactFrame'>
+                                            /guide/Cards
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -119,14 +119,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/lists' target='reactFrame'>
+                                        <Link to='/guide/Lists' target='reactFrame'>
                                             <span>Bullets, Gorups</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/lists' target='reactFrame'>
-                                            /guide/lists
+                                        <Link to='/guide/Lists' target='reactFrame'>
+                                            /guide/Lists
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -135,14 +135,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/tabs' target='reactFrame'>
+                                        <Link to='/guide/Tabs' target='reactFrame'>
                                             <span>Tabs, Steps</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/tabs' target='reactFrame'>
-                                            /guide/tabs
+                                        <Link to='/guide/Tabs' target='reactFrame'>
+                                            /guide/Tabs
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -151,14 +151,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/accordions' target='reactFrame'>
+                                        <Link to='/guide/Accordions' target='reactFrame'>
                                             <span>Accordions</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/accordions' target='reactFrame'>
-                                            /guide/accordions
+                                        <Link to='/guide/Accordions' target='reactFrame'>
+                                            /guide/Accordions
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -167,14 +167,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/modals' target='reactFrame'>
+                                        <Link to='/guide/Modals' target='reactFrame'>
                                             <span>Alert, Confirm, Center, Bottom, Full</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/modals' target='reactFrame'>
-                                            /guide/modals
+                                        <Link to='/guide/Modals' target='reactFrame'>
+                                            /guide/Modals
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>
@@ -183,14 +183,14 @@ class PageList extends Component {
                                 </Table.Row>
                                 <Table.Row verticalAlign='top'>
                                     <Table.Cell>
-                                        <Link to='/guide/etcGroup' target='reactFrame'>
+                                        <Link to='/guide/EtcGroup' target='reactFrame'>
                                             <span>ETC</span>
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell textAlign='center'></Table.Cell>
                                     <Table.Cell className='link-address'>
-                                        <Link to='/guide/etcGroup' target='reactFrame'>
-                                            /guide/etcGroup
+                                        <Link to='/guide/EtcGroup' target='reactFrame'>
+                                            /guide/EtcGroup
                                         </Link>
                                     </Table.Cell>
                                     <Table.Cell></Table.Cell>

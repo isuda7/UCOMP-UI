@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import '../style.css';
+import './style.css';
 
-const guideLayout = ({children}) => {
+const LayoutGuide = ({children}) => {
   return (
     <div className="g-wrap">
         <header>
@@ -14,4 +14,4 @@ const guideLayout = ({children}) => {
     </div>
   );
 }
-export default guideLayout;
+export default LayoutGuide;

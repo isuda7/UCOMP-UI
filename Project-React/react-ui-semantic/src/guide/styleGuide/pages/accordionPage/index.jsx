@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Accordion, Icon} from "semantic-ui-react";
-import '../../style.css';
 
 class AccordionPage extends Component {
     state = { activeIndex: 0 }

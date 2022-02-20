@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Button, Checkbox, Form, Input, Select} from "semantic-ui-react";
-import '../../style.css';
 
 const selectOptions1 = [
     { key: 'key1', value: 'value1', text: 'Option Text1' },
