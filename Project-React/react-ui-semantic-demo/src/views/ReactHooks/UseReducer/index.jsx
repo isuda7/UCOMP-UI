@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
-import {Container} from "semantic-ui-react";
 import {ContentHead, ContentBody} from './components';
-import './style.css';
+import '../style.css';
 
 class ReactHooksUseReducer extends Component {
     render() {
         return (
-            <Container role="main" as={'main'}>
+            <main role='main' className='container hooks-container'>
                 <ContentHead />
                 <ContentBody />
-            </Container>
+            </main>
         )
     }
 }

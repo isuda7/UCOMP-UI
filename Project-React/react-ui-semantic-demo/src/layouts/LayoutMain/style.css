@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+
+/*-------------------------------------------------------------------
+    @Default Layout
+-------------------------------------------------------------------*/
+html, body {
+	height: 100%;
+}
+.main-wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main-wrapper > .header,
+.main-wrapper > .footer {
+	flex: none;
+}
+.main-wrapper > .container {
+	flex: 1 0 auto;
+	display:flex; 
+	flex-direction: column;	
+}
+.main-wrapper > .container > .content-body {
+	flex: 1 0 auto;
+}
+.main-wrapper > .container > .content-head,
+.main-wrapper > .container > .content-foot {
+	flex: none;
+}
+
+/*-------------------------------------------------------------------
+    @Container
+-------------------------------------------------------------------*/
+.main-wrapper > .container {
+	width: 100%;
+	margin: 0;
+	padding: 24px var(--gap-base-side);
+}
+
+/*-------------------------------------------------------------------
+    @Header
+-------------------------------------------------------------------*/
+.main-wrapper > .header {
+	display: flex;
+	align-items: center;
+	height: 52px;
+	padding: 0 var(--gap-base-side);
+	background-color: #000;
+	color: #fff;
+}
+
+/*-------------------------------------------------------------------
+    @Footer
+-------------------------------------------------------------------*/
+.main-wrapper > .footer {
+	display: flex;
+	align-items: center;
+	padding: 12px var(--gap-base-side);
+	background-color: #666;
+	color: #fff;
+}

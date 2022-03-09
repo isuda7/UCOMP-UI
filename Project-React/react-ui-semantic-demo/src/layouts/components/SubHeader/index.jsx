@@ -5,7 +5,7 @@ class SubHeader extends Component {
     render() {
         return (
             <header className='header'>
-                <h1>Sub Header</h1>
+                <h1>React Hooks</h1>
             </header>
         )   
     }

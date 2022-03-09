@@ -1,5 +1,4 @@
 
-export { default as ContentHead } from './ContentHead';
-export { default as ContentBody } from './ContentBody';
-export { default as Section01 } from './Section01';
-export { default as Section02 } from './Section02';
+export { default as Render1 } from './Render1';
+export { default as Render2 } from './Render2';
+export { default as Render3 } from './Render3';

@@ -44,8 +44,8 @@
 
 	/* 라인 */
 	--color-line-dark: #222222; 
-	--color-line-gray: #666666;
-	--color-line-light: #999999;
+	--color-line-gray: #999999;
+	--color-line-light: #dddddd;
 	
 	/* 강조 */
 	--color-primary: orange;
