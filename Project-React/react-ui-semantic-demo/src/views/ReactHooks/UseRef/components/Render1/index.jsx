@@ -4,13 +4,13 @@ import {Button} from "semantic-ui-react";
 const Render1 = () => {
 	const [count, setCount] = useState(0);
 	const countRef = useRef(0);
-	console.log('랜더링');
+	console.log('(Render1) 랜더링');
 	const handleState = () => {
 		setCount(count + 1);
 	}
 	const handleRef = () => {
 		countRef.current = countRef.current + 1;
-		console.log('Ref: ', countRef.current);
+		console.log('(Render1) Ref: ', countRef.current);
 	}
 
 	return (

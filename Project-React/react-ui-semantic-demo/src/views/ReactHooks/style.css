@@ -11,4 +11,8 @@
 .hooks-container .desc {margin-top:20px; padding-top:10px; border-top:1px solid var(--color-line-light);}
 .hooks-container .desc dt {font-weight:700;}
 
-.hooks-container .ui.button {padding:8px 14px;}
+.hooks-container .ui.button {padding:11px 14px;}
+.hooks-container .fields {display:flex;}
+.hooks-container .fields .ui.input {flex:1 1 auto;}
+.hooks-container .fields .ui.input input {width:100%}
+.hooks-container .fields button {flex:none;}

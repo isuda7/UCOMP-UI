@@ -6,7 +6,7 @@ const Render3 = () => {
 	const countRef = useRef(0);
 	useEffect(() => {
 		countRef.current = countRef.current + 1;
-		console.log('랜더링 수:', countRef.current);
+		console.log('(Render3) 랜더링 수:', countRef.current);
 	});
 	const handleRender = () => {
 		setCount(count + 1);

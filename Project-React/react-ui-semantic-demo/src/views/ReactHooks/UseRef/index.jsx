@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Render1} from './components';
-import {Render2} from './components';
-import {Render3} from './components';
+import {Render1, Render2, Render3, Render4} from './components';
 import '../style.css';
 
 class ReactHooksUseRef extends Component {
@@ -11,20 +9,27 @@ class ReactHooksUseRef extends Component {
                 <div className='content-head'>
                     <h2>useRef</h2>
                     <p><code>const count = useRef(초기값)</code></p>
+                    <p><code>count.current = (변경값)</code></p>
                     <p>랜더링 되지 않고 변수를 변경함.</p>
                 </div>
                 <div className='content-body'>
+                    <section className='sec' aria-labelledby='Section01'>
+                        <div className='sec-head'>
+                            <h3 id="Section01">공통요약</h3>
+                        </div>
+                        <div className='sec-body'>
+                            <p>1. useState는 렌더링을 한다.</p>
+                            <p>2. useRef는 값만 저장되고, 렌더링시 적용 된다.</p>
+                            <p>3. let은 값을 저장하지만, 랜더링시 초기화 된다.</p>
+                            <p>4. useEffect안에서 State변경은 주의한다.</p>
+                        </div>
+                    </section>
                     <section className='sec' aria-labelledby='Section01'>
                         <div className='sec-head'>
                             <h3 id="Section01">useState, useRef</h3>
                         </div>
                         <div className='sec-body'>
                             <Render1 />
-                            <dl className='desc'>
-                                <dt>요약</dt>
-                                <dd>1. State는 렌더링을 한다.</dd>
-                                <dd>2. Ref는 값만 저장되고, 랜더링시 값이 유지된다.</dd>
-                            </dl>
                         </div>
                     </section>
                     <section className='sec' aria-labelledby='Section02'>
@@ -33,11 +38,6 @@ class ReactHooksUseRef extends Component {
                         </div>
                         <div className='sec-body'>
                             <Render2 />
-                            <dl className='desc'>
-                                <dt>요약</dt>
-                                <dd>1. Ref는 값만 저장되고, 랜더링시 값이 유지된다.</dd>
-                                <dd>2. let은 값을 저장하지만, 랜더링시 초기화 된다.</dd>
-                            </dl>
                         </div>
                     </section>
                     <section className='sec' aria-labelledby='Section03'>
@@ -46,13 +46,24 @@ class ReactHooksUseRef extends Component {
                         </div>
                         <div className='sec-body'>
                             <Render3 />
-                            <dl className='desc'>
-                                <dt>요약</dt>
-                                <dd>1. Effect는 랜더링으로 실행된다.</dd>
-                                <dd>2. Effect안에서 State변경을 지양한다.</dd>
-                            </dl>
                         </div>
                     </section>
+                    <section className='sec' aria-labelledby='Section04'>
+                        <div className='sec-head'>
+                            <h3 id="Section04">Focus</h3>
+                        </div>
+                        <div className='sec-body'>
+                            <Render4 />
+                        </div>
+                    </section>
+                    {/* <section className='sec' aria-labelledby='Section05'>
+                        <div className='sec-head'>
+                            <h3 id="Section05">useRef, useEffect</h3>
+                        </div>
+                        <div className='sec-body'>
+                            <Render5 />
+                        </div>
+                    </section> */}
                 </div>
             </main>
         )

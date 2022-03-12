@@ -1,5 +1,3 @@
 
-export { default as ContentHead } from './ContentHead';
-export { default as ContentBody } from './ContentBody';
-export { default as Section01 } from './Section01';
-export { default as Section02 } from './Section02';
+export { default as Memo1 } from './Memo1';
+export { default as Memo2 } from './Memo2';

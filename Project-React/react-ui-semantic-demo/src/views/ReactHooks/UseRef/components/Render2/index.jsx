@@ -12,13 +12,13 @@ const Render2 = () => {
 	}
 	const handleLet = () => {
 		countLet = countLet + 1;
-		console.log('Let:', countLet);
+		console.log('(Render2) Let:', countLet);
 	}
 	const handleRender = () => {
 		setCount(count + 1);
 	}
 	const handlePrint = () => {
-		console.log('Ref:', countRef.current, ', Let:', countLet);
+		console.log('(Render2) Ref:', countRef.current, ', Let:', countLet);
 	}
 
 	return (
