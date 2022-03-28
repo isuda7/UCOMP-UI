@@ -1,9 +1,0 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-/*******************************
-         Site Overrides
-*******************************/
-.sr-only {position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px; }
-.txt-center {text-align: center;}
-.txt-left {text-align: left;}
-.txt-right {text-align: right;}
