@@ -1,0 +1,34 @@
+/*******************************
+         Site Overrides
+*******************************/
+/* Default */
+.ui.button {display:inline-flex; justify-content:center; align-items:center; margin:0; padding:1.0rem; color:inherit; font-size:1.4rem;}
+.ui.button:hover,
+.ui.button:active,
+.ui.button:focus {color:inherit;}
+.ui.button.icon {margin:0; padding:0.5rem;}
+
+/* Colors */
+.ui.button.primary:hover,
+.ui.button.primary:focus,
+.ui.button.primary:active,
+.ui.button.primary {background-color:@colorPrimary;}
+
+/* Types */
+.ui.button.select {
+    padding:9px 36px 9px 16px;
+    border:1px solid @colorFormLine;
+    color:@colorFormText;
+}
+.ui.button.select.is_disabled {
+    color:@colorFormDisable;
+}
+.ui.button.select.is_valued {
+    color:@colorFormValue;
+}
+
+/* Content */
+.page_action {display:flex; padding:1.6rem 0;}
+.page_action .ui.button {flex:1 1 auto; height:5.2rem; font-size:1.6rem; font-weight:700; border-radius:0.4rem;}
+.page_action .ui.button + .ui.button {margin-left:0.6rem;}
+.page_action .ui.button:not(.primary) {background:gray; color:#fff;}

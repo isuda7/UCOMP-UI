@@ -1,0 +1,46 @@
+/*******************************************
+     User Global Variables
+     _variables.scss 파일과 동일해야 함.
+********************************************/
+// 간격 (Margin, Padding)
+@gapSideBase: 2.0rem;
+
+// 사이즈 (Width, Height)
+@heightHeader: 52px;
+
+// 컬러 엘리먼트
+@colorFormLine: #e3e4e5;
+@colorFormText: #A4A6AA;
+@colorFormValue: #000000;
+@colorFormDisable: #E3E4E5;
+
+// 컬러 맥락
+@colorTitle: #222222;
+@colorPara: #666666;
+@colorInfo: #999999;
+@colorLink: #999999;
+
+// 컬러 강조
+@colorPrimary: #ff664d;
+@colorSecondary: green;
+@coloreEphasis: green;
+
+// 컬러 항목
+@colorCateAi: #9f3fc5;
+@colorCateDt: #613fc6;
+@colorCateHappinesst: #ff9600;
+@colorCateSV: #ee712c;
+@colorCateDesign: #d72d2f;
+@colorCateGlobal: #38b84c;
+@colorCateLeadership: #2987cd;
+@colorCateManagement: #28b4ac;
+@colorCateSemicond: #4b6bcc;
+@colorCateGreen: #009abd;
+@colorCateBM: #bd38a5;
+@colorCateSkacademy: #ea6957;
+
+// 컬러 상태
+@colorSuccessed: green;
+@colorFailed: red;
+@colorCompleted: blue;
+@colorErrored: red;

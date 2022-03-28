@@ -1,0 +1,63 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+/*-------------------------------------------------------------------
+    @Layout
+-------------------------------------------------------------------*/
+/* Default */
+.sub_wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	&>.header {
+		flex: none;
+	}
+	&>.container {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+		&>.content_head {
+			flex: none;
+		}
+		&>.content_body {
+			flex: 1 0 auto;
+		}
+		&>.content_foot {
+			flex: none;
+		}
+	}
+}
+
+
+
+/* Container Styles */
+.sub_wrapper>.container {
+	width: 100%;
+	margin: 0;
+	padding-top: calc($heightHeader + var(--safeTop));
+	padding-bottom: var(--safeBottom);
+	line-height: 1.5;
+	>.content_head,
+	>.content_body,
+	>.content_foot {
+		padding-left: $gapSideBase;
+		padding-right: $gapSideBase;
+	}
+}
+
+/* Guide Case Only */
+.sub_wrapper {
+	>.header {
+		& + .header {
+			top:$heightHeader * 1;
+			& + .header {
+				top:$heightHeader * 2;
+				& + .header {
+					top:$heightHeader * 3;
+				}
+			}
+		}
+	}
+}
+
+

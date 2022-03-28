@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+/*-------------------------------------------------------------------
+    @Layout
+-------------------------------------------------------------------*/
+/* Default */
+.main_wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_wrapper>.header,
+.main_wrapper>.footer {
+    flex: none;
+}
+
+.main_wrapper>.container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_wrapper>.container>.content_body {
+    flex: 1 0 auto;
+}
+
+.main_wrapper>.container>.content_head,
+.main_wrapper>.container>.content_foot {
+    flex: none;
+}
+
+/* Container Styles */
+.main_wrapper>.container {
+    width: 100%;
+    margin: 0;
+	padding-top: calc($heightHeader + var(--safeTop));
+	padding-bottom: var(--safeBottom);
+    line-height: 1.5;
+	>.content_body {
+		padding-left: $gapSideBase;
+		padding-right: $gapSideBase;
+	}
+}

@@ -1,0 +1,3 @@
+.no_data {text-align: center;}
+.no_data .img {display:block;}
+.no_data .img + .msg {margin-top:10px;}

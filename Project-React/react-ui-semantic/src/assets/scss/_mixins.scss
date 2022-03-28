@@ -1,0 +1,39 @@
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+// 폰트사이즈
+@mixin fontSize($size) {
+	@if ($size == 12) {
+		font-size:1.2rem;
+		line-height: 1.6rem;;
+	} @else if ($size == 14) {
+		font-size:1.4rem;
+		line-height: 2.0rem;;
+
+	} @else if ($size == 16) {
+		font-size:1.6rem;
+		line-height: 2.2rem;;
+
+	} @else if ($size == 18) {
+		font-size:1.8rem;
+		line-height: 2.4rem;;
+
+	} @else if ($size == 20) {
+		font-size:2.0rem;
+		line-height: 2.6rem;;
+
+	} @else if ($size == 22) {
+		font-size:2.2rem;
+		line-height: 2.8rem;;
+
+	} @else if ($size == 24) {
+		font-size:2.4rem;
+		line-height: 3.0rem;;
+
+	} @else {
+		font-size:$size+px;
+		line-height: 1.5;
+	}
+}
+

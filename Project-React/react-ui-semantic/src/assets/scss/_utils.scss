@@ -1,0 +1,284 @@
+/*-------------------------------------------------------------------
+	분류그룹 : 유틸리티
+	속성순서 : 레이아웃, 크기여백, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @General
+-------------------------------------------------------------------*/
+/* System */
+.blind {
+	position: fixed;
+	overflow: hidden;
+	border: 0;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+}
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-locked-all {
+	overflow: hidden;
+}
+
+.is-locked-ios {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Layout */
+.in_sec {
+	padding-left: $gapSideBase;
+	padding-right: $gapSideBase;
+}
+
+.out_sec {
+	margin-left: calc(-1 * $gapSideBase);
+	margin-right: calc(-1 * $gapSideBase);
+}
+
+/* Margin */
+.mar_0 {
+	margin: 0 !important;
+}
+
+.mar_t0 {
+	margin-top: 0 !important;
+}
+
+.mar_r0 {
+	margin-right: 0 !important;
+}
+
+.mar_b0 {
+	margin-bottom: 0 !important;
+}
+
+.mar_l0 {
+	margin-left: 0 !important;
+}
+
+/* Padding */
+.pad_0 {
+	padding: 0 !important
+}
+
+.pad_t0 {
+	padding-top: 0 !important
+}
+
+.pad_r0 {
+	padding-right: 0 !important
+}
+
+.pad_b0 {
+	padding-bottom: 0 !important
+}
+
+.pad_l0 {
+	padding-left: 0 !important
+}
+
+/* Border */
+.line_0 {
+	border-width: 0 !important;
+}
+
+.line_t0 {
+	border-top-width: 0 !important;
+}
+
+.line_r0 {
+	border-right-width: 0 !important;
+}
+
+.line_b0 {
+	border-bottom-width: 0 !important;
+}
+
+.line_l0 {
+	border-left-width: 0 !important;
+}
+
+/* Align - Inline */
+.align_t {
+	vertical-align: top !important;
+}
+
+.align_m {
+	vertical-align: middle !important;
+}
+
+.align_b {
+	vertical-align: bottom !important;
+}
+
+.align_l {
+	text-align: left !important;
+}
+
+.align_c {
+	text-align: center !important;
+}
+
+.align_r {
+	text-align: right !important;
+}
+
+.align_j {
+	text-align: justify;
+	-moz-text-align-last: justify;
+	-webkit-text-align-last: justify;
+	text-align-last: justify;
+}
+
+/* 말줄임 */
+.ellipsis1 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ellipsis2 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.ellipsis3 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/*-------------------------------------------------------------------
+	@Grid
+-------------------------------------------------------------------*/
+/* Grid */
+.grid {
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.col {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+
+/* Column */
+.col.auto {
+	width: auto;
+}
+
+.col.col_1 {
+	width: 8.33333333%;
+}
+
+.col.col_2 {
+	width: 16.6666%;
+}
+
+.col.col_3 {
+	width: 25%;
+}
+
+.col.col_4 {
+	width: 33.3333%;
+}
+
+.col.col_5 {
+	width: 41.66666667%;
+}
+
+.col.col_6 {
+	width: 50%;
+}
+
+.col.col_7 {
+	width: 58.33333333%;
+}
+
+.col.col_8 {
+	width: 66.66666667%;
+}
+
+.col.col_9 {
+	width: 75%;
+}
+
+.col.col_10 {
+	width: 83.33333334%;
+}
+
+.col.col_11 {
+	width: 91.66666667%;
+}
+
+.col.col_12 {
+	width: 100%;
+}
+
+/*-------------------------------------------------------------------
+	@Colors
+-------------------------------------------------------------------*/
+/* 팔레트 */
+.bg_light {
+	background-color: #f8f8f8;
+}
+.bg_black {
+	background-color: #000;
+	color: #fff;
+}
+.bg_dark {
+	background-color: #333;
+	color: #fff;
+}
+.bg_opacity {
+	background-color: transparent;
+}
+
+/* 강조 */
+.bg_primary {
+	background-color: $colorPrimary;
+}
+
+.text_primary {
+	color: $colorPrimary;
+}
+
+.line_primary {
+	border-color: $colorPrimary;
+}
+
+.bg_secondary {
+	background-color: $colorSecondary;
+}
+
+.text_secondary {
+	color: $colorSecondary;
+}
+
+.line_secondary {
+	border-color: $colorSecondary;
+}

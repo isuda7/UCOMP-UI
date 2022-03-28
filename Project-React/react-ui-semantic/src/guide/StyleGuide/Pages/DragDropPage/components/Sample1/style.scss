@@ -1,0 +1,12 @@
+.dragdrop_item {
+	display:flex;
+	justify-content: space-between;
+	padding:1.0rem;
+	background:#eee;
+	&.is_active {
+		background:lightgreen;
+	}
+	& + & {
+		margin-top:0.2rem;
+	}
+}

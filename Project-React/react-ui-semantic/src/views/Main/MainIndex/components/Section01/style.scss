@@ -1,0 +1,17 @@
+@import '../../../../../assets/scss/variables';
+@import '../../../../../assets/scss/mixins';
+
+/* Event Section */
+.main_event_sec .main_event_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15.0rem;
+    background-color: lightgray;
+}
+.main_event_sec .main_event_swiper .swiper-controller {
+    position:absolute;
+    left:0;
+    bottom:1.0rem;
+    width:100%;
+}

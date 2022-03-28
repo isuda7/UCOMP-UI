@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------
+	분류그룹 : Components
+	속성순서 : 레이아웃, 크기여백, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/* Swiper */
+.swiper {
+	position: relative;
+}
+
+.swiper>.swiper-button-prev,
+.swiper>.swiper-button-next {
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.swiper>.swiper-container>.swiper-button-prev,
+.swiper>.swiper-container>.swiper-button-next {
+	display: none;
+}
+
+.swiper .swiper-pagination {
+	display: flex;
+	justify-content: center;
+	position:static;
+	width: 100%;
+	bottom: 1.0rem;
+}
+
+.swiper .swiper-pagination-bullet {
+	margin: 0 0.3rem;
+}
+
+.swiper .swiper-controller {
+	position: relative;
+	z-index: 1;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper .swiper-controller .swiper-pagination {
+	width:auto;
+}
+.swiper .swiper-controller .swiper-pagination + .swiper-autoplay {
+	margin-left:1.0rem;
+}
+
+/* Section */
+.sec_head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.sec h2,
+.sec h3,
+.sec h4,
+.sec p {
+	font-family: inherit;
+	margin: 0;
+	line-height: inherit;
+}

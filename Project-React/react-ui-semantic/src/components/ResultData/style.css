@@ -1,0 +1,5 @@
+.result_data {text-align: center;}
+.result_data.is_successed {color: var($colorsuccessed)}
+.result_data.is_failed {color: var($colorfailed)}
+.result_data .img {display:block;}
+.result_data .img + .msg {margin-top:10px;}
