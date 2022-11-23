@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Prototype extends Component {
-    render() {
-        return (
-			<div>
-				Prototype Area
-			</div>
-		)
-    }
+const Prototype = () => {
+	return (
+		<div>
+			Prototype Area
+		</div>
+	)
 }
 export default Prototype;

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './resources/css/base.css';
-import './resources/css/layout.css';
-import './resources/css/utilities.css';
+import './assets/css/base.css';
+import './assets/css/layout.css';
+import './assets/css/utilities.css';
 
 ReactDOM.render(
   <React.StrictMode>

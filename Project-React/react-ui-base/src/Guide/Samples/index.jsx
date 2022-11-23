@@ -1,10 +1,10 @@
 import React from 'react';
 
-const PageList = () => {
+const PagSampleseList = () => {
 	return (
 		<div>
 			PageList Area
 		</div>
 	)
 }
-export default PageList;
+export default Samples;

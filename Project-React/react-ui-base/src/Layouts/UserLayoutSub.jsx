@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import UserHeader from "./UserHeader";
 import UserFooter from "./UserFooter";
 
-const UserLayoutSub = ({children}) => {
+const UserLayoutSub = () => {
 	return (
 		<div className='wrapper sub'>
 			<UserHeader />
