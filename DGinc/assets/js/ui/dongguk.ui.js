@@ -11,3 +11,32 @@ function dropdown(id, btn){
         }
     })
 }
+
+function setPage(idx) {
+	if (idx === 0){
+		var swiper = new Swiper(".main-swiper", {
+			direction: "vertical",
+			loop: true,
+			speed: 600,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".main-swiper-pagination",
+			},
+		});
+	} else {
+		var $window = $(window);
+		var $container = $('.container');
+		var $items = $('.gnb-item');
+		$items.eq(idx - 1).addClass('is-current');
+		$window.off('scroll.sub').on('scroll.sub', function(){
+			if ($window.scrollTop() > 176) {
+				$container.addClass('is-fixed');
+			} else {
+				$container.removeClass('is-fixed');
+			}
+		})
+	}
+}

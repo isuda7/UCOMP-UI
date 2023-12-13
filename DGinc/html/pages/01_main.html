@@ -17,20 +17,20 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper main-wrapper">
 		<!-- Header -->
 		<header class="header">
 			<div class="header-inner in-sec">
 				<div class="logo-area">
-					<div class="logo"><img src="../../assets/images/logo_dongguk.png" alt="dongguk UNIVERSITY LINC" />
-					</div>
+					<a href="./01_main.html" class="logo"><img src="../../assets/images/logo_dongguk.png" alt="dongguk UNIVERSITY LINC" />
+					</a>
 				</div>
 				<div class="gnb-area">
 					<ul class="gnb">
-						<li class="gnb-item"><a href="#" class="btn btn-gnb">사업 안내</a></li>
-						<li class="gnb-item"><a href="#" class="btn btn-gnb">기업 절차</a></li>
-						<li class="gnb-item"><a href="#" class="btn btn-gnb">사용 안내</a></li>
-						<li class="gnb-item"><a href="#" class="btn btn-gnb">사용 기준</a></li>
+						<li class="gnb-item"><a href="./02_bizInfo.html" class="btn btn-gnb">사업 안내</a></li>
+						<li class="gnb-item"><a href="./03_regiProcess.html" class="btn btn-gnb">기업 절차</a></li>
+						<li class="gnb-item"><a href="./04_useInfo.html" class="btn btn-gnb">사용 안내</a></li>
+						<li class="gnb-item"><a href="./05_useStandard.html" class="btn btn-gnb">사용 기준</a></li>
 					</ul>
 				</div>
 				<div class="btn-area">
@@ -54,6 +54,7 @@
 				<i class="icn icn-list"></i>
 				<span>자료실</span>
 			</a>
+			<p class="aside-unvsity"><span>DONGGUK UNIVERSITY</span></p>
 		</aside>
 		<!-- //Sidebar -->
 
@@ -65,10 +66,10 @@
 						DONGGUK UNIVERSITY
 					</p>
 					<p class="main-title">
-						<strong>사회와 동행하여 국가발전을 <br>선도하는 열린 대학</strong>
+						<strong>미래산업 발전에<br>공헌하는 열린 대학</strong>
 					</p>
 					<P class="main-explain">
-						동국대학교 LINC 3.0 사업단은 사회수요 창출형 인새양성과 <br>CSI기반 행복산업 육성을 목표로 하고 있습니다.
+						동국대학교 LINC 3.0사업단은 D.R.E.A.M 인재 양성 및 N행복산업 <br>고부가가치 창출을 통한 산학협력 공유 생태계 구축을 목표로 하고 있습니다.
 					</P>
 				</div>
 				<div class="swiper main-swiper">
@@ -113,18 +114,8 @@
 	</div>
 
 	<script>
-		var swiper = new Swiper(".main-swiper", {
-			direction: "vertical",
-			loop: true,
-			speed: 600,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
-			},
-			pagination: {
-				el: ".main-swiper-pagination",
-			},
-		});
+		// Set Page
+		setPage(0);
 	  </script>
 </body>
 

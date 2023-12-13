@@ -9,112 +9,195 @@
 	<meta name="keywords" content="동국대학교 산업협력 바우처">
 	<meta name="description" content="동국대학교 산업협력 바우처">
 	<title>동국대학교 산업협력 바우처</title>
-	<link rel="stylesheet" href="../../assets/css/dongguk.comm.css" />
-	<link rel="stylesheet" href="../../assets/css/dongguk.styles.css" />
+	<link rel="stylesheet" href="../../assets/css/dongguk.css" />
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/ui/dongguk.ui.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper sub-wrapper">
 		<!-- Header -->
-		<header class="header"></header>
+		<header class="header">
+			<div class="header-inner in-sec">
+				<div class="logo-area">
+					<a href="./01_main.html" class="logo"><img src="../../assets/images/logo_dongguk.png" alt="dongguk UNIVERSITY LINC" />
+					</a>
+				</div>
+				<div class="gnb-area">
+					<ul class="gnb">
+						<li class="gnb-item"><a href="./02_bizInfo.html" class="btn btn-gnb">사업 안내</a></li>
+						<li class="gnb-item"><a href="./03_regiProcess.html" class="btn btn-gnb">기업 절차</a></li>
+						<li class="gnb-item"><a href="./04_useInfo.html" class="btn btn-gnb">사용 안내</a></li>
+						<li class="gnb-item"><a href="./05_useStandard.html" class="btn btn-gnb">사용 기준</a></li>
+					</ul>
+				</div>
+				<div class="btn-area">
+					<button type="button" class="btn btn-login icn-left" onclick="dropdown('#dropDownLogin', this)">
+						<i class="icn icn-link"></i><span>로그인</span>
+					</button>
+					<div id="dropDownLogin" class="drop-menu">
+						<div class="drop-menu-list">
+							<a href="#" class="btn">회원사</a>
+							<a href="#" class="btn">교원</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 		<!-- // Header -->
 
+		<!-- Sidebar -->
+		<aside class="aside">
+			<a href="#" class="btn">
+				<i class="icn icn-list"></i>
+				<span>자료실</span>
+			</a>
+			<p class="aside-unvsity"><span>DONGGUK UNIVERSITY</span></p>
+		</aside>
+		<!-- //Sidebar -->
+
 		<!-- Container -->
-		<main role="main" class="container">
+		<main role="main" class="container biz-container">
 			<div id="content" class="content in-sec">
-				<h1 class="h1">사업안내</h1>
-				<h2 class="h2">동국패밀리 프리미엄 CLUB 산학협력 바우처란?</h2>
-				<p>동국패밀리는 동국대학교와 유기적인 협력 관계를 구축하여 기업-대학 간 상호 발전을 도모하는 기업지원 제도입니다. 특히, 프리미엄 CLUB 멤버십 가입을 통해 동국대학교만의 체계적이고
-					전문화된 다양한 기업 맞춤형 프로그램을 지원하고 있으며 CLUB 가입금액별로 산학협력 바우처 포인트를 차별적으로 제공하고 있습니다.</p>
+				<div class="section">
+					<div class="h1-header">
+						<h1 class="h1">동국패밀리 프리미엄 CLUB <br>산학협력 바우처란?</h1>
+						<p class="h1-explain">동국패밀리는 동국대학교와 유기적인 협력 관계를 구축하여 기업-대학 간 상호 발전을 도모하는 기업지원 제도입니다. 특히, 프리미엄 CLUB 멤버십 가입을 통해 동국대학교만의 체계적이고
+							전문화된 다양한 기업 맞춤형 프로그램을 지원하고 있으며 CLUB 가입금액별로 산학협력 바우처 포인트를 차별적으로 제공하고 있습니다.</p>
+					</div>
+					<div class="h1-body">
+						<div class="h2-header">
+							<h2 class="h2">동국패밀리 프리미엄 CLUB 유형</h2>
+						</div>
+						<div class="h2-body">
+							<div class="tbl-wrap">
+								<table class="tbl">
+									<colgroup>
+										<col width="25%" />
+										<col width="25%" />
+										<col width="25%" />
+										<col width="25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>
+												<p>구분</p>
+											</th>
+											<th colspan="3">
+												<p>동국패밀리 프리미엄 CLUB 유형</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p>CLUB</p>
+												<p>가입비</p>
+											</td>
+											<td>
+												<p><img src="../../assets/images/icn-club-a.png" alt="CLUB A" class="img-club" /></p>
+												<p>1백만원 이상 </p>
+												<p>5백만원 미만</p>
+											</td>
+											<td>
+												<p><img src="../../assets/images/icn-club-a.png" alt="CLUB AA" class="img-club" /></p>
+												<p>5백만원 이상 </p>
+												<p>1천만원 미만</p>
+											</td>
+											<td>
+												<p><img src="../../assets/images/icn-club-a.png" alt="CLUB AAA" class="img-club" /></p>
+												<p>1천만원 이상</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>산학협력 </p>
+												<p>바우처 포인트(점)</p>
+											</td>
+											<td>
+												<p>입금액의 100% 바우처 포인트 제공</p>
+											</td>
+											<td>
+												<p>입금액의 110% 바우처 포인트 제공</p>
+											</td>
+											<td>
+												<p>입금액의 120% 바우처 포인트 제공</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>유효기간</p>
+											</td>
+											<td>
+												<p>입금일로부터 1년</p>
+											</td>
+											<td colspan="2">
+												<p>입금일로부터 2년</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl-footer">
+								<p class="desc">
+									<i class="icn icn-desc"></i>동국패밀리 프리미엄 CLUB 가입비는 부가가치세(VAT)는 별도 납부
+								</p>
+							</div>
+						</div>
 
-				<h2 class="h2">동국패밀리 프리미엄 CLUB 유형</h2>
-				<table>
-					<colgroup>
-						<col width="25%" />
-						<col width="25%" />
-						<col width="25%" />
-						<col width="25%" />
-					</colgroup>
-					<tbody>
-						<tr>
-							<td>
-								<p>구분</p>
-							</td>
-							<td colspan="3">
-								<p>동국패밀리 프리미엄 CLUB 유형</p>
-							</td>
-						</tr>
-					<tbody>
-						<tr>
-							<td rowspan="2">
-								<p>CLUB</p>
-								<p>가입비</p>
-							</td>
-							<td>
-								<p>A CLUB</p>
-							</td>
-							<td>
-								<p>AA&nbsp;CLUB</p>
-							</td>
-							<td>
-								<p>AAA CLUB</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>1백만원 이상 </p>
-								<p>5백만원 미만</p>
-							</td>
-							<td>
-								<p>5백만원 이상 </p>
-								<p>1천만원 미만</p>
-							</td>
-							<td>
-								<p>1천만원 이상</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>산학협력 </p>
-								<p>바우처 포인트(점)</p>
-							</td>
-							<td>
-								<p>입금액의 100% 바우처 포인트 제공</p>
-							</td>
-							<td>
-								<p>입금액의 110% 바우처 포인트 제공</p>
-							</td>
-							<td>
-								<p>입금액의 120% 바우처 포인트 제공</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>유효기간</p>
-							</td>
-							<td>
-								<p>입금일로부터 1년</p>
-							</td>
-							<td colspan="2">
-								<p>입금일로부터 2년</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<p>※ 동국패밀리 프리미엄 CLUB 가입비는 부가가치세(VAT)는 별도 납부</p>
+						<div class="cs-center-wrap">
+							<dl class="cs-center">
+								<dt>문의처</dt>
+								<dd>
+									동국대 산학연협업센터&nbsp;
+									<a href="tel:02-2260-8693">
+										02-2260-8693<i class="icn icn-duplicate" aria-label="복사하기"></i>
+									</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
 
-				<h2 class="h2">문의처</h2>
-				<p>동국대 산학연협업센터(☎ 02-2260-8693)</p>
 			</div>
 		</main>
 		<!-- // Container -->
 
 		<!-- Footer -->
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="footer-inner in-sec">
+				<div class="left-area">
+					<div class="contact">
+						<div class="contact-link">
+							<a href="#" class="btn">개인정보처리방침</a>
+						</div>
+						<div class="contact-cs">
+							<strong class="tit">담당자</strong>
+							<span class="txt">동국대 산학연협업센터</span>
+							<span class="split"></span>
+							<strong class="tit">연락처</strong>
+							<span class="txt">02-2260-8693</span>
+						</div>
+					</div>
+					<div class="copyright">
+						<p>© Copright 2023 동국대학교 LINC 3.0 사업단</p>
+					</div>
+				</div>
+				<div class="right-area">
+					<button type="button" class="btn btn-admin icn-left"><i class="icn icn-link"></i>관리자
+						로그인</button>
+				</div>
+			</div>
+		</footer>
 		<!-- // Footer -->
 	</div>
+
+	<script>
+		// Set Page
+		setPage(1);
+	</script>
 </body>
 
 </html>
