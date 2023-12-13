@@ -46,6 +46,27 @@
 	-webkit-mask: url('../images/icn-desc.svg') no-repeat center center / 100% auto;
 }
 
+/* Section */
+.h1-header {}
+.h1 {font-size: 36rem; line-height: 48rem; font-weight: 700;}
+.h1 em {color: var(--color-primary);}
+.h1-explain {font-size: 18rem    ; margin-top: 20rem;}
+
+.h2-section {margin-top: 60rem;}
+.h2-header {margin-bottom: 20px;}
+.h2 {font-size: 24rem; line-height: 32rem; font-weight: 600;}
+
+/* Tables */
+.tbl-scroll {overflow: auto;}
+.tbl {position: relative; table-layout: fixed; border-collapse: collapse; border-top: 1px solid #666; min-width: calc(768px - 40px); width: 100%;}
+.tbl thead th {height: 70rem; background-color: #FAFAFA; font-size: 18rem; border-bottom: 1px solid #EEEEEE; line-height: 26rem; font-weight: 600; text-align: center; vertical-align: middle;}
+.tbl tbody td {height: 74rem; padding: 24rem 16rem; background-color: #ffffff; border-bottom: 1px solid #EEEEEE;font-size: 18rem; line-height: 26rem; font-weight: 400; text-align: center; vertical-align: middle; word-break: keep-all;}
+.tbl.v-lined tbody td {border-right: 1px solid #eee;}
+.tbl.v-lined::after {content:''; display: block; position: absolute; right: 0; top: 0; height: 100%; width: 1px; background-color: #fff;}
+.tbl-footer {margin-top: 16px;}
+.tbl-footer .desc {position: relative; padding-left: 24px; font-size: max(12px, 14rem); line-height: max(18px, 20rem); font-weight: 400; color: #666666;}
+.tbl-footer .desc .icn {position: absolute; left: 0; top: 0; width: 20px; height: 20px; background-color: var(--color-primary);}
+
 /*-------------------------------------------------------------------
 	@@메인 Page
 -------------------------------------------------------------------*/
@@ -72,21 +93,6 @@
 .main-swiper-pagination .swiper-pagination-bullet-active {width:8px; height: 16px; background-color:var(--color-primary) ; opacity: 1;}
 .main-swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {margin-top:18px;}
 
-/* Section */
-.h1-header {margin-bottom: 60rem;}
-.h1 {font-size: 36rem; line-height: 48rem; font-weight: 700;}
-.h1-explain {margin-top: 20rem;}
-
-.h2-header {margin-bottom: 20px;}
-.h2 {font-size: 24rem; line-height: 32rem; font-weight: 600;}
-
-/* Tables */
-.tbl-wrap {overflow: auto;}
-.tbl {table-layout: fixed; border-spacing: collapse; border-top: 1px solid #666; min-width: 640px; width: 100%;}
-.tbl thead th {height: 70rem; background-color: #FAFAFA; font-size: 18rem; border-bottom: 1px solid #EEEEEE; line-height: 26rem; font-weight: 600; text-align: center; vertical-align: middle;}
-.tbl tbody td {height: 74rem; padding: 24rem; background-color: #ffffff; border-bottom: 1px solid #EEEEEE;font-size: 18rem; line-height: 26rem; font-weight: 400; text-align: center; vertical-align: middle;}
-.tbl-footer {margin-top: 16rem;}
-
 /*-------------------------------------------------------------------
 	@@서브공통 Page
 -------------------------------------------------------------------*/
@@ -99,22 +105,41 @@
 
 /* 문의처 */
 .cs-center-wrap {margin-top: 60rem;}
-.cs-center {display: flex; flex-wrap: wrap; align-items: center; gap: 20rem; padding:22rem 24rem; background-color: #FAFAFA; border: 1px solid #EEEEEE; font-size: 16rem; line-height: 24rem;}
+.cs-center {display: flex; flex-wrap: wrap; align-items: center; gap:10rem         20rem; padding:22rem 24rem; background-color: #FAFAFA; border: 1px solid #EEEEEE; font-size: 16rem; line-height: 24rem;}
 .cs-center dt {color:var(--color-primary); font-weight: 600;}
 .cs-center dd {display: flex; flex-wrap: wrap;}
 .cs-center dd a {display: flex; align-items: center;}
 .cs-center dd .icn {margin-left: 4rem; width: 24rem; height: 24rem; background-color: #999999; vertical-align: middle;}
+
+/* 절차안내 */
+.prgrs-wrap {width: 100%; overflow: auto;}
+.prgrs-wrap img {width: 100%; min-width: 900px;}
 
 /*-------------------------------------------------------------------
 	@@사업안내 Page
 -------------------------------------------------------------------*/
 /* Layout */
 .biz-container .img-club {width: 44px; height: 44px; margin-bottom: 12px; vertical-align: top;}
-.biz-container .tbl-footer .desc {position: relative; padding-left: 24px; font-size: 14px; line-height: 20px; font-weight: 400; color: #666666;}
-.biz-container .tbl-footer .desc .icn {position: absolute; left: 0; top: 0; width: 20px; height: 20px; background-color: var(--color-primary);}
 
+/*-------------------------------------------------------------------
+	@@가입절차 Page
+-------------------------------------------------------------------*/
+.process-container .account-box {display: flex; justify-content:center; align-items: center; height: 126rem; border: 1px solid #EEEEEE;}
+.process-container .account-list {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 30px; font-size: 18rem; line-height: 26px; gap: 10rem 60rem;}
+.process-container .account-list li {display: flex; align-items: center; flex:1 1 auto;}
+.process-container .account-list li strong {font-weight: 700; margin-right: 14rem;}
+.process-container .account-list li span {display:flex; align-items: center; font-weight: 400;}
+.process-container .account-list .icn {margin-left: 4rem; width: 24rem; height: 24rem; background-color: #999999; vertical-align: middle;}
+.process-container .desc-check {margin-top: 16px;}
+.process-container .desc-check li {position: relative; padding-left: 24px; font-size: max(12px, 14rem); line-height: max(18px, 20rem);}
+.process-container .desc-check li + li {margin-top:4px;}
+.process-container .desc-check li .icn {position: absolute; left: 0; top: 0; width: 20px; height: 20px; background-color: #999999;}
+
+/*-------------------------------------------------------------------
+	@@Responsive
+-------------------------------------------------------------------*/
 @media (max-width: 1024px) {
 	.swiper.main-swiper {left: 0; width: 100%;}
-	.h1 {font-size: 24px;}
-	.h2 {font-size: 18px;}
+	/* .h1 {font-size: 36rem;}
+	.h2 {font-size: 24rem;} */
 }

@@ -62,13 +62,15 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .left-area {margin-right: auto;}
 .right-area {margin-left: auto;}
 
+/* Colors */
+.txt-primary {color: var(--color-primary);}
 
 /*-------------------------------------------------------------------
 	@Layout
 -------------------------------------------------------------------*/
 /* Default */
 body, html {height:100%;}
-html {font-size: 1px;}
+html {font-size: 1px; transition: all 0.4s ease;}
 body {color: #333; font-size:14px; line-height:1.5;}
 .wrapper {min-height:100%;}
 .wrapper, .container, .content, .content-body {display:flex; flex-direction:column; flex-grow:1; flex-basis:auto;}
@@ -131,17 +133,18 @@ body {color: #333; font-size:14px; line-height:1.5;}
 .footer .right-area .btn-admin .icn {background-color: #fff; width: 22px; height: 22px;}
 
 /* Sub Layout */
-.sub-wrapper .container {padding-top: 280px;}
-.sub-wrapper .container::before {content: ''; display: block; position: absolute; left: var(--aside-width); top: 0; height: 280px; width: 100%; background-color:#333; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+.sub-wrapper .container {padding-top: 280px; padding-bottom: 0 !important;}
+.sub-wrapper .container::before {content: ''; display: block; position: absolute; z-index: 90; left: var(--aside-width); top: 0; height: 280px; width: 100%; background-color:#333; background-repeat: no-repeat; background-position: center center; background-size: cover;}
 .sub-wrapper .container.is-fixed::before {position: fixed; top: -176px;}
-.sub-wrapper .content {padding-top: 80px; padding-bottom: 100px;}
-.sub-wrapper .footer {background-color: #fff; border-color:#EEEEEE; color: #444;}
+.sub-wrapper .content {padding-top: 80rem; padding-bottom: 100rem;}
+.sub-wrapper .footer {position: relative; background-color: #fff; border-color:#EEEEEE; color: #444;}
 .sub-wrapper .footer .left-area .contact .contact-link .btn {color: #000;}
 .sub-wrapper .footer .left-area .contact .contact-cs .txt {color: inherit;}
 .sub-wrapper .footer .left-area .copyright {color: #999;}
 
 
 @media (max-width: 1024px) {
+	html {font-size: 0.9px;}
 	.header {padding-left: 0;}
 	.container {padding-left: 0;}
 	.footer {padding-left: 0;}
