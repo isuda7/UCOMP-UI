@@ -17,12 +17,13 @@
 </head>
 
 <body>
-	<div class="wrapper main-wrapper">
+	<div class="wrapper login-wrapper">
 		<!-- Header -->
 		<header class="header">
 			<div class="header-inner in-sec">
 				<div class="logo-area">
-					<a href="./01_main.html" class="logo"><span class="blind">dongguk UNIVERSITY LINC</span></a>
+					<a href="./01_main.html" class="logo"><img src="../../assets/images/logo_dongguk_bk.png" alt="dongguk UNIVERSITY LINC" />
+					</a>
 				</div>
 				<div class="gnb-area">
 					<ul class="gnb">
@@ -58,27 +59,35 @@
 		<!-- //Sidebar -->
 
 		<!-- Container -->
-		<main role="main" class="container main-container">
-			<div id="content" class="content">
-				<div class="main-section in-sec">
-					<p class="main-name">
-						DONGGUK UNIVERSITY
-					</p>
-					<p class="main-title">
-						<strong>미래산업 발전에<br>공헌하는 열린 대학</strong>
-					</p>
-					<P class="main-explain">
-						동국대학교 LINC 3.0사업단은 D.R.E.A.M 인재 양성 및 N행복산업 <br>고부가가치 창출을 통한 산학협력 공유 생태계 구축을 목표로 하고 있습니다.
-					</P>
-				</div>
-				<div class="swiper main-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
+		<main role="main" class="container login-container">
+			<div id="content" class="content in-sec">
+				<div class="login-section">
+					<div class="h1-header">
+						<h1 class="h1"><em>로그인</em></h1>
+						<p>산학협력 바우처 회원사 로그인</p>
+					</div>
+					<div class="h1-body">
+						<form action="#" class="login-form">
+							<fieldset class="login-form-input">
+								<div class="input-group">
+									<label for="frmPW" class="icn icn-user"><span class="blind">아이디</span></label>
+									<input type="text" id="frmID" class="input" placeholder="아이디를 입력해 주세요." />
+								</div>
+								<div class="input-group">
+									<label for="frmPW" class="icn icn-password"><span class="blind">비밀번호</span></label>
+									<input type="password" id="frmPW" class="input" placeholder="비밀번호를 입력해 주세요." />
+								</div>
+							</fieldset>
+							<div class="login-form-action">
+								<button type="submit" class="btn btn-submit">로그인</button>
+							</div>
+							<div class="login-form-desc">
+								<p class="desc">비밀번호 분실 시 동국대 산학연협업센터로 문의 바랍니다.</p>
+								<p class="tel">02-2260-8693<i class="icn icn-duplicate" aria-label="복사하기"></i></p>
+							</div>
+						</form>
 					</div>
 				</div>
-				<div class="main-swiper-pagination"></div>
 			</div>
 		</main>
 		<!-- // Container -->
@@ -111,11 +120,6 @@
 		</footer>
 		<!-- // Footer -->
 	</div>
-
-	<script>
-		// Set Page
-		setPage(0);
-	  </script>
 </body>
 
 </html>

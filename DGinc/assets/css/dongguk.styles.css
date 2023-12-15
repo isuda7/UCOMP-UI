@@ -1,5 +1,5 @@
 /*-------------------------------------------------------------------
-	@@Components
+	@@공통 스타일
 -------------------------------------------------------------------*/
 /* Default */
 .btn {flex:none; display: inline-flex; justify-content: center; align-items: center; vertical-align: middle; border:1px solid transparent; line-height: 1; transition: all 0.2s ease;}
@@ -67,6 +67,18 @@
 .tbl-footer .desc {position: relative; padding-left: 24px; font-size: max(12px, 14rem); line-height: max(18px, 20rem); font-weight: 400; color: #666666;}
 .tbl-footer .desc .icn {position: absolute; left: 0; top: 0; width: 20px; height: 20px; background-color: var(--color-primary);}
 
+/* 문의처 */
+.cs-center-wrap {margin-top: 60rem;}
+.cs-center {display: flex; flex-wrap: wrap; align-items: center; gap:10rem 20rem; padding:22rem 24rem; background-color: #FAFAFA; border: 1px solid #EEEEEE; font-size: 16rem; line-height: 24rem;}
+.cs-center dt {color:var(--color-primary); font-weight: 600;}
+.cs-center dd {display: flex; flex-wrap: wrap;}
+.cs-center dd a {display: flex; align-items: center;}
+.cs-center dd .icn {margin-left: 4rem; width: 24rem; height: 24rem; background-color: #999999; vertical-align: middle;}
+
+/* 절차안내 */
+.prgrs-wrap {width: 100%; overflow: auto;}
+.prgrs-wrap img {width: 100%; min-width: 900px;}
+
 /*-------------------------------------------------------------------
 	@@메인 Page
 -------------------------------------------------------------------*/
@@ -76,9 +88,9 @@
 
 /* Contents */
 .main-section {position: relative; z-index: 20; display:flex; flex-direction: column; justify-content: center; align-items: center; color:#fff; text-align: center;}
-.main-section .main-name {color: var(--color-secondary-light); letter-spacing: 8px; font-size: 14px; font-weight: 900; line-height: 20px;}
-.main-section .main-title {margin-top: 44px; font-size: 58px; line-height: 72px; font-weight: 700;}
-.main-section .main-explain {margin-top: 20px; font-size: 20px; line-height: 30px; font-weight: 500; color: rgba(255,255,255,0.8);}
+.main-section .main-name {color: var(--color-secondary-light); letter-spacing: 8rem; font-size: 14rem; font-weight: 900; line-height: 20rem;}
+.main-section .main-title {margin-top: 44rem; font-size: 58rem; line-height: 72rem; font-weight: 700;}
+.main-section .main-explain {margin-top: 20rem; font-size: 20rem; line-height: 30rem; font-weight: 500; color: rgba(255,255,255,0.8);}
 
 .swiper.main-swiper,
 .swiper.main-swiper .swiper-wrapper,
@@ -94,28 +106,6 @@
 .main-swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {margin-top:18px;}
 
 /*-------------------------------------------------------------------
-	@@서브공통 Page
--------------------------------------------------------------------*/
-/* Sub Visual */
-.biz-container::before {background-image: url('../images/visual-main-01.jpg');}
-.process-container::before {background-image: url('../images/visual-main-01.jpg');}
-.info-container::before {background-image: url('../images/visual-main-01.jpg');}
-.std-container::before {background-image: url('../images/visual-main-01.jpg');}
-.login-container::before {background-image: url('../images/visual-main-01.jpg');}
-
-/* 문의처 */
-.cs-center-wrap {margin-top: 60rem;}
-.cs-center {display: flex; flex-wrap: wrap; align-items: center; gap:10rem         20rem; padding:22rem 24rem; background-color: #FAFAFA; border: 1px solid #EEEEEE; font-size: 16rem; line-height: 24rem;}
-.cs-center dt {color:var(--color-primary); font-weight: 600;}
-.cs-center dd {display: flex; flex-wrap: wrap;}
-.cs-center dd a {display: flex; align-items: center;}
-.cs-center dd .icn {margin-left: 4rem; width: 24rem; height: 24rem; background-color: #999999; vertical-align: middle;}
-
-/* 절차안내 */
-.prgrs-wrap {width: 100%; overflow: auto;}
-.prgrs-wrap img {width: 100%; min-width: 900px;}
-
-/*-------------------------------------------------------------------
 	@@사업안내 Page
 -------------------------------------------------------------------*/
 /* Layout */
@@ -127,13 +117,33 @@
 .process-container .account-box {display: flex; justify-content:center; align-items: center; height: 126rem; border: 1px solid #EEEEEE;}
 .process-container .account-list {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 30px; font-size: 18rem; line-height: 26px; gap: 10rem 60rem;}
 .process-container .account-list li {display: flex; align-items: center; flex:1 1 auto;}
-.process-container .account-list li strong {font-weight: 700; margin-right: 14rem;}
-.process-container .account-list li span {display:flex; align-items: center; font-weight: 400;}
+.process-container .account-list li .tit {font-weight: 700; margin-right: 14rem;}
+.process-container .account-list li .txt {display:flex; align-items: center; font-weight: 400;}
 .process-container .account-list .icn {margin-left: 4rem; width: 24rem; height: 24rem; background-color: #999999; vertical-align: middle;}
 .process-container .desc-check {margin-top: 16px;}
 .process-container .desc-check li {position: relative; padding-left: 24px; font-size: max(12px, 14rem); line-height: max(18px, 20rem);}
 .process-container .desc-check li + li {margin-top:4px;}
 .process-container .desc-check li .icn {position: absolute; left: 0; top: 0; width: 20px; height: 20px; background-color: #999999;}
+
+/*-------------------------------------------------------------------
+	@@Login Page
+-------------------------------------------------------------------*/
+.login-container .content {display: flex; align-items: center; justify-content: center;}
+.login-section {width: 100%; max-width: 360px; margin: auto;}
+.login-section .h1-header {text-align: center;}
+.login-section .h1-header .h1 {font-size: 48rem; line-height: 56rem; font-weight: 700;}
+.login-section .h1-header p {margin-top: 12px; font-size: 20rem; line-height: 30rem; font-weight: 500;}
+.login-form {margin-top:48px;}
+.login-form-input {display: flex; flex-direction: column; gap: 8px;}
+.login-form-input .input-group {position: relative;}
+.login-form-input .input-group input {width: 100%; height: 52px; padding-left: 48px; border-radius: 8px; font-size: 16px; line-height: 24px; border: 1px solid #DEDEDE; color: #111; outline: 0;}
+.login-form-input .input-group input::placeholder {color: #999;}
+.login-form-input .input-group .icn {position: absolute; left: 14px; top: 50%; width: 24px; height: 24px; background-color: #BBBBBB; transform: translateY(-50%);}
+.login-form-input .input-group:focus-within .icn {background-color: var(--color-primary);}
+.login-form-input .input-group:focus-within input {border-color: var(--color-primary);}
+.login-form-action {margin-top: 48px;}
+.login-form-desc {margin-top: 16px; font-size: 14px; line-height: 20px;}
+
 
 /*-------------------------------------------------------------------
 	@@Responsive

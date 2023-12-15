@@ -28,14 +28,14 @@ function setPage(idx) {
 		});
 	} else {
 		var $window = $(window);
-		var $container = $('.container');
+		var $wrapper = $('.wrapper');
 		var $items = $('.gnb-item');
 		$items.eq(idx - 1).addClass('is-current');
 		$window.off('scroll.sub').on('scroll.sub', function(){
-			if ($window.scrollTop() > 176) {
-				$container.addClass('is-fixed');
+			if ($window.scrollTop() > 280) {
+				$wrapper.addClass('is-dark');
 			} else {
-				$container.removeClass('is-fixed');
+				$wrapper.removeClass('is-dark');
 			}
 		})
 	}

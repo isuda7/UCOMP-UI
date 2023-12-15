@@ -1,9 +1,10 @@
 /* Variables */
 :root {
 	--aside-width: 80px;
-	--header-height: 80px;
+	--header-height: 104rem;
 	--content-padding: 20px;
 	--content-width: 1240px;
+	--sub-visual-height: 280px;
 
 	--color-primary-light4: #FFD0AD;
 	--color-primary-light3: #FFB781;
