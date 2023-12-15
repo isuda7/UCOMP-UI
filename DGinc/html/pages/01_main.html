@@ -33,17 +33,34 @@
 					</ul>
 				</div>
 				<div class="btn-area">
-					<button type="button" class="btn btn-login icn-left" onclick="dropdown('#dropDownLogin', this)">
-						<i class="icn icn-link"></i><span>로그인</span>
-					</button>
-					<div id="dropDownLogin" class="drop-menu">
-						<div class="drop-menu-list">
-							<a href="./06_login_member.html" class="btn">회원사</a>
-							<a href="./06_login_teacher.html" class="btn">교원</a>
+					<div class="drop-wrap">
+						<button type="button" class="btn btn-login icn-left" onclick="dropdown('#dropDownLogin', this)">
+							<i class="icn icn-link"></i><span>로그인</span>
+						</button>
+						<div id="dropDownLogin" class="drop-menu">
+							<div class="drop-menu-list">
+								<a href="./06_login_member.html" class="btn">회원사</a>
+								<a href="./06_login_teacher.html" class="btn">교원</a>
+							</div>
 						</div>
 					</div>
+					<button type="button" class="btn-icn btn-menu" onclick="mobileNav('#mobileNav', this)">
+						<i class="icn icn-menu"></i><span class="blind">모바일 메뉴</span>
+					</button>
 				</div>
 			</div>
+
+			<!-- Mobile Menu -->
+			<div class="mnb-area" id="mobileNav">
+				<ul class="mnb">
+					<li class="mnb-item"><a href="./02_bizInfo.html" class="btn btn-mnb">사업 안내</a></li>
+					<li class="mnb-item"><a href="./03_regiProcess.html" class="btn btn-mnb">기업 절차</a></li>
+					<li class="mnb-item"><a href="./04_useInfo.html" class="btn btn-mnb">사용 안내</a></li>
+					<li class="mnb-item"><a href="./05_useStandard.html" class="btn btn-mnb">사용 기준</a></li>
+				</ul>
+				<div class="dimmer"></div>
+			</div>
+			<!-- //Mobile Menu -->
 		</header>
 		<!-- // Header -->
 
@@ -68,14 +85,15 @@
 						<strong>미래산업 발전에<br>공헌하는 열린 대학</strong>
 					</p>
 					<P class="main-explain">
-						동국대학교 LINC 3.0사업단은 D.R.E.A.M 인재 양성 및 N행복산업 <br>고부가가치 창출을 통한 산학협력 공유 생태계 구축을 목표로 하고 있습니다.
+						<span class="pc-block">동국대학교 LINC 3.0사업단은 D.R.E.A.M 인재 양성 및 행복산업</span>
+						<span class="pc-block">고부가가치 창출을 통한 산학협력 공유 생태계 구축을 목표로 하고 있습니다.</span>
 					</P>
 				</div>
 				<div class="swiper main-swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
+						<!-- <div class="swiper-slide"></div>
+						<div class="swiper-slide"></div> -->
 					</div>
 				</div>
 				<div class="main-swiper-pagination"></div>
