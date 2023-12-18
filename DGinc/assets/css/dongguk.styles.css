@@ -160,6 +160,7 @@
 @media (max-width: 1024px) {
 	.swiper.main-swiper {left: 0; width: 100%;}
 	.main-swiper-pagination {display: none !important;}
+	.main-section .main-explain {max-width: 400px;}
 	/* .h1 {font-size: 36rem;}
 	.h2 {font-size: 24rem;} */
 }
