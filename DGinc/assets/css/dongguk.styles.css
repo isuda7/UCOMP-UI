@@ -55,8 +55,7 @@
 }
 
 /* Section */
-.h1-header {}
-.h1 {font-size: 36rem; line-height: 48rem; font-weight: 700;}
+.h1 {font-size: 34rem; line-height: 48rem; font-weight: 700;}
 .h1 em {color: var(--color-primary);}
 .h1-explain {font-size: 18rem    ; margin-top: 20rem;}
 
