@@ -229,6 +229,7 @@ body {color: #333; font-size:14px; line-height:1.5;}
 	.footer .right-area .btn-admin .icn {display: none;}
 }
 @media (max-width: 420px) {
+	html {font-size: 0.6px;}
 	.footer {height: 160px;}
 	.main-wrapper .container {padding-bottom: 160px;}
 	.footer .left-area {padding-top: 8px;}
@@ -236,5 +237,5 @@ body {color: #333; font-size:14px; line-height:1.5;}
 	.footer .left-area .copyright {color:#999999;}
 }
 @media (max-width: 320px) {
-	html {font-size: 0.7px;}
+	html {font-size: 0.6px;}
 }
