@@ -1,16 +1,16 @@
 @charset "utf-8";
 
 /*-------------------------------------------------------------------
-    ## Basic
+    @@ Basic
 -------------------------------------------------------------------*/
 /* Basic */
-#g-content {background-color:#fff;}
+.g-content {background-color:#fff;}
 
 /*-------------------------------------------------------------------
-    ## Primary
+    @@ Primary
 -------------------------------------------------------------------*/
 /* Default */
-#g-header {background-color:#ff5400;}
+.g-header {background-color:#ff5400;}
 .g-lnb > ul > li.is-current > a {color:#ff5400;}
 .g-snb .g-depth2 .g-node2.is-current > a,
 .g-snb .g-depth2 .g-node2 > a:focus,
@@ -36,8 +36,9 @@ a.g-top {background-color:#ff5400;}
 .g-btn-aside:before, .g-btn-aside:after, .g-btn-aside span {background-color:#fff;}
 
 /*-------------------------------------------------------------------
-    ## Responsive
+    @@ Responsive
 -------------------------------------------------------------------*/
 @media only screen and (max-width: 820px) {
 .g-lnb > .g-node-title {color:#ff5400; background-color:#fff;}
 .g-lnb > ul > li {background-color:#ff5400;}
+}

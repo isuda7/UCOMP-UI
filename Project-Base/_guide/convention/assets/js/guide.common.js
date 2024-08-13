@@ -59,7 +59,7 @@ var gCom = {
 		}
 	},
 	gHeader : {
-		headerEl : '#g-header',
+		headerEl : '.g-header',
 		init : function(){
 			this.setInit();
 			this.action();
@@ -204,7 +204,7 @@ var gUI = {
 			})
 		},
 		action : function(id){
-			var topH = $('#g-header').height();
+			var topH = $('.g-header').height();
 			var gapH = 30;
 			var scrObj = 'html, body';
 			if ($(id).length){

@@ -8,7 +8,6 @@
 -------------------------------------------------------------------*/
 /* System */
 .blind {position:fixed; overflow: hidden; border: 0; margin:-1px; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%);}
-.hidden {display:none !important;}
 .is-locked-all {overflow:hidden;}
 .is-locked-ios {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden;}
 
@@ -56,35 +55,35 @@
 
 /* Column */
 .col.auto {width:auto;}
-.col.col-1  {width:8.33333333%;}
-.col.col-2  {width:16.6666%;}
-.col.col-3  {width:25%;}
-.col.col-4  {width:33.3333%;}
-.col.col-5  {width:41.66666667%;}
-.col.col-6  {width:50%;}
-.col.col-7  {width:58.33333333%;}
-.col.col-8  {width:66.66666667%;}
-.col.col-9  {width:75%;}
-.col.col-10 {width:83.33333334%;}
-.col.col-11 {width:91.66666667%;}
-.col.col-12 {width:100%;}
+.col.col-1  {width:calc(100%/12 * 1);}
+.col.col-2  {width:calc(100%/12 * 2);}
+.col.col-3  {width:calc(100%/12 * 3);}
+.col.col-4  {width:calc(100%/12 * 4);}
+.col.col-5  {width:calc(100%/12 * 5);}
+.col.col-6  {width:calc(100%/12 * 6);}
+.col.col-7  {width:calc(100%/12 * 7);}
+.col.col-8  {width:calc(100%/12 * 8);}
+.col.col-9  {width:calc(100%/12 * 9);}
+.col.col-10 {width:calc(100%/12 * 10);}
+.col.col-11 {width:calc(100%/12 * 11);}
+.col.col-12 {width:calc(100%/12 * 12);}
 
 /*-------------------------------------------------------------------
 	@Colors
 -------------------------------------------------------------------*/
 /* 강조 */
-.bg-primary {background-color:#ff0;}
-.font-primary {color:#ff0;}
+.bg-primary {}
+.txt-primary {}
 
 /* 상태 */
-.bg-success {background-color:#0f0;}
-.font-success {color:#0f0;}
+.bg-success {}
+.txt-success {}
 
 /* 상품 */
-.bg-이름 {background-color:#0ff;}
-.font-이름 {color:#0ff;}
+.bg-이름 {}
+.txt-이름 {}
 
 /* 스킨 */
-.skin-이름 .skin-bg {background-color:#0ff;}
-.skin-이름 .skin-font {color:#0ff;}
-.skin-이름 .skin-line {border-color:#0ff;}
+.skin-이름 .skin-bg {}
+.skin-이름 .skin-txt {}
+.skin-이름 .skin-line {}

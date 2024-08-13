@@ -57,4 +57,4 @@
 }
 
 .is-aside-closed #g-aside {transform:translateX(-102%); -webkit-transform:translateX(-102%); -moz-transform:translateX(-102%); -ms-transform:translateX(-102%); -o-transform:translateX(-102%);}
-.is-aside-closed #g-content {padding-left:0;}
+.is-aside-closed .g-content {padding-left:0;}
