@@ -90,11 +90,11 @@
 .ia-tbl table .col-2depth,
 .ia-tbl table .col-3depth,
 .ia-tbl table .col-4depth,
-.ia-tbl table .col-5depth {width:10%;}
+.ia-tbl table .col-5depth {width:12.5%;}
 .ia-tbl table .col-point {width:60px;}
-.ia-tbl table .col-url {width:300px;}
+.ia-tbl table .col-url {width:360px;}
 .ia-tbl table .col-date {width:100px;}
-.ia-tbl table .col-complete {width:60px;}
+.ia-tbl table .col-complete {width:60px; display: none;}
 .ia-tbl table .col-worker {width:100px;}
 .ia-tbl table .col-memo {width:auto;}
 @media (max-width:1366px){
