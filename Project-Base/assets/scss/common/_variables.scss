@@ -1,0 +1,20 @@
+@charset 'utf-8';
+/*
+	변수 네이밍 규칙
+	--[속성]-[이름]-[상태]-[디바이스]:
+*/
+:root {
+	/* Layout: Frame */
+	--height-header: ;
+	--padding-sidespacer: ;
+
+	/* Color: Accent */
+	--color-primary: ;
+	--color-secondary: ;
+	--color-point1: ;
+
+	/* Color: Items */
+	--color-name1: ;
+	--color-name2: ;
+	--color-name3: ;
+}

@@ -11,4 +11,5 @@ body, html {height:100%;}
 .header, .footer, .content-header, .content-footer {flex:none;}
 
 /* Common */
+.out-sec {padding-left: var(--padding-sidespacer); padding-right: var(--padding-sidespacer);}
 .in-sec {width:1200px; margin-left:auto; margin-right:auto;}
