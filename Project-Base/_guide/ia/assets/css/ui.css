@@ -1,7 +1,6 @@
 /*-------------------------------------------------------------------
     파일정의 : 초기화 스타일
-    분류순서 : Base > Fonts
-    속성순서 : Display > Position > Box Model > Design > Paragraph
+    속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
     Layout
@@ -92,16 +91,16 @@
 .ia-tbl table .col-4depth,
 .ia-tbl table .col-5depth {width:12.5%;}
 .ia-tbl table .col-point {width:60px;}
-.ia-tbl table .col-url {width:360px;}
+.ia-tbl table .col-url {width:300px;}
 .ia-tbl table .col-date {width:100px;}
 .ia-tbl table .col-complete {width:60px; display: none;}
 .ia-tbl table .col-worker {width:100px;}
 .ia-tbl table .col-memo {width:auto;}
-@media (max-width:1366px){
+@media (max-width:1024px){
     .ia-tbl table .col-url {width:auto;}
     .ia-tbl table .col-date,
     .ia-tbl table .col-worker {width:100px;}
-    .ia-tbl table .col-memo {width:10%;}
+    .ia-tbl table .col-memo {width:25%; display: none;}
 }
 
 /* Setting */

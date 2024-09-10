@@ -54,7 +54,7 @@
 .col {-webkit-box-flex:0;-ms-flex:none;flex:none;}
 
 /* Column */
-.col.auto {width:auto;}
+.col.auto {width:auto; flex: 1 1 auto;}
 .col.col-1  {width:calc(100%/12 * 1);}
 .col.col-2  {width:calc(100%/12 * 2);}
 .col.col-3  {width:calc(100%/12 * 3);}
@@ -67,23 +67,3 @@
 .col.col-10 {width:calc(100%/12 * 10);}
 .col.col-11 {width:calc(100%/12 * 11);}
 .col.col-12 {width:calc(100%/12 * 12);}
-
-/*-------------------------------------------------------------------
-	@Colors
--------------------------------------------------------------------*/
-/* 강조 */
-.bg-primary {}
-.txt-primary {}
-
-/* 상태 */
-.bg-success {}
-.txt-success {}
-
-/* 상품 */
-.bg-이름 {}
-.txt-이름 {}
-
-/* 스킨 */
-.skin-이름 .skin-bg {}
-.skin-이름 .skin-txt {}
-.skin-이름 .skin-line {}
