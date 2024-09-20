@@ -209,8 +209,8 @@ function setResized(){
 -------------------------------------------------------------------*/
 /* 스크롤설정 */
 var setScrollOptions = {
-	clsLockAll: 'is-locked-all',
-	clsLockIOS: 'is-locked-ios',
+	clsLockAll: '.is-scroll-hidden',
+	clsLockIOS: '.is-scroll-hidden-ios',
 	scrTop: null
 }
 /* 스크롤 비활성 */
