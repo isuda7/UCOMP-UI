@@ -26,10 +26,10 @@
 .g-h1 {font-size:30px; font-weight:normal;}
 .g-h2 {font-size:24px; font-weight:normal;}
 .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;}
-.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:normal; color:#d3002e;}
+.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:700; color:#d3002e;}
 .g-h3:first-child {margin-top:0;}
 .g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
-.g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e;}
+.g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e; font-size: 16px; font-weight: 700;}
 .g-h3 + .g-h4 {margin-top:10px;}
 .g-explain-h1 {display:none; font-size:14px; color:#aaa; font-family:'NST';}
 

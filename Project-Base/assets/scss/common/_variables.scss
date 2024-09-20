@@ -21,22 +21,26 @@ $color-item3: value;
 //-------------------------------------------------------------------
 // 폰트규칙
 @mixin font-body-10 {
-    font-size: 10px;
-    line-height: 14px;
+	font-size: 10px;
+	line-height: 14px;
 }
+
 @mixin font-body-11 {
-    font-size: 11px;
-    line-height: 15px;
+	font-size: 11px;
+	line-height: 15px;
 }
+
 @mixin font-body-12 {
-    font-size: 12px;
-    line-height: 18px;
+	font-size: 12px;
+	line-height: 18px;
 }
+
 @mixin font-body-13 {
-    font-size: 13px;
-    line-height: 19px;
+	font-size: 13px;
+	line-height: 19px;
 }
+
 @mixin font-body-14 {
-    font-size: 14px;
-    line-height: 22px;
+	font-size: 14px;
+	line-height: 22px;
 }

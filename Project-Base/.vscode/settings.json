@@ -1,6 +1,6 @@
 {
     "editor.tabSize": 4,
-    "editor.detectIndentation": true,
+    "editor.detectIndentation": false,
     "liveSassCompile.settings.generateMap": false, //이부분 수정
     "liveSassCompile.settings.formats": [
 
@@ -23,5 +23,7 @@
     "editor.detectIndentation": false,
     "editor.trimAutoWhitespace": true,
     "editor.insertSpaces": true,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true,
+    "eslint.codeActionsOnSave.rules": null,
+    "editor.renderWhitespace": "all"
 }

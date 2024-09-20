@@ -10,57 +10,61 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 
 // 반응형: 분기점 사용자정의
 @mixin media-tablet {
-    @media all and (max-width: $media-tablet-xs) {
-        @content;
-    }
+	@media all and (max-width: $media-tablet-xs) {
+		@content;
+	}
 }
 
 @mixin media-mobile {
-    @media all and (max-width: $media-mobile-xl) {
-        @content;
-    }
-    @media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
-        @content;
-    }
+	@media all and (max-width: $media-mobile-xl) {
+		@content;
+	}
+
+	@media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
+		@content;
+	}
 }
+
 @mixin media-mobile-landscape {
-    @media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
-        @content;
-    }
+	@media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
+		@content;
+	}
 }
 
 // Media Responsive: Custom Size
 @mixin media-max-width($width) {
-    @media all and (max-width: $width) {
-        @content;
-    }
+	@media all and (max-width: $width) {
+		@content;
+	}
 }
+
 @mixin media-max-min-width($maxWidth, $minWidth) {
-    @media all and (max-width: $maxWidth) and (min-width: $minWidth) {
-        @content;
-    }
+	@media all and (max-width: $maxWidth) and (min-width: $minWidth) {
+		@content;
+	}
 }
 
 @mixin media-max-height($height) {
-    @media all and (max-height: $height) {
-        @content;
-    }
+	@media all and (max-height: $height) {
+		@content;
+	}
 }
+
 @mixin media-max-min-height($maxHeight, $minHeight) {
-    @media all and (max-height: $maxHeight) and (max-height: $minHeight) {
-        @content;
-    }
+	@media all and (max-height: $maxHeight) and (max-height: $minHeight) {
+		@content;
+	}
 }
 
 // Media Responsive: Orientation
 @mixin media-portrait() {
-    @media all and (orientation: portrait) {
-        @content;
-    }
+	@media all and (orientation: portrait) {
+		@content;
+	}
 }
 
 @mixin media-landscape() {
-    @media all and (orientation: landscape) {
-        @content;
-    }
+	@media all and (orientation: landscape) {
+		@content;
+	}
 }

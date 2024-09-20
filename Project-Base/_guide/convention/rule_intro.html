@@ -79,9 +79,15 @@
 									<tr>
 										<th scope="row" class="align-l">해상도 정책</th>
 										<td>
-											PC UI : 1024 ~<br>
-											MO UI : ~ 1023 <br>
-											각 디바이스별 구간에서 반응형 처리
+                                            - 데스크탑 : 1280 이상 (기본스타일)<br>
+                                            - 테블릿 1 : 1279 ~ 1024<br>
+                                            - 테블릿 2 : 1023 ~ 768 (가로모드 제외)<br>
+                                            - 모바일 1 : 767 ~ 480 (가로모드 포함)<br>
+                                            - 모바일 2 : 479 ~ 320 (최소값 지정)<br>
+                                            - 가로모드 : W 960 이하, H 480 이하<br>
+                                            <br>
+											* 모바일 가로모드는 태블릿 구간이지만 모바일에 포함되도록 한다.<br>
+											* 분기점(1280, 1024, 768, 480, 320)은 해당 구간의 최소값으로 한다.
 										</td>
 									</tr>
 								</tbody>
@@ -89,7 +95,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- //section1 -->
+				<!-- // Section1 -->
 
 				<!-- section2 -->
 				<section id="section2" class="g-section">
@@ -117,10 +123,18 @@
 								<tbody>
 									<tr>
 										<td>fonts</td>
-										<td></td>
-										<td></td>
+										<td>PretendardVariable</td>
+										<td>Pretendard*.*</td>
 										<td>
-											웹폰트
+											웹폰트 - Pretendard
+										</td>
+									</tr>
+									<tr>
+										<td>fonts</td>
+										<td>NotoSans</td>
+										<td>NotoSans*.*</td>
+										<td>
+											웹폰트 - NotoSans
 										</td>
 									</tr>
 									<tr>
@@ -144,6 +158,54 @@
 										</td>
 									</tr>
 									<tr>
+										<td>scss</td>
+										<td>common</td>
+										<td>
+											_base.scss<br>
+											_utilities.scss<br>
+											_librarys.min.scss<br>
+											_layout.scss
+										</td>
+										<td>
+											스타일 - 웹폰트, 태그초기화<br>
+											스타일 - 유틸리티<br>
+											스타일 - 라이브러리 전체<br>
+											스타일 - 레이아웃
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>components</td>
+										<td>
+											_button.scss<br>
+											_form.scss<br>
+											_tab.scss<br>
+											... 등등
+										</td>
+										<td>
+											스타일 - 버튼<br>
+											스타일 - 서식<br>
+											스타일 - 탭<br>
+											스타일 - 기타 등등
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>contents</td>
+										<td>
+											_main.scss<br>
+											_대메뉴1.scss<br>
+											_대메뉴2.scss<br>
+											... 등등
+										</td>
+										<td>
+											스타일 - 메인<br>
+											스타일 - 대메뉴1<br>
+											스타일 - 대메뉴2<br>
+											스타일 - 기타 등등
+										</td>
+									</tr>
+									<tr>
 										<td>js</td>
 										<td>libs</td>
 										<td>
@@ -151,8 +213,8 @@
 											librurys.min.js
 										</td>
 										<td>
-											스크립트 - Jquery Core<br>
-											스크립트 - All Librurys
+											스크립트 - 제이쿼리 코어<br>
+											스크립트 - 라이브러리 전체
 										</td>
 									</tr>
 									<tr>
@@ -163,8 +225,8 @@
 											ui.publish.js
 										</td>
 										<td>
-											스크립트 - UI<br>
-											스크립트 - 퍼블리싱 작업용
+											스크립트 - Front UI<br>
+											스크립트 - Only Publishing
 										</td>
 									</tr>
 									<tr>
@@ -200,7 +262,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- //section2 -->
+				<!-- // Section2 -->
 			</div>
 		</article>
 		<!-- //Content -->

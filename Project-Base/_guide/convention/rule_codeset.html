@@ -1,48 +1,50 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<script src="assets/js/guide.include.js"></script>
-<script>include.meta()</script>
-<script>include.head()</script>
-</head>
-<body>
-<div class="g-wrapper" class="g-convention-wrap">
-	<script>include.header()</script>
-	<div class="g-container">
-		<script>include.aside()</script>
 
-		<!-- Content -->
-		<article class="g-content">
-			<div class="g-content-header">
-				<h1 class="g-h1">설계패턴</h1>
-				<p class="g-explain-h1">Project Startup Codeset</p>
-			</div>
-			<div class="g-content-body">
-				<!-- section1 -->
-				<section id="g-section1" class="g-section">
-					<div class="g-section-header">
-						<h2 class="g-h2">HTML</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn is-active">Document</a>
-									<a href="#tabContentCode1-2" class="g-example-btn">Wrapper</a>
-									<a href="#tabContentCode1-5" class="g-example-btn">Popup</a>
-								</div>
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer is-active">
-								<pre class="brush:html">
+<head>
+    <meta charset="UTF-8" />
+    <script src="assets/js/guide.include.js"></script>
+    <script>include.meta()</script>
+    <script>include.head()</script>
+</head>
+
+<body>
+    <div class="g-wrapper" class="g-convention-wrap">
+        <script>include.header()</script>
+        <div class="g-container">
+            <script>include.aside()</script>
+
+            <!-- Content -->
+            <article class="g-content">
+                <div class="g-content-header">
+                    <h1 class="g-h1">설계패턴</h1>
+                    <p class="g-explain-h1">Project Startup Codeset</p>
+                </div>
+                <div class="g-content-body">
+                    <!-- section1 -->
+                    <section id="g-section1" class="g-section">
+                        <div class="g-section-header">
+                            <h2 class="g-h2">HTML</h2>
+                        </div>
+                        <div class="g-section-body">
+                            <div class="g-example-wrap">
+                                <div class="g-example-header">
+                                    <strong class="g-example-tit"></strong>
+                                    <div class="g-example-nav">
+                                        <span class="g-example-txt"></span>
+                                        <a href="#tabContentCode1-1" class="g-example-btn is-active">Document</a>
+                                        <a href="#tabContentCode1-2" class="g-example-btn">Wrapper</a>
+                                        <a href="#tabContentCode1-5" class="g-example-btn">Popup</a>
+                                    </div>
+                                </div>
+                                <div id="tabContentCode1-1" class="g-example-footer is-active">
+                                    <pre class="brush:html">
 									&lt;!DOCTYPE html>
 									&lt;html lang="ko">
 									&lt;head>
 									&lt;meta charset="utf-8">
 									&lt;meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-									&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+									&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 									&lt;meta name="keywords" content="Hausys in story">
 									&lt;meta name="description" content="Hausys in story">
 									&lt;title>분류명 - 페이지명 | Hausys in story&lt;/title>
@@ -52,13 +54,13 @@
 									&lt;/body>
 									&lt;/html>
 								</pre>
-							</div>
-							<div id="tabContentCode1-2" class="g-example-footer">
-								<pre class="brush:html">
+                                </div>
+                                <div id="tabContentCode1-2" class="g-example-footer">
+                                    <pre class="brush:html">
 									&lt;div class="wrapper">
 										&lt;!-- Header -->
 										&lt;header class="header">&lt;/header>
-										&lt;!-- //Header -->
+										&lt;!-- // Header -->
 
 										&lt;!-- Container -->
 										&lt;main role="main" class="container">
@@ -69,16 +71,16 @@
 											&lt;/div>
 											&lt;!-- //Content -->
 											&lt;/main>
-										&lt;!-- //Container -->
+										&lt;!-- // Container -->
 
 										&lt;!-- Footer -->
 										&lt;footer class="footer">&lt;/footer>
-										&lt;!-- //Footer -->
+										&lt;!-- // Footer -->
 									&lt;/div>
 								</pre>
-							</div>
-							<div id="tabContentCode1-5" class="g-example-footer">
-								<pre class="brush:html">
+                                </div>
+                                <div id="tabContentCode1-5" class="g-example-footer">
+                                    <pre class="brush:html">
 									<!-- Popup -->
 									&lt;div class="popup_wrap" role="dialog" aria-modal="true">
 										&lt;section class="popup">
@@ -90,35 +92,35 @@
 									&lt;/div>
 									<!-- //Popup -->
 								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //section1 -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- // Section1 -->
 
-				<!-- section2 -->
-				<section id="g-section2" class="g-section">
-					<div class="g-section-header">
-						<h2 class="g-h2">CSS</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode2-2" class="g-example-btn is-active">Common</a>
-									<a href="#tabContentCode2-5" class="g-example-btn">Components</a>
-									<a href="#tabContentCode2-6" class="g-example-btn">Contents</a>
-									<a href="#tabContentCode2-7" class="g-example-btn">Main</a>
-								</div>
-							</div>
-							<div id="tabContentCode2-2" class="g-example-footer is-active">
-								<pre class="brush:css">
+                    <!-- section2 -->
+                    <section id="g-section2" class="g-section">
+                        <div class="g-section-header">
+                            <h2 class="g-h2">CSS</h2>
+                        </div>
+                        <div class="g-section-body">
+                            <div class="g-example-wrap">
+                                <div class="g-example-header">
+                                    <strong class="g-example-tit"></strong>
+                                    <div class="g-example-nav">
+                                        <span class="g-example-txt"></span>
+                                        <a href="#tabContentCode2-2" class="g-example-btn is-active">Common</a>
+                                        <a href="#tabContentCode2-5" class="g-example-btn">Components</a>
+                                        <a href="#tabContentCode2-6" class="g-example-btn">Contents</a>
+                                        <a href="#tabContentCode2-7" class="g-example-btn">Main</a>
+                                    </div>
+                                </div>
+                                <div id="tabContentCode2-2" class="g-example-footer is-active">
+                                    <pre class="brush:css">
 									@charset 'utf-8';
 									/*-------------------------------------------------------------------
 										분류그룹 : 초기화
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										@웹폰트
@@ -130,7 +132,7 @@
 
 									/*-------------------------------------------------------------------
 										분류그룹 : 유틸리티
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 									    @General
@@ -146,7 +148,7 @@
 
 									/*-------------------------------------------------------------------
 										파일정의 : 레이아웃
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										@공통
@@ -164,13 +166,13 @@
 										@메인
 									-------------------------------------------------------------------*/
 								</pre>
-							</div>
-							<div id="tabContentCode2-5" class="g-example-footer">
-								<pre class="brush:css">
+                                </div>
+                                <div id="tabContentCode2-5" class="g-example-footer">
+                                    <pre class="brush:css">
 									@charset "utf-8";
 									/*-------------------------------------------------------------------
 										파일정의 : 컴포넌트
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										@Forms
@@ -184,13 +186,13 @@
 										@컴포넌트
 									-------------------------------------------------------------------*/
 								</pre>
-							</div>
-							<div id="tabContentCode2-6" class="g-example-footer">
-								<pre class="brush:css">
+                                </div>
+                                <div id="tabContentCode2-6" class="g-example-footer">
+                                    <pre class="brush:css">
 									@charset "utf-8";
 									/*-------------------------------------------------------------------
 										파일정의 : 컨텐츠 스타일
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										@공통화면
@@ -207,13 +209,13 @@
 									-------------------------------------------------------------------*/
 									/* 메뉴명 > 화면명 > 팝업명 */
 								</pre>
-							</div>
-							<div id="tabContentCode2-7" class="g-example-footer">
-								<pre class="brush:css">
+                                </div>
+                                <div id="tabContentCode2-7" class="g-example-footer">
+                                    <pre class="brush:css">
 									@charset "utf-8";
 									/*-------------------------------------------------------------------
 										파일정의 : 메인, 서브메인
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										@메인
@@ -229,33 +231,33 @@
 
 									/* 섹션 */
 								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //section2 -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- // Section2 -->
 
-				<!-- section3 -->
-				<section id="g-section3" class="g-section" style="display:none">
-					<div class="g-section-header">
-						<h2 class="g-h2">SASS</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#none" class="g-example-btn">Settings</a>
-								</div>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:css">
+                    <!-- section3 -->
+                    <section id="g-section3" class="g-section" style="display:none">
+                        <div class="g-section-header">
+                            <h2 class="g-h2">SASS</h2>
+                        </div>
+                        <div class="g-section-body">
+                            <div class="g-example-wrap">
+                                <div class="g-example-header">
+                                    <strong class="g-example-tit"></strong>
+                                    <div class="g-example-nav">
+                                        <span class="g-example-txt"></span>
+                                        <a href="#none" class="g-example-btn">Settings</a>
+                                    </div>
+                                </div>
+                                <div class="g-example-footer">
+                                    <pre class="brush:css">
 									@charset "utf-8";
 									/*-------------------------------------------------------------------
 										파일정의 : Settings
 										참고사항 : 이 파일은 설정값만 정의한다.
-										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+										속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 									-------------------------------------------------------------------*/
 									/*-------------------------------------------------------------------
 										Globals
@@ -293,28 +295,28 @@
 									/* Buttons */
 									$button-hei-md: 40px;
 								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //section3 -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- // Section3 -->
 
-				<!-- section4 -->
-				<section id="g-section4" class="g-section">
-					<div class="g-section-header">
-						<h2 class="g-h2">SCRIPT</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode3-1" class="g-example-btn is-active">Common</a>
-								</div>
-							</div>
-							<div id="tabContentCode3-1" class="g-example-footeris-active">
-								<pre class="brush:js">
+                    <!-- section4 -->
+                    <section id="g-section4" class="g-section">
+                        <div class="g-section-header">
+                            <h2 class="g-h2">SCRIPT</h2>
+                        </div>
+                        <div class="g-section-body">
+                            <div class="g-example-wrap">
+                                <div class="g-example-header">
+                                    <strong class="g-example-tit"></strong>
+                                    <div class="g-example-nav">
+                                        <span class="g-example-txt"></span>
+                                        <a href="#tabContentCode3-1" class="g-example-btn is-active">Common</a>
+                                    </div>
+                                </div>
+                                <div id="tabContentCode3-1" class="g-example-footeris-active">
+                                    <pre class="brush:js">
 									/*--------------------------------------------------------------
 										분류순서
 										@Variables  : 전역변수
@@ -364,16 +366,17 @@
 										ui_init();
 									});
 								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //section4 -->
-			</div>
-		</article>
-		<!-- //Content -->
-	</div>
-	<script>include.footer()</script>
-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- // Section4 -->
+                </div>
+            </article>
+            <!-- //Content -->
+        </div>
+        <script>include.footer()</script>
+    </div>
 </body>
+
 </html>
