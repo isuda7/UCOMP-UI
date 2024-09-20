@@ -22,7 +22,7 @@ canvas, details, figure, figcaption, main, footer, header, menu, nav, section,
 button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b {margin:0; padding:0; border:0; list-style:none; font-style:normal; font-size:inherit; font-weight:inherit; font-family:inherit; color:inherit; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit; -webkit-print-color-adjust:exact; color-adjust: exact !important;}
 :before, :after {box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit;}
 main, article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
-body {font-family:'NotoSans', 'Pretendard Variable', 'sans-serif'; font-size:14px; line-height:1; word-break:break-all; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+body {font-family:'NotoSans', 'Pretendard Variable', 'sans-serif'; font-size:14px; line-height:22px; word-break:break-all; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
 html[lang=ja] body, html[lang=zh] body {word-break:normal;}
 [hidden], hr {display:none;}
 img {vertical-align:middle;}

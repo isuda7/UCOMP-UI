@@ -9,8 +9,8 @@ var gURL = {
 var include = {
 	meta : function(){
 		document.write('<title>웹퍼블리싱가이드 - Standard Guide</title>');
-		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="format-detection" content="telephone=no" />');
+		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
+		document.write('<meta name="format-detection" content="telephone=no" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 	},
 	head : function(){

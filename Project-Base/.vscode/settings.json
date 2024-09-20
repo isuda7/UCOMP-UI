@@ -22,7 +22,7 @@
     ],
     "editor.detectIndentation": false,
     "editor.trimAutoWhitespace": true,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": false,
     "editor.formatOnSave": true,
     "eslint.codeActionsOnSave.rules": null,
     "editor.renderWhitespace": "all"
