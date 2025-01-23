@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Layout
+-------------------------------------------------------------------*/
+/* Default */
+.sub_wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sub_wrapper > .header {
+  flex: none;
+}
+.sub_wrapper > .container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.sub_wrapper > .container > .content_head {
+  flex: none;
+}
+.sub_wrapper > .container > .content_body {
+  flex: 1 0 auto;
+}
+.sub_wrapper > .container > .content_foot {
+  flex: none;
+}
+
+/* Container Styles */
+.sub_wrapper > .container {
+  width: 100%;
+  margin: 0;
+  padding-top: calc(5.2rem + var(--safeTop));
+  padding-bottom: var(--safeBottom);
+  line-height: 1.5;
+}
+.sub_wrapper > .container > .content_head,
+.sub_wrapper > .container > .content_body,
+.sub_wrapper > .container > .content_foot {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Guide Case Only */
+.sub_wrapper > .header + .header {
+  top: 5.2rem;
+}
+.sub_wrapper > .header + .header + .header {
+  top: 10.4rem;
+}
+.sub_wrapper > .header + .header + .header + .header {
+  top: 15.6rem;
+}/*# sourceMappingURL=style.css.map */

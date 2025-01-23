@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+.ia_wrap {
+  display: flex;
+  min-height: 100%;
+  background-color: #f6f6f6;
+}
+.ia_wrap iframe {
+  flex: none;
+  width: 375px;
+  height: 760px;
+}
+.ia_wrap .ia_container {
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 74px 20px 30px;
+}
+.ia_wrap .ia_container .g_gnb_area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 20px 0;
+}
+.ia_wrap .ia_container .g_gnb_area .g_gnb {
+  margin-right: 20px;
+}
+.ia_wrap .ia_container .g_gnb_area .g_gnb .ui.button {
+  font-weight: 700;
+  margin-right: 6px;
+  background-color: #999;
+  color: #fff;
+}
+.ia_wrap .ia_container .g_gnb_area .g_gnb .ui.button.active {
+  background-color: #ff664d;
+}
+.ia_wrap .ia_container .g_gnb_area .g_menu a {
+  display: inline-block;
+  padding: 6px;
+}
+.ia_wrap .ia_container .ui.vertical.menu {
+  width: 100% !important;
+}
+.ia_wrap .ia_container .ui.vertical.menu .page-list-menu {
+  padding: 14px 0 !important;
+  height: 50px;
+}
+.ia_wrap .ia_container .ui.vertical.menu .page-list-menu .item {
+  margin-right: 15px;
+  font-size: 12px !important;
+  color: #6c788f;
+}
+.ia_wrap .ia_container .ui.vertical.menu .page-list-menu .item a {
+  font-weight: bold;
+}
+.ia_wrap .ia_container .ui.vertical.menu .page-list-menu .item:hover {
+  color: #222;
+}
+.ia_wrap .ia_container .table {
+  margin-top: 0;
+}
+.ia_wrap .ia_container .table thead th {
+  font-size: 14px;
+  background: #666 !important;
+  color: #fff !important;
+}
+.ia_wrap .ia_container .table tbody tr td {
+  font-size: 14px;
+}
+.ia_wrap .ia_container .table .table-tit {
+  background: #e4e9f3;
+  border-top: 2px solid #777;
+  border-bottom: 1px solid #777;
+}
+.ia_wrap .ia_container .table .link-address {
+  color: #999;
+}
+.ia_wrap .ia_container .table .link-address a::before {
+  content: attr(href);
+}
+.ia_wrap .ia_container .text-bold {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

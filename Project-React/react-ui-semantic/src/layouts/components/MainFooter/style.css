@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+/* Footer Styles */
+.sub_wrapper.main > .footer,
+.main_wrapper > .footer {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #666;
+  color: #fff;
+}
+.sub_wrapper.main > .footer .ui.button.drower,
+.main_wrapper > .footer .ui.button.drower {
+  margin-left: -0.8rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.sub_wrapper.main > .footer .ui.button.drower .icon,
+.main_wrapper > .footer .ui.button.drower .icon {
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

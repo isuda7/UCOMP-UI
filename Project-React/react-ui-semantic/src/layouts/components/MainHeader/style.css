@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+/* Header Styles */
+.main_wrapper > .header {
+  position: fixed;
+  left: 0;
+  top: calc(0 + var(--safeTop));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.2rem;
+  padding: 0 2rem;
+}
+.main_wrapper > .header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_wrapper > .header .profile_home {
+  display: flex;
+  align-items: center;
+}
+
+/* BannerNotice */
+.main_wrapper > .banner_notice {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+.main_wrapper > .banner_notice button.close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.main_wrapper > .banner_notice a.banner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: #e6f4ff;
+}
+.main_wrapper > .banner_notice.is_opened {
+  display: block;
+  height: 4.5rem;
+}
+.main_wrapper > .banner_notice.is_closed {
+  display: block;
+  height: 0;
+  transition: height 0.2s ease;
+}
+.main_wrapper > .banner_notice.is_opened + .header {
+  top: calc(5.2rem + var(--safeTop));
+}
+.main_wrapper > .banner_notice.is_closed + .header {
+  top: calc(0 + var(--safeTop));
+}/*# sourceMappingURL=style.css.map */

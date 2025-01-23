@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	주제 : 변수정의
+	분류 : Fonts
+-------------------------------------------------------------------*/
+/* Header Styles */
+.sub_wrapper > .header {
+  position: fixed;
+  left: 0;
+  top: calc(0 + var(--safeTop));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.2rem;
+  padding: 0 2rem;
+}
+.sub_wrapper > .header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub_wrapper > .header.is_white {
+  background-color: transparent;
+  color: #222222;
+}
+.sub_wrapper > .header.is_black {
+  background-color: transparent;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

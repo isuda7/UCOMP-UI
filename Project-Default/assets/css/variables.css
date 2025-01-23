@@ -1,0 +1,10 @@
+@charset 'utf-8';
+/*
+	변수 네이밍 규칙
+	--[속성]-[이름]-[상태]-[디바이스]:
+*/
+:root {
+	/* Color: Accent */
+	--color-primary: ;
+	--color-secondary: ;
+}

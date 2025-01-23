@@ -21,16 +21,20 @@
 		.g-section {
 			color: #444;
 		}
+
 		.g-section-body {
 			line-height: 1.5
 		}
+
 		.g-section-body span {
 			display: inline-block;
 			padding: 5px 10px;
 		}
+
 		.g-section-body [class^='bg-'] {
 			color: transparent;
 		}
+
 		.g-section-body [class^='line-'] {
 			border-width: 1px;
 			border-style: solid;
@@ -42,18 +46,18 @@
 <body>
 	<div class="wrapper sub_page">
 		<!-- Header -->
-		<div data-include="include_header.html"></div>
+		<header class="header"></header>
 		<!-- // Header -->
 
 		<!-- Container -->
 		<div class="container">
 			<main id="content" class="content" role="main">
 				<div class="content-body out-sec">
-					<div class="in-sec">
+					<div class="inner">
 						<h1 class="g-h1">Colorset</h1>
 					</div>
 					<!-- Section -->
-					<section class="g-section in-sec">
+					<section class="g-section inner">
 						<div class="g-section-head">
 							<h2 class="g-h2">분류</h2>
 						</div>
@@ -68,7 +72,7 @@
 					<!-- // Section -->
 
 					<!-- Section -->
-					<section class="g-section in-sec">
+					<section class="g-section inner">
 						<div class="g-section-head">
 							<h2 class="g-h2">강조</h2>
 						</div>
@@ -105,7 +109,7 @@
 					<!-- // Section -->
 
 					<!-- Section -->
-					<section class="g-section in-sec">
+					<section class="g-section inner">
 						<div class="g-section-head">
 							<h2 class="g-h2">아이템</h2>
 						</div>
@@ -135,7 +139,7 @@
 					<!-- // Section -->
 
 					<!-- Section -->
-					<section class="g-section in-sec">
+					<section class="g-section inner">
 						<div class="g-section-head">
 							<h2 class="g-h2">상태</h2>
 						</div>
@@ -193,7 +197,7 @@
 					<!-- // Section -->
 
 					<!-- Section -->
-					<section class="g-section in-sec" style="display: none;">
+					<section class="g-section inner" style="display: none;">
 						<div class="g-section-head">
 							<h2 class="g-h2">스킨</h2>
 						</div>
@@ -224,7 +228,7 @@
 		<!-- // Container -->
 
 		<!-- Footer -->
-		<div data-include="include_footer.html"></div>
+		<footer class="footer"></footer>
 		<!-- // Footer -->
 	</div>
 </body>
