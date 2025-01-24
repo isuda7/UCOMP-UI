@@ -1,10 +1,9 @@
 @charset 'utf-8';
 
 // Commons
-@import './common/responsive.scss';
 @import './common/variables.scss';
+@import './common/responsive.scss';
 @import './common/base.scss';
-@import './common/utilities.scss';
 @import './common/layout.scss';
 @import './common/librarys.min.scss';
 
@@ -12,5 +11,4 @@
 @import './components/button';
 
 // Contents
-@import './contents/main';
-@import './contents/common';
+@import './contents/page';

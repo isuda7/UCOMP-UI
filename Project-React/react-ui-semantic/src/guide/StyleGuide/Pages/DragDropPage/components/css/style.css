@@ -1,0 +1,1 @@
+.dragdrop_item{display:flex;justify-content:space-between;padding:1rem;background:#eee}.dragdrop_item.is_active{background:#90ee90}.dragdrop_item+.dragdrop_item{margin-top:.2rem}

@@ -9,73 +9,20 @@ $media-mobile-xs: 480px; // 갤럭시 S23 울트라 세로모드 가로 해상�
 $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 가로 해상도: 926px
 
 // 반응형: 분기점 사용자정의
-@mixin media-tablet-xl {
-	@media all and (max-width: $media-tablet-xl) {
-		@content;
-	}
-}
-@mixin media-tablet-xs {
+@mixin media-tablet {
 	@media all and (max-width: $media-tablet-xs) {
 		@content;
 	}
 }
 
-@mixin media-mobile-xl {
+@mixin media-mobile {
 	@media all and (max-width: $media-mobile-xl) {
-		@content;
-	}
-
-	@media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
-		@content;
-	}
-}
-
-@mixin media-mobile-xs {
-	@media all and (max-width: $media-mobile-xs) {
 		@content;
 	}
 }
 
 @mixin media-mobile-landscape {
 	@media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
-		@content;
-	}
-}
-
-// Media Responsive: Custom Size
-@mixin media-max-width($width) {
-	@media all and (max-width: $width) {
-		@content;
-	}
-}
-
-@mixin media-max-min-width($maxWidth, $minWidth) {
-	@media all and (max-width: $maxWidth) and (min-width: $minWidth) {
-		@content;
-	}
-}
-
-@mixin media-max-height($height) {
-	@media all and (max-height: $height) {
-		@content;
-	}
-}
-
-@mixin media-max-min-height($maxHeight, $minHeight) {
-	@media all and (max-height: $maxHeight) and (max-height: $minHeight) {
-		@content;
-	}
-}
-
-// Media Responsive: Orientation
-@mixin media-portrait() {
-	@media all and (orientation: portrait) {
-		@content;
-	}
-}
-
-@mixin media-landscape() {
-	@media all and (orientation: landscape) {
 		@content;
 	}
 }
