@@ -34,60 +34,29 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th scope="row" class="align-l">문서 및 버전</th>
-										<td>HTML5, CSS3</td>
+										<th scope="row" class="align-l">언더 및 인코딩</th>
+										<td>- HTML5, CSS3, ES6 / UTF-8</td>
 									</tr>
 									<tr>
-										<th scope="row" class="align-l">인코딩</th>
-										<td>UTF-8</td>
-									</tr>
-									<tr>
-										<th scope="row" class="align-l">웹 유형</th>
-										<td>반응형 웹</td>
+										<th scope="row" class="align-l">사용자 접근방식</th>
+										<td>- 반응형 웹</td>
 										<!-- PC Web | Mobile Web | Responsive Web | Mobile Hybrid Web -->
 									</tr>
 									<tr>
-										<th scope="row" class="align-l">PC 웹 호환성</th>
+										<th scope="row" class="align-l">호환성 브라우저</th>
 										<td>
-											<div class="g-browser-icons">
-												<img src="assets/img/ico_ie9.png" alt="">
-												<img src="assets/img/ico_crom.png" alt="">
-												<img src="assets/img/ico_firefox.png" alt="">
-												<img src="assets/img/ico_sapari.jpg" alt="">
-												<!-- <img src="../../img/ico_opera.png" alt=""> -->
-											</div>
-											<style type="text/css">
-												.g-browser-icons img {width:30px; height:30px;}
-											</style>
+											- 크롬, 파이어폭스, 사파리, 엣지, 삼성브라우저
 										</td>
 									</tr>
 									<tr>
-										<th scope="row" class="align-l">Mobile 웹 호환성</th>
-										<td>
-											<div class="g-browser-icons">
-												안드로이드 6.x 이상, IOS 12.x 이상, 사파리, 크롬, IE11 이상
-											</div>
-											<style type="text/css">
-												.g-browser-icons img {width:30px; height:30px;}
-											</style>
-										</td>
+										<th scope="row" class="align-l">접근성 준수범위</th>
+										<td>- 기본준수 (A레벨)</td>
 									</tr>
-									<!-- <tr>
-										<th scope="row" class="align-l">웹 접근성</th>
-										<td>기본준수(A레벨)</td>
-									</tr> -->
 									<tr>
-										<th scope="row" class="align-l">해상도 정책</th>
+										<th scope="row" class="align-l">반응형 분기점</th>
 										<td>
-                                            - 데스크탑 : 1280 이상 (기본스타일)<br>
-                                            - 테블릿 1 : 1279 ~ 1024<br>
-                                            - 테블릿 2 : 1023 ~ 768 (가로모드 제외)<br>
-                                            - 모바일 1 : 767 ~ 480 (가로모드 포함)<br>
-                                            - 모바일 2 : 479 ~ 320 (최소값 지정)<br>
-                                            - 가로모드 : W 960 이하, H 480 이하<br>
-                                            <br>
-											* 모바일 가로모드는 태블릿 구간이지만 모바일에 포함되도록 한다.<br>
-											* 분기점(1280, 1024, 768, 480, 320)은 해당 구간의 최소값으로 한다.
+											- 분기점은 1280, 1024, 768, 480, 360, 320 으로 구분하며 은 해당 구간의 최소값으로 한다.<br>
+											- 모바일 가로모드의 폰트 사이즈는 모바일 세로모드 기준으로 한다.
 										</td>
 									</tr>
 								</tbody>
@@ -161,12 +130,16 @@
 										<td>scss</td>
 										<td>common</td>
 										<td>
+											_variables.scss<br>
+											_responsive.scss<br>
 											_base.scss<br>
 											_utilities.scss<br>
 											_librarys.min.scss<br>
 											_layout.scss
 										</td>
 										<td>
+											스타일 - 변수정의 공통<br>
+											스타일 - 변수정의 미디어쿼리<br>
 											스타일 - 웹폰트, 태그초기화<br>
 											스타일 - 유틸리티<br>
 											스타일 - 라이브러리 전체<br>
@@ -248,7 +221,7 @@
 									<tr>
 										<td>html</td>
 										<td>
-											_layout<br>
+											layout<br>
 											[menus]
 										</td>
 										<td></td>

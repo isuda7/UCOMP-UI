@@ -54,7 +54,7 @@ var include = {
         document.write('					<li class="g-node1"><a href="'+baseURL+'rule_standard.html">표준규칙</a></li>');
         document.write('					<li class="g-node1"><a href="'+baseURL+'rule_code.html">코드규칙</a></li>');
         document.write('					<li class="g-node1"><a href="'+baseURL+'rule_name.html">네임규칙</a></li>');
-        document.write('					<li class="g-node1"><a href="'+baseURL+'rule_codeset.html">설계패턴</a></li>');
+        document.write('					<li class="g-node1"><a href="'+baseURL+'rule_codeset.html">작업양식</a></li>');
         document.write('					<li class="g-node1"><a href="'+baseURL+'rule_title.html">서식명칭</a></li>');
         document.write('				</ul>');
         document.write('				<!-- //Convention -->');
