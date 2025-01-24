@@ -9,7 +9,7 @@ class Template01 extends Component {
         return (
             <div className='sub_wrapper'>
                 <SubHeader addBack className='is_white' title='Title 영역입니다.' />
-                <main role="main" className='container'>
+                <main className='container'>
                     <div className='content_head'>
                         <h2>Content Heading 2</h2>
                         <p className='summary'>Content Heading Summary</p>

@@ -5,7 +5,7 @@ import './style.css';
 class Sample extends Component {
     render() {
         return (
-            <main role="main" as={'main'} className='container'>
+            <main as={'main'} className='container'>
                 <ContentHead />
                 <ContentBody />
             </main>

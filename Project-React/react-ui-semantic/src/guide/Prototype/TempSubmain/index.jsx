@@ -8,7 +8,7 @@ class TempSubmain extends Component {
         return (
             <div className='sub_wrapper main'>
                 <MainHeader submain title='추천' />
-                <main role="main" className='container'>
+                <main className='container'>
                     <div className='content_body'>
                         <Section01 />
                         <Section02 />

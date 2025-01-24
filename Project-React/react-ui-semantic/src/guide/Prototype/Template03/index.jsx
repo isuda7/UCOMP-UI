@@ -9,7 +9,7 @@ class Template03 extends Component {
         return (
             <div className='sub_wrapper'>
                 <SubHeader addBack addList addMore className='is_black' />
-                <main role="main" className='container bg_dark'>
+                <main className='container bg_dark'>
                     <div className='content_head'>
                         <h2>Content Heading 2</h2>
                         <p className='summary'>Content Heading Summary</p>
