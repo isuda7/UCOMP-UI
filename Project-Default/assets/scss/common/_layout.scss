@@ -31,13 +31,11 @@ html {
 	flex: none;
 }
 
-.outer {
+.inner {
+	width: 100%;
+	max-width: 1260px;
 	padding-left: 30px;
 	padding-right: 30px;
-}
-
-.inner {
-	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
