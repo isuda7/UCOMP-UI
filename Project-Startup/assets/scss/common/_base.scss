@@ -1,19 +1,18 @@
 @charset 'utf-8';
-
 /*-------------------------------------------------------------------
 	분류그룹 : 초기화
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@Fonts
+	@@ Fonts
 -------------------------------------------------------------------*/
-@font-face {
-	font-family: 'Pretendard Variable';
-	font-weight: 45 920;
-	font-style: normal;
-	font-display: swap;
-	src: url('../fonts/PretendardVariable/PretendardVariable.woff2') format('woff2-variations');
-}
+/* Pretendard Variable */
+// @import url('../fonts/PretendardVariable/fonts.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css");
+
+/* NotoSans */
+// @import url('../fonts/NotoSans/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 /*-------------------------------------------------------------------
 	@Resets

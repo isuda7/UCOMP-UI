@@ -9,11 +9,11 @@ var ia = {
 	},
 	include : function(){
 		var html_header = ''
-        +'<h1 class="g-logo">원주미래산업진흥원</h1>'
+        +'<h1 class="g-logo">프로젝트명</h1>'
         +'<nav class="g-gnb">'
         +'    <ul>'
-        +'        <li><a href="index.html">가이드</a></li>'
-        +'        <li><a href="page.html">페이지</a></li>'
+        +'        <li><a href="guide.html">가이드</a></li>'
+        +'        <li><a href="index.html">페이지</a></li>'
         +'    </ul>'
         +'</nav>';
 		$('.g-header').html(html_header);
