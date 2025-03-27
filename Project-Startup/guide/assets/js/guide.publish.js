@@ -4,16 +4,15 @@
 	- @ Init	    : 초기실행
 -------------------------------------------------------------------*/
 $(function(){
-	$(".header").each(function(){
-		$(this).load("../../html/layout/include_header.html", function(){
+	$(".g-header").each(function(){
+		$(this).load("../include/include_guide_header.html", function(){
 			console.log('[INFO] 퍼블리싱 header.html 인클루드 완료');
 			initUI();
+
+			// 퍼블리싱 바로 볼 수 있도록 호출
+			// var anbModal = new bootstrap.Modal(document.getElementById('anbModal'));
+			// anbModal.show();
+
 		});
 	})
-	$(".footer").each(function(){
-		$(this).load("../../html/layout/include_footer.html", function(){
-			console.log('[INFO] 퍼블리싱 footer.html 인클루드 완료');
-			initUI();
-		});
-	});
 });

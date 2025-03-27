@@ -14,7 +14,6 @@ function initUI() {
 	setScrollStatus(); // 스크롤 상태 설정
 
 	// Layout
-	setGnb.init();
 }
 
 $(function(){
@@ -101,62 +100,7 @@ function setScrollStatus(){
 /*-------------------------------------------------------------------
 	@ Layout
 -------------------------------------------------------------------*/
-var setGnb = {
-	init : function(){
-		this.event();
-	},
-	event : function(){
-		var $headerNav = $('.header-pc-sec .header-nav');
-		var $dep1ItemAll = $headerNav.find('.dep1-item');
-		var setTime = null;
-		var _this = this;
 
-		// 마우스 기본기능
-		$dep1ItemAll.off('mouseenter.gnb').on('mouseenter.gnb', function(e){
-			var $this = $(this);
-			// 지나가는 마우스가 아닌 경우 mouseenter 실행.
-			setTime = setTimeout(() => {
-				_this.show($dep1ItemAll, $this);
-			}, 100);
-		})
-		$headerNav.off('mouseleave.gnb').on('mouseleave.gnb', function(e){
-			_this.hide($dep1ItemAll, $(this).find('.dep1-item.is-active'));
-			// 마우스가 지지나가면 mouseenter 실행안되게 setTime 초기화
-			clearTimeout(setTime);
-		})
-
-		// 키보드 접근성
-		$dep1ItemAll.off('focusin.gnb').on('focusin.gnb', function(e){
-			_this.show($dep1ItemAll, $(this));
-			// 포커스가 유지되면 focusout 실행안되게 setTime 초기화나
-			clearTimeout(setTime);
-		})
-		$dep1ItemAll.off('focusout.gnb').on('focusout.gnb', function(e){
-			var $this = $(this);
-			// focusin 않을시 초기화 되지 않고 focusout 실행.
-			setTime = setTimeout(() => {
-				_this.hide($dep1ItemAll, $this);
-			}, 50);
-		})
-	},
-	show : function($dep1ItemAll, $dep1ItemActive){
-		var $siblings = $dep1ItemActive.siblings('.is-active');
-		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
-		$dep2Wrap.stop().slideDown(200);
-		$dep1ItemActive.addClass('is-active');
-
-		$('.header-nav-bg').stop().slideDown(200);
-	},
-	hide : function($dep1ItemAll, $dep1ItemActive){
-		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
-		$dep1ItemActive.removeClass('is-active');
-		// 더 이상 활성화된 메뉴가 없으면 배경을 닫기
-		if (!$('.dep1-item.is-active').length) {
-			$dep2Wrap.stop().slideUp(200);
-			$('.header-nav-bg').stop().slideUp(200);
-		}
-	},
-}
 
 /*-------------------------------------------------------------------
 	@ Content

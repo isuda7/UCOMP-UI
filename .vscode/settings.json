@@ -23,5 +23,6 @@
 	"editor.trimAutoWhitespace": true,
 	"editor.insertSpaces": false,
 	"editor.formatOnSave": false,
-	"editor.renderWhitespace": "all"
+	"editor.renderWhitespace": "all",
+	"liveServer.settings.port": 5501
 }

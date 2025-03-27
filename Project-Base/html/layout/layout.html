@@ -17,21 +17,79 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<!-- 페이지 -->
+	<div class="page templete-*">
+		<header class="page-header"></header>
+		<main class="page-body">
+			<!-- 본문 -->
+			<div id="pageContent" class="page-content templete-*">
+				<!-- 화면명 -->
+				<div class="[화면명]-wrap">
+					<!-- 섹션 모듈 -->
+					<section class="sec [섹션]-sec module-*">
+						<div class="sec-inner">
+							<div class="sec-header"></div>
+							<div class="sec-body">
+								<!-- 컨텐츠 모듈 -->
+								<div class="[분류]-[성격] module-*">
+									<!-- 컴포넌트 모듈 -->
+									<button type="button" class="btn module-*">버튼</button>
+									<!-- //컴포넌트 모듈 -->
+								</div>
+								<!-- //컨텐츠 모듈 -->
+							</div>
+						</div>
+					</section>
+					<!-- //섹션 모듈 -->
+				</div>
+				<!-- //화면명 -->
+			</div>
+			<!-- //본문 -->
+		</main>
+		<footer class="page-footer"></footer>
+	</div>
+	<!-- //페이지 -->
+
+	<!-- 모달 -->
+	<div class="modal about-modal">
 		<!-- Header -->
-		<header class="header"></header>
+		<div class="modal-header"></div>
 		<!-- // Header -->
 
-		<!-- Container -->
-		<main class="container">
-			<div id="content" class="content"></div>
-		</main>
-		<!-- // Container -->
+		<!-- modal-body -->
+		<div class="modal-body">
+			<!-- modal-content -->
+			<div class="modal-content">
+				<!-- 화면명 -->
+				<div class="[화면명]-wrap">
+					<!-- 섹션 모듈 -->
+					<section class="sec [섹션]-sec module-*">
+						<div class="sec-inner">
+							<div class="sec-header"></div>
+							<div class="sec-body">
+								<!-- 컨텐츠 모듈 -->
+								<div class="[분류]-[성격] module-*">
+									<!-- 컴포넌트 모듈 -->
+									<button type="button" class="btn module-*">버튼</button>
+									<!-- //컴포넌트 모듈 -->
+								</div>
+								<!-- //컨텐츠 모듈 -->
+							</div>
+						</div>
+					</section>
+					<!-- //섹션 모듈 -->
+				</div>
+				<!-- //화면명 -->
+			</div>
+			<!-- // modal-content -->
+		</div>
+		<!-- // modal-body -->
 
-		<!-- Footer -->
-		<footer class="footer"></footer>
-		<!-- // Footer -->
+		<!-- modal-footer -->
+		<div class="modal-footer"></div>
+		<!-- // modal-footer -->
 	</div>
+	<!-- //모달 -->
 </body>
 
 </html>

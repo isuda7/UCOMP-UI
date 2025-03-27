@@ -3,23 +3,33 @@
 /*-------------------------------------------------------------------
 	Guide
 -------------------------------------------------------------------*/
+/* Header */
+.g-header {position: sticky; left: 0; top: 0; z-index: 100;}
+.g-header-sec {height: 80px; background-color: #000;  color: #fff; font-size: 24px; font-weight: 300; padding: 0 30px;}
+.g-header .inner {display: flex; justify-content: space-between; align-items: center; height: 100%; max-width: none;}
+.g-header .logo-area {display: flex; align-items: center; height: 100%;}
+/* Container */
+.g-container {padding: 40px 0 60px;}
 /* Section */
 .g-section {color:#222;}
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
-.g-section xmp {max-height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 13px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
+.g-section .g-xmp-wrap {position: relative;}
+.g-section .g-xmp-wrap xmp {height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 13px; padding:0 20px; word-break: break-all; white-space:pre-wrap; transition: all 0.2s ease;}
+.g-section .g-xmp-wrap.is-active xmp {height: auto;}
 
 /* 목차 */
-.g-h1 {margin:30px 0; font-size:28px; font-weight:normal;}
-.g-h2 {font-size:22px; font-weight:normal;}
+.g-h1 {margin-bottom:40px; font-size:40px; font-weight:normal; line-height: 1.2;}
+.g-h2 {font-size:28px; font-weight:normal; line-height: 1.2;}
 .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;}
-.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:500; color:#d3002e;}
+.g-h3 {margin-top:30px; margin-bottom:15px; font-size:24px; font-weight:500; color:#d3002e; line-height: 1.2;}
 .g-h3:first-child {margin-top:0;}
-.g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
-.g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e;}
-.g-h3 + .g-h4 {margin-top:10px;}
-.g-h4:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
+/* .g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;} */
+.g-h4 {margin-top:25px; margin-bottom:10px; font-size: 20px; color:rgb(0, 99, 99); line-height: 1.2;}
+.g-h4 + .g-h5 {margin-top:10px;}
+.g-h5 {margin-top:16px; margin-bottom:10px; font-size: 16px; color:#333; line-height: 1.2;}
+.g-h5:before {content:''; display:inline-block; position:relative; top:-1px; width:2px; height:13px; margin-right:5px; background-color:#333; vertical-align:middle;}
 
 /* 설명 */
 ul.g-desc {margin:5px 0; border-radius:5px; padding:5px 10px;}
@@ -50,6 +60,7 @@ ul.g-desc strong {font-weight: 700;}
 .g-tbl-type2 table tbody + tbody tr:first-child td {border-top:1px solid #666;}
 
 .g-code {line-height:1.6;}
+.g-code-label {background: rgba(135, 131, 120, .15); color: #EB5757;border-radius: 4px;font-size: 85%;padding: 0.2em 0.4em;}
 .g-section .g-link {color: #2496ee; text-decoration: underline;}
 
 /*-------------------------------------------------------------------
@@ -61,6 +72,54 @@ ul.g-desc strong {font-weight: 700;}
 
 /* Button */
 .btn.demo1 {height:40px;padding:0 20px 0;border:1px solid #ddd;border-radius:3px; line-height:27px;color:#333;}
+
+/* Icon */
+.icn-12-demo-gr-a {width: 12px; height: 12px; background-color: #ddd;}
+.icn-12-demo-gr-b {width: 12px; height: 12px; background-color: #ddd; border-radius: 50%;}
+.icn-16-demo-gr-a {width: 16px; height: 16px; background-color: #ddd;}
+.icn-16-demo-gr-b {width: 16px; height: 16px; background-color: #ddd; border-radius: 50%;}
+.icn-20-demo-gr-a {width: 20px; height: 20px; background-color: #ddd;}
+.icn-20-demo-gr-b {width: 20px; height: 20px; background-color: #ddd; border-radius: 50%;}
+.icn-24-demo-gr-a {width: 24px; height: 24px; background-color: #ddd;}
+.icn-24-demo-gr-b {width: 24px; height: 24px; background-color: #ddd; border-radius: 50%;}
+.icn-28-demo-gr-a {width: 28px; height: 28px; background-color: #ddd;}
+.icn-28-demo-gr-b {width: 28px; height: 28px; background-color: #ddd; border-radius: 50%;}
+
+.icn-12-demo-dk-a {width: 12px; height: 12px; background-color: #333;}
+.icn-12-demo-dk-b {width: 12px; height: 12px; background-color: #333; border-radius: 50%;}
+.icn-16-demo-dk-a {width: 16px; height: 16px; background-color: #333;}
+.icn-16-demo-dk-b {width: 16px; height: 16px; background-color: #333; border-radius: 50%;}
+.icn-20-demo-dk-a {width: 20px; height: 20px; background-color: #333;}
+.icn-20-demo-dk-b {width: 20px; height: 20px; background-color: #333; border-radius: 50%;}
+.icn-24-demo-dk-a {width: 24px; height: 24px; background-color: #333;}
+.icn-24-demo-dk-b {width: 24px; height: 24px; background-color: #333; border-radius: 50%;}
+.icn-28-demo-dk-a {width: 28px; height: 28px; background-color: #333;}
+.icn-28-demo-dk-b {width: 28px; height: 28px; background-color: #333; border-radius: 50%;}
+
+.icn-12-demo-bl-a {width: 12px; height: 12px; background-color: #376de0;}
+.icn-12-demo-bl-b {width: 12px; height: 12px; background-color: #376de0; border-radius: 50%;}
+.icn-16-demo-bl-a {width: 16px; height: 16px; background-color: #376de0;}
+.icn-16-demo-bl-b {width: 16px; height: 16px; background-color: #376de0; border-radius: 50%;}
+.icn-20-demo-bl-a {width: 20px; height: 20px; background-color: #376de0;}
+.icn-20-demo-bl-b {width: 20px; height: 20px; background-color: #376de0; border-radius: 50%;}
+.icn-24-demo-bl-a {width: 24px; height: 24px; background-color: #376de0;}
+.icn-24-demo-bl-b {width: 24px; height: 24px; background-color: #376de0; border-radius: 50%;}
+.icn-28-demo-bl-a {width: 28px; height: 28px; background-color: #376de0;}
+.icn-28-demo-bl-b {width: 28px; height: 28px; background-color: #376de0; border-radius: 50%;}
+.icn-32-anb-wh {background-image: url('../../assets/img/icn-32-anb-wh.png')}
+
+/* Modal */
+.modal-anb,
+.modal-anb .modal-dialog {pointer-events: none;}
+.modal-anb .modal-dialog {justify-content: flex-end;align-items: flex-end;}
+.modal-anb .modal-content {height: 100%; min-width: 240px; width: 240px; max-height: calc(100% - 80px); border-radius: 0; background-color: #fff; transform: translate(110%, 0);}
+.modal-anb .g-nav-anb {padding:20rem; color: #333;}
+.modal-anb .g-nav-anb .g-nav-tit {font-size: 20px; line-height: 28px; font-weight: 500; color: #000;}
+.modal-anb .g-nav-anb .g-nav-tit ~ .g-nav-tit {margin-top: 10px;}
+.modal-anb .g-nav-anb .g-nav-stit {margin-top: 10px; font-size: 16px; line-height: 24px; font-weight: 500; color: #000;}
+.modal-anb .g-nav-anb .g-nav-list {padding: 10px;}
+.modal-anb .g-nav-anb .g-nav-item + .g-nav-item {margin-top: 10px;}
+.modal-anb .g-nav-anb .g-nav-link {font-weight: 300; font-size: 16px; letter-spacing: 0;}
 
 /* Tab */
 .tab-nav.demo1 .tab-list {display:flex; width:100%;}

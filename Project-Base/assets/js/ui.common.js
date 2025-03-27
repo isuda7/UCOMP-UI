@@ -10,12 +10,15 @@
 /*-------------------------------------------------------------------
 	Init
 -------------------------------------------------------------------*/
-document.addEventListener('DOMContentLoaded', function () {
+function initUI() {
 	/* Settings */
 	setDeviceStatus(); // 디바이스 설정
 	setScrollStatus(); // 스크롤 상태 설정
-});
+};
 
+document.addEventListener('DOMContentLoaded', function () {
+	initUI();
+});
 /*-------------------------------------------------------------------
 	Setting
 -------------------------------------------------------------------*/
