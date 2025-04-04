@@ -23,88 +23,90 @@
 /*-------------------------------------------------------------------
 	@@ 모듈
 -------------------------------------------------------------------*/
-/* module-a */
-.btn.module-a {
-	min-width: 100rem;
-	height: 48rem;
-	padding: 5rem 20rem;
-	background-color: #f0f0f0;
-	font-size: 18rem;
-	border-radius: 4rem;
-	color: #000;
-}
+.btn {
+	/* module-a */
+	&.module-a {
+		min-width: 100rem;
+		height: 48rem;
+		padding: 5rem 20rem;
+		background-color: #f0f0f0;
+		font-size: 18rem;
+		border-radius: 4rem;
+		color: #000;
+	}
 
-/* module-b */
-.btn.module-b {
-	min-width: 80rem;
-	height: 44rem;
-	padding: 5rem 16rem;
-	background-color: #666;
-	font-size: 16rem;
-	border-radius: 4rem;
-	color: #fff;
-}
+	/* module-b */
+	&.module-b {
+		min-width: 80rem;
+		height: 44rem;
+		padding: 5rem 16rem;
+		background-color: #666;
+		font-size: 16rem;
+		border-radius: 4rem;
+		color: #fff;
+	}
 
-/* module-c */
-.btn.module-c {
-	min-width: 80rem;
-	height: 36rem;
-	padding: 3rem 12rem;
-	background-color: #f0f0f0;
-	font-size: 16rem;
-	border-radius: 44rem;
-	color: #222;
-}
+	/* module-c */
+	&.module-c {
+		min-width: 80rem;
+		height: 36rem;
+		padding: 3rem 12rem;
+		background-color: #f0f0f0;
+		font-size: 16rem;
+		border-radius: 44rem;
+		color: #222;
+	}
 
-/* module-d */
-.btn.module-d {
-	gap: 2rem;
-	font-size: 14rem;
-	color: #666;
-	font-weight: 500;
-	&.primary {
-		background-color: transparent;
-		color: $color-primary;
+	/* module-d */
+	&.module-d {
+		gap: 2rem;
+		font-size: 14rem;
+		color: #666;
+		font-weight: 500;
+		&.primary {
+			background-color: transparent;
+			color: $color-primary;
+		}
+		&.secondary {
+			background-color: transparent;
+			color: $color-secondary;
+		}
+		&.dark {
+			background-color: transparent;
+			color: $color-dark;
+		}
+		&.black {
+			background-color: transparent;
+			color: $color-black;
+		}
 	}
-	&.secondary {
-		background-color: transparent;
-		color: $color-secondary;
-	}
-	&.dark {
-		background-color: transparent;
-		color: $color-dark;
-	}
-	&.black {
-		background-color: transparent;
-		color: $color-black;
-	}
-}
 
-/* module-d */
-.btn.module-e {
-	width: 100%;
-	height: 40rem;
-	gap: 2rem;
-	padding: 3rem 12rem;
-	font-size: 16rem;
-	color: #666;
-	font-weight: 500;
-	background-color: #f0f0f0;
-	&.primary {
-		background-color: transparent;
-		color: $color-primary;
-	}
-	&.secondary {
-		background-color: transparent;
-		color: $color-secondary;
-	}
-	&.dark {
-		background-color: transparent;
-		color: $color-dark;
-	}
-	&.black {
-		background-color: transparent;
-		color: $color-black;
+	/* module-e */
+	&.module-e {
+		width: 100%;
+		height: 40rem;
+		gap: 2rem;
+		padding: 3rem 12rem;
+		font-size: 16rem;
+		color: #666;
+		font-weight: 500;
+		background-color: #f0f0f0;
+		&.primary {
+			background-color: transparent;
+			color: $color-primary;
+		}
+		&.secondary {
+			background-color: transparent;
+			color: $color-secondary;
+		}
+		&.dark {
+			background-color: transparent;
+			color: $color-dark;
+		}
+		&.black {
+			background-color: transparent;
+			color: $color-black;
+		}
 	}
 }
 

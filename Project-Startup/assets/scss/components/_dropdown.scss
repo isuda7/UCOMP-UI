@@ -7,18 +7,70 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
+.dropdown {
+	display: inline-flex;
+	position: relative;
+}
 .dropdown-menu {
 	display: none;
 	&.show {
 		display: block;
+		z-index: 10;
 	}
 }
+
 /* 강조 */
 
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
-/* 스타일1 */
-
-
-/* 스타일2 */
+.dropdown {
+	/* module-a */
+	&.module-a {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 5rem 0;
+			border-radius: 4rem;
+			background-color: #fff;
+			.dropdown-item {
+				display: block;
+				padding: 5rem 16rem;
+			}
+		}
+	}
+	/* module-b */
+	&.module-b {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 0 0;
+			border-radius: 4rem;
+			background-color: #fff;
+			> li + li {
+				border-top: 1px solid #ddd;
+			}
+			.dropdown-item {
+				display: block;
+				padding: 10rem 16rem;
+			}
+		}
+	}
+	/* module-c */
+	&.module-c {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 5rem 16rem;
+			border-radius: 4rem;
+			background-color: #fff;
+			> li + li {
+				border-top: 1px solid #ddd;
+			}
+			.dropdown-item {
+				display: block;
+				padding: 5rem 0;
+			}
+		}
+	}
+}

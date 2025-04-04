@@ -14,16 +14,11 @@
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
-	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 인크루드 설정용도(개발적용안함) -->
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
 </head>
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
-		<header class="header"></header>
-		<!-- // Header -->
-
 		<!-- Container -->
 		<main class="g-container">
 			<div id="content" class="content">
@@ -34,25 +29,43 @@
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-head">
-							<h2 class="g-h2">기본 구조</h2>
+							<h2 class="g-h2">System</h2>
 						</div>
 						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">dropdown</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<ul class="g-desc">
-								<li><a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank"
-										class="g-link">https://getbootstrap.com/docs/5.3/components/dropdowns/</a></li>
+								<li>[참조] 부트스트랩 : <a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/dropdowns/</a></li>
 							</ul>
+							<h3 class="g-h3">기본</h3>
 							<xmp>
-								<div class="ui-dropdown dropdown-유형">
-									<button class="ui-btn btn-secondary dropdown-toggle" type="button"
-										data-bs-toggle="dropdown" aria-expanded="false">
-										Dropdown button
-									</button>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-										<li><a class="dropdown-item" href="#">Something else here</a></li>
-									</ul>
-								</div>
+<div class="dropdown module-*">
+	<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		<span>Dropdown button</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="#">Action</a></li>
+		<li><a class="dropdown-item" href="#">Another action</a></li>
+		<li><a class="dropdown-item" href="#">Something else here</a></li>
+	</ul>
+</div>
 							</xmp>
 						</div>
 					</section>
@@ -60,13 +73,36 @@
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-head">
-							<h2 class="g-h2">Styles</h2>
+							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="ui-dropdown">
-								<button class="ui-btn btn-secondary dropdown-toggle" type="button"
-									data-bs-toggle="dropdown" aria-expanded="false">
-									Dropdown button
+							<h3 class="g-h3">dropdown</h3>
+							<h4 class="g-h4">module-a</h4>
+							<div class="dropdown module-a">
+								<button class="btn module-a secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span>Dropdown button</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Action</a></li>
+									<li><a class="dropdown-item" href="#">Another action</a></li>
+									<li><a class="dropdown-item" href="#">Something else here</a></li>
+								</ul>
+							</div>
+							<h4 class="g-h4">module-b</h4>
+							<div class="dropdown module-b">
+								<button class="btn module-a secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span>Dropdown button</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Action</a></li>
+									<li><a class="dropdown-item" href="#">Another action</a></li>
+									<li><a class="dropdown-item" href="#">Something else here</a></li>
+								</ul>
+							</div>
+							<h4 class="g-h4">module-c</h4>
+							<div class="dropdown module-c">
+								<button class="btn module-a secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span>Dropdown button</span>
 								</button>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="#">Action</a></li>

@@ -14,166 +14,511 @@
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
-	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 인크루드 설정용도(개발적용안함) -->
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+
+	<script>
+		// 테스트용
+		// document.addEventListener("DOMContentLoaded", function() {
+		// 	const alert01ModalElement = document.getElementById('alert01Modal');
+		// 	const alert01Modal = new bootstrap.Modal(alert01ModalElement);
+
+		// 	// Modal Callback
+		// 	alert01ModalElement.addEventListener('shown.bs.modal', () => {
+		// 		console.log("alert01Modal show");
+		// 	});
+
+		// 	// Modal Open
+		// 	alert01Modal.show();
+		// });
+	</script>
+
 </head>
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
-		<header class="header"></header>
-		<!-- // Header -->
-
 		<!-- Container -->
 		<main class="g-container">
 			<div id="content" class="content">
 				<div class="content-body outer">
 					<div class="inner">
-						<h1 class="g-h1">Modals</h1>
+						<h1 class="g-h1">Modal</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-head">
-							<h2 class="g-h2">기본 구조</h2>
+							<h2 class="g-h2">System</h2>
 						</div>
 						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">modal</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">분류</th>
+											<td class="align-l"><code class="g-code-label">*-modal</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션</th>
+											<td class="align-l"><code class="g-code-label">[효과] [방향]</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<ul class="g-desc">
-								<li><a href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank"
-										class="g-link">https://getbootstrap.com/docs/5.3/components/modal/</a></li>
+								<li>[참조] 부트스트랩 : <a href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/modal/</a></li>
 							</ul>
-							<!-- Modal -->
+
+							<h3 class="g-h3">기본</h3>
 							<xmp>
-								<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog"
-									aria-labelledby="defaultModalLabel" aria-hidden="true">
-									<div class="modal-dialog modal-유형">
-										<div class="modal-content modal-컨텐츠">
-											<div class="modal-header">
-												<h3 class="modal-title" id="defaultModalLabel"></h3>
-												<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal"
-													aria-label="Close">닫기</button>
-											</div>
-											<div class="modal-body"></div>
-											<div class="modal-footer"></div>
-										</div>
-									</div>
-								</div>
+<!-- Open Trigger -->
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#demoModal">
+	<span>Modal Open</span>
+</button>
+
+<!-- Modal -->
+<div class="modal *-modal module-* fade module-*" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="demoModalLabel"></h3>
+				<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
 							</xmp>
-							<!-- // Modal -->
-						</div>
-					</section>
-					<!-- // Section -->
-					<!-- Section -->
-					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2">Baisc</h2>
-						</div>
-						<div class="g-section-body">
+
+							<h3 class="g-h3">스크립트</h3>
+							<xmp>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const demoModalElement = document.getElementById('demoModal');
+		const demoModal = new bootstrap.Modal(demoModalElement);
+
+		// Modal Open
+		demoModal.show();
+
+		// Modal Callback
+		demoModalElement.addEventListener('shown.bs.modal', () => {
+			console.log("demoModalElement show");
+		});
+
+		// Modal Callback
+		demoModalElement.addEventListener('hide.bs.modal', () => {
+			console.log("demoModalElement hide");
+		});
+	});
+</script>
+							</xmp>
+
+							<h3 class="g-h3">옵션</h3>
+							<h4 class="g-h4">효과</h4>
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#centerModal">
+								<span>fade (O)</span>
+							</button>
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#fullModal">
+								<span>fade (X)</span>
+							</button>
+
+							<h4 class="g-h4">방향</h4>
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#normalModal">
+								<span>normal</span>
+							</button>
+
 							<!-- Modal -->
-							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal"
-								data-bs-target="#exampleModal">
-								Basic modal
-							</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-								aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-basic">
+							<div class="modal *-modal module-* fade normal" id="normalModal" tabindex="-1" role="dialog" aria-labelledby="normalModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h1 class="modal-title" id="exampleModalLabel">Modal title</h1>
-											<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal"
-												aria-label="Close">닫기</button>
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#fullModal">
+								<span>full</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* full" id="fullModal" tabindex="-1" role="dialog" aria-labelledby="fullModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#centerModal">
+								<span>center</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* fade center" id="centerModal" tabindex="-1" role="dialog" aria-labelledby="centerModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#leftModal">
+								<span>left</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* fade left" id="leftModal" tabindex="-1" role="dialog" aria-labelledby="leftModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#rightModal">
+								<span>right</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* fade right" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="rightModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#bottomModal">
+								<span>bottom</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* fade bottom" id="bottomModal" tabindex="-1" role="dialog" aria-labelledby="bottomModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+
+							<h3 class="g-h3">선택기능</h3>
+							<h4 class="g-h4">속성</h4>
+							<h5 class="g-h5">딤 클릭으로 닫기 안할 시 : <code class="g-code-label">data-bs-backdrop="static"</code> 추가</h5>
+							<!-- Open Trigger -->
+							<button type="button" class="btn module-b black" data-bs-toggle="modal" data-bs-target="#demoModal" >
+								<span>Modal Open</span>
+							</button>
+
+							<!-- Modal -->
+							<div class="modal *-modal module-* fade center" id="demoModal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-labelledby="demoModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">Modules</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">alert-modal</h3>
+							<h4 class="g-h4">module-a</h4>
+							<h5 class="g-h5">버튼 1개</h5>
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#alert01Modal">
+								<span>제목 + 내용</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="alert01Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Alert Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
 										<div class="modal-body">
-											<div>
-												<p style="height:600px; background-color: #eee;">Modal Body (스크롤 확인)</p>
-											</div>
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<h3 class="msg-tit">등록결과</h3>
+													<p class="msg-con"><em class="txt-fail">등록 실패하였습니다.</em> <br>정확히 다시 입력하시기 바랍니다.</p>
+												</div>
+											</section>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="ui-btn btn-popup secondary"
-												data-bs-dismiss="modal">Close</button>
-											<button type="button" class="ui-btn btn-popup primary">Save changes</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#alert02Modal">
+								<span>제목</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="alert02Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Alert Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<h3 class="msg-tit">접수 되었습니다.</h3>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#alert03Modal">
+								<span>내용</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="alert03Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Alert Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<p class="msg-con">정확히 다시 입력하시기 바랍니다.</p>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<h5 class="g-h5">버튼 2개</h5>
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#confirm01Modal">
+								<span>제목 + 내용</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="confirm01Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Confirm Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<h3 class="msg-tit">등록결과</h3>
+													<p class="msg-con"><em class="txt-fail">등록 실패하였습니다.</em> <br>정확히 다시 입력하시기 바랍니다.</p>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#confirm02Modal">
+								<span>제목</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="confirm02Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Confirm Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<h3 class="msg-tit">접수 되었습니다.</h3>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#confirm03Modal">
+								<span>내용</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal alert-modal module-a fade center" id="confirm03Modal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-label="Confirm Dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- <div class="modal-header">
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div> -->
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<p class="msg-con">정확히 다시 입력하시기 바랍니다.</p>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<h3 class="g-h3">basic-modal</h3>
+							<h4 class="g-h4">module-a</h4>
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#basic01Modal">
+								<span>full</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal basic-modal module-a fade full" id="basic01Modal" tabindex="-1" role="dialog" aria-labelledby="basic01ModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="basic01ModalLabel">Modal Title</h3>
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<div style="height:1000px"><!-- 스크롤확인용 --></div>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#basic02Modal">
+								<span>center</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal basic-modal module-a fade center" id="basic02Modal" tabindex="-1" role="dialog" aria-labelledby="basic02ModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="basic02ModalLabel">Modal Title</h3>
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<div style="height:1000px"><!-- 스크롤확인용 --></div>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#basic03Modal">
+								<span>bottom</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal basic-modal module-a fade bottom" id="basic03Modal" tabindex="-1" role="dialog" aria-labelledby="basic03ModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="basic03ModalLabel">Modal Title</h3>
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+										</div>
+										<div class="modal-body">
+											<section class="sec msg-sec">
+												<div class="sec-inner">
+													<div style="height:1000px"><!-- 스크롤확인용 --></div>
+												</div>
+											</section>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
 										</div>
 									</div>
 								</div>
 							</div>
 							<!-- // Modal -->
 						</div>
+
 					</section>
 					<!-- // Section -->
-
-					<!-- Section -->
-					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2">Alert, Confirm</h2>
-						</div>
-						<div class="g-section-body">
-							<ul class="g-desc">
-								<li>바닥 클릭시 모달 안닫힘 : data-bs-backdrop="static"</li>
-							</ul>
-							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal"
-								data-bs-target="#alertModal">
-								Alert modal
-							</button>
-							<br>
-							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal"
-								data-bs-target="#confirmModal">
-								Confirm modal
-							</button>
-
-							<!-- Alert -->
-							<div class="modal fade" id="alertModal" tabindex="-1" role="alertdialog"
-								data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-alert">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h1 class="modal-title fs-5" id="alertModalLabel">Modal title</h1>
-										</div>
-										<div class="modal-body">
-											...
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="ui-btn btn-popup secondary"
-												data-bs-dismiss="modal">Close</button>
-											<button type="button" class="ui-btn btn-popup primary">Save changes</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- //Alert -->
-
-							<!-- Confirm -->
-							<div class="modal fade" id="confirmModal" tabindex="-1" role="alertdialog"
-								data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-confirm">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h1 class="modal-title fs-5" id="confirmModalLabel">Modal title</h1>
-										</div>
-										<div class="modal-body">
-											...
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="ui-btn btn-secondary"
-												data-bs-dismiss="modal">Close</button>
-											<button type="button" class="ui-btn btn-primary">Save changes</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- //Confirm -->
-						</div>
-					</section>
-					<!-- // Section -->
-
-					<!-- Section -->
-					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2"></h2>
-						</div>
-						<div class="g-section-body">
-						</div>
-					</section>
-					<!-- // Section -->
-
 				</div>
 			</div>
 		</main>

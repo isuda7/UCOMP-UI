@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Buttons | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../assets/js/guide.publish.js"></script><!-- 퍼블리싱 인크루드 설정용도(개발적용안함) -->
+	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header -->
+		<header class="g-header"></header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">Button</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">btn</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션</th>
+											<td class="align-l">
+												<code class="g-code-label">[강조]</code>, <code class="g-code-label">[라인]</code>, <code class="g-code-label">[가변]</code>
+											</td>
+										</tr>
+										<tr>
+											<th class="align-l">구성</th>
+											<td class="align-l">
+												텍스트, 아이콘
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="g-h3">기본</h3>
+							<div class="g-xmp-wrap">
+								<xmp>
+<!-- 텍스트 버튼 -->
+<button type="button" class="btn">
+	<span>버튼</span>
+</button>
+
+<!-- 아이콘 버튼 -->
+<button type="button" class="btn">
+	<i class="icn" aria-hidden="true"></i>
+	<span class="blind">버튼</span>
+</button>
+
+<!-- 아이콘+텍스트 버튼 -->
+<button type="button" class="btn">
+	<i class="icn" aria-hidden="true"></i>
+	<span>버튼</span>
+</button>
+								</xmp>
+							</div>
+							<h3 class="g-h3">옵션</h3>
+							<h4 class="g-h4">강조</h4>
+							<button type="button" class="btn module-a black">
+								<span>black</span>
+							</button>
+							<button type="button" class="btn module-a primary">
+								<span>primary</span>
+							</button>
+							<button type="button" class="btn module-a secondary">
+								<span>secondary</span>
+							</button>
+							<h4 class="g-h4">라인</h4>
+							<button type="button" class="btn module-a black outlined">
+								<span>black</span>
+							</button>
+							<button type="button" class="btn module-a primary outlined">
+								<span>primary</span>
+							</button>
+							<button type="button" class="btn module-a secondary outlined">
+								<span>secondary</span>
+							</button>
+							<h4 class="g-h4">가변</h4>
+							<button type="button" class="btn module-a primary fluid">
+								<span>fluid</span>
+							</button>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">Styles</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">btn</h3>
+							<h4 class="g-h4">module-a</h4>
+							<button type="button" class="btn module-a">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-a primary">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-a primary outlined">
+								<span>버튼</span>
+							</button>
+							<br>
+							<br>
+							<button type="button" class="btn module-a" disabled>
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-a primary" disabled>
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-a primary outlined" disabled>
+								<span>버튼</span>
+							</button>
+							<br><br>
+							<button type="button" class="btn module-a primary outlined">
+								<span>버튼</span>
+								<i class="icn icn-20-demo-gr-b" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="btn module-a primary outlined">
+								<i class="icn icn-20-demo-gr-b" aria-hidden="true"></i>
+								<span>버튼</span>
+							</button>
+
+							<h4 class="g-h4">module-b</h4>
+							<button type="button" class="btn module-b">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-b black">
+								<span>버튼</span>
+								<i class="icn icn-16-demo-gr-b" aria-hidden="true"></i>
+							</button>
+
+							<h4 class="g-h4">module-c</h4>
+							<button type="button" class="btn module-c outlined">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-c outlined black">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-c outlined primary">
+								<span>버튼</span>
+							</button>
+							<br><br>
+							<button type="button" class="btn module-c outlined">
+								<span>버튼</span>
+								<i class="icn icn-16-demo-gr-b" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="btn module-c outlined black">
+								<span>버튼</span>
+								<i class="icn icn-16-demo-gr-b" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="btn module-c outlined primary">
+								<span>버튼</span>
+								<i class="icn icn-16-demo-gr-b" aria-hidden="true"></i>
+							</button>
+
+							<h4 class="g-h4">module-d</h4>
+							<button type="button" class="btn module-d">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d dark">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d black">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d primary">
+								<span>버튼</span>
+							</button>
+							<br>
+							<button type="button" class="btn module-d underlined">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d underlined dark">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d underlined black">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="btn module-d underlined primary">
+								<span>버튼</span>
+							</button>
+							<br>
+							<button type="button" class="btn module-d">
+								<span>버튼</span>
+								<i class="icn icn-12-demo-gr-b" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="btn module-d dark">
+								<span>버튼</span>
+								<i class="icn icn-12-demo-dk-b" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="btn module-d primary">
+								<span>버튼</span>
+								<i class="icn icn-12-demo-bl-b" aria-hidden="true"></i>
+							</button>
+
+							<h4 class="g-h4">module-e</h4>
+							<button type="button" class="btn module-e">
+								<span>버튼</span>
+							</button>
+							<br>
+							<br>
+							<button type="button" class="btn module-e">
+								<span>버튼</span>
+								<i class="icn icn-12-demo-dk-b" aria-hidden="true"></i>
+							</button>
+						</div>
+					</section>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

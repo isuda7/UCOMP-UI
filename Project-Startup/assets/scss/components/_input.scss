@@ -7,62 +7,136 @@
 /*-------------------------------------------------------------------
 	@@ Label
 -------------------------------------------------------------------*/
-.form-tit {
+.frm-tit {
 	display: inline-block;
 }
 
 /*-------------------------------------------------------------------
 	@@ Input
 -------------------------------------------------------------------*/
-/* 스타일1 */
-.ui-inp {
-	display: inline-block;
-	position: relative;
-	height: 40px;
-	.inp {
-		height: 100%;
-		line-height: 1.5;
-		padding: 0 10px;
-		border: 1px solid #ddd;
-		border-radius: 0;
+.frm-inp {
+	/* common */
+	& {
+		.inp {
+			// 입력상태 인터렉션
+			&:not(:placeholder-shown) + .on-right .btn-clear {
+				display: block;
+			}
 
-		// 기본상태 인터렉션
-		&:focus,
-		&:hover,
-		&.is-focused {
-			border-color: #0089b3;
-		}
-		&:read-only,
-		&:disabled {
-			background-color: #f8f8f8;
-		}
+			&:not(:placeholder-shown):disabled + .on-right .btn-clear {
+				display: none;
+			}
 
-		// 입력상태 인터렉션
-		&:not(:placeholder-shown) + .on-right .btn-clear {
-			display: block;
+			&:not(:placeholder-shown):read-only + .on-right .btn-clear {
+				display: none;
+			}
 		}
-
-		&:not(:placeholder-shown):disabled + .on-right .btn-clear {
-			display: none;
+		.on-right {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+			position: absolute;
+			right: 10rem;
+			top: 0;
+			height: 100%;
 		}
 
-		&:not(:placeholder-shown):read-only + .on-right .btn-clear {
+		.btn-clear {
 			display: none;
 		}
 	}
 
-	.on-right {
-		display: flex;
-		align-items: center;
-		gap: 4rem;
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 100%;
+	/* module-a */
+	&.module-a {
+		display: inline-block;
+		position: relative;
+		height: 40rem;
+		flex: 1 1 auto;
+		width: 100%;
+		.inp {
+			width: 100%;
+			height: 100%;
+			line-height: 1.5;
+			padding: 0 16rem;
+			border: 1px solid #ddd;
+			border-radius: 0;
+			transition: all 0.2s ease;
+
+			// 기본상태 인터렉션
+			&:focus,
+			&:hover,
+			&.is-focused {
+				border-color: $color-primary;
+			}
+			&:read-only,
+			&:disabled {
+				background-color: #f8f8f8;
+			}
+		}
 	}
 
-	.btn-clear {
-		display: none;
+	/* module-b */
+	&.module-b {
+		display: inline-block;
+		position: relative;
+		height: 40rem;
+		flex: 1 1 auto;
+		width: 100%;
+		.inp {
+			width: 100%;
+			height: 100%;
+			line-height: 1.5;
+			padding: 0 16rem;
+			border: 1px solid #ddd;
+			border-radius: 40rem;
+			transition: all 0.2s ease;
+
+			// 기본상태 인터렉션
+			&:focus,
+			&:hover,
+			&.is-focused {
+				border-color: $color-primary;
+			}
+			&:read-only,
+			&:disabled {
+				background-color: #f8f8f8;
+			}
+		}
+	}
+
+	/* module-c */
+	&.module-c {
+		display: inline-block;
+		position: relative;
+		height: 40rem;
+		flex: 1 1 auto;
+		border-radius: 40rem;
+		width: 100%;
+		.inp {
+			width: 100%;
+			height: calc(100% - 2px);
+			line-height: 1.5;
+			padding: 1px 10rem;
+			border-bottom: 1px solid #ddd;
+			border-radius: 0;
+			transition: border-color 0.2s ease;
+
+			// 기본상태 인터렉션
+			&:focus,
+			&:hover,
+			&.is-focused {
+				border-color: #0089b3;
+			}
+			&:focus-visible {
+				outline:0;
+				padding-bottom: 0;
+				border-bottom: 2px solid #000;
+			}
+			&:read-only,
+			&:disabled {
+				background-color: #f8f8f8;
+			}
+		}
 	}
 }
 
@@ -72,19 +146,54 @@
 	@@ Textarea
 -------------------------------------------------------------------*/
 /* 스타일 */
-.ui-textarea {
+.frm-textarea {
+    display: flex;
+    flex-direction: column;
+	gap: 4rem;
+	position: relative;
 	.textarea {
 		display: block;
-		padding: 0 10px;
 		width: 100%;
+		height: 100rem;
+		padding: 10px;
+		flex: 1 1 auto;
 		border: 1px solid #ddd;
 		border-radius: 0;
 		line-height: 1.5;
+
+		&:hover {
+			border-color: #0089b3;
+		}
+		&:focus {
+			border-color: #000;
+			outline: 1px solid #000;
+		}
+		&:disabled {
+			background-color: #f8f8f8;
+		}
 	}
-	&:focus,
-	&:hover,
-	&.is-focused {
-		border-color: #0089b3;
+
+	.on-right {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		position: absolute;
+		bottom: 10rem;
+		right: 10rem;
+	}
+
+	.under-right {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.bytes {
+		font-size: 12rem;
+		color: #666;
+		.count {
+			color: #000;
+		}
 	}
 }
 
@@ -93,15 +202,22 @@
 	@@ Select
 -------------------------------------------------------------------*/
 /* 스타일 */
-.ui-sel {
-	.sel {
+.frm-sel {
+	&.module-a {
+		display: flex;
 		height: 40px;
-		padding: 0 30px 0 10px;
-		border: 1px solid #ddd;
-		background: url('../demo/ico_select01_black.png') no-repeat right 10px center;
+		flex: 1 1 auto;
+		width: 100%;
+		.sel {
+			width: 100%;
+			height: 40px;
+			padding: 0 30px 0 10px;
+			border: 1px solid #ddd;
+			background: url('../images/demo/icn-16-demo-select-arw.svg') no-repeat right 10px center;
 
-		&:disabled.demo1 {
-			background-color: #f7f7f7;
+			&:disabled.demo1 {
+				background-color: #f7f7f7;
+			}
 		}
 	}
 }
