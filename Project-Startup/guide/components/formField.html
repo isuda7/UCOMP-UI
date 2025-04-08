@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Form | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">Form</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">frm</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션</th>
+											<td class="align-l"><code class="g-code-label">[방향]</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="g-h3">기본</h3>
+							<xmp>
+<!-- 폼 -->
+<form action="" class="frm module-*">
+	<fieldset class="frm-fieldset">
+		<legend class="blind">Form Name</legend>
+
+		<!-- 필드: 이름A -->
+		<div class="frm-field">
+			<div class="frm-title">라벨영역</div>
+			<div class="frm-content">서식영역</div>
+		</div>
+		<!-- //필드: 이름A -->
+
+		<!-- 필드: 이름B -->
+		<div class="frm-field">
+			<div class="frm-title">라벨영역</div>
+			<div class="frm-content">서식영역</div>
+		</div>
+		<!-- //필드: 이름B -->
+	</fieldset>
+</form>
+<!-- //폼 -->
+							</xmp>
+
+							<h3 class="g-h3">옵션</h3>
+							<h4 class="g-h4">방향</h4>
+							<h5 class="g-h5">Vertical</h5>
+							<form action="" class="frm module-a">
+								<fieldset class="frm-fieldset">
+									<legend class="blind">Form Name</legend>
+
+									<!-- 필드: 아이디 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmID" class="frm-label">아이디</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-inp module-a fluid">
+												<input type="text" name="" id="frmID" value="aesufshl123" placeholder="아이디 입력" title="" class="inp" />
+												<div class="on-right">
+													<button type="button" class="btn btn-clear" onclick="InputClearHandler('#frmID')">
+														<i class="icn icn-20-demo-remove-dk" aria-hidden="false"></i>
+														<span class="blind">삭제</span>
+													</button>
+												</div>
+											</div>
+											<div class="frm-alert is-success" role="alert">
+												<p>아이디 사용가능합니다.</p>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 아이디 -->
+
+									<!-- 필드: 패스워드 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmPW" class="frm-label">패스워드</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-inp module-a fluid">
+												<input type="password" name="" id="frmPW" value="alefhlkuh" placeholder="패스워드 입력" title="" class="inp" />
+												<div class="on-right">
+													<button type="button" class="btn btn-clear" onclick="InputClearHandler('#frmID')">
+														<i class="icn icn-20-demo-remove-dk" aria-hidden="false"></i>
+														<span class="blind">삭제</span>
+													</button>
+												</div>
+											</div>
+											<div class="frm-alert is-errored" role="alert">
+												<p>특수문자/숫자/영문 조합 8자 이상 입력 바랍니다.</p>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 패스워드 -->
+
+								</fieldset>
+							</form>
+
+							<h5 class="g-h5">Horizontal</h5>
+							<form action="" class="frm module-a">
+								<fieldset class="frm-fieldset">
+									<legend class="blind">Form Name</legend>
+
+									<!-- 필드: 아이디 -->
+									<div class="frm-field horizontal">
+										<div class="frm-title">
+											<label for="frmID" class="frm-label">아이디</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-inp module-a fluid">
+												<input type="text" name="" id="frmID" value="aesufshl123" placeholder="아이디 입력" title="" class="inp" />
+												<div class="on-right">
+													<button type="button" class="btn btn-clear" onclick="InputClearHandler('#frmID')">
+														<i class="icn icn-20-demo-remove-dk" aria-hidden="false"></i>
+														<span class="blind">삭제</span>
+													</button>
+												</div>
+											</div>
+											<div class="frm-alert is-success" role="alert">
+												<p>아이디 사용가능합니다.</p>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 아이디 -->
+
+									<!-- 필드: 패스워드 -->
+									<div class="frm-field horizontal">
+										<div class="frm-title">
+											<label for="frmPW" class="frm-label">패스워드</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-inp module-a fluid">
+												<input type="password" name="" id="frmPW" value="alefhlkuh" placeholder="패스워드 입력" title="" class="inp" />
+												<div class="on-right">
+													<button type="button" class="btn btn-clear" onclick="InputClearHandler('#frmID')">
+														<i class="icn icn-20-demo-remove-dk" aria-hidden="false"></i>
+														<span class="blind">삭제</span>
+													</button>
+												</div>
+											</div>
+											<div class="frm-alert is-errored" role="alert">
+												<p>특수문자/숫자/영문 조합 8자 이상 입력 바랍니다.</p>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 패스워드 -->
+								</fieldset>
+							</form>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">Modules</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- frm -->
+							<h3 class="g-h3">frm</h3>
+							<!-- module-a -->
+							<h4 class="g-h4">module-a</h4>
+							<form action="" class="frm module-a">
+								<fieldset class="frm-fieldset">
+									<legend class="blind">Form Name</legend>
+
+									<!-- 필드: 아이디 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmID" class="frm-label">아이디</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-inp module-a fluid">
+												<input type="text" name="" id="frmID" value="aesufshl123" placeholder="아이디 입력" title="" class="inp" />
+												<div class="on-right">
+													<button type="button" class="btn btn-clear" onclick="InputClearHandler('#frmID')">
+														<i class="icn icn-20-demo-remove-dk" aria-hidden="false"></i>
+														<span class="blind">삭제</span>
+													</button>
+												</div>
+											</div>
+											<div class="frm-alert
+											is-success" role="alert">
+												<p>아이디 사용가능합니다.</p>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 아이디 -->
+								</fieldset>
+							</form>
+						</div>
+					</section>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

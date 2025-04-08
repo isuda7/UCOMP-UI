@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>System | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+	<!-- 페이지 스크립트 영역 -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">설계규칙</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- 문서 레이아웃 -->
+							<h3 class="g-h3">문서구조</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">페이지</th>
+											<td class="align-l"><code class="g-code-label">.page</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">페이지 머리말</th>
+											<td class="align-l"><code class="g-code-label">.page-header</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">페이지 본문</th>
+											<td class="align-l"><code class="g-code-label">.page-body</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">페이지 바닥글</th>
+											<td class="align-l"><code class="g-code-label">.page-footer</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //문서 레이아웃 -->
+
+							<!-- 영역 레이아웃 -->
+							<h3 class="g-h3">영역규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">전체 영영</th>
+											<td class="align-l"><code class="g-code-label">-wrap</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">배치 영역</th>
+											<td class="align-l"><code class="g-code-label">-area</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">섹션 영역</th>
+											<td class="align-l"><code class="g-code-label">-sec</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //영역 레이아웃 -->
+
+							<!-- 모듈 네임규칙 -->
+							<h3 class="g-h3">모듈규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">모듈공통 [컴포넌트]</th>
+											<td class="align-l"><code class="g-code-label">[표현적 구조]</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈공통 [컨텐츠]</th>
+											<td class="align-l"><code class="g-code-label">[내용적 성격]-[표현적 구조]</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈구분</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션구분</th>
+											<td class="align-l">
+												<code class="g-code-label">[강조]</code>,
+												<code class="g-code-label">[모양]</code>,
+												<code class="g-code-label">[방향]</code>,
+												<code class="g-code-label">[정렬]</code>,
+												<code class="g-code-label">[가변]</code> 등
+											</td>
+										</tr>
+										<tr>
+											<th class="align-l">특성구분</th>
+											<td class="align-l">
+												<code class="g-code-label">is-[상태]</code>,
+												<code class="g-code-label">has-[확장요소]</code>,
+												<code class="g-code-label">type-[명사]</code>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //모듈 네임규칙 -->
+
+							<!-- 예외 네임규칙 -->
+							<h3 class="g-h3">예외규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">크기대응</th>
+											<td class="align-l">
+												<ul class="g-desc">
+													<li>단위 클래스 (예)<code class="g-code-label">.xs-1, .xl-1</code></li>
+													<li>수치 클래스 (예)<code class="g-code-label">.h-20</code></li>
+													<li>컨텐츠 모듈로 컴포넌트의 크기를 제어 (예) <code class="g-code-label">.info-board .bul</code></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="align-l">유틸리티</th>
+											<td class="align-l">
+												<code class="g-code-label">[속성]-[값]</code>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="g-desc">
+								<li>기본 가이드에 포함하지 않으며 유연한 대응을 목적으로 필요시 사용한다.</li>
+								<li>반복적인 네이밍을 [prefix]- 로 적용한다.</li>
+							</ul>
+							<!-- //모듈 네임규칙 -->
+						</div>
+					</section>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

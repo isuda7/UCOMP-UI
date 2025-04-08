@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Form Controls | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">Form Controls</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">frm-controls</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">이름</th>
+											<td class="align-l"><code class="g-code-label">type-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">설명</th>
+											<td class="align-l">
+												<p>서식이 여러개일 때 묶어주는 목적이다.</p>
+												<p>따라서 하나일 때는 생략 할 수 있다.</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="g-h3">기본</h3>
+							<xmp style="height: auto;">
+<div class="frm-controls">
+	Form Elements
+</div>
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-head">
+							<h2 class="g-h2">Types</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- 폼 -->
+							<form action="" class="frm module-a">
+								<fieldset class="frm-fieldset">
+									<legend class="blind">개인정보 입력</legend>
+
+									<!-- 필드: 주민등록번호 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmPersnolId" class="frm-label">주민등록번호</label>
+											<b class="frm-star" aria-hidden="true">*</b>
+										</div>
+										<div class="frm-content">
+											<div class="frm-controls">
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="frmPersnolId" value="" placeholder="예: 900101" title="주민등록번호 6자리 입력" class="inp" aria-required="true" />
+												</div>
+												<span class="frm-split">-</span>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="예: 1234567" title="주민등록번호 7자리 입력" class="inp" aria-required="true" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 주민등록번호 -->
+
+									<!-- 필드: 이메일 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmEmail" class="frm-label">이메일</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-controls type-email">
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="frmEmail" value="" placeholder="아이디 입력" title="이메일 아이디 입력" class="inp" />
+												</div>
+												<span class="frm-split">@</span>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="도메인 입력" title="이메일 도메인주소 입력" class="inp" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 이메일 -->
+
+									<!-- 필드: 카드번호 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmCardNo" class="frm-label">카드번호</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-controls type-cardNo">
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="frmCardNo" value="" placeholder="0000" title="카드 첫번째 4자리 입력" class="inp" />
+												</div>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="0000" title="카드 두번째 4자리 입력" class="inp" />
+												</div>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="0000" title="카드 세번째 4자리 입력" class="inp" />
+												</div>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="0000" title="카드 네번째 4자리 입력" class="inp" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 카드번호 -->
+
+									<!-- 필드: 주소 -->
+									<div class="frm-field vertical">
+										<div class="frm-title">
+											<label for="frmAddress" class="frm-label">주소</label>
+										</div>
+										<div class="frm-content">
+											<div class="frm-controls type-address">
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="frmAddress" value="" placeholder="우편번호" title="우편번호 5자리 입력" class="inp" />
+												</div>
+												<button type="button" class="btn module-b">
+													<span>검색</span>
+												</button>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="기본 주소" title="기본 주소 입력, 도로명 주소 또는 지번 주소" class="inp" />
+												</div>
+												<div class="frm-inp module-a fluid">
+													<input type="text" name="" id="" value="" placeholder="나머지 주소" title="상세 주소 입력, 동·호수 또는 건물명까지 입력" class="inp" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //필드: 주소 -->
+								</fieldset>
+							</form>
+							<!-- //폼 -->
+						</div>
+					</section>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

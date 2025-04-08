@@ -5,11 +5,11 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ Checkbox Group
-	@@ Radio Group
+	@@ Group
 -------------------------------------------------------------------*/
 .frm-chk-group,
 .frm-rdo-group {
+
 	// Direction
 	&.horizontal {
 		display: flex;
@@ -17,6 +17,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 	}
+
 	&.vertical {
 		display: flex;
 		flex-direction: column;
@@ -26,37 +27,51 @@
 	// Size
 	&.module-a {
 		min-height: 40rem;
+
 		&.horizontal {
 			gap: 8rem 16rem;
 		}
+
 		&.vertical {
 			gap: 8rem 16rem;
 		}
 	}
+
 	&.module-b {
 		min-height: 40rem;
+
 		&.horizontal {
-			gap: 4rem 8rem;
+			gap: 8rem 8rem;
 		}
+
 		&.vertical {
-			gap: 4rem 8rem;
+			gap: 8rem 8rem;
+
+			.frm-chk,
+			.frm-rdo {
+				width: 100%;
+			}
 		}
 	}
 }
 
 /*-------------------------------------------------------------------
-	@@ Checkbox
+	@@ Elements
 -------------------------------------------------------------------*/
-.frm-chk {
+.frm-chk,
+.frm-rdo {
+
 	/* module-a */
 	&.module-a {
+		--icn-size: 20rem;
+
 		display: inline-flex;
 		align-items: flex-start;
 		position: relative;
 		min-height: 22rem;
-		font-size: 14rem;
-		line-height: 22rem;
+
 		>input {
+
 			// Normal
 			& {
 				position: absolute;
@@ -66,44 +81,60 @@
 				height: 100%;
 				background: #fff;
 
-				+.frm-chk-label {
+				+label {
 					position: relative;
 					display: flex;
+					width: 100%;
+					font-size: 14rem;
+					line-height: 22rem;
+
 					&::before {
-						content:'';
+						content: '';
+						flex: none;
 						position: relative;
 						z-index: 1;
 						display: inline-flex;
-						width: 20rem;
-						height: 20rem;
+						width: var(--icn-size);
+						height: var(--icn-size);
 						top: 1px;
 						vertical-align: top;
-						background:
-							url('../images/demo/icn-20-demo-chk-nor.svg') no-repeat center 0 / contain,
-							url('../images/demo/icn-20-demo-chk-sel.svg') no-repeat center 20rem / contain;
+						background: no-repeat center 0 / contain, no-repeat center var(--icn-size) / contain;
 					}
-					.frm-chk-txt {
-						display: inline-block;
+
+					>span {
+						display: block;
+						width: 100%;
 						margin-left: 8rem;
+					}
+
+					// Checkbox
+					&.frm-chk-label::before {
+						background-image:
+							url('../images/demo/icn-20-demo-chk-nor.svg'),
+							url('../images/demo/icn-20-demo-chk-sel.svg');
+					}
+
+					// Radio
+					&.frm-rdo-label::before {
+						background-image:
+							url('../images/demo/icn-20-demo-rdo-nor.svg'),
+							url('../images/demo/icn-20-demo-rdo-sel.svg');
 					}
 				}
 			}
+
 			// Checked
 			&:checked {
-				& ~ .frm-chk-label {
+				+label {
 					&::before {
-						background-position: center 20rem, center 0rem;
+						background-position: center var(--icn-size), center 0rem;
 					}
-				}
-
-				+.frm-chk-txt {
-					display: inline-block;
 				}
 			}
 
 			// Disabled
 			&:disabled {
-				+.frm-chk-label {
+				+label {
 					opacity: 0.5;
 				}
 			}
@@ -117,9 +148,9 @@
 		align-items: flex-start;
 		position: relative;
 		font-size: 16rem;
-		font-weight: 500;
-		line-height: 24rem;
+
 		>input {
+
 			// Normal
 			& {
 				position: absolute;
@@ -129,165 +160,44 @@
 				height: 100%;
 				background: #fff;
 
-				+.frm-chk-label {
+				+label {
 					position: relative;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					border:1px solid #ddd;
-					height: 40rem;
+					width: 100%;
+					height: 44rem;
 					padding: 4rem 15rem;
+					border: 1px solid #ddd;
 					border-radius: 4rem;
-					.frm-chk-txt {
-						display: inline-block;
+					font-weight: 500;
+					line-height: 24rem;
+
+					>span {
+						display: block;
+						width: 100%;
+						text-align: center;
 					}
 				}
 			}
+
 			// Checked
 			&:checked {
-				& ~ .frm-chk-label {
+				+label {
 					border-color: $color-primary;
 					color: $color-primary;
-				}
-
-				+.frm-chk-txt {
-					display: inline-block;
 				}
 			}
 
 			// Disabled
 			&:disabled {
-				+.frm-chk-label {
+				+label {
 					opacity: 0.5;
 				}
 			}
 		}
 	}
 }
-
-/*-------------------------------------------------------------------
-	@@ Radio
--------------------------------------------------------------------*/
-/* 스타일 */
-.frm-rdo {
-	/* module-a */
-	&.module-a {
-		display: inline-flex;
-		align-items: flex-start;
-		position: relative;
-		line-height: 20rem;
-		vertical-align: top;
-
-		>input {
-			// Normal
-			& {
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background: #fff;
-
-				+.frm-rdo-label {
-					position: relative;
-					display: flex;
-					// normal, checked
-					&::before {
-						content:'';
-						position: relative;
-						z-index: 1;
-						display: inline-flex;
-						width: 20rem;
-						height: 20rem;
-						padding-top: 1px;
-						vertical-align: top;
-						background:
-							url('../images/demo/icn-20-demo-rdo-nor.svg') no-repeat center 0 / contain,
-							url('../images/demo/icn-20-demo-rdo-sel.svg') no-repeat center 20rem / contain;
-					}
-					.frm-rdo-txt {
-						display: inline-block;
-						margin-left: 8rem;
-					}
-				}
-			}
-			// Checked
-			&:checked {
-				& ~ .frm-rdo-label {
-					&::before {
-						background-position: center 20rem, center 0rem;
-					}
-				}
-
-				+.frm-rdo-txt {
-					display: inline-block;
-				}
-			}
-
-			// Disabled
-			&:disabled {
-				+.frm-rdo-label {
-					opacity: 0.5;
-				}
-			}
-		}
-
-	}
-
-	/* module-b */
-	&.module-b {
-		display: inline-flex;
-		align-items: flex-start;
-		position: relative;
-		font-size: 16rem;
-		font-weight: 500;
-		line-height: 24rem;
-		>input {
-			// Normal
-			& {
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background: #fff;
-
-				+.frm-rdo-label {
-					position: relative;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					border:1px solid #ddd;
-					height: 40rem;
-					padding: 4rem 15rem;
-					border-radius: 4rem;
-					.frm-chk-txt {
-						display: inline-block;
-					}
-				}
-			}
-			// Checked
-			&:checked {
-				& ~ .frm-rdo-label {
-					border-color: $color-primary;
-					color: $color-primary;
-				}
-
-				+.frm-rdo-txt {
-					display: inline-block;
-				}
-			}
-
-			// Disabled
-			&:disabled {
-				+.frm-rdo-label {
-					opacity: 0.5;
-				}
-			}
-		}
-	}
-}
-
 
 /*-------------------------------------------------------------------
 	@@ switch
@@ -373,7 +283,9 @@
 		font-size: 16rem;
 		font-weight: 500;
 		line-height: 24rem;
+
 		>input {
+
 			// Normal
 			& {
 				position: absolute;
@@ -387,18 +299,20 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					border:1px solid #ddd;
+					border: 1px solid #ddd;
 					height: 40rem;
 					padding: 4rem 15rem;
 					border-radius: 4rem;
+
 					.frm-chk-txt {
 						display: inline-block;
 					}
 				}
 			}
+
 			// Checked
 			&:checked {
-				& ~ .frm-rdo-label {
+				&~.frm-rdo-label {
 					border-color: $color-primary;
 					color: $color-primary;
 				}

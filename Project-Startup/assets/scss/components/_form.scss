@@ -7,14 +7,113 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
+.frm-fieldset {
+	display: flex;
+	flex-direction: column;
+}
+
+.frm-field {
+	display: flex;
+	width: 100%;
+
+	.frm-title {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+		flex: none;
+	}
+	.frm-content {
+		flex: 1 1 auto;
+	}
+	.frm-alert {
+		width: 100%;
+	}
+
+	&.horizontal {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+	&.vertical {
+		flex-direction: column;
+	}
+}
 
 
-/* 강조 */
+.frm-alert {
+	&.is-hide {
+		display: none;
+	}
+	&.is-errored {
+		color: $color-error;
+	}
+	&.is-success {
+		color: $color-success;
+	}
+}
+
+.frm-controls {
+	display: flex;
+	align-items: center;
+	gap: 8rem;
+	.frm-split {
+		flex: none;
+		color: #666;
+	}
+
+	&.type-email {
+		.frm-inp:first-child {
+			min-width: 160rem;
+			width: 30%;
+		}
+	}
+
+	&.type-address {
+		flex-wrap: wrap;
+		.frm-inp:first-child {
+			min-width: 160rem;
+			width: 30%;
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
-	@@ 유형
+	@@ Form 모듈
 -------------------------------------------------------------------*/
-/* 스타일1 */
+.frm {
+	/* module-a */
+	&.module-a {
 
+		.frm-fieldset {
+			gap: 24rem;
+		}
 
-/* 스타일2 */
+		.frm-field {
+			&.horizontal {
+				gap: 8rem;
+
+				.frm-title {
+					height: 44rem;
+					width: 120rem;
+				}
+			}
+
+			&.vertical {
+				gap: 8rem;
+			}
+		}
+
+		.frm-label {
+			display: block;
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 500;
+		}
+
+		.frm-alert {
+			margin-top: 4rem;
+			font-size: 14rem;
+			line-height: 22rem;
+		}
+	}
+}
