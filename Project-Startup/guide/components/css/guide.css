@@ -26,7 +26,8 @@
 .g-h3 {margin-top:40px; margin-bottom:15px; font-size:22px; font-weight:500; color:#d3002e; line-height: 1.2;}
 .g-h3:first-child {margin-top:0;}
 /* .g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;} */
-.g-h3 + .g-h4 {margin-top:16px;}
+.g-h3 + .g-h4,
+.g-h4:first-child {margin-top:16px;}
 .g-h4 {margin-top:30px; margin-bottom:10px; font-size: 20px; color:rgb(0, 99, 99); line-height: 1.2;}
 .g-h4 + .g-h5 {margin-top:16px;}
 .g-h5 {margin-top:30px; margin-bottom:10px; font-size: 16px; color:#333; line-height: 1.2;}
@@ -109,6 +110,9 @@ ul.g-desc strong {font-weight: 700;}
 .icn-28-demo-bl-a {width: 28px; height: 28px; background-color: #376de0;}
 .icn-28-demo-bl-b {width: 28px; height: 28px; background-color: #376de0; border-radius: 50%;}
 .icn-32-anb-wh {background-image: url('../../assets/img/icn-32-anb-wh.png')}
+
+/* box */
+.box-100-demo-gr {display: flex; justify-content: center; align-items: center; width: 100rem; height: 100rem; background-color: #999; color: #222;}
 
 /* Modal */
 .modal-anb,
