@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>List Bullets | 프로젝트 스타일가이드</title>
+	<title>Bullet | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -14,16 +14,11 @@
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
-	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 인크루드 설정용도(개발적용안함) -->
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
 </head>
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
-		<header class="header"></header>
-		<!-- // Header -->
-
 		<!-- Container -->
 		<main class="g-container">
 			<div id="content" class="content">
@@ -33,70 +28,131 @@
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2">기본 구조</h2>
+						<div class="g-section-header">
+							<h2 class="g-h2">System</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">모양</h3>
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">bul</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션</th>
+											<td class="align-l">
+												<code class="g-code-label">[모양]</code>,
+												<code class="g-code-label">[기호]</code>,
+												<code class="g-code-label">[숫자]</code>,
+												<code class="g-code-label">[영문]</code>,
+												<code class="g-code-label">[한글]</code>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="g-h3">기본</h3>
+							<xmp>
+<!-- 순서없는 목록 -->
+<ul class="bul module-*">
+	<li></li>
+</ul>
+
+<!-- 순서있는 목록 -->
+<ol class="bul module-*">
+	<li></li>
+</ol>
+							</xmp>
+
+							<h3 class="g-h3">옵션</h3>
+							<h4 class="g-h4">순서 없는 목록</h4>
+							<h5 class="g-h5">모양</h5>
 							<ul class="bul dot">
-								<li>블릿 리스트</li>
+								<li>블릿 리스트: dot</li>
 							</ul>
-							<h3 class="g-h3">숫자</h3>
+							<ul class="bul square">
+								<li>블릿 리스트: square</li>
+							</ul>
+
+							<h5 class="g-h5">기호</h5>
+							<ul class="bul dash">
+								<li>블릿리스트: dash</li>
+							</ul>
+							<ul class="bul bill">
+								<li>블릿리스트: bill</li>
+							</ul>
+							<ul class="bul star">
+								<li>블릿리스트: star</li>
+							</ul>
+
+							<h4 class="g-h4">순서 있는 목록</h4>
+							<h5 class="g-h5">숫자</h5>
 							<ul class="bul num1">
-								<li>블릿 리스트
-									<ul class="bul num2">
-										<li>블릿 리스트
-											<ul class="bul num3">
-												<li>블릿 리스트
-													<ul class="bul num4">
-														<li>블릿 리스트</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								<li>블릿리스트: num1</li>
 							</ul>
-							<h3 class="g-h3">영문</h3>
+							<ul class="bul num2">
+								<li>블릿리스트: num2</li>
+							</ul>
+							<ul class="bul num3">
+								<li>블릿리스트: num3</li>
+							</ul>
+							<ul class="bul num4">
+								<li>블릿리스트: num4</li>
+							</ul>
+
+							<h5 class="g-h5">영문</h5>
 							<ul class="bul eng1">
-								<li>블릿 리스트
-									<ul class="bul eng2">
-										<li>블릿 리스트
-											<ul class="bul eng3">
-												<li>블릿 리스트
-													<ul class="bul eng4">
-														<li>블릿 리스트</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								<li>블릿리스트: eng1</li>
 							</ul>
-							<h3 class="g-h3">한글</h3>
+							<ul class="bul eng2">
+								<li>블릿리스트: eng2</li>
+							</ul>
+							<ul class="bul eng3">
+								<li>블릿리스트: eng3</li>
+							</ul>
+							<ul class="bul eng4">
+								<li>블릿리스트: eng4</li>
+							</ul>
+
+							<h5 class="g-h5">한글</h5>
 							<ul class="bul kor1">
-								<li>블릿 리스트
-									<ul class="bul kor2">
-										<li>블릿 리스트
-											<ul class="bul kor3">
-												<li>블릿 리스트</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								<li>블릿리스트: kor1</li>
 							</ul>
-							<h3 class="g-h3">기호</h3>
-							<div class="bul dash">
-								<p>블릿 리스트</p>
-							</div>
-							<div class="bul bill">
-								<p>블릿 리스트</p>
-							</div>
-							<div class="bul star">
-								<p>블릿 리스트</p>
-							</div>
+							<ul class="bul kor2">
+								<li>블릿리스트: kor2</li>
+							</ul>
+							<ul class="bul kor3">
+								<li>블릿리스트: kor3</li>
+							</ul>
 						</div>
 					</section>
+					<!-- //Section -->
+
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">Modules</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">bul</h3>
+							<h4 class="g-h4">module-a</h4>
+							<ul class="bul dot module-a">
+								<li>블릿리스트 : dot module-a <em class="txt-primary">txt-primary</em></li>
+								<li>블릿리스트 : dot module-a <em class="txt-secondary">txt-secondary</em></li>
+							</ul>
+						</div>
+					</section>
+				<!-- //Section -->
 				</div>
 			</div>
 		</main>

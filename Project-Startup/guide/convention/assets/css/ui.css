@@ -23,14 +23,17 @@
 }
 
 /* 목차 */
-.g-h1 {font-size:30px; font-weight:normal;}
-.g-h2 {font-size:24px; font-weight:normal;}
+.g-h1 {margin-bottom:40px; font-size:40px; font-weight:normal; line-height: 1.2;}
+.g-h2 {font-size:32px; font-weight:normal; line-height: 1.2;}
 .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;}
-.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:700; color:#d3002e;}
+.g-h3 {margin-top:40px; margin-bottom:15px; font-size:22px; font-weight:500; color:#d3002e; line-height: 1.2;}
 .g-h3:first-child {margin-top:0;}
-.g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
-.g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e; font-size: 16px; font-weight: 700;}
-.g-h3 + .g-h4 {margin-top:10px;}
+/* .g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;} */
+.g-h3 + .g-h4 {margin-top:16px;}
+.g-h4 {margin-top:30px; margin-bottom:10px; font-size: 20px; color:rgb(0, 99, 99); line-height: 1.2;}
+.g-h4 + .g-h5 {margin-top:16px;}
+.g-h5 {margin-top:30px; margin-bottom:10px; font-size: 16px; color:#333; line-height: 1.2;}
+.g-h5:before {content:''; display:inline-block; position:relative; top:-2px; width:2px; height:14px; margin-right:5px; background-color:#333; vertical-align:middle;}
 .g-explain-h1 {display:none; font-size:14px; color:#aaa; font-family:'NST';}
 
 /* 컬러 */

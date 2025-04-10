@@ -20,7 +20,7 @@
     pointer-events: none;
 }
 
-.ui-toast {
+.toast {
     max-width: 100%;
 	padding: 5rem 10rem;
     pointer-events: auto;
@@ -33,16 +33,32 @@
 	}
 }
 
-.ui-toast.showing {
+.toast.showing {
     opacity: 0;
 }
 
 /* 강조 */
 
 /*-------------------------------------------------------------------
-	@@ 유형
+	@@ 모듈
 -------------------------------------------------------------------*/
-/* 스타일1 */
+.toast {
+	/* module-a */
+	&.module-a {
+		background-color: #000;
+		color: #fff;
 
+		.toast-body {
+			display: flex;
+			align-items: flex-start;
+			gap: 8rem;
 
-/* 스타일2 */
+			p {
+				line-height: 32rem;
+			}
+		}
+		.btn-close {
+			margin-left: auto;
+		}
+	}
+}

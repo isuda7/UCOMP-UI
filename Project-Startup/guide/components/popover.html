@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Popover | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// const popover = new bootstrap.Popover('#examplePopover1');
+			setPopover();
+		});
+
+		function setPopover() {
+			const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+			const popoverList = [...popoverTriggerList].map((el) => {
+				// 사용자정의 HTML 구조 정의
+				const templateId = el.dataset.templateId;
+
+				if (templateId) {
+					const template = document.getElementById(templateId);
+					if (template) {
+					return new bootstrap.Popover(el, {
+						content: template.innerHTML,
+						html: true,
+					});
+					}
+				}
+
+			// 기본 popover (data-bs-content / data-bs-title 등으로 처리되는 경우)
+			return new bootstrap.Popover(el);
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">Popover</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">popover</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">선택기능</th>
+											<td class="align-l">
+												<code class="g-code-label">data-bs-custom-class="module-*"</code><br>
+												<code class="g-code-label">data-bs-container="body"</code><br>
+												<code class="g-code-label">data-bs-trigger="hover focus"</code><br>
+												<code class="g-code-label">data-bs-placement="auto"</code>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="g-desc">
+								<li>[참조] 부트스트랩 : <a href="https://getbootstrap.com/docs/5.2/components/popovers/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.2/components/popovers/</a></li>
+							</ul>
+
+							<h3 class="g-h3">기본</h3>
+							<xmp>
+<!-- Open Trigger -->
+<button type="button" class="btn module-*"
+	data-bs-toggle="popover" data-bs-custom-class="module-a"
+	data-bs-container="body" data-bs-trigger="hover focus"
+	data-bs-title="Custom popover" data-bs-content="This popover is themed via CSS variables.">
+	<span>Custom popover</span>
+</button>
+
+<!-- Init Script -->
+<script>
+	// Case1. 기본호출
+	document.addEventListener("DOMContentLoaded", function() {
+		const popover = new bootstrap.Popover('#examplePopover1');
+	});
+
+	// Case2. 공통호출
+	function setPopover(selector){
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => {
+			return new bootstrap.Popover(popoverTriggerEl);
+		});
+	}
+</script>
+							</xmp>
+
+							<h3 class="g-h3">사용자정의</h3>
+							<xmp>
+<!-- 사용자정의 속성 -->
+<button class="btn" data-template-id="tpl-demo-1">
+	템플릿 팝오버
+</button>
+
+<!-- 사용자정의 HTML -->
+<template id="tpl-demo-1">
+	<div>
+		<strong>강조 텍스트</strong>
+		<hr />
+		<a href="#">자세히 보기</a>
+	</div>
+</template>
+
+// Case3. 공통호출(사용자정의 추가)
+function setPopover() {
+	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+	const popoverList = [...popoverTriggerList].map((el) => {
+		// 사용자정의 HTML 구조 정의
+		const templateId = el.dataset.templateId;
+
+		if (templateId) {
+			const template = document.getElementById(templateId);
+			if (template) {
+			return new bootstrap.Popover(el, {
+				content: template.innerHTML,
+				html: true,
+			});
+			}
+		}
+
+	  // 기본 popover (data-bs-content / data-bs-title 등으로 처리되는 경우)
+	  return new bootstrap.Popover(el);
+	});
+}
+
+							</xmp>
+
+							<h3 class="g-h3">선택기능</h3>
+							<h4 class="g-h4">속성</h4>
+							<h5 class="g-h5">data-bs-trigger</h5>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-placement="auto"
+								data-bs-title="Basic popover" data-bs-content="This popover is themed via CSS variables.">
+								속성생략 toggle
+							</button>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-trigger="hover" data-bs-placement="auto"
+								data-bs-title="Basic popover" data-bs-content="This popover is themed via CSS variables.">
+								data-bs-trigger="hover"
+							</button>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-trigger="focus" data-bs-placement="auto"
+								data-bs-title="Basic popover" data-bs-content="This popover is themed via CSS variables.">
+								data-bs-trigger="focus"
+							</button>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-trigger="hover focus" data-bs-placement="auto"
+								data-bs-title="Basic popover" data-bs-content="This popover is themed via CSS variables.">
+								data-bs-trigger="hover focus"
+							</button>
+
+							<h5 class="g-h5">data-template-id</h5>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-placement="auto"
+								data-bs-title="Custom popover" data-bs-content="This popover is themed via CSS variables."
+								data-template-id="tpl-demo-1">
+								사용자정의 속성
+							</button>
+							<template id="tpl-demo-1">
+								<div>
+									<ol class="bul num1">
+										<li>블릿 리스트</li>
+										<li>블릿 리스트</li>
+									</ol>
+								</div>
+							</template>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">Modules</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">popover</h3>
+							<h4 class="g-h4">module-a</h4>
+							<button type="button" class="btn module-c"
+								data-bs-toggle="popover" data-bs-custom-class="module-a"
+								data-bs-container="body" data-bs-trigger="hover focus" data-bs-placement="auto"
+								data-bs-title="Custom popover" data-bs-content="This popover is themed via CSS variables.">
+								Custom popover
+							</button>
+						</div>
+					</section>
+
+					<template id="tpl-3">
+						<div>
+						  <strong>강조 텍스트</strong>
+						  <hr />
+						  <a href="#">자세히 보기</a>
+						</div>
+					  </template>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

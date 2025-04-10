@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Tooltips | 프로젝트 스타일가이드</title>
+	<title>Board | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -15,12 +15,7 @@
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-		});
-	</script>
+	<!-- 페이지 스크립트 영역 -->
 </head>
 
 <body>
@@ -30,7 +25,7 @@
 			<div id="content" class="content">
 				<div class="content-body outer">
 					<div class="inner">
-						<h1 class="g-h1">Tooltips</h1>
+						<h1 class="g-h1">Board</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
@@ -42,54 +37,37 @@
 							<div class="g-tbl-type1">
 								<table>
 									<colgroup>
-										<col style="width:200px">
+										<col style="width:20%">
 										<col>
 									</colgroup>
 									<tbody>
 										<tr>
-											<th class="align-l">기본</th>
-											<td class="align-l"><code class="g-code-label">tooltip</code></td>
-										</tr>
-										<tr>
-											<th class="align-l">모듈</th>
-											<td class="align-l"><code class="g-code-label">module-*</code></td>
+											<th class="align-l"></th>
+											<td class="align-l"></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<ul class="g-desc">
-								<li>[참조] 부트스트랩 : <a href="https://getbootstrap.com/docs/5.3/components/tooltips/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/tooltips/</a></li>
-							</ul>
-
 							<h3 class="g-h3">기본</h3>
 							<xmp>
-<!-- Open Trigger -->
-<button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="module-*" data-bs-title="This top tooltip is themed via CSS variables.">
-	<span>Custom tooltip</span>
-</button>
-
-<!-- Init Script -->
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-	});
-</script>
+<div></div>
 							</xmp>
 						</div>
 					</section>
 					<!-- // Section -->
+
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-header">
 							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">tooltip</h3>
+							<h3 class="g-h3">모듈명</h3>
 							<h4 class="g-h4">module-a</h4>
-							<button type="button" class="btn module-c secondary" data-bs-toggle="tooltip" data-bs-custom-class="module-a" data-bs-title="This top tooltip is themed via CSS variables.">
-								<span>Custom tooltip</span>
-							</button>
+							<h5 class="g-h5">상세구분</h5>
+							<ul class="g-desc">
+								<li>목록</li>
+							</ul>
 						</div>
 					</section>
 					<!-- // Section -->

@@ -14,16 +14,25 @@
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
-	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 인크루드 설정용도(개발적용안함) -->
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// https://getbootstrap.com/docs/5.3/components/toasts/
+			const toastTrigger = document.getElementById('liveToastBtn')
+			const toastLiveExample = document.getElementById('liveToast')
+
+			if (toastTrigger) {
+				const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+				toastTrigger.addEventListener('click', () => {
+					toastBootstrap.show()
+				})
+			}
+		})
+	</script>
 </head>
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
-		<header class="header"></header>
-		<!-- // Header -->
-
 		<!-- Container -->
 		<main class="g-container">
 			<div id="content" class="content">
@@ -33,58 +42,87 @@
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2">기본 구조</h2>
+						<div class="g-section-header">
+							<h2 class="g-h2">System</h2>
 						</div>
 						<div class="g-section-body">
+							<h3 class="g-h3">규칙</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">기본</th>
+											<td class="align-l"><code class="g-code-label">toast</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">모듈</th>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
+										</tr>
+										<tr>
+											<th class="align-l">옵션</th>
+											<td class="align-l"><code class="g-code-label">[효과]</code></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<ul class="g-desc">
-								<li><a href="https://getbootstrap.com/docs/5.3/components/toasts/" target="_blank"
-										class="g-link">https://getbootstrap.com/docs/5.3/components/toasts/</a></li>
-								<li>탭 기능 : data-bs-toggle="tab" data-bs-target="#패널아이디"</li>
+								<li>[참조] 부트스트랩 : <a href="https://getbootstrap.com/docs/5.3/components/toasts/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/toasts/</a></li>
 							</ul>
+
+							<h3 class="g-h3">기본</h3>
 							<xmp>
-								<button type="button" class="ui-btn" id="liveToastBtn">Show live toast</button>
+<button type="button" class="btn" id="liveToastBtn">Show live toast</button>
 
-								<div class="toast-container">
-									<div id="liveToast" class="ui-toast fade" role="alert" aria-live="assertive"
-										aria-atomic="true" data-bs-animation="true">
-										<div class="toast-body">
-											<p>Hello, world! This is a toast message.</p>
-											<button type="button" class="btn-close" data-bs-dismiss="toast">닫기</button>
-										</div>
-									</div>
-								</div>
+<div class="toast-container">
+	<div id="liveToast" class="toast fade module-a" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true">
+		<div class="toast-body">
+			<p>Hello, world! This is a toast message.</p>
+			<button type="button" class="btn-close" data-bs-dismiss="toast">닫기</button>
+		</div>
+	</div>
+</div>
+							</xmp>
+							<h3 class="g-h3">스크립트</h3>
+							<xmp>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const toastTrigger = document.getElementById('liveToastBtn')
+		const toastLiveExample = document.getElementById('liveToast')
 
-								<script>
-									const toastTrigger = document.getElementById('liveToastBtn')
-									const toastLiveExample = document.getElementById('liveToast')
-
-									if (toastTrigger) {
-										const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-										toastTrigger.addEventListener('click', () => {
-											toastBootstrap.show()
-										})
-									}
-								</script>
+		if (toastTrigger) {
+			const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+			toastTrigger.addEventListener('click', () => {
+				toastBootstrap.show()
+			})
+		}
+	})
+</script>
 							</xmp>
 						</div>
 					</section>
 					<!-- // Section -->
 					<!-- Section -->
 					<section class="g-section inner">
-						<div class="g-section-head">
-							<h2 class="g-h2">Styles</h2>
+						<div class="g-section-header">
+							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<button type="button" class="ui-btn btn-basic primary" id="liveToastBtn">Show live
-								toast</button>
+							<h3 class="g-h3">toast</h3>
+							<h4 class="g-h4">module-a</h4>
+							<button type="button" class="btn module-c" id="liveToastBtn">Show live toast</button>
 
 							<div class="toast-container">
-								<div id="liveToast" class="ui-toast fade" role="alert" aria-live="assertive"
-									aria-atomic="true" data-bs-animation="true">
+								<div id="liveToast" class="toast fade module-a" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true">
 									<div class="toast-body">
 										<p>Hello, world! This is a toast message.</p>
-										<button type="button" class="btn-close" data-bs-dismiss="toast">닫기</button>
+										<button type="button" class="btn-close" data-bs-dismiss="toast">
+											<i class="icn icn-32-demo-close-wh" aria-hidden="true"></i>
+											<span class="blind">닫기</span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -100,20 +138,6 @@
 		<footer class="footer"></footer>
 		<!-- // Footer -->
 	</div>
-
-	<script>
-		// https://getbootstrap.com/docs/5.3/components/toasts/
-		const toastTrigger = document.getElementById('liveToastBtn')
-		const toastLiveExample = document.getElementById('liveToast')
-
-		if (toastTrigger) {
-			const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-			toastTrigger.addEventListener('click', () => {
-				toastBootstrap.show()
-			})
-		}
-	</script>
-
 </body>
 
 </html>
