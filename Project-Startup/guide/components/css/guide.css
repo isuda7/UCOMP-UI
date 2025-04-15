@@ -114,6 +114,11 @@ ul.g-desc strong {font-weight: 700;}
 /* box */
 .box-100-demo-gr {display: flex; justify-content: center; align-items: center; width: 100rem; height: 100rem; background-color: #999; color: #222;}
 
+/* image */
+.img-demo-dk {display: inline-flex; justify-content: center; align-items: center; background-color: #666; color: #fff; font-size: 36rem; line-height: 1.5; max-width: 100%;}
+.img-demo-gr {display: inline-flex; justify-content: center; align-items: center; background-color: #eee; color: #999; font-size: 36rem; line-height: 1.5; max-width: 100%;}
+.img-demo-wh {display: inline-flex; justify-content: center; align-items: center; background-color: #fff; color: #333; font-size: 36rem; line-height: 1.5; max-width: 100%;}
+
 /* Modal */
 .modal-anb,
 .modal-anb .modal-dialog {pointer-events: none;}

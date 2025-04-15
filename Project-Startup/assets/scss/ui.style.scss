@@ -11,9 +11,11 @@
 // Components
 @import './components/accordion';
 @import './components/button';
-@import './components/bullet';
 @import './components/checkbox';
 @import './components/dropdown';
+@import './components/dataBasic';
+@import './components/dataBullet';
+@import './components/dataTable';
 @import './components/form';
 @import './components/icon';
 @import './components/input';
@@ -21,10 +23,13 @@
 @import './components/modal';
 @import './components/popover';
 @import './components/tab';
-@import './components/table';
 @import './components/toast';
 @import './components/tooltip';
 
 // Contents
+@import './components/info';
+
+
+// Pages
 @import './contents/main';
 @import './contents/common';

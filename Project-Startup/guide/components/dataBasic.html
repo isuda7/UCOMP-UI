@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Data | 프로젝트 스타일가이드</title>
+	<title>Data Basic | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -54,22 +54,17 @@
 							</div>
 							<h3 class="g-h3">기본</h3>
 							<xmp>
-<div class="data-wrap">
-	<!-- 데이터 문단 -->
-	<p class="data-para module-*"></p>
+<!-- 데이터 문단 -->
+<p class="data-para module-*"></p>
 
-	<!-- 데이터 리스트 -->
-	<ul class="data-list module-*"></ul>
+<!-- 데이터 이미지 -->
+<figure class="data-image module-*"></figure>
 
-	<!-- 데이터 테이블 -->
-	<table class="data-table module-*"></table>
+<!-- 데이터 미디어 -->
+<figure class="data-media module-*"></figure>
 
-	<!-- 데이터 이미지 -->
-	<figure class="data-image module-*"></figure>
-
-	<!-- 데이터 그래프 -->
-	<figure class="data-graph module-*"></figure>
-</div>
+<!-- 데이터 그래프 -->
+<figure class="data-graph module-*"></figure>
 							</xmp>
 						</div>
 					</section>
@@ -85,54 +80,34 @@
 							<h3 class="g-h3">data-para</h3>
 							<div>
 								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
+								<div class="data-para module-a">
+									<p>
+										전용 색상은 포스코그룹의 브랜드 이미지를 차별화시키는 또 하나의 중요한 수단으로서 지정된 색상을 지속적으로 정확하게 사용하는 것이 중요합니다. 인쇄매체 적용 시 색상의 표현은 별색 인쇄를 원칙으로 하며 가이드에 수록된 Pantone Color 또는 4원색 Process Color를 표준으로 삼습니다.
+									</p>
+									<p>
+										영문 POSCO의 다섯 개 알파벳은 'S'를 중심으로 균형적으로 배치해, 내·외부 조화와 화합을 지향하는 기업철학을 상징적으로 표현합니다. <br>
+										동심원 형태의 글자는 외부환경에 적극적으로 대처하고 끊임없는 혁신을 통해 영속적으로 발전하는 포스코의 미래상을 반영하였습니다.
+									</p>
+								</div>
 							</div>
 							<!-- //data-para -->
-
-							<!-- data-list -->
-							<h3 class="g-h3">data-list</h3>
-							<div>
-								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
-							</div>
-							<!-- //data-list -->
-
-							<!-- data-table -->
-							<h3 class="g-h3">data-table</h3>
-							<div>
-								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
-							</div>
-							<!-- //data-table -->
-
-							<!-- data-info -->
-							<h3 class="g-h3">data-info</h3>
-							<div>
-								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
-							</div>
-							<!-- //data-info -->
 
 							<!-- data-image -->
 							<h3 class="g-h3">data-image</h3>
 							<div>
 								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
+								<figure class="data-image module-a">
+									<div class="data-content">
+										<span class="img img-demo-gr" style="width: 640rem; height: 140rem;">Image 640*240</span>
+									</div>
+								</figure>
+								<h4 class="g-h4">module-b</h4>
+								<figure class="data-image module-b">
+									<div class="data-content">
+										<span class="img img-demo-gr" style="width: 640rem; height: 140rem;">Image 640*240</span>
+									</div>
+									<figcaption class="data-caption">이미지 대신 데모 디자인 적용</figcaption>
+								</figure>
 							</div>
 							<!-- //data-image -->
 
@@ -140,10 +115,18 @@
 							<h3 class="g-h3">data-graph</h3>
 							<div>
 								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
+								<figure class="data-graph module-a">
+									<div class="data-content">
+										<span class="img img-demo-wh" style="width: 640rem; height: 140rem; background-color: transparent;">Graph 640*240</span>
+									</div>
+								</figure>
+								<h4 class="g-h4">module-b</h4>
+								<figure class="data-graph module-b">
+									<div class="data-content">
+										<span class="graph img-demo-wh" style="width: 640rem; height: 140rem;">Graph 640*240</span>
+									</div>
+									<figcaption class="data-caption">그래프 대신 데모 디자인 적용</figcaption>
+								</figure>
 							</div>
 							<!-- //data-graph -->
 						</div>
