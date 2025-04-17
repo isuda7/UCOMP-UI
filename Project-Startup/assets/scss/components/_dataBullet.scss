@@ -9,13 +9,14 @@
 		순서 {content:"문자" counter(이름, 형식) "문자"} ("문자"는 생략가능)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 공통
+	@@ 기본
 -------------------------------------------------------------------*/
-.data-bul {
-	/* 기본 */
+/* 텍스트 */
+.data-bul-text {
 	>li {
 		position: relative;
 		display: table;
+
 		&:before {
 			content: '';
 			display: table-cell;
@@ -23,46 +24,98 @@
 			padding-right: 5px;
 		}
 	}
+}
 
-	/* 모양 */
-	&.dot {
-		>li {
-			position: relative;
-			display: block;
-			padding-left: 12rem;
-		}
-		>li::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 9rem;
-			width:4rem;
-			height:4rem;
-			padding-right: 0;
-			border-radius: 50%;
-			background-color: #333;
-		}
-	}
-
-	&.square {
+/* 모양 */
+.data-bul-shape {
+	>li {
 		position: relative;
 		display: block;
-		>li {
-			padding-left: 12rem;
-		}
-		>li::before {
+		padding-left: 12rem;
+
+		&::before {
 			content: '';
 			position: absolute;
 			left: 0;
-			top: 9rem;
-			width:5rem;
-			height:5rem;
-			padding-right: 0;
-			background-color: #333;
+			top: 0;
 		}
 	}
+}
 
+/* 아이콘 */
+.data-bul-icon {
+	>li {
+		position: relative;
+		display: block;
+		padding-left: 12rem;
+
+		.icn:first-child {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+/* 모양 */
+.data-bul-shape {
+	/* module-a */
+	&.module-a {
+		> li {
+			font-size: 16rem;
+			line-height: 24rem;
+			&::before {
+				top: 10rem;
+				width:4rem;
+				height:4rem;
+				border-radius: 50%;
+				background-color: #333;
+			}
+		}
+	}
+}
+
+/* 아이콘 */
+.data-bul-icon {
+	/* module-a */
+	&.module-a {
+		> li {
+			font-size: 14rem;
+			line-height: 22rem;
+			padding-left: calc(14rem + 4rem);
+			.icn:first-child {
+				top: 4rem;
+			}
+		}
+	}
+	/* module-b */
+	&.module-b {
+		> li {
+			font-size: 16rem;
+			line-height: 24rem;
+			padding-left: calc(16rem + 4rem);
+			.icn:first-child {
+				top: 3rem;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------------
+	@@ 옵션
+-------------------------------------------------------------------*/
+/* 텍스트 */
+.data-bul-text {
 	/* 기호 */
+	&.bar>li::before {
+		content: '|';
+	}
+
 	&.dash>li::before {
 		content: '-';
 	}
@@ -383,23 +436,4 @@
 			content: 'ⓙ';
 		}
 	}
-}
-
-/*-------------------------------------------------------------------
-	@@ 모듈
--------------------------------------------------------------------*/
-.data-bul {
-	/* module-a */
-	&.module-a {
-		> li {
-			font-size: 16rem;
-			line-height: 24rem;
-			&::before {
-				width: 5rem;
-				height: 5rem;
-				background-color: #999;
-			}
-		}
-	}
-
 }

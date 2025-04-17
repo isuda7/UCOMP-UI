@@ -16,7 +16,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 16, 20, 24, 28, 32);
+$icn-sizes: (12, 14, 16, 20, 24, 28, 32);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -26,6 +26,9 @@ $icn-sizes: (12, 16, 20, 24, 28, 32);
 }
 
 /* Demo */
+.icn-14-demo-info-wh {
+	background-image: url('../images/demo/icn-14-demo-info-wh.svg');
+}
 .icn-16-demo-info-gr {
 	background-image: url('../images/demo/icn-16-demo-info-gr.svg');
 }

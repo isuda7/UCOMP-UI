@@ -43,18 +43,25 @@
 									<tbody>
 										<tr>
 											<th class="align-l">기본</th>
-											<td class="align-l">board-*</td>
+											<td class="align-l"><code class="g-code-label">board-*</code></td>
 										</tr>
 										<tr>
 											<th class="align-l">모듈</th>
-											<td class="align-l">module-*</td>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							<h3 class="g-h3">기본</h3>
-							<xmp>
-<div></div>
+							<xmp style="height: auto;">
+<!-- 게시판 목록 -->
+<div class="board-list module-*"></div>
+
+<!-- 게시판 상세 -->
+<div class="board-view module-*"></div>
+
+<!-- 게시판 등록 -->
+<div class="board-write module-*"></div>
 							</xmp>
 						</div>
 					</section>
@@ -66,12 +73,128 @@
 							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">모듈명</h3>
+							<!-- board-list -->
+							<h3 class="g-h3">board-list</h3>
+							<h4 class="g-h4">module-a</h4>
+							<!-- board-list module-a -->
+							<div class="board-list module-a">
+								<!-- board-toolbar -->
+								<div class="board-toolbar">
+									<div class="board-count">
+										<p>총 <em class="count">1,000건</em>의 게시글이 있습니다.</p>
+									</div>
+									<div class="board-search">
+										<div class="frm-controls">
+											<div class="frm-sel module-a">
+												<select name="" id="frm아이디" title="" class="sel">
+													<option value="">최신순</option>
+													<option value="">오름차순</option>
+												</select>
+											</div>
+											<div class="frm-inp module-a fluid">
+												<input type="text" name="" id="" value="" placeholder="예: 1234567" title="검색어를 입력" class="inp" aria-required="true" />
+											</div>
+											<button type="button" class="btn module-b">
+												<span>검색</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- //board-toolbar -->
+								<!-- board-data -->
+								<div class="board-data">
+									<div class="img-demo-gr" style="display: flex; font-size: 24rem; height:200rem">
+										Post List 영역
+									</div>
+									<br>
+									<div class="img-demo-gr" style="display: flex; font-size: 24rem; height:200rem">
+										Post Nodata 영역
+									</div>
+								</div>
+								<!-- //board-data -->
+								<!-- board-pagination -->
+								<div class="board-paging">
+									<nav class="paging module-a" aria-label="Pagination">
+										<div class="paging-prev">
+											<button type="button" class="btn first" disabled>
+												<span>First</span>
+											</button>
+											<button type="button" class="btn prev" disabled>
+												<span>Prev</span>
+											</button>
+										</div>
+										<div class="paging-number">
+											<button type="button" class="btn number" aria-current="page">
+												<span>1</span>
+											</button>
+											<button type="button" class="btn number">
+												<span>2</span>
+											</button>
+											<button type="button" class="btn number">
+												<span>3</span>
+											</button>
+											<button type="button" class="btn number">
+												<span>4</span>
+											</button>
+											<button type="button" class="btn number">
+												<span>5</span>
+											</button>
+										</div>
+										<div class="paging-next">
+											<button type="button" class="btn next">
+												<span>Next</span>
+											</button>
+											<button type="button" class="btn last">
+												<span>Last</span>
+											</button>
+										</div>
+									</nav>
+								</div>
+								<!-- //board-paging -->
+							</div>
+							<!-- //board-list module-a -->
+							<!-- //board-list -->
+
+							<!-- board-view -->
+							<h3 class="g-h3">board-view</h3>
+							<h4 class="g-h4">module-a</h4>
+							<div class="board-view module-a">
+								<div class="board-data">
+									<div class="post-view module-a">
+										<div class="img-demo-gr" style="display: flex; font-size: 24rem; height:200rem">
+											Post View 영역
+										</div>
+									</div>
+								</div>
+								<div class="board-direction">
+									<div class="board-item">
+										<div class="board-dir">
+											<strong>이전 글</strong>
+										</div>
+										<div class="board-tit">
+											<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
+										</div>
+									</div>
+									<div class="board-item">
+										<div class="board-dir">
+											<strong>다음 글</strong>
+										</div>
+										<div class="board-tit">
+											<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //board-view -->
+
+							<!-- board-write -->
+							<h3 class="g-h3">board-write</h3>
 							<h4 class="g-h4">module-a</h4>
 							<h5 class="g-h5">상세구분</h5>
 							<ul class="g-desc">
 								<li>목록</li>
 							</ul>
+							<!-- //board-write -->
 						</div>
 					</section>
 					<!-- // Section -->

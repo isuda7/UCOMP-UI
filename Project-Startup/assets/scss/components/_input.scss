@@ -9,7 +9,7 @@
 -------------------------------------------------------------------*/
 /* module-a */
 @mixin frm-inp-module-a {
-	display: inline-block;
+	display: inline-flex;
 	position: relative;
 	height: 44rem;
 }
@@ -228,6 +228,8 @@
 		@include frm-inp-module-a;
 		.sel {
 			@include inp-module-a;
+			flex:1 1 auto;
+			width: auto;
 			padding: 0 30px 0 10px;
 			background: url('../images/demo/icn-16-demo-select-arw.svg') no-repeat right 10px center;
 		}
