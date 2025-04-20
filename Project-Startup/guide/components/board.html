@@ -78,8 +78,8 @@
 							<h4 class="g-h4">module-a</h4>
 							<!-- board-list module-a -->
 							<div class="board-list module-a">
-								<!-- board-toolbar -->
-								<div class="board-toolbar">
+								<!-- board-header -->
+								<div class="board-header">
 									<div class="board-count">
 										<p>총 <em class="count">1,000건</em>의 게시글이 있습니다.</p>
 									</div>
@@ -92,7 +92,7 @@
 												</select>
 											</div>
 											<div class="frm-inp module-a fluid">
-												<input type="text" name="" id="" value="" placeholder="예: 1234567" title="검색어를 입력" class="inp" aria-required="true" />
+												<input type="text" name="" id="" value="" placeholder="검색어를 입력해 주세요." class="inp" aria-required="true" />
 											</div>
 											<button type="button" class="btn module-b">
 												<span>검색</span>
@@ -100,9 +100,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- //board-toolbar -->
-								<!-- board-data -->
-								<div class="board-data">
+								<!-- //board-header -->
+								<!-- board-body -->
+								<div class="board-body">
 									<div class="img-demo-gr" style="display: flex; font-size: 24rem; height:200rem">
 										Post List 영역
 									</div>
@@ -111,9 +111,9 @@
 										Post Nodata 영역
 									</div>
 								</div>
-								<!-- //board-data -->
+								<!-- //board-body -->
 								<!-- board-pagination -->
-								<div class="board-paging">
+								<div class="board-footer">
 									<nav class="paging module-a" aria-label="Pagination">
 										<div class="paging-prev">
 											<button type="button" class="btn first" disabled>
@@ -150,7 +150,7 @@
 										</div>
 									</nav>
 								</div>
-								<!-- //board-paging -->
+								<!-- //board-footer -->
 							</div>
 							<!-- //board-list module-a -->
 							<!-- //board-list -->
@@ -159,28 +159,30 @@
 							<h3 class="g-h3">board-view</h3>
 							<h4 class="g-h4">module-a</h4>
 							<div class="board-view module-a">
-								<div class="board-data">
+								<div class="board-body">
 									<div class="post-view module-a">
 										<div class="img-demo-gr" style="display: flex; font-size: 24rem; height:200rem">
 											Post View 영역
 										</div>
 									</div>
 								</div>
-								<div class="board-direction">
-									<div class="board-item">
-										<div class="board-dir">
-											<strong>이전 글</strong>
+								<div class="board-footer">
+									<div class="board-nav">
+										<div class="board-item">
+											<div class="board-nav-dir">
+												<strong>이전 글</strong>
+											</div>
+											<div class="board-nav-tit">
+												<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
+											</div>
 										</div>
-										<div class="board-tit">
-											<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
-										</div>
-									</div>
-									<div class="board-item">
-										<div class="board-dir">
-											<strong>다음 글</strong>
-										</div>
-										<div class="board-tit">
-											<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
+										<div class="board-item">
+											<div class="board-nav-dir">
+												<strong>다음 글</strong>
+											</div>
+											<div class="board-nav-tit">
+												<p>광양제철소, 열연 코일 스틸밴드 결속 자동화 장치 개발</p>
+											</div>
 										</div>
 									</div>
 								</div>

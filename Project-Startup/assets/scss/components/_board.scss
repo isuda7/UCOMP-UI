@@ -23,22 +23,22 @@
 .board-list {
 	/* module-a */
 	&.module-a {
-		.board-toolbar {
+		.board-header {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
-		}
-		.board-count {
-			@include font-set(16, 400);
-			.count {
-				font-weight: 500;
-				color: $color-primary;
+			.board-count {
+				@include font-set(16, 400);
+				.count {
+					font-weight: 500;
+					color: $color-primary;
+				}
 			}
 		}
-		.board-data {
+		.board-body {
 			margin-top: 20rem;
 		}
-		.board-paging {
+		.board-footer {
 			margin-top: 20rem;
 		}
 	}
@@ -52,18 +52,18 @@
 .board-view {
 	/* module-a */
 	&.module-a {
-		.board-direction {
+		.board-nav {
 			margin-top: 40rem;
 			border-bottom: 1px solid #ddd;
 			.board-item {
 				display: flex;
 				align-items: center;
 				border-top: 1px solid #ddd;
-				.board-dir {
+				.board-nav-dir {
 					padding: 20rem 20rem;
 					@include font-set(18, 700);
 				}
-				.board-tit {
+				.board-nav-tit {
 					padding: 20rem 20rem;
 					@include font-set(18, 400);
 				}
