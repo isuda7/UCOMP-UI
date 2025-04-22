@@ -37,6 +37,10 @@
 		}
 		.board-body {
 			margin-top: 20rem;
+
+			.board-nodata {
+				padding: 50rem;
+			}
 		}
 		.board-footer {
 			margin-top: 20rem;
@@ -72,6 +76,26 @@
 	}
 }
 
+/* board-nodata */
+.board-nodata {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	/* module-a */
+	&.module-a {
+		gap: 16rem;
+
+		.data-img {
+			display: flex;
+		}
+		.data-para {
+			@include font-set(16, 500);
+			color: #333;
+		}
+	}
+}
 /*-------------------------------------------------------------------
 	@@ 옵션
 -------------------------------------------------------------------*/

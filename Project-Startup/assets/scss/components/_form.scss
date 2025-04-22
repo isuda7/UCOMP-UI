@@ -83,7 +83,11 @@
 .frm {
 	/* module-a */
 	&.module-a {
-
+		.frm-tip {
+			margin-bottom: 20rem;
+			text-align: right;
+			line-height: 22rem;
+		}
 		.frm-fieldset {
 			gap: 24rem;
 		}
@@ -114,6 +118,11 @@
 			margin-top: 4rem;
 			font-size: 14rem;
 			line-height: 22rem;
+		}
+
+		.frm-submit {
+			margin-top: 30rem;
+			text-align: center;
 		}
 	}
 }
