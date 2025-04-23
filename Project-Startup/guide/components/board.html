@@ -107,9 +107,11 @@
 										Post List 영역
 									</div>
 									<br>
-									<div class="board-nodata module-a">
-										<p class="data-img"><span class="img-demo-gr" style="width: 100rem; height: 100rem; border-radius: 50%;">Icon</span></p>
-										<p class="data-para">등록된 게시물이 없습니다.</p>
+									<div class="board-nodata">
+										<div class="nodata">
+											<img class="nodata-img" alt="" />
+											<p class="nodata-para">등록된 게시물이 없습니다.</p>
+										</div>
 									</div>
 								</div>
 								<!-- //board-body -->
@@ -195,11 +197,12 @@
 							<h4 class="g-h4">module-a</h4>
 							<div class="board-write module-a">
 								<!-- 폼 -->
-								<form action="" class="frm module-a">
+								<form action="" class="frm">
 									<div class="frm-tip">
 										<p><b class="frm-star" aria-hidden="true">*</b> 표시된 항목은 필수 입력 바랍니다.</p>
 									</div>
 
+									<!-- 필드 그룹 -->
 									<fieldset class="frm-fieldset">
 										<legend class="blind">게시글 입력</legend>
 
@@ -239,6 +242,8 @@
 										</div>
 										<!-- //필드: 이메일 -->
 									</fieldset>
+									<!-- 필드 그룹 -->
+
 									<div class="frm-submit">
 										<button type="button" class="btn module-a primary">
 											<span>등록</span>
@@ -246,7 +251,6 @@
 									</div>
 								</form>
 								<!-- //폼 -->
-
 							</div>
 							<!-- //board-write -->
 						</div>

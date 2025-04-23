@@ -40,6 +40,23 @@
 
 			.board-nodata {
 				padding: 50rem;
+
+				.nodata {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 16rem;
+
+					.nodata-img {
+						width: 80rem;
+						height: 80rem;
+					}
+					.nodata-para {
+						@include font-set(16, 500);
+						color: #333;
+					}
+				}
 			}
 		}
 		.board-footer {
@@ -76,26 +93,56 @@
 	}
 }
 
-/* board-nodata */
-.board-nodata {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
+/* board-write */
+.board-write {
 	/* module-a */
 	&.module-a {
-		gap: 16rem;
+		.frm {
+			.frm-tip {
+				margin-bottom: 20rem;
+				text-align: right;
+				line-height: 22rem;
+			}
+			.frm-fieldset {
+				gap: 24rem;
+			}
 
-		.data-img {
-			display: flex;
-		}
-		.data-para {
-			@include font-set(16, 500);
-			color: #333;
+			.frm-field {
+				&.horizontal {
+					gap: 8rem;
+
+					.frm-title {
+						height: 44rem;
+						width: 120rem;
+					}
+				}
+
+				&.vertical {
+					gap: 8rem;
+				}
+			}
+
+			.frm-label {
+				display: block;
+				font-size: 16rem;
+				line-height: 24rem;
+				font-weight: 500;
+			}
+
+			.frm-alert {
+				margin-top: 4rem;
+				font-size: 14rem;
+				line-height: 22rem;
+			}
+
+			.frm-submit {
+				margin-top: 30rem;
+				text-align: center;
+			}
 		}
 	}
 }
+
 /*-------------------------------------------------------------------
 	@@ 옵션
 -------------------------------------------------------------------*/
