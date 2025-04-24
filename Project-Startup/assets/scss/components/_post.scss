@@ -18,110 +18,133 @@
 /*-------------------------------------------------------------------
 	@@ 모듈
 -------------------------------------------------------------------*/
-/* 일반 게시글 */
-.post-basic {
-	& {
-		/* module-a */
-		&.module-a {
-			padding: 16rem 20rem;
-			.post-title {
-				@include font-set(18, 700);
-			}
-			.post-summary {
-				margin-top: 4rem;
-				@include font-set(16, 400);
-				@extend .ellipsis3;
-			}
-			.post-meta {
-				display: flex;
-				align-items: center;
-				gap: 8rem;
-				margin-top: 8rem;
-				@include font-set(14, 400);
-				color: #666;
-				.split {
-					display: block;
-					width: 1px;
-					height: 10rem;
-					background-color: #aaa;
-				}
+/* 게시글 */
+.post {
+	/* module-a */
+	&.module-a {
+		padding: 16rem 20rem;
+		.post-title {
+			@include font-set(18, 700);
+		}
+		.post-summary {
+			margin-top: 4rem;
+			@include font-set(16, 400);
+			@extend .ellipsis3;
+		}
+		.post-meta {
+			display: flex;
+			align-items: center;
+			gap: 8rem;
+			margin-top: 8rem;
+			@include font-set(14, 400);
+			color: #666;
+			.split {
+				display: block;
+				width: 1px;
+				height: 10rem;
+				background-color: #aaa;
 			}
 		}
 	}
 
-	&-list {
-		/* module-a */
-		&.module-a {
-			border-top:2px solid #000;
-			border-bottom:1px solid #000;
-			.post-item + .post-item {
-				border-top: 1px solid #999;
+	/* module-b */
+	&.module-b {
+		display: flex;
+		flex-direction: column;
+		gap: 16rem;
+		height: 100%;
+		.post-thumb {
+			width: 100%;
+			height: 160rem;
+			flex: none;
+			.thumb {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.post-content {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			flex: 1 1 auto;
+		}
+
+		.post-title {
+			@include font-set(18, 700);
+			@extend .ellipsis2;
+		}
+		.post-summary {
+			margin-top: 4rem;
+			@include font-set(16, 400);
+			@extend .ellipsis3;
+		}
+		.post-meta {
+			display: flex;
+			align-items: center;
+			gap: 8rem;
+			margin-top: auto;
+			padding-top: 8rem;
+			@include font-set(14, 400);
+			color: #666;
+			.split {
+				display: block;
+				width: 1px;
+				height: 10rem;
+				background-color: #aaa;
 			}
 		}
 	}
 }
 
-/* 카드 게시글 */
-.post-card {
-	& {
-		/* module-a */
-		&.module-a {
-			display: flex;
-			flex-direction: column;
-			gap: 16rem;
-			height: 100%;
-			.post-thumb {
-				width: 100%;
-				height: 160rem;
-				flex: none;
-				.thumb {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.post-content {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				flex: 1 1 auto;
-			}
+/* 게시글 레이아웃 */
+.post-layout {
+	/* module-a */
+	&.module-a {
+		border-top:2px solid #000;
+		border-bottom:1px solid #000;
 
-			.post-title {
-				@include font-set(18, 700);
-				@extend .ellipsis2;
-			}
-			.post-summary {
-				margin-top: 4rem;
-				@include font-set(16, 400);
-				@extend .ellipsis3;
-			}
-			.post-meta {
-				display: flex;
-				align-items: center;
-				gap: 8rem;
-				margin-top: auto;
-				padding-top: 8rem;
-				@include font-set(14, 400);
-				color: #666;
-				.split {
-					display: block;
-					width: 1px;
-					height: 10rem;
-					background-color: #aaa;
-				}
+		.post-list {
+			.post-item + .post-item {
+				border-top: 1px solid #999;
 			}
 		}
 	}
 
-	&-grid {
-		/* module-a */
-		&.module-a {
+	/* module-b */
+	&.module-b {
+		border-top:2px solid #000;
+		border-bottom:1px solid #000;
+
+		.post-list {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			padding: 24rem 0;
-			border-top:2px solid #000;
-			border-bottom:1px solid #000;
 			gap: 24rem;
+		}
+	}
+}
+
+
+/* 게시글 없음 */
+.post-nodata {
+	padding: 50rem;
+	border-top:2px solid #000;
+	border-bottom:1px solid #000;
+
+	.nodata {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 16rem;
+
+		.nodata-img {
+			width: 80rem;
+			height: 80rem;
+		}
+		.nodata-para {
+			@include font-set(16, 500);
+			color: #333;
 		}
 	}
 }
