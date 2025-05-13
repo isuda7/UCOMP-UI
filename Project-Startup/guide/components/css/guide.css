@@ -134,10 +134,10 @@ ul.g-desc strong {font-weight: 700;}
 
 /* Tab */
 .tab-nav.demo1 .tab-list {display:flex; width:100%;}
-.tab-nav.demo1 .tab-list li {flex:1 1 auto;}
-.tab-nav.demo1 .tab-list li .btn {width:100%; padding:10px; background:#eee;}
-.tab-nav.demo1 .tab-list li.is-active .btn {padding:10px; background:#2496ee; color:#fff;}
-.tab-nav.demo1 + .tab-body .tab-cont {padding:10px 0; line-height:1.5;}
+.tab-nav.demo1 .tab-list .tab-item {flex:1 1 auto;}
+.tab-nav.demo1 .tab-list .tab-item .tab-link {width:100%; padding:10px; background:#eee;}
+.tab-nav.demo1 .tab-list .tab-item .tab-link.active {padding:10px; background:#2496ee; color:#fff;}
+.tab-nav.demo1 + .tab-content .tab-pane {padding:20px 0; line-height:1.5;}
 
 /* SelectList */
 .btn-demo1-area {border:1px solid #eee;}

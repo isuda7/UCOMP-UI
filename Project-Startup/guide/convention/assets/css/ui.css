@@ -44,6 +44,10 @@
 .g-link-basic:hover,
 .g-link-basic:focus {color:#d3002e; border-bottom:1px solid #d3002e;}
 
+/* 코드 */
+.g-code {line-height:1.6;}
+.g-code-label {background: rgba(135, 131, 120, .15); color: #EB5757;border-radius: 4px;font-size: 85%;padding: 0.2em 0.4em;}
+
 /* 설명 */
 ul.g-desc {margin:5px 0;}
 ul.g-desc:last-child {margin-bottom:0;}

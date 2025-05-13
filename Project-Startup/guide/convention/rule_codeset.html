@@ -28,54 +28,40 @@
                         </div>
                         <div class="g-section-body">
                             <div class="g-example-wrap">
-                                <div class="g-example-header">
-                                    <strong class="g-example-tit"></strong>
-                                    <div class="g-example-nav">
-                                        <span class="g-example-txt"></span>
-                                        <a href="#tabContentCode1-1" class="g-example-btn is-active">레이아웃</a>
-                                    </div>
-                                </div>
-                                <div id="tabContentCode1-1" class="g-example-footer is-active">
-                                    <pre class="brush:html">
-										&lt;!DOCTYPE html>
-										&lt;html lang="ko">
+                                <pre class="brush:html">
+									&lt;!DOCTYPE html>
+									&lt;html lang="ko">
 
-										&lt;head>
-											&lt;meta charset="utf-8" />
-											&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" />
-											&lt;meta name="format-detection" content="telephone=no" />
-											&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-											&lt;meta name="keywords" content="UCOMPANION">
-											&lt;meta name="description" content="UCOMPANION">
-											&lt;title>Pages | UCOMPANION&lt;/title>
-											&lt;link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
-											&lt;script src="../../assets/js/libs/jquery.min.js">&lt;/script>
-											&lt;script src="../../assets/js/libs/librurys.min.js">&lt;/script>
-											&lt;script src="../../assets/js/ui/ui.common.js">&lt;/script>
-											&lt;script src="../../assets/js/ui/ui.publish.js">&lt;/script>&lt;!-- 퍼블리싱 작업용 환경설정(개발적용안함) -->
-										&lt;/head>
+									&lt;head>
+										&lt;meta charset="utf-8" />
+										&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" />
+										&lt;meta name="format-detection" content="telephone=no" />
+										&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+										&lt;meta name="keywords" content="UCOMPANION">
+										&lt;meta name="description" content="UCOMPANION">
+										&lt;title>Pages | UCOMPANION&lt;/title>
+										&lt;link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+										&lt;script src="../../assets/js/libs/jquery.min.js">&lt;/script>
+										&lt;script src="../../assets/js/libs/librurys.min.js">&lt;/script>
+										&lt;script src="../../assets/js/ui/ui.common.js">&lt;/script>
+										&lt;script src="../../assets/js/ui/ui.publish.js">&lt;/script>&lt;!-- 퍼블리싱 작업용 환경설정(개발적용안함) -->
+									&lt;/head>
 
-										&lt;body>
-											&lt;div class="wrapper">
-												&lt;!-- Header -->
-												&lt;header class="header">&lt;/header>
-												&lt;!-- // Header -->
+									&lt;body>
+										&lt;!-- page -->
+										&lt;div class="page">
+											...
+										&lt;/div>
+										&lt;!-- // page -->
 
-												&lt;!-- Container -->
-												&lt;main class="container">
-													&lt;div id="content" class="content">&lt;/div>
-												&lt;/main>
-												&lt;!-- // Container -->
+										&lt;!-- modal -->
+										&lt;div class="modal">
+											...
+										&lt;/div>
+										&lt;!-- // modal -->
+									&lt;/body>
 
-												&lt;!-- Footer -->
-												&lt;footer class="footer">&lt;/footer>
-												&lt;!-- // Footer -->
-											&lt;/div>
-
-											&lt;div class="modal">&lt;/div>
-										&lt;/body>
-
-										&lt;/html>
+									&lt;/html>
 								</pre>
 							</div>
                         </div>
@@ -89,15 +75,7 @@
                         </div>
                         <div class="g-section-body">
                             <div class="g-example-wrap">
-                                <div class="g-example-header">
-                                    <strong class="g-example-tit"></strong>
-                                    <div class="g-example-nav">
-                                        <span class="g-example-txt"></span>
-                                        <a href="#tabContentCode2-2" class="g-example-btn is-active">CSS</a>
-                                    </div>
-                                </div>
-                                <div id="tabContentCode2-2" class="g-example-footer is-active">
-                                    <pre class="brush:css">
+                                <pre class="brush:css">
 									@charset 'utf-8';
 									/*-------------------------------------------------------------------
 										분류그룹 : 제목
@@ -117,7 +95,6 @@
 
 									/* 주석2 */
 								</pre>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -130,52 +107,27 @@
                         </div>
                         <div class="g-section-body">
                             <div class="g-example-wrap">
-                                <div class="g-example-header">
-                                    <strong class="g-example-tit"></strong>
-                                    <div class="g-example-nav">
-                                        <span class="g-example-txt"></span>
-                                        <a href="#tabContentCode3-1" class="g-example-btn is-active">Common</a>
-                                    </div>
-                                </div>
-                                <div id="tabContentCode3-1" class="g-example-footeris-active">
-                                    <pre class="brush:css">
-									/*--------------------------------------------------------------
-										분류순서
-										- Init
-										- Setting
-										- Layout
-										- Component
-										- Content
-									--------------------------------------------------------------*/
-									/*--------------------------------------------------------------
-										@@ Variables
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										Setting
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										@@ Utilites
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										Layouts
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										Components
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										Contents
-									--------------------------------------------------------------*/
-
-									/*--------------------------------------------------------------
-										Inits
-									--------------------------------------------------------------*/
+								<pre class="brush:css">
+								/*-------------------------------------------------------------------
+									분류순서
+									- @@ Init		: 초기실행
+									- @@ Settings	: 기본설정
+									- @@ Layout		: 레이아웃
+									- @@ common		: 공통함수
+								-------------------------------------------------------------------*/
+								/*-------------------------------------------------------------------
+									@@ Init
+								-------------------------------------------------------------------*/
+								/*-------------------------------------------------------------------
+									@@ Settings
+								-------------------------------------------------------------------*/
+								/*-------------------------------------------------------------------
+									@@ Layout
+								-------------------------------------------------------------------*/
+								/*-------------------------------------------------------------------
+									@@ Common
+								-------------------------------------------------------------------*/
 								</pre>
-                                </div>
                             </div>
                         </div>
                     </section>

@@ -23,11 +23,11 @@
 .board-list {
 	/* module-a */
 	&.module-a {
-		.board-search {
+		.board-toolbar {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
-			.board-search-count {
+			.board-count {
 				@include font-set(16, 400);
 				.count {
 					font-weight: 500;
@@ -52,23 +52,24 @@
 .board-view {
 	/* module-a */
 	&.module-a {
-		.board-nav {
+		.board-direction {
 			margin-top: 40rem;
 			border-bottom: 1px solid #ddd;
 			.board-item {
 				display: flex;
 				align-items: center;
 				border-top: 1px solid #ddd;
-				.board-nav-dir {
+				.board-tit {
 					padding: 20rem 20rem;
 					@include font-set(18, 700);
 				}
-				.board-nav-tit {
+				.board-con {
 					padding: 20rem 20rem;
 					@include font-set(18, 400);
 				}
 			}
 		}
+
 	}
 }
 
