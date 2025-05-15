@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 데이터 기본
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/* chip */
+.chip {
+	/* 기본 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border: 1px solid transparent;
+	background-color: #fff;
+
+	&:disabled {
+		cursor: default;
+		opacity: 0.5;
+	}
+
+	/* module-a */
+	&.module-a {
+		height: 32rem;
+		padding: 0 12rem;
+		border-radius: 30rem;
+		background-color: #eee;
+	}
+
+	/* module-b */
+	&.module-b {
+	}
+
+	&.is-selected {
+		background-color: $color-primary;
+		color: #fff;
+		&.outlined {
+			background-color: #fff;
+			border-color: $color-primary;
+			color: $color-primary;
+		}
+	}
+}
+
+/* chip-group */
+.chip-group {
+	display: flex;
+	gap: 4rem 8rem;
+}
