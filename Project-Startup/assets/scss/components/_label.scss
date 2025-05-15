@@ -3,24 +3,90 @@
 	분류그룹 : 이름표
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
-	@@ 공통
--------------------------------------------------------------------*/
-/* 기본 */
 .label {
+	// 기본
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	gap: 4rem;
+	border: 1px solid transparent;
+
+	// 모듈
+	&.module-a {
+		height: 24rem;
+		padding: 0rem 6rem;
+		border-radius: 4rem;
+		background-color: #666;
+		font-weight: 500;
+		font-size: 12rem;
+		line-height: 18rem;
+		color: #fff;
+		&.type-skt {
+			background-color: #3617CE;
+		}
+		&.type-kt {
+			background-color: #EC1B23;
+		}
+		&.type-lgt {
+			background-color: #D0006F;
+		}
+		&.type-low-lgt {
+			background-color: #0084FF;
+		}
+	}
+	&.module-b {
+		min-width: 46rem;
+		height: 24rem;
+		padding: 0rem 8rem;
+		border-radius: 20rem;
+		border-color: #eee;
+		font-weight: 500;
+		font-size: 12rem;
+		line-height: 18rem;
+		color: #000;
+		&.type-recom {
+			color: #D0006F;
+			border-color: #D0006F;
+		}
+		&.type-best {
+			color: #3617CE;
+			border-color: #3617CE;
+		}
+	}
+
+	&.module-c {
+		min-width: 46rem;
+		height: 24rem;
+		padding: 0rem 8rem;
+		border-radius: 20rem;
+		background-color: #666;
+		font-weight: 500;
+		font-size: 12rem;
+		line-height: 18rem;
+		color: #fff;
+		&.outlined {
+			background-color: #fff;
+			border-color: #666;
+			color: #666;
+		}
+	}
+
+	// 옵션
+	&.primary {
+		background-color: $color-primary;
+		&.outlined {
+			background-color: #fff;
+			border-color: $color-primary;
+			color: $color-primary;
+		}
+	}
+	&.secondary {
+		background-color: $color-secondary;
+		&.outlined {
+			background-color: #fff;
+			border-color: $color-secondary;
+			color: $color-secondary;
+		}
+	}
 }
-
-/* 강조 */
-
-/*-------------------------------------------------------------------
-	@@ 유형
--------------------------------------------------------------------*/
-/* 스타일1 */
-
-
-/* 스타일2 */
