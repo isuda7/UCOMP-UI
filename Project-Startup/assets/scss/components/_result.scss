@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 결과
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+/* 결과 완료 */
+.result-complete {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	/* module-a */
+	&.module-a {
+		.result-img {
+			text-align: center;
+		}
+		.result-con {
+			margin-top: 12rem;
+			text-align: center;
+			.tit {
+				font-size: 18rem;
+				line-height: 24rem;
+				font-weight: 700;
+				color: #000;
+			}
+			.txt {
+				margin-top: 4rem;
+				font-size: 16rem;
+				line-height: 22rem;
+				font-weight: 500;
+				color: #666;
+			}
+		}
+
+		&.is-successed {
+			em {
+				color:  $color-success;
+			}
+		}
+
+		&.is-failed {
+			em {
+				color:  $color-fail;
+			}
+		}
+	}
+}

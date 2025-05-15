@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8" />
 	<title>result | 프로젝트 스타일가이드</title>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
 	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
-	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -58,14 +58,9 @@
 							</div>
 							<h3 class="g-h3">기본</h3>
 							<xmp style="height: auto;">
-<!-- 결과 없음  -->
-<div class="result-empty module-*"></div>
 
 <!-- 결과 완료(성공/실패)  -->
 <div class="result-complete module-* is-*"></div>
-
-<!-- 결과 에러(404/500) -->
-<div class="result-system module-*"></div>
 							</xmp>
 						</div>
 					</section>
@@ -77,38 +72,30 @@
 							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<!-- result-empty -->
-							<h3 class="g-h3">result-empty</h3>
-							<div>
-								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
-							</div>
-							<!-- //result-empty -->
-
 							<!-- result-complete -->
 							<h3 class="g-h3">result-complete</h3>
 							<div>
 								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
-							</div>
-							<!-- //result-complete -->
+								<div class="result-complete module-a is-successed">
+									<div class="result-img">
+										<i class="icn icn-140-demo-complete" aria-hidden="true"></i>
+									</div>
+									<div class="result-con">
+										<p class="tit">포인트전환 <em>성공</em>하였습니다.</p>
+									</div>
+								</div>
+								<div class="result-complete module-a is-failed">
+									<div class="result-img">
+										<i class="icn icn-140-demo-fail" aria-hidden="true"></i>
+									</div>
+									<div class="result-con">
+										<p class="tit">포인트전환 <em>실패</em>하였습니다.</p>
+										<p class="txt">다음 기회에 다시 시도하시기 바랍니다.</p>
+									</div>
 
-							<!-- result-system -->
-							<h3 class="g-h3">result-system</h3>
-							<div>
-								<h4 class="g-h4">module-a</h4>
-								<h5 class="g-h5">상세구분</h5>
-								<ul class="g-desc">
-									<li>목록</li>
-								</ul>
+								</div>
 							</div>
-							<!-- //result-system -->
+							<!-- //result-empty -->
 						</div>
 					</section>
 					<!-- // Section -->

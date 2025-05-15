@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 섹션
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.sec {
+	// 공통
+	.sec-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// module-a
+	&.module-a {
+		.sec-header {
+			margin-bottom: 10rem;
+
+			.title-area {
+				display: flex;
+				align-items: center;
+				gap: 12rem;
+			}
+			.sec-title {
+				font-weight: 700;
+				font-size: 24rem;
+				line-height: 36rem;
+				color: #000;
+			}
+			.sec-explain {
+				font-weight: 500;
+				font-size: 16rem;
+				line-height: 24rem;
+				color: #666;
+			}
+		}
+	}
+
+	// module-b
+	&.module-b {
+		.sec-header {
+			margin-bottom: 20rem;
+			flex-direction: column;
+			justify-content: center;
+
+			.sec-title {
+				padding: 0 4rem;
+				border-bottom: 2px solid #333;
+				font-weight: 700;
+				font-size: 24rem;
+				line-height: 36rem;
+				color: #333;
+			}
+			.sec-explain {
+				margin-top: 8rem;
+				font-weight: 500;
+				font-size: 16rem;
+				line-height: 24rem;
+				color: #666;
+			}
+		}
+	}
+}

@@ -16,7 +16,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 14, 16, 20, 24, 28, 32);
+$icn-sizes: (12, 14, 16, 20, 24, 28, 32, 140);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -26,6 +26,9 @@ $icn-sizes: (12, 14, 16, 20, 24, 28, 32);
 }
 
 /* Demo */
+.icn-14-demo-more-gr {
+	background-image: url('../images/demo/icn-14-demo-more-gr.svg');
+}
 .icn-14-demo-info-wh {
 	background-image: url('../images/demo/icn-14-demo-info-wh.svg');
 }
@@ -43,4 +46,10 @@ $icn-sizes: (12, 14, 16, 20, 24, 28, 32);
 }
 .icn-32-demo-close-wh {
 	background-image: url('../images/demo/icn-32-demo-close-wh.svg');
+}
+.icn-140-demo-complete {
+	background-image: url('../images/demo/icn-140-demo-complete.svg');
+}
+.icn-140-demo-fail {
+	background-image: url('../images/demo/icn-140-demo-fail.svg');
 }

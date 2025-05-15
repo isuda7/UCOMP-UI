@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Showcase | 프로젝트 스타일가이드</title>
+	<title>Section | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -25,7 +25,7 @@
 			<div id="content" class="content">
 				<div class="content-body outer">
 					<div class="inner">
-						<h1 class="g-h1">Showcase</h1>
+						<h1 class="g-h1">Section</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
@@ -43,44 +43,26 @@
 									<tbody>
 										<tr>
 											<th class="align-l">기본</th>
-											<td class="align-l">showcase-*</td>
+											<td class="align-l"><code class="g-code-label">sec</code></td>
 										</tr>
 										<tr>
 											<th class="align-l">모듈</th>
-											<td class="align-l">module-*</td>
+											<td class="align-l"><code class="g-code-label">module-*</code></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							<h3 class="g-h3">기본</h3>
-							<xmp>
-<!-- 전시용 비주얼 -->
-<div class="showcase-visual module-*">
-	<ul class="showcase-list">
-		<li class="showcase-item"></li>
-	</ul>
-</div>
-
-<!-- 전시용 게시글 -->
-<div class="showcase-post module-*">
-	<ul class="showcase-list">
-		<li class="showcase-item"></li>
-	</ul>
-</div>
-
-<!-- 전시용 상품 -->
-<div class="showcase-product module-*">
-	<ul class="showcase-list">
-		<li class="showcase-item"></li>
-	</ul>
-</div>
-
-<!-- 전시용 후기 -->
-<div class="showcase-review module-*">
-	<ul class="showcase-list">
-		<li class="showcase-item"></li>
-	</ul>
-</div>
+							<xmp style="height: auto;">
+<section class="sec module-*">
+	<div class="sec-header">
+		<h2 class="sec-title">H2</h2>
+		<p class="sec-explain">부연설명</p>
+	</div>
+	<div class="sec-body">
+		<article>실질적인 컨텐츠 영역</article>
+	</div>
+</section>
 							</xmp>
 						</div>
 					</section>
@@ -92,42 +74,50 @@
 							<h2 class="g-h2">Modules</h2>
 						</div>
 						<div class="g-section-body">
-							<!-- showcase-visual -->
-							<h3 class="g-h3">showcase-visual</h3>
+							<h3 class="g-h3">sec</h3>
 							<h4 class="g-h4">module-a</h4>
-							<h5 class="g-h5">상세구분</h5>
-							<ul class="g-desc">
-								<li>목록</li>
-							</ul>
-							<!-- //showcase-visual -->
+							<section class="sec module-a">
+								<div class="sec-header">
+									<h2 class="sec-title">목차</h2>
+								</div>
+								<div class="sec-body"></div>
+							</section>
+							<section class="sec module-a">
+								<div class="sec-header">
+									<h2 class="sec-title">목차</h2>
+									<button type="button" class="btn texted">
+										<span>더보기</span>
+										<i class="icn icn-14-demo-more-gr" aria-hidden="true"></i>
+									</button>
+								</div>
+								<div class="sec-body"></div>
+							</section>
+							<section class="sec module-a">
+								<div class="sec-header">
+									<div class="title-area">
+										<h2 class="sec-title">목차</h2>
+										<p class="sec-explain"><small>봄날의 햇살</small></p>
+									</div>
+									<div class="btn-area">
+										<button type="button" class="btn texted">
+											<span>더보기</span>
+											<i class="icn icn-14-demo-more-gr" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+								<div class="sec-body"></div>
+							</section>
 
-							<!-- showcase-post -->
-							<h3 class="g-h3">showcase-post</h3>
-							<h4 class="g-h4">module-a</h4>
-							<h5 class="g-h5">상세구분</h5>
-							<ul class="g-desc">
-								<li>목록</li>
-							</ul>
-							<!-- //showcase-post -->
-
-							<!-- showcase-product -->
-							<h3 class="g-h3">showcase-product</h3>
-							<h4 class="g-h4">module-a</h4>
-							<h5 class="g-h5">상세구분</h5>
-							<ul class="g-desc">
-								<li>목록</li>
-							</ul>
-							<!-- //showcase-product -->
-
-							<!-- showcase-review -->
-							<h3 class="g-h3">showcase-review</h3>
-							<h4 class="g-h4">module-a</h4>
-							<h5 class="g-h5">상세구분</h5>
-							<ul class="g-desc">
-								<li>목록</li>
-							</ul>
-							<!-- //showcase-review -->
-
+							<h4 class="g-h4">module-b</h4>
+							<section class="sec module-b">
+								<div class="sec-header">
+									<h2 class="sec-title">목차</h2>
+									<p class="sec-explain"><small>봄날의 햇살</small></p>
+								</div>
+								<div class="sec-body">
+									<div class="img-demo-gr" style="width: 100%; height: 100px;">sec-body</div>
+								</div>
+							</section>
 						</div>
 					</section>
 					<!-- // Section -->

@@ -12,7 +12,7 @@
 	@@ 기본
 -------------------------------------------------------------------*/
 /* 텍스트 */
-.data-bul-text {
+.bul-text {
 	>li {
 		position: relative;
 		display: table;
@@ -27,7 +27,7 @@
 }
 
 /* 모양 */
-.data-bul-shape {
+.bul-shape {
 	>li {
 		position: relative;
 		display: block;
@@ -43,7 +43,7 @@
 }
 
 /* 아이콘 */
-.data-bul-icon {
+.bul-icon {
 	>li {
 		position: relative;
 		display: block;
@@ -62,7 +62,7 @@
 	@@ 모듈
 -------------------------------------------------------------------*/
 /* 모양 */
-.data-bul-shape {
+.bul-shape {
 	/* module-a */
 	&.module-a {
 		> li {
@@ -80,7 +80,7 @@
 }
 
 /* 아이콘 */
-.data-bul-icon {
+.bul-icon {
 	/* module-a */
 	&.module-a {
 		> li {
@@ -110,7 +110,7 @@
 	@@ 옵션
 -------------------------------------------------------------------*/
 /* 텍스트 */
-.data-bul-text {
+.bul-text {
 	/* 기호 */
 	&.bar>li::before {
 		content: '|';
