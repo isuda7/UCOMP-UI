@@ -66,7 +66,7 @@
 		--icn-size: 20rem;
 
 		display: inline-flex;
-		align-items: flex-start;
+		align-items: center;
 		position: relative;
 		min-height: 22rem;
 
@@ -84,6 +84,7 @@
 				+label {
 					position: relative;
 					display: flex;
+					align-items: center;
 					width: 100%;
 					font-size: 14rem;
 					line-height: 22rem;
@@ -96,13 +97,13 @@
 						display: inline-flex;
 						width: var(--icn-size);
 						height: var(--icn-size);
-						top: 1px;
+						// top: 1px;
 						vertical-align: top;
 						background: no-repeat center 0 / contain, no-repeat center var(--icn-size) / contain;
 					}
 
 					>span {
-						display: block;
+						display: flex;
 						width: 100%;
 						margin-left: 8rem;
 					}
@@ -120,6 +121,15 @@
 							url('../images/demo/icn-20-demo-rdo-nor.svg'),
 							url('../images/demo/icn-20-demo-rdo-sel.svg');
 					}
+
+					// 2줄 이상일때
+					&.multiline {
+						align-items: flex-start;
+						&::before {
+							top: 1px;
+						}
+					}
+
 				}
 			}
 

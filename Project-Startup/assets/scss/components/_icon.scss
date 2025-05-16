@@ -10,14 +10,13 @@
 .icn {
 	position: relative;
 	overflow: hidden;
-	display: inline-block;
+	display: inline-flex;
 	vertical-align: middle;
 	background: no-repeat center center / contain;
 }
 
 // 추가하고 싶은 크기를 배열에 나열
 $icn-sizes: (12, 14, 16, 20, 24, 28, 32, 140);
-
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
 		width: #{$size}rem;
@@ -35,11 +34,29 @@ $icn-sizes: (12, 14, 16, 20, 24, 28, 32, 140);
 .icn-16-demo-info-gr {
 	background-image: url('../images/demo/icn-16-demo-info-gr.svg');
 }
+.icn-16-demo-info-gr {
+	background-image: url('../images/demo/icn-16-demo-info-gr.svg');
+}
+.icn-16-demo-star {
+	background-image: url('../images/demo/icn-16-demo-star.svg');
+}
+.icn-16-demo-star-pr {
+	background-image: url('../images/demo/icn-16-demo-star-pr.svg');
+}
 .icn-20-demo-remove-dk {
 	background-image: url('../images/demo/icn-20-demo-remove-dk.svg');
 }
 .icn-20-demo-srch-bk {
 	background-image: url('../images/demo/icn-20-demo-srch-bk.svg');
+}
+.icn-24-demo-star-gr {
+	background-image: url('../images/demo/icn-24-demo-star-gr.svg');
+}
+.icn-24-demo-star-pr {
+	background-image: url('../images/demo/icn-24-demo-star-pr.svg');
+}
+.icn-24-demo-star-sel {
+	background-image: url('../images/demo/icn-24-demo-star-gr.svg');
 }
 .icn-32-demo-close-bk {
 	background-image: url('../images/demo/icn-32-demo-close-bk.svg');
@@ -52,4 +69,13 @@ $icn-sizes: (12, 14, 16, 20, 24, 28, 32, 140);
 }
 .icn-140-demo-fail {
 	background-image: url('../images/demo/icn-140-demo-fail.svg');
+}
+
+/* Interaction */
+.icn-24-demo-star-sel {
+	background-image: url('../images/demo/icn-24-demo-star-gr.svg'), url('../images/demo/icn-24-demo-star-pr.svg');
+	background-position: 0 0, 0 1000rem;
+}
+.is-selected .icn-24-demo-star-sel {
+	background-position: 0 1000rem, 0 0;
 }

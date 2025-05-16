@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 약관내용
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+.legal {
+	/* module-a */
+	&.module-a {
+		.legal-header {
+			margin-bottom: 20rem;
+		}
+		.legal-body {
+			display: flex;
+			flex-direction: column;
+		}
+		.legal-con {
+			width: 100%;
+			font-weight: 400;
+			font-size: 16rem;
+			line-height: 24rem;
+			color: #444;
+			+ .legal-con {
+				margin-top: 16rem;
+			}
+		}
+		.legal-h1 {
+			font-size: 20rem;
+			line-height: 30rem;
+			font-weight: 700;
+			color: #000;
+		}
+		.legal-h2 {
+			font-size: 16rem;
+			line-height: 30rem;
+			font-weight: 600;
+			color: #000;
+		}
+		.legal-list > li + li,
+		.legal-para + .legal-para {
+			margin-top: 4rem;
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+	}
+
+	/* 옵션 */
+}

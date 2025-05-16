@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : Rating
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+/* rating-label */
+.rating-label {
+	/* 기본 */
+	display: inline-flex;
+	align-items: center;
+
+	/* module-a */
+	&.module-a {
+		gap: 4rem;
+		height: 28rem;
+		padding: 0 8rem;
+		border:1px solid #333;
+		border-radius: 24rem;
+		.rating-count {
+			font-size: 14rem;
+			font-weight: 500;
+			line-height: 16rem;
+		}
+	}
+}
+
+/* rating-visual */
+.rating-visual {
+	/* 기본 */
+	display: inline-flex;
+	align-items: center;
+
+	/* module-a */
+	&.module-a {
+		gap: 2rem;
+	}
+}
+
+/* rating-select */
+.rating-select {
+	/* 기본 */
+	display: inline-flex;
+	align-items: center;
+
+	/* module-a */
+	&.module-a {
+		gap: 2rem;
+	}
+}
