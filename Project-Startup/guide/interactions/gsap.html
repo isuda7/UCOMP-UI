@@ -22,7 +22,7 @@
 			height: 300rem;
 			flex-direction: column;
 		}
-		.box {
+		.gsap-box .box {
 			width: 75px;
 			height: 75px;
 			border-radius: 12px;
@@ -36,14 +36,44 @@
 			line-height: 1.2;
 			will-change: transform;
 		}
-		.green {
+		.gsap-box .green {
 			background-color: green;
 		}
-		.purple {
+		.gsap-box .purple {
 			background-color: purple;
 		}
-		.blue {
+		.gsap-box .blue {
 			background-color: blue;
+		}
+
+		.ex-qnb-a {
+			display: flex;
+			align-items: flex-end;
+			height: 300rem;
+		}
+		.ex-qnb-a .qnb-list {
+			position: relative;
+		}
+		.ex-qnb-a .qnb-list .qnb-link {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 50rem;
+			height: 50rem;
+			padding: 0 12rem;
+			background-color: #fff;
+			border:1px solid #ddd;
+			border-radius: 50rem;
+			white-space: nowrap;
+		}
+		.ex-qnb-a .qnb-list .qnb-item:not(:first-child) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			opacity: 0;
+			/* display: flex; */
+			pointer-events: none;
+			/* justify-content: flex-end; */
 		}
 	</style>
 	<script>
@@ -63,6 +93,22 @@
 			document.querySelector("#exampleB_Resume").onclick = () => tl.resume();
 			document.querySelector("#exampleB_Resvrse").onclick = () => tl.reverse();
 			document.querySelector("#exampleB_Restart").onclick = () => tl.restart();
+
+			// Quickmenu A
+			const qnbItems = document.querySelectorAll(".ex-qnb-a .qnb-item:not(:first-child)");
+			const qnbToggle = document.querySelector(".ex-qnb-a .qnb-item:first-child .qnb-link");
+			const qnbTl = gsap.timeline({ paused: true, reversed: true });
+			qnbTl.to(qnbItems, {
+				y: (i) => -54 * (i + 1),
+				opacity: 1,
+				stagger: 0.015,
+				duration: 0.3,
+				pointerEvent: 'auto',
+				ease: "power3.out"
+			});
+			qnbToggle.addEventListener("click", () => {
+				qnbTl.reversed() ? qnbTl.play() : qnbTl.reverse();
+			});
 		})
 	</script>
 </head>
@@ -168,6 +214,10 @@
 											<th class="align-l">되돌아갈지 여부</th>
 											<td class="align-l"><code class="g-code-label">yoyo</code></td>
 										</tr>
+										<tr>
+											<th class="align-l">순차적으로</th>
+											<td class="align-l"><code class="g-code-label">stagger</code></td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -178,7 +228,7 @@ let tw = gsap.to("셀렉터", {속성: 값});
 
 // Timeline
 let tl = gsap.timeline();
-tl.to("셀렉터", {속성: 값});
+tl.to("셀렉터", {속성: 값}, 타이밍);
 							</xmp>
 						</div>
 					</section>
@@ -187,7 +237,7 @@ tl.to("셀렉터", {속성: 값});
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-header">
-							<h2 class="g-h2">Examples</h2>
+							<h2 class="g-h2">Basic Examples</h2>
 						</div>
 						<div class="g-section-body">
 							<h3 class="g-h3">Default</h3>
@@ -232,6 +282,56 @@ document.querySelector("#exampleB_Pause").onclick = () => tl.pause();
 document.querySelector("#exampleB_Resume").onclick = () => tl.resume();
 document.querySelector("#exampleB_Resvrse").onclick = () => tl.reverse();
 document.querySelector("#exampleB_Restart").onclick = () => tl.restart();
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">UI Examples</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">Quick Menu</h3>
+							<h4 class="g-h4">Example A</h4>
+
+							<div class="ex-qnb-a">
+								<ul class="qnb-list">
+									<li class="qnb-item">
+										<a href="javascript:;" class="qnb-link">토글</a>
+									</li>
+									<li class="qnb-item">
+										<a href="javascript:;" class="qnb-link">QNB Menu 1</a>
+									</li>
+									<li class="qnb-item">
+										<a href="javascript:;" class="qnb-link">QNB Menu 2</a>
+									</li>
+									<li class="qnb-item">
+										<a href="javascript:;" class="qnb-link">QNB Menu 3</a>
+									</li>
+									<li class="qnb-item">
+										<a href="javascript:;" class="qnb-link">QNB Menu 4</a>
+									</li>
+								</ul>
+							</div>
+							<br>
+							<xmp>
+// Quickmenu A
+const qnbItems = document.querySelectorAll(".ex-qnb-a .qnb-item:not(:first-child)");
+const qnbToggle = document.querySelector(".ex-qnb-a .qnb-item:first-child .qnb-link");
+const qnbTl = gsap.timeline({ paused: true, reversed: true });
+qnbTl.to(qnbItems, {
+	y: (i) => -54 * (i + 1),
+	opacity: 1,
+	stagger: 0.015,
+	duration: 0.3,
+	pointerEvent: 'auto',
+	ease: "power3.out"
+});
+qnbToggle.addEventListener("click", () => {
+	qnbTl.reversed() ? qnbTl.play() : qnbTl.reverse();
+});
 							</xmp>
 						</div>
 					</section>
