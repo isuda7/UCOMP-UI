@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Scroll Interruption | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+	<style>
+		* {margin:0; padding:0;}
+		section {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3rem;
+			color: white;
+		}
+		.section-a { background: #3498db; }
+		.section-b { background: #9b59b6; }
+		.section-c { background: #1abc9c; }
+		.section-d { background: #e67e22; }
+		.section-e { background: #e74c3c; }
+	</style>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			gsap.registerPlugin(ScrollTrigger);
+
+			ScrollTrigger.create({
+				trigger: ".section-c",
+				start: "top top",
+				end: "+=200%",  // C 섹션 높이의 2배만큼 고정 유지 (필요에 따라 조절)
+				pin: true,
+				pinSpacing: true,
+				scrub: false,
+			});
+		});
+	</script>
+	<!-- 페이지 스크립트 영역 -->
+</head>
+
+<body>
+	<section class="section-a">A 섹션</section>
+	<section class="section-b">B 섹션</section>
+	<section class="section-c">C 섹션</section>
+	<section class="section-d">D 섹션</section>
+	<section class="section-e">E 섹션</section>
+</body>
+
+</html>
