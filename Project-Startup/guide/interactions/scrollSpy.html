@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Prototype | 프로젝트 스타일가이드</title>
+	<title>ScrollSpy | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -14,8 +14,50 @@
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.scrollspy.js"></script>
 	<link rel="stylesheet" type="text/css" href="../components/css/guide.css" /><!-- 가이드전용 -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 	<!-- 페이지 스크립트 영역 -->
+
+	<style>
+		.nav-demo {
+			position: sticky;
+			top: 0;
+			display: flex;
+			gap: 10px;
+		}
+		.nav-demo .nav-link {
+			padding: 5px 16px;
+			background-color: #eee;
+			border-radius: 20px;
+			font-size: 16px;
+		}
+		.nav-demo .nav-link.active {
+			background-color: burlywood;
+		}
+		.nav-sec {
+			height: 600px;
+			background-color: #eee;
+		}
+		.nav-sec + .nav-sec {
+			margin-top: 100px;
+		}
+	</style>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			initScrollSpy();
+
+			const basic01ModalElement = document.getElementById('basic01Modal');
+			const basic01Modal = new bootstrap.Modal(basic01ModalElement);
+
+			// Modal Callback
+			basic01ModalElement.addEventListener('shown.bs.modal', () => {
+				initScrollSpy();
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -25,7 +67,7 @@
 			<div id="content" class="content">
 				<div class="content-body outer">
 					<div class="inner">
-						<h1 class="g-h1">Prototype</h1>
+						<h1 class="g-h1">ScrollSpy</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
@@ -42,19 +84,127 @@
 									</colgroup>
 									<tbody>
 										<tr>
-											<th class="align-l">기본</th>
-											<td class="align-l"><code class="g-code-label">bul-*</code></td>
+											<th class="align-l">URL</th>
+											<td class="align-l"><a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/" target="_blank" class="g-link">https://gsap.com/docs/v3/Plugins/ScrollTrigger/</a></td>
 										</tr>
 										<tr>
-											<th class="align-l">모듈</th>
-											<td class="align-l"><code class="g-code-label">module-*</code></td>
+											<th class="align-l">CDN</th>
+											<td class="align-l">
+												<p><code class="g-code-label">&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js">&lt;/script></code></p>
+												<p><code class="g-code-label">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">&lt;/script></code></p>
+												<p><code class="g-code-label">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js">&lt;/script></code></p>
+											</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<h3 class="g-h3">기본</h3>
+							<h3 class="g-h3">HTML</h3>
 							<xmp>
-<div></div>
+<div class="nav-demo">
+	<!-- 페이지 -->
+	<a class="nav-link" href="#pageScrollspyHeading1" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">First</a>
+
+	<!-- 팝업 -->
+	<a class="nav-link" href="#popupScrollspyHeading2" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center">Second</a>
+</div>
+<div>
+	<section class="nav-sec" id="pageScrollspyHeading1">
+		<h4>First heading</h4>
+		<p>...</p>
+	</section>
+	<section class="nav-sec" id="pageScrollspyHeading2">
+		<h4>Second heading</h4>
+		<p>...</p>
+	</section>
+</div>
+							</xmp>
+
+							<h3 class="g-h3">Script</h3>
+							<xmp>
+gsap.registerPlugin(ScrollTrigger);
+
+function initScrollSpy(globalOptions = {}) {
+	const {
+		scrollOffset: globalScrollOffset = 0,
+		scrollActive: globalScrollActive = 'center',
+	} = globalOptions;
+
+	const links = document.querySelectorAll('.nav-link');
+
+	links.forEach(link => {
+		const targetId = link.getAttribute('href');
+		const target = document.querySelector(targetId);
+		if (!target) return;
+
+		const scrollContainerSelector = link.dataset.scrollContainer;
+		const scrollContainer = scrollContainerSelector === 'window' ? window : document.querySelector(scrollContainerSelector);
+		if (!scrollContainer) return;
+
+		// 개별 옵션 처리
+		const scrollOffset = parseFloat(link.dataset.scrollOffset) || globalScrollOffset;
+		const scrollActive = link.dataset.scrollActive || globalScrollActive;
+
+		const activeStart = `top ${scrollActive}`;
+		const activeEnd = `bottom ${scrollActive}`;
+
+		// ScrollTrigger 설정
+		ScrollTrigger.create({
+			trigger: target,
+			start: activeStart,
+			end: activeEnd,
+			scroller: scrollContainer === window ? undefined : scrollContainer,
+			onEnter: () => setActive(link),
+			onEnterBack: () => setActive(link),
+			// markers: true,
+		});
+
+		// 클릭 스크롤 이동
+		link.addEventListener('click', e => {
+			e.preventDefault();
+
+			const targetRect = target.getBoundingClientRect();
+			const containerRect = scrollContainer === window ? { top: 0 } : scrollContainer.getBoundingClientRect();
+			const currentScrollTop = scrollContainer === window ? window.scrollY : scrollContainer.scrollTop;
+
+			let scrollTargetPos;
+			if (scrollContainer === window) {
+				scrollTargetPos = currentScrollTop + targetRect.top - scrollOffset;
+			} else {
+				const containerStyle = window.getComputedStyle(scrollContainer);
+				const paddingTop = parseFloat(containerStyle.paddingTop) || 0;
+				scrollTargetPos = targetRect.top - containerRect.top + currentScrollTop - paddingTop - scrollOffset;
+			}
+
+			scrollContainer.scrollTo({
+				top: scrollTargetPos,
+				behavior: 'smooth'
+			});
+		});
+	});
+
+	function setActive(activeLink) {
+		document.querySelectorAll('.nav-link.active').forEach(link => {
+			link.classList.remove('active');
+		});
+		activeLink.classList.add('active');
+	}
+}
+							</xmp>
+
+							<h3 class="g-h3">Init</h3>
+							<xmp>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		// 페이지 호출
+		initScrollSpy();
+
+		// 부트스트랩 모달 호출
+		const demoModal = new bootstrap.Modal(document.getElementById('demoModal'));
+		demoModalElement.addEventListener('shown.bs.modal', () => {
+			initScrollSpy();
+		});
+	});
+</script>
 							</xmp>
 						</div>
 					</section>
@@ -63,15 +213,94 @@
 					<!-- Section -->
 					<section class="g-section inner">
 						<div class="g-section-header">
-							<h2 class="g-h2">Modules</h2>
+							<h2 class="g-h2">Examples</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">모듈명</h3>
-							<h4 class="g-h4">module-a</h4>
-							<h5 class="g-h5">상세구분</h5>
-							<ul class="g-desc">
-								<li>목록</li>
-							</ul>
+							<h3 class="g-h3">Page Scroll</h3>
+							<div class="nav-demo">
+								<a class="nav-link" href="#pageScrollspyHeading1" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">First</a>
+								<a class="nav-link" href="#pageScrollspyHeading2" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">Second</a>
+								<a class="nav-link" href="#pageScrollspyHeading3" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">Third</a>
+								<a class="nav-link" href="#pageScrollspyHeading4" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">Fourth</a>
+								<a class="nav-link" href="#pageScrollspyHeading5" data-scroll-container="window" data-scroll-offset="50" data-scroll-active="40%">Fifth</a>
+							</div>
+							<div>
+								<section class="nav-sec" id="pageScrollspyHeading1">
+									<h4>First heading</h4>
+									<p>...</p>
+								</section>
+								<section class="nav-sec" id="pageScrollspyHeading2">
+									<h4>Second heading</h4>
+									<p>...</p>
+								</section>
+								<section class="nav-sec" id="pageScrollspyHeading3">
+									<h4>Third heading</h4>
+									<p>...</p>
+								</section>
+								<section class="nav-sec" id="pageScrollspyHeading4">
+									<h4>Fourth heading</h4>
+									<p>...</p>
+								</section>
+								<section class="nav-sec" id="pageScrollspyHeading5">
+									<h4>Fifth heading</h4>
+									<p>...</p>
+								</section>
+							</div>
+
+							<h3 class="g-h3">Popup Scroll</h3>
+							<button type="button" class="btn module-b black primary" data-bs-toggle="modal" data-bs-target="#basic01Modal">
+								<span>Center</span>
+							</button>
+							<!-- Modal -->
+							<div class="modal modal-basic module-a fade center" id="basic01Modal" tabindex="-1" role="dialog" aria-labelledby="basic01ModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="basic01ModalLabel">Modal Title</h3>
+											<button type="button" class="btn modal-close" data-bs-dismiss="modal" aria-label="Close">
+												<i class="icn icn-32-demo-close-bk" aria-hidden="true"></i>
+												<span class="blind">닫기</span>
+											</button>
+											<div class="nav-demo">
+												<a class="nav-link" href="#popupScrollspyHeading1" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center" data-scroll-fill="true">First</a>
+												<a class="nav-link" href="#popupScrollspyHeading2" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center" data-scroll-fill="true">Second</a>
+												<a class="nav-link" href="#popupScrollspyHeading3" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center" data-scroll-fill="true">Third</a>
+												<a class="nav-link" href="#popupScrollspyHeading4" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center" data-scroll-fill="true">Fourth</a>
+												<a class="nav-link" href="#popupScrollspyHeading5" data-scroll-container="#modalScrollSpy" data-scroll-offset="0" data-scroll-active="center" data-scroll-fill="true">Fifth</a>
+											</div>
+										</div>
+										<div class="modal-body" id="modalScrollSpy">
+											<div>
+												<section class="nav-sec" id="popupScrollspyHeading1">
+													<h4>First heading</h4>
+													<p>...</p>
+												</section>
+												<section class="nav-sec" id="popupScrollspyHeading2">
+													<h4>Second heading</h4>
+													<p>...</p>
+												</section>
+												<section class="nav-sec" id="popupScrollspyHeading3">
+													<h4>Third heading</h4>
+													<p>...</p>
+												</section>
+												<section class="nav-sec" id="popupScrollspyHeading4">
+													<h4>Fourth heading</h4>
+													<p>...</p>
+												</section>
+												<section class="nav-sec" id="popupScrollspyHeading5">
+													<h4>Fifth heading</h4>
+													<p>...</p>
+												</section>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn module-a" data-bs-dismiss="modal">취소</button>
+											<button type="button" class="btn module-a primary" data-bs-dismiss="modal">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
 						</div>
 					</section>
 					<!-- // Section -->
