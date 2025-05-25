@@ -9,6 +9,20 @@
 .page.template-user {
 	// page-header
 	.page-header {
+		&::before {
+			content:'';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 100%;
+			width: 100%;
+			height: 320rem;
+			background-color: #fff;
+			border-bottom: 1px solid #ddd;
+			transform: translateY(0%);
+			transition: all 0.2s ease;
+		}
+
 		.inner {
 			min-width: 100%;
 		}
@@ -22,8 +36,8 @@
 				url('../images/demo/img-demo-logo-wh.svg') no-repeat 0 1000rem / contain;
 		}
 
-		// GNB
-		.gnb {
+		// GNB A
+		.gnb.module-a {
 			display: flex;
 			align-items: center;
 			flex: none;
@@ -119,6 +133,87 @@
 			}
 		}
 
+		// GNB B
+		.gnb.module-b {
+			display: flex;
+			align-items: center;
+			flex: none;
+			height: 100%;
+
+			// Normal
+			.dep1 {
+				&-list {
+					display: flex;
+					flex: none;
+					justify-content: center;
+					gap: 30rem;
+				}
+				&-item {
+					position: relative;
+				}
+				&-link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					height: 80rem;
+					padding: 10rem;
+					font-weight: 700;
+					font-size: 20rem;
+					line-height: 88rem;
+					color: #222;
+					// &[aria-current="page"] {
+					// 	color: $color-primary;
+					// }
+				}
+			}
+
+			.dep2 {
+				&-menu {
+					display: block;
+					width: 160rem;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					pointer-events: none;
+					visibility: hidden;
+					opacity: 0;
+					transition: all 0.2s ease;
+					transform: translate(-50%, 0rem) scaleY(0);
+					transform-origin: top center;
+				}
+				&-list {
+					display: flex;
+					flex-direction: column;
+					gap: 4rem;
+					padding: 15rem 8rem;
+					// background-color: #fff;
+					// border-radius: 8rem;
+					// border: 1px solid #ddd;
+					// box-shadow: 0 5rem 5rem 0 rgba(0,0,0,0.2);
+				}
+				&-item {
+					width: 100%;
+					text-align: center;
+				}
+				&-link {
+					display: block;
+					padding: 2rem 10rem;
+					@include font-set(500, 16);
+					color: #333;
+					&[aria-current="page"] {
+						color: $color-primary;
+					}
+					&[aria-current="page"]:hover,
+					&:hover {
+						border-radius: 4rem;
+						background-color: $color-primary;
+						color: #fff;
+					}
+				}
+			}
+		}
+
 		.util {
 			display: flex;
 			align-items: center;
@@ -161,6 +256,22 @@
 			.util {
 				.icn {
 					background-position: 0 1000rem, 0 0;
+				}
+			}
+		}
+
+		// 풀다운메뉴
+		&.is-active {
+			&::before {
+				transform: translateY(100%);
+			}
+			.gnb {
+				.dep2-menu {
+					pointer-events: auto;
+					visibility: visible;
+					transform: translate(-50%, -10rem);
+					opacity: 1;
+					z-index: 10;
 				}
 			}
 		}

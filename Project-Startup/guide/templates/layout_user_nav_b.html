@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="사이트명" />
 	<meta name="description" content="사이트명" />
-	<title>Template Type A | Ucomp</title>
+	<title>Template Type B | Ucomp</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
 
@@ -20,28 +20,38 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			// GNB
-			document.querySelectorAll('.dep1-item').forEach(function(item) {
-				let focusOutTimer;
-				const link = item.querySelector('.dep1-link'); // 자식 요소 참조
+			const gnb = document.querySelector('.gnb');
+			const pageHeader = document.querySelector('.page-header');
+			const gnbLinks = gnb.querySelectorAll('.dep1-link');
 
-				function openDropdown() {
-					clearTimeout(focusOutTimer);
-					item.classList.add('is-active');
-					link.setAttribute('aria-expanded', 'true');
-				}
+			let openTimer;
+			let closeTimer;
 
-				function closeDropdown() {
-					focusOutTimer = setTimeout(function() {
-						item.classList.remove('is-active');
-						link.setAttribute('aria-expanded', 'false');
-					}, 100);
-				}
+			function openFullDown(delay = 0) {
+				clearTimeout(closeTimer);
+				clearTimeout(openTimer);
+				openTimer = setTimeout(() => {
+					pageHeader.classList.add('is-active');
+					gnbLinks.forEach(link => link.setAttribute('aria-expanded', 'true'));
+				}, delay);
+			}
 
-				item.addEventListener('mouseenter', openDropdown);
-				item.addEventListener('focusin', openDropdown);
-				item.addEventListener('mouseleave', closeDropdown);
-				item.addEventListener('focusout', closeDropdown);
-			});
+			function closeFullDown(delay = 200) {
+				clearTimeout(openTimer);
+				clearTimeout(closeTimer);
+				closeTimer = setTimeout(() => {
+					pageHeader.classList.remove('is-active');
+					gnbLinks.forEach(link => link.setAttribute('aria-expanded', 'false'));
+				}, delay);
+			}
+
+			// 마우스: 딜레이 열기/닫기
+			gnb.addEventListener('mouseenter', () => openFullDown(200));
+			gnb.addEventListener('mouseleave', () => closeFullDown(200));
+
+			// 포커스: 즉시 열기 / 딜레이 닫기
+			gnb.addEventListener('focusin', () => openFullDown(0));
+			gnb.addEventListener('focusout', () => closeFullDown(200));
 		});
 	</script>
 </head>
@@ -72,7 +82,7 @@
 
 				<!-- gnb-area -->
 				<div class="gnb-area">
-					<nav class="gnb">
+					<nav class="gnb module-b">
 						<ul class="dep1-list">
 							<li class="dep1-item">
 								<!--  현재 페이지일 경우: aria-current="page" -->
