@@ -53,11 +53,11 @@
 			padding-right: 60rem;
 
 			.banner-tit {
-				@include font-set(18, 500);
+				@include font-set(500, 18);
 			}
 
 			.banner-txt {
-				@include font-set(16, 500);
+				@include font-set(500, 16);
 				color: #666;
 			}
 		}
