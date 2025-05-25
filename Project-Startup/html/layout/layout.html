@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<meta name="keywords" content="원주미래산업진흥원" />
-	<meta name="description" content="원주미래산업진흥원" />
-	<title>Pages | 원주미래산업진흥원</title>
+	<meta name="keywords" content="사이트명" />
+	<meta name="description" content="사이트명" />
+	<title>페이지명 | 사이트명</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,29 +21,31 @@
 </head>
 
 <body>
-	<!-- 레이아웃 유형구분
-		메인: main-wrapper,
-		서브: sub-wrapper,
-		기타: [기타]-wrapper
+	<!--  유형구분
+		메인: template-main,
+		서브: template-sub,
+		기타: template-[기타]
 	 -->
-	<div class="wrapper">
-		<!-- include_header.html -->
-		<header class="header"></header>
-		<!-- // include_header.html -->
+	<div class="page template-main">
+		<!-- page-header -->
+		<template data-include="../layout/include_header.html"></template>
+		<!-- //page-header -->
 
-		<!-- Container -->
-		<main class="container">
+		<!-- page-body -->
+		<main class="page-body">
 			<!-- content -->
-			<div id="content" class="content">
-
+			<div class="content">
+				<!-- 본문영역 -->
+				본문 내용 영역
+				<!-- //본문영역 -->
 			</div>
 			<!-- // content -->
 		</main>
-		<!-- // Container -->
+		<!-- // page-body -->
 
-		<!-- include_footer.html -->
-		<footer class="footer"></footer>
-		<!-- // include_footer.html -->
+		<!-- page-footer -->
+		<template data-include="../layout/include_footer.html"></template>
+		<!-- // page-footer -->
 	</div>
 </body>
 

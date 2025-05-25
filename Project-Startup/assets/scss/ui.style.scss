@@ -1,12 +1,12 @@
 @charset 'utf-8';
 
 // Commons
-@import './common/responsive.scss';
-@import './common/variables.scss';
-@import './common/base.scss';
-@import './common/utilities.scss';
-@import './common/layout.scss';
-@import './common/librarys.min.scss';
+@import './common/responsive';
+@import './common/variables';
+@import './common/base';
+@import './common/utilities';
+@import './common/layout';
+@import './common/librarys.min';
 
 // Components Basic
 @import './components/button';

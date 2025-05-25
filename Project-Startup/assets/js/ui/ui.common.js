@@ -64,37 +64,44 @@ function setScrollStatus(){
     var oldScrTop = $(window).scrollTop(); // 초기 스크롤 위치 설정
     var isScrFirst = oldScrTop === 0;    // 스크롤이 처음인지 확인
     var isScrLast = oldScrTop + $(window).outerHeight() === $(document).height(); // 스크롤이 끝인지 확인
+	var isScrStarted = oldScrTop !== 0;
 
     // 처음과 마지막 스크롤 상태 설정
-    $('body').toggleClass('is-scroll-first', isScrFirst);
-    $('body').toggleClass('is-scroll-last', isScrLast);
+	$('body')
+		.toggleClass('is-scroll-first', isScrFirst)
+		.toggleClass('is-scroll-last', isScrLast)
+		.toggleClass('is-scroll-started', isScrStarted); // ✅ 추가된 상태
 
     // 스크롤 이벤트 처리
-    $(window).off('scroll.customEvent').on('scroll.customEvent', function() {
-        var curScrTop = $(window).scrollTop();
+	$(window).off('scroll.customEvent').on('scroll.customEvent', function() {
+		var curScrTop = $(window).scrollTop();
 
-        // 스크롤 방향 처리
-        if (oldScrTop > curScrTop) {
-            $('body').addClass('is-scroll-up').removeClass('is-scroll-down');
-            $(window).trigger('scrollUp');
-        } else if (oldScrTop < curScrTop) {
-            $('body').addClass('is-scroll-down').removeClass('is-scroll-up');
-            $(window).trigger('scrollDown');
-        }
-        oldScrTop = curScrTop;
+		// 스크롤 방향 처리
+		if (oldScrTop > curScrTop) {
+			$('body').addClass('is-scroll-up').removeClass('is-scroll-down');
+			$(window).trigger('scrollUp');
+		} else if (oldScrTop < curScrTop) {
+			$('body').addClass('is-scroll-down').removeClass('is-scroll-up');
+			$(window).trigger('scrollDown');
+		}
+		oldScrTop = curScrTop;
 
-        // 스크롤 종료 처리
-        clearTimeout(scrollEndTime);
-        scrollEndTime = setTimeout(function() {
-            $(window).trigger('scrollEnd');
-        }, 100);
+		// 스크롤 종료 처리
+		clearTimeout(scrollEndTime);
+		scrollEndTime = setTimeout(function() {
+			$(window).trigger('scrollEnd');
+		}, 100);
 
-        // 스크롤 상태 업데이트
-        isScrFirst = curScrTop === 0;
-        isScrLast = curScrTop + $(window).outerHeight() >= $(document).height();
-        $('body').toggleClass('is-scroll-first', isScrFirst);
-        $('body').toggleClass('is-scroll-last', isScrLast);
-    });
+		// 스크롤 상태 업데이트
+		isScrFirst = curScrTop === 0;
+		isScrLast = curScrTop + $(window).outerHeight() >= $(document).height();
+		isScrStarted = curScrTop !== 0;
+
+		$('body')
+			.toggleClass('is-scroll-first', isScrFirst)
+			.toggleClass('is-scroll-last', isScrLast)
+			.toggleClass('is-scroll-started', isScrStarted); // ✅ 상태 적용
+	});
 }
 
 /*-------------------------------------------------------------------

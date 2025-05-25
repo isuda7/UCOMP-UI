@@ -1,0 +1,215 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 템플릿 레이아웃
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ Type A
+-------------------------------------------------------------------*/
+.page.template-user {
+	// page-header
+	.page-header {
+		.inner {
+			min-width: 100%;
+		}
+
+		.logo {
+			display: block;
+			width: 216rem;
+			height: 26rem;
+			background:
+				url('../images/demo/img-demo-logo-bk.svg') no-repeat 0 0 / contain,
+				url('../images/demo/img-demo-logo-wh.svg') no-repeat 0 1000rem / contain;
+		}
+
+		// GNB
+		.gnb {
+			display: flex;
+			align-items: center;
+			flex: none;
+			height: 100%;
+
+			// Normal
+			.dep1 {
+				&-list {
+					display: flex;
+					flex: none;
+					justify-content: center;
+					gap: 30rem;
+				}
+				&-item {
+					position: relative;
+				}
+				&-link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					height: 80rem;
+					padding: 10rem;
+					font-weight: 700;
+					font-size: 20rem;
+					line-height: 88rem;
+					color: #222;
+					// &[aria-current="page"] {
+					// 	color: $color-primary;
+					// }
+				}
+			}
+
+			.dep2 {
+				&-menu {
+					display: block;
+					width: 160rem;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					pointer-events: none;
+					visibility: hidden;
+					opacity: 0;
+					transition: all 0.2s ease;
+					transform: translate(-50%, -10rem) scaleY(0);
+					transform-origin: top center;
+				}
+				&-list {
+					display: flex;
+					flex-direction: column;
+					gap: 4rem;
+					padding: 15rem 8rem;
+					background-color: #fff;
+					border-radius: 8rem;
+					border: 1px solid #ddd;
+					box-shadow: 0 5rem 5rem 0 rgba(0,0,0,0.2);
+				}
+				&-item {
+					width: 100%;
+					text-align: center;
+				}
+				&-link {
+					display: block;
+					padding: 2rem 10rem;
+					@include font-set(500, 16);
+					color: #333;
+					&[aria-current="page"] {
+						color: $color-primary;
+					}
+					&[aria-current="page"]:hover,
+					&:hover {
+						border-radius: 4rem;
+						background-color: $color-primary;
+						color: #fff;
+					}
+				}
+			}
+
+			// Interaction
+			.dep1-item {
+				&.is-active {
+					.dep1-link {
+						color: $color-primary;
+					}
+					.dep2-menu {
+						pointer-events: auto;
+						visibility: visible;
+						transform: translate(-50%, -10rem);
+						opacity: 1;
+						z-index: 10;
+					}
+				}
+			}
+		}
+
+		.util {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 16rem;
+
+			.icn {
+				background-position: 0 0, 0 1000rem;
+			}
+
+			.icn-32-demo-util-sigin-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-sigin-bk.svg),
+					url(../images/demo/icn-32-demo-util-sigin-wh.svg);
+			}
+
+			.icn-32-demo-util-search-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-search-bk.svg),
+					url(../images/demo/icn-32-demo-util-search-wh.svg);
+			}
+
+			.icn-32-demo-util-menu-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-menu-bk.svg),
+					url(../images/demo/icn-32-demo-util-menu-wh.svg);
+			}
+		}
+
+		// Theme
+		&.is-dark {
+			.logo {
+				background-position: 0 1000rem, 0 0;
+			}
+			.gnb {
+				.dep1-link {
+					color: #fff;
+				}
+			}
+			.util {
+				.icn {
+					background-position: 0 1000rem, 0 0;
+				}
+			}
+		}
+	}
+
+	// page-footer
+	.page-footer {
+		padding-top: 40rem;
+		padding-bottom: 40rem;
+		text-align: center;
+		background-color: #151921;
+		border-top: 1px solid #ddd;
+		color: #fff;
+
+		.fnb-area {
+			margin-top: 24rem;
+
+			.fnb-list {
+				display: flex;
+				justify-content: center;
+				gap: 20rem;
+			}
+			.fnb-link {
+				font-size: 16rem;
+				line-height: 24rem;
+				color: #fff;
+
+				strong {
+					font-weight: 700;
+				}
+			}
+		}
+
+		.contact-area {
+			margin-top: 8rem;
+
+			.contact-list {
+				display: flex;
+				justify-content: center;
+				gap: 20rem;
+			}
+		}
+
+		.copyright-area {
+			margin-top: 12rem;
+			.copyright {
+				font-weight: 400;
+				color: #ccc;
+			}
+		}
+	}
+}

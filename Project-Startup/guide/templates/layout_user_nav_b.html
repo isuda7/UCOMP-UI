@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="keywords" content="사이트명" />
+	<meta name="description" content="사이트명" />
+	<title>Template Type A | Ucomp</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+
+	<!-- 페이지 스크립트 영역 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// GNB
+			document.querySelectorAll('.dep1-item').forEach(function(item) {
+				let focusOutTimer;
+				const link = item.querySelector('.dep1-link'); // 자식 요소 참조
+
+				function openDropdown() {
+					clearTimeout(focusOutTimer);
+					item.classList.add('is-active');
+					link.setAttribute('aria-expanded', 'true');
+				}
+
+				function closeDropdown() {
+					focusOutTimer = setTimeout(function() {
+						item.classList.remove('is-active');
+						link.setAttribute('aria-expanded', 'false');
+					}, 100);
+				}
+
+				item.addEventListener('mouseenter', openDropdown);
+				item.addEventListener('focusin', openDropdown);
+				item.addEventListener('mouseleave', closeDropdown);
+				item.addEventListener('focusout', closeDropdown);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!--  유형구분
+		메인: template-main,
+		서브: template-sub,
+		기타: template-[기타]
+	 -->
+	<div class="page template-user">
+		<!-- page-skip -->
+		<div class="page-skip">
+			<a href="#content">본문 바로가기</a>
+		</div>
+		<!-- // page-skip -->
+
+		<!-- page-header -->
+		<header class="page-header">
+			<div class="inner">
+				<!-- logo-area -->
+				<div class="logo-area">
+					<a href="./" class="logo">
+						<span class="blind">WFI (재)원주미래산업진흥원</span>
+					</a>
+				</div>
+				<!-- // logo-area -->
+
+				<!-- gnb-area -->
+				<div class="gnb-area">
+					<nav class="gnb">
+						<ul class="dep1-list">
+							<li class="dep1-item">
+								<!--  현재 페이지일 경우: aria-current="page" -->
+								<a href="#" class="dep1-link" aria-haspopup="menu" aria-expanded="false"aria-current="page">회사소개</a>
+								<div class="dep2-menu">
+									<ul class="dep2-list">
+										<li class="dep2-item">
+											<a href="#" class="dep2-link" aria-current="page">인사말</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">미션 및 비전</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">연혁</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">조직도</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">CI 소개</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">찾아오시는 길</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="dep1-item">
+								<a href="#" class="dep1-link" aria-expanded="false">소통마당</a>
+								<div class="dep2-menu">
+									<ul class="dep2-list">
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">공지사항</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">보도자료</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">경영공시</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">채용공고</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">자료실</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="dep1-item">
+								<a href="#" class="dep1-link" aria-expanded="false">사업안내</a>
+								<div class="dep2-menu">
+									<ul class="dep2-list">
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">주요사업</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">연구보고서</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">사업리포트</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">사업공고</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">이슈브리핑</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="dep1-item">
+								<a href="#" class="dep1-link" aria-expanded="false">시설안내</a>
+								<div class="dep2-menu">
+									<ul class="dep2-list">
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">시설/입주 안내</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">시설 예약</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">예약 현황</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">입주기업 소개</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="dep1-item">
+								<a href="#" class="dep1-link" aria-expanded="false">고객지원</a>
+								<div class="dep2-menu">
+									<ul class="dep2-list">
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">Support</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">자주하는 질문</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">1:1 문의 안내</a>
+										</li>
+										<li class="dep2-item">
+											<a href="#" class="dep2-link">AI 상담원 문의</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- // gnb-area -->
+
+				<!-- util-area -->
+				<div class="util-area">
+					<div class="util">
+						<a href="#" class="util-link">
+							<i class="icn icn-32-demo-util-sigin-bk" aria-hidden="true"></i>
+							<span class="blind">로그인</span>
+						</a>
+						<a href="#" class="util-link">
+							<i class="icn icn-32-demo-util-search-bk" aria-hidden="true"></i>
+							<span class="blind">검색</span>
+						</a>
+						<a href="#" class="util-link">
+							<i class="icn icn-32-demo-util-menu-bk" aria-hidden="true"></i>
+							<span class="blind">검색</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //page-header -->
+
+		<!-- page-body -->
+		<main class="page-body">
+			<!-- content -->
+			<div id="content" class="content">
+				<!-- 본문영역 -->
+				<!-- //본문영역 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // page-body -->
+
+		<!-- page-footer -->
+		<footer class="page-footer">
+			<div class="inner">
+				<div class="logo-area">
+					<img src="../../assets/images/demo/img-demo-logo-wh.svg" alt="WFI (재)원주미래산업진흥원" />
+				</div>
+
+				<div class="fnb-area">
+					<ul class="fnb-list">
+						<li class="fnb-item"><a href="../comm/terms.do" class="fnb-link">이용약관</a></li>
+						<li class="fnb-item"><a href="javascript:void(0)" class="fnb-link" id="emailPolicyModalLink" data-bs-toggle="modal" data-bs-target="#mainEmailPolicyModal">이메일무단수집거부</a></li>
+						<li class="fnb-item"><a href="../comm/policy.do" class="fnb-link"><strong>개인정보처리방침</strong></a></li>
+					</ul>
+				</div>
+
+				<div class="contact-area">
+					<ul class="contact-list">
+						<li>주소 : (26395) 강원특별자치도 원주시 마재2로 10 창업지원허브 2층</li>
+						<li>대표자 : 조영희</li>
+						<li>대표번호 : 033-764-3160&ZeroWidthSpace;</li>
+					</ul>
+				</div>
+
+				<div class="copyright-area">
+					<p class="copyright">Copyright ⓒ WFI. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // page-footer -->
+	</div>
+</body>
+
+</html>
