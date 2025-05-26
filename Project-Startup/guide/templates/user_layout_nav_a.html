@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="사이트명" />
 	<meta name="description" content="사이트명" />
-	<title>Template Default | Ucomp</title>
+	<title>User Layout Navigation A | Ucomp</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
 
@@ -17,7 +17,33 @@
 	<script src="../../assets/js/ui/ui.common.js"></script>
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// GNB
+			document.querySelectorAll('.dep1-item').forEach(function(item) {
+				let focusOutTimer;
+				const link = item.querySelector('.dep1-link'); // 자식 요소 참조
+
+				function openDropdown() {
+					clearTimeout(focusOutTimer);
+					item.classList.add('is-active');
+					link.setAttribute('aria-expanded', 'true');
+				}
+
+				function closeDropdown() {
+					focusOutTimer = setTimeout(function() {
+						item.classList.remove('is-active');
+						link.setAttribute('aria-expanded', 'false');
+					}, 100);
+				}
+
+				item.addEventListener('mouseenter', openDropdown);
+				item.addEventListener('focusin', openDropdown);
+				item.addEventListener('mouseleave', closeDropdown);
+				item.addEventListener('focusout', closeDropdown);
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -39,22 +65,22 @@
 				<!-- logo-area -->
 				<div class="logo-area">
 					<a href="./" class="logo">
-						<img src="../../assets/images/demo/img-demo-logo-bk.svg" alt="WFI (재)원주미래산업진흥원" />
+						<span class="blind">WFI (재)원주미래산업진흥원</span>
 					</a>
 				</div>
 				<!-- // logo-area -->
 
 				<!-- gnb-area -->
 				<div class="gnb-area">
-					<nav class="gnb">
+					<nav class="gnb module-a">
 						<ul class="dep1-list">
 							<li class="dep1-item">
 								<!--  현재 페이지일 경우: aria-current="page" -->
-								<a href="#" class="dep1-link" aria-haspopup="true" aria-expanded="false" aria-current="page">회사소개</a>
+								<a href="#" class="dep1-link" aria-haspopup="menu" aria-expanded="false"aria-current="page">회사소개</a>
 								<div class="dep2-menu">
 									<ul class="dep2-list">
 										<li class="dep2-item">
-											<a href="#" class="dep2-link">인사말</a>
+											<a href="#" class="dep2-link" aria-current="page">인사말</a>
 										</li>
 										<li class="dep2-item">
 											<a href="#" class="dep2-link">미션 및 비전</a>
@@ -75,7 +101,7 @@
 								</div>
 							</li>
 							<li class="dep1-item">
-								<a href="#" class="dep1-link" aria-haspopup="true" aria-expanded="false">소통마당</a>
+								<a href="#" class="dep1-link" aria-expanded="false">소통마당</a>
 								<div class="dep2-menu">
 									<ul class="dep2-list">
 										<li class="dep2-item">
@@ -97,7 +123,7 @@
 								</div>
 							</li>
 							<li class="dep1-item">
-								<a href="#" class="dep1-link" aria-haspopup="true" aria-expanded="false">사업안내</a>
+								<a href="#" class="dep1-link" aria-expanded="false">사업안내</a>
 								<div class="dep2-menu">
 									<ul class="dep2-list">
 										<li class="dep2-item">
@@ -119,7 +145,7 @@
 								</div>
 							</li>
 							<li class="dep1-item">
-								<a href="#" class="dep1-link" aria-haspopup="true" aria-expanded="false">시설안내</a>
+								<a href="#" class="dep1-link" aria-expanded="false">시설안내</a>
 								<div class="dep2-menu">
 									<ul class="dep2-list">
 										<li class="dep2-item">
@@ -138,7 +164,7 @@
 								</div>
 							</li>
 							<li class="dep1-item">
-								<a href="#" class="dep1-link" aria-haspopup="true" aria-expanded="false">고객지원</a>
+								<a href="#" class="dep1-link" aria-expanded="false">고객지원</a>
 								<div class="dep2-menu">
 									<ul class="dep2-list">
 										<li class="dep2-item">

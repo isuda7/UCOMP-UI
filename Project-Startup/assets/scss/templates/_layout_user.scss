@@ -323,4 +323,64 @@
 			}
 		}
 	}
+
+	// page-body
+	.page-body {
+		.content {
+			&.module-a {
+				.content-header {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 420rem;
+					padding-top: $pc-header-height;
+					background: url('../images/demo/visual-sub-01-pc.jpg') no-repeat center center / cover;
+					color: #fff;
+					text-align: center;
+
+					.page-tit {
+						@include font-set(700, 60);
+						color: #fff;
+					}
+					.page-explain {
+						@include font-set(300, 20);
+						color: #fff;
+					}
+
+					.breadcrumb {
+						margin-top: 24rem;
+						ol {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: 4rem;
+							li {
+								@include font-set(500, 16);
+							}
+							a {
+								position: relative;
+								display: flex;
+								align-items: center;
+								gap: 4rem;
+								&.home::before {
+									content:'';
+									display: block;
+									width: 20rem;
+									height: 20rem;
+									background: url('../images/demo/icn-20-demo-breadcrumb-home-wh.svg') no-repeat center center;
+								}
+								&::after {
+									content:'';
+									display: block;
+									width: 20rem;
+									height: 20rem;
+									background: url('../images/demo/icn-20-demo-breadcrumb-split-wh.svg') no-repeat center center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

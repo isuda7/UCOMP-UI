@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="사이트명" />
 	<meta name="description" content="사이트명" />
-	<title>Template Type A | Ucomp</title>
+	<title>User Layout Theme | Ucomp</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
 
@@ -22,28 +22,36 @@
 			// Theme
 			gsap.registerPlugin(ScrollTrigger);
 
-			document.querySelectorAll('section[data-theme]').forEach(section => {
+			document.querySelectorAll('[data-theme="dark"]').forEach(section => {
+				const theme = section.dataset.theme;
+
+				// 내려갈 때 (top 기준)
 				ScrollTrigger.create({
 					trigger: section,
-					start: "top top+=60",   // 헤더 높이 만큼 오프셋 (예: 60px)
-					end: "bottom top",
-					onEnter: () => {
-						if (section.dataset.theme === 'dark') {
-							document.querySelector('.page-header').classList.add('theme-dark');
-						} else {
-							document.querySelector('.page-header').classList.remove('theme-dark');
-						}
-					},
-					onLeaveBack: () => {
-						// 뒤로 스크롤해서 구간 벗어날 때
-						if (section.dataset.theme === 'dark') {
-							document.querySelector('.page-header').classList.remove('theme-dark');
-						} else {
-							document.querySelector('.page-header').classList.add('theme-dark');
-						}
-					}
+					start: "top top+=60",
+					end: "bottom top+=60",
+					onEnter: () => applyTheme(theme, "정+"),
+					onLeave: () => removeTheme(theme, "정-"),
+					onEnterBack: () => applyTheme(theme, "역+"),
+					onLeaveBack: () => removeTheme(theme, "역-"),
 				});
 			});
+
+			let darkCount = 0;
+
+			function applyTheme(theme, direction) {
+				if (darkCount === 0) {
+					document.querySelector('.page-header').classList.add('theme-dark');
+				}
+				darkCount++;
+			}
+
+			function removeTheme(theme, direction) {
+				darkCount--;
+				if (darkCount === 0) {
+					document.querySelector('.page-header').classList.remove('theme-dark');
+				}
+			}
 		});
 	</script>
 
@@ -57,17 +65,17 @@
 			font-size: 40rem;
 			line-height: 60rem;
 		}
-		.demo-sec:nth-child(1) {
+		.demo-sec.demo-01 {
 			background-color: #000;
 			color: #fff;
 		}
-		.demo-sec:nth-child(2) {
-			background-color: aquamarine;
-		}
-		.demo-sec:nth-child(3) {
+		.demo-sec.demo-02 {
 			background-color: darkblue;
 		}
-		.demo-sec:nth-child(4) {
+		.demo-sec.demo-03 {
+			background-color: aquamarine;
+		}
+		.demo-sec.demo-04 {
 			background-color: plum;
 		}
 	</style>
@@ -240,10 +248,10 @@
 			<!-- content -->
 			<div id="content" class="content">
 				<!-- 본문영역 -->
-				<section class="demo-sec" data-theme="dark">SECTION 1</section>
-				<section class="demo-sec" data-theme="light">SECTION 2</section>
-				<section class="demo-sec" data-theme="dark">SECTION 3</section>
-				<section class="demo-sec" data-theme="light">SECTION 4</section>
+				<section class="demo-sec demo-01" data-theme="dark">SECTION 1</section>
+				<section class="demo-sec demo-02" data-theme="dark">SECTION 2</section>
+				<section class="demo-sec demo-03" data-theme="light">SECTION 3</section>
+				<section class="demo-sec demo-04" data-theme="light">SECTION 4</section>
 				<!-- //본문영역 -->
 			</div>
 			<!-- // content -->

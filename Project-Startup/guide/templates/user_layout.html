@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Prototype | 프로젝트 스타일가이드</title>
+	<title>Page Layout | 프로젝트 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
@@ -25,7 +25,7 @@
 			<div id="content" class="content">
 				<div class="content-body outer">
 					<div class="inner">
-						<h1 class="g-h1">Layout</h1>
+						<h1 class="g-h1">Page Layout</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section inner">
@@ -33,7 +33,7 @@
 							<h2 class="g-h2">System</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">Template Step</h3>
+							<h3 class="g-h3">Templates</h3>
 							<div class="g-tbl-type1">
 								<table>
 									<colgroup>
@@ -43,23 +43,23 @@
 									<tbody>
 										<tr>
 											<th class="align-l">1. Static</th>
-											<td class="align-l"><a href="./layout_user_static.html" class="g-link">layout_user_static.html</a></td>
+											<td class="align-l"><a href="./user_layout_static.html" class="g-link">user_layout_static.html</a></td>
 										</tr>
 										<tr>
 											<th class="align-l">2. Navigation Dropdown</th>
-											<td class="align-l"><a href="./layout_user_nav_a.html" class="g-link">layout_user_nav_a.html</a></td>
+											<td class="align-l"><a href="./user_layout_nav_a.html" class="g-link">user_layout_nav_a.html</a></td>
 										</tr>
 										<tr>
 											<th class="align-l">3. Navigation Fulldown</th>
-											<td class="align-l"><a href="./layout_user_nav_b.html" class="g-link">layout_user_nav_b.html</a></td>
+											<td class="align-l"><a href="./user_layout_nav_b.html" class="g-link">user_layout_nav_b.html</a></td>
 										</tr>
 										<tr>
 											<th class="align-l">4. Theme</th>
-											<td class="align-l"><a href="./layout_user_theme.html" class="g-link">layout_user_theme.html</a></td>
+											<td class="align-l"><a href="./user_layout_theme.html" class="g-link">user_layout_theme.html</a></td>
 										</tr>
 										<tr>
 											<th class="align-l">5. Search</th>
-											<td class="align-l"><a href="./layout_user_search.html" class="g-link">layout_user_search.html</a></td>
+											<td class="align-l"><a href="./user_layout_search.html" class="g-link">user_layout_search.html</a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -653,28 +653,36 @@ gnb.addEventListener('focusout', () => closeFullDown(200));
 // Theme
 gsap.registerPlugin(ScrollTrigger);
 
-document.querySelectorAll('section[data-theme]').forEach(section => {
+document.querySelectorAll('[data-theme="dark"]').forEach(section => {
+	const theme = section.dataset.theme;
+
+	// 내려갈 때 (top 기준)
 	ScrollTrigger.create({
 		trigger: section,
-		start: "top top+=60",   // 헤더 높이 만큼 오프셋 (예: 60px)
-		end: "bottom top",
-		onEnter: () => {
-			if (section.dataset.theme === 'dark') {
-				document.querySelector('.page-header').classList.add('theme-dark');
-			} else {
-				document.querySelector('.page-header').classList.remove('theme-dark');
-			}
-		},
-		onLeaveBack: () => {
-			// 뒤로 스크롤해서 구간 벗어날 때
-			if (section.dataset.theme === 'dark') {
-				document.querySelector('.page-header').classList.remove('theme-dark');
-			} else {
-				document.querySelector('.page-header').classList.add('theme-dark');
-			}
-		}
+		start: "top top+=60",
+		end: "bottom top+=60",
+		onEnter: () => applyTheme(theme, "정+"),
+		onLeave: () => removeTheme(theme, "정-"),
+		onEnterBack: () => applyTheme(theme, "역+"),
+		onLeaveBack: () => removeTheme(theme, "역-"),
 	});
 });
+
+let darkCount = 0;
+
+function applyTheme(theme, direction) {
+	if (darkCount === 0) {
+		document.querySelector('.page-header').classList.add('theme-dark');
+	}
+	darkCount++;
+}
+
+function removeTheme(theme, direction) {
+	darkCount--;
+	if (darkCount === 0) {
+		document.querySelector('.page-header').classList.remove('theme-dark');
+	}
+}
 							</xmp>
 						</div>
 					</section>
