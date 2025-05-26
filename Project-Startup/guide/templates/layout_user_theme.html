@@ -29,17 +29,17 @@
 					end: "bottom top",
 					onEnter: () => {
 						if (section.dataset.theme === 'dark') {
-							document.querySelector('.page-header').classList.add('is-dark');
+							document.querySelector('.page-header').classList.add('theme-dark');
 						} else {
-							document.querySelector('.page-header').classList.remove('is-dark');
+							document.querySelector('.page-header').classList.remove('theme-dark');
 						}
 					},
 					onLeaveBack: () => {
 						// 뒤로 스크롤해서 구간 벗어날 때
 						if (section.dataset.theme === 'dark') {
-							document.querySelector('.page-header').classList.remove('is-dark');
+							document.querySelector('.page-header').classList.remove('theme-dark');
 						} else {
-							document.querySelector('.page-header').classList.add('is-dark');
+							document.querySelector('.page-header').classList.add('theme-dark');
 						}
 					}
 				});
@@ -87,7 +87,7 @@
 		<!-- // page-skip -->
 
 		<!-- page-header -->
-		<header class="page-header is-dark">
+		<header class="page-header theme-dark">
 			<div class="inner">
 				<!-- logo-area -->
 				<div class="logo-area">
@@ -99,7 +99,7 @@
 
 				<!-- gnb-area -->
 				<div class="gnb-area">
-					<nav class="gnb">
+					<nav class="gnb module-a">
 						<ul class="dep1-list">
 							<li class="dep1-item">
 								<!--  현재 페이지일 경우: aria-current="page" -->

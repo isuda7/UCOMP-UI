@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Prototype | 프로젝트 스타일가이드</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="keywords" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 프로젝트 스타일가이드" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../components/css/guide.css" /><!-- 가이드전용 -->
+	<!-- 페이지 스크립트 영역 -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Container -->
+		<main class="g-container">
+			<div id="content" class="content">
+				<div class="content-body outer">
+					<div class="inner">
+						<h1 class="g-h1">Layout</h1>
+					</div>
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">System</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">Template Step</h3>
+							<div class="g-tbl-type1">
+								<table>
+									<colgroup>
+										<col style="width:20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="align-l">1. Static</th>
+											<td class="align-l"><a href="./layout_user_static.html" class="g-link">layout_user_static.html</a></td>
+										</tr>
+										<tr>
+											<th class="align-l">2. Navigation Dropdown</th>
+											<td class="align-l"><a href="./layout_user_nav_a.html" class="g-link">layout_user_nav_a.html</a></td>
+										</tr>
+										<tr>
+											<th class="align-l">3. Navigation Fulldown</th>
+											<td class="align-l"><a href="./layout_user_nav_b.html" class="g-link">layout_user_nav_b.html</a></td>
+										</tr>
+										<tr>
+											<th class="align-l">4. Theme</th>
+											<td class="align-l"><a href="./layout_user_theme.html" class="g-link">layout_user_theme.html</a></td>
+										</tr>
+										<tr>
+											<th class="align-l">5. Search</th>
+											<td class="align-l"><a href="./layout_user_search.html" class="g-link">layout_user_search.html</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="g-h3">Page Layout</h3>
+							<h4 class="g-h4">HTML</h4>
+							<xmp>
+<div class="page">
+	<!-- page-header -->
+	<header class="page-header"></header>
+	<!-- //page-header -->
+
+	<!-- page-body -->
+	<main class="page-body"></main>
+	<!-- // page-body -->
+
+	<!-- page-footer -->
+	<footer class="page-footer"></footer>
+	<!-- // page-footer -->
+</div>
+							</xmp>
+							<h4 class="g-h4">SCSS</h4>
+							<xmp>
+/*-------------------------------------------------------------------
+	@@ Default
+-------------------------------------------------------------------*/
+body,
+html {
+	height: 100%;
+}
+
+.page {
+	min-height: 100%;
+	min-width: 320px;
+}
+
+.page,
+.page-body,
+.content,
+.content-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-body,
+.content,
+.content-body {
+	width: 100%;
+	flex-grow: 1;
+	flex-basis: auto;
+}
+
+.header,
+.footer,
+.content-header,
+.content-footer {
+	flex: none;
+}
+
+.outer {
+	@include outer;
+}
+
+.inner {
+	@include inner;
+}
+
+/*-------------------------------------------------------------------
+	@@ Layout
+-------------------------------------------------------------------*/
+.page-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	@include outer;
+
+	.inner {
+		position: relative;
+		height: 100%;
+	}
+}
+
+.page-footer {
+	@include outer;
+
+	.inner {
+		position: relative;
+		height: 100%;
+	}
+}
+							</xmp>
+							<h3 class="g-h3">Header</h3>
+							<h4 class="g-h4">HTML</h4>
+							<xmp>
+<header class="page-header">
+	<div class="inner">
+		<!-- logo-area -->
+		<div class="logo-area"></div>
+		<!-- // logo-area -->
+
+		<!-- gnb-area -->
+		<div class="gnb-area"></div>
+		<!-- // gnb-area -->
+
+		<!-- util-area -->
+		<div class="util-area"></div>
+		<!-- // util-area -->
+	</div>
+</header>
+							</xmp>
+							<h4 class="g-h4">SCSS</h4>
+							<xmp>
+/*-------------------------------------------------------------------
+	@@ Header
+-------------------------------------------------------------------*/
+.page-header {
+	height: 100rem;
+
+	// logo-area
+	.logo-area {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	// gnb-area
+	.gnb-area {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	// util-area
+	.util-area {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+							</xmp>
+							<h3 class="g-h3">Navigation</h3>
+							<h4 class="g-h4">HTML</h4>
+							<xmp>
+<nav class="gnb">
+	<ul class="dep1-list">
+		<li class="dep1-item">
+			<!--  현재 페이지일 경우: aria-current="page" -->
+			<a href="#" class="dep1-link" aria-haspopup="menu" aria-expanded="false"aria-current="page">회사소개</a>
+			<div class="dep2-menu">
+				<ul class="dep2-list">
+					<li class="dep2-item">
+						<a href="#" class="dep2-link" aria-current="page">인사말</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">미션 및 비전</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">연혁</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">조직도</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">CI 소개</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">찾아오시는 길</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="dep1-item">
+			<a href="#" class="dep1-link" aria-expanded="false">소통마당</a>
+			<div class="dep2-menu">
+				<ul class="dep2-list">
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">공지사항</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">보도자료</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">경영공시</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">채용공고</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">자료실</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="dep1-item">
+			<a href="#" class="dep1-link" aria-expanded="false">사업안내</a>
+			<div class="dep2-menu">
+				<ul class="dep2-list">
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">주요사업</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">연구보고서</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">사업리포트</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">사업공고</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">이슈브리핑</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="dep1-item">
+			<a href="#" class="dep1-link" aria-expanded="false">시설안내</a>
+			<div class="dep2-menu">
+				<ul class="dep2-list">
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">시설/입주 안내</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">시설 예약</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">예약 현황</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">입주기업 소개</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="dep1-item">
+			<a href="#" class="dep1-link" aria-expanded="false">고객지원</a>
+			<div class="dep2-menu">
+				<ul class="dep2-list">
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">Support</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">자주하는 질문</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">1:1 문의 안내</a>
+					</li>
+					<li class="dep2-item">
+						<a href="#" class="dep2-link">AI 상담원 문의</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+							</xmp>
+							<h4 class="g-h4">SCSS</h4>
+							<h5 class="g-h5">Depth 1 : 공통</h5>
+							<xmp>
+.page-header {
+	.gnb {
+		display: flex;
+		align-items: center;
+		flex: none;
+		height: 100%;
+
+		// Normal
+		.dep1 {
+			&-list {
+				display: flex;
+				flex: none;
+				justify-content: center;
+				gap: 30rem;
+			}
+			&-item {
+				position: relative;
+			}
+			&-link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				height: 80rem;
+				padding: 10rem;
+				font-weight: 700;
+				font-size: 20rem;
+				line-height: 88rem;
+				color: #222;
+			}
+		}
+	}
+}
+							</xmp>
+							<h5 class="g-h5">Depth 2 : 드롭다운</h5>
+							<xmp>
+.page-header {
+	.gnb {
+		.dep2 {
+			&-menu {
+				display: block;
+				width: 160rem;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				pointer-events: none;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.2s ease;
+				transform: translate(-50%, -10rem) scaleY(0);
+				transform-origin: top center;
+			}
+			&-list {
+				display: flex;
+				flex-direction: column;
+				gap: 4rem;
+				padding: 15rem 8rem;
+				background-color: #fff;
+				border-radius: 8rem;
+				border: 1px solid #ddd;
+				box-shadow: 0 5rem 5rem 0 rgba(0,0,0,0.2);
+			}
+			&-item {
+				width: 100%;
+				text-align: center;
+			}
+			&-link {
+				display: block;
+				padding: 2rem 10rem;
+				@include font-set(500, 16);
+				color: #333;
+				&[aria-current="page"] {
+					color: $color-primary;
+				}
+				&[aria-current="page"]:hover,
+				&:hover {
+					border-radius: 4rem;
+					background-color: $color-primary;
+					color: #fff;
+				}
+			}
+		}
+
+		// Interaction
+		.dep1-item {
+			&.is-active {
+				.dep1-link {
+					color: $color-primary;
+				}
+				.dep2-menu {
+					pointer-events: auto;
+					visibility: visible;
+					transform: translate(-50%, -10rem);
+					opacity: 1;
+					z-index: 10;
+				}
+			}
+		}
+	}
+}
+							</xmp>
+							<h5 class="g-h5">Depth 2 : 풀다운</h5>
+							<xmp>
+.page-header {
+	.gnb {
+		.dep2 {
+			&-menu {
+				display: block;
+				width: 160rem;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				pointer-events: none;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.2s ease;
+				transform: translate(-50%, 0rem) scaleY(0);
+				transform-origin: top center;
+			}
+			&-list {
+				display: flex;
+				flex-direction: column;
+				gap: 4rem;
+				padding: 15rem 8rem;
+				// background-color: #fff;
+				// border-radius: 8rem;
+				// border: 1px solid #ddd;
+				// box-shadow: 0 5rem 5rem 0 rgba(0,0,0,0.2);
+			}
+			&-item {
+				width: 100%;
+				text-align: center;
+			}
+			&-link {
+				display: block;
+				padding: 2rem 10rem;
+				@include font-set(500, 16);
+				color: #333;
+				&[aria-current="page"] {
+					color: $color-primary;
+				}
+				&[aria-current="page"]:hover,
+				&:hover {
+					border-radius: 4rem;
+					background-color: $color-primary;
+					color: #fff;
+				}
+			}
+		}
+
+	}
+
+	// 풀다운메뉴
+	&::before {
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		width: 100%;
+		height: 320rem;
+		background-color: #fff;
+		border-bottom: 1px solid #ddd;
+		transform: translateY(0%);
+		transition: all 0.2s ease;
+	}
+
+	&.is-active {
+		&::before {
+			transform: translateY(100%);
+		}
+		.gnb {
+			.dep2-menu {
+				pointer-events: auto;
+				visibility: visible;
+				transform: translate(-50%, -10rem);
+				opacity: 1;
+				z-index: 10;
+			}
+		}
+	}
+}
+							</xmp>
+							<h4 class="g-h4">SCRIPT</h4>
+							<h5 class="g-h5">Depth 2 : 드롭다운</h5>
+							<xmp>
+// GNB
+document.querySelectorAll('.dep1-item').forEach(function(item) {
+	let focusOutTimer;
+	const link = item.querySelector('.dep1-link'); // 자식 요소 참조
+
+	function openDropdown() {
+		clearTimeout(focusOutTimer);
+		item.classList.add('is-active');
+		link.setAttribute('aria-expanded', 'true');
+	}
+
+	function closeDropdown() {
+		focusOutTimer = setTimeout(function() {
+			item.classList.remove('is-active');
+			link.setAttribute('aria-expanded', 'false');
+		}, 100);
+	}
+
+	item.addEventListener('mouseenter', openDropdown);
+	item.addEventListener('focusin', openDropdown);
+	item.addEventListener('mouseleave', closeDropdown);
+	item.addEventListener('focusout', closeDropdown);
+});
+							</xmp>
+							<h5 class="g-h5">Depth 2 : 풀다운</h5>
+							<xmp>
+// GNB
+const gnb = document.querySelector('.gnb');
+const pageHeader = document.querySelector('.page-header');
+const gnbLinks = gnb.querySelectorAll('.dep1-link');
+
+let openTimer;
+let closeTimer;
+
+function openFullDown(delay = 0) {
+	clearTimeout(closeTimer);
+	clearTimeout(openTimer);
+	openTimer = setTimeout(() => {
+		pageHeader.classList.add('is-active');
+		gnbLinks.forEach(link => link.setAttribute('aria-expanded', 'true'));
+	}, delay);
+}
+
+function closeFullDown(delay = 200) {
+	clearTimeout(openTimer);
+	clearTimeout(closeTimer);
+	closeTimer = setTimeout(() => {
+		pageHeader.classList.remove('is-active');
+		gnbLinks.forEach(link => link.setAttribute('aria-expanded', 'false'));
+	}, delay);
+}
+
+// 마우스: 딜레이 열기/닫기
+gnb.addEventListener('mouseenter', () => openFullDown(200));
+gnb.addEventListener('mouseleave', () => closeFullDown(200));
+
+// 포커스: 즉시 열기 / 딜레이 닫기
+gnb.addEventListener('focusin', () => openFullDown(0));
+gnb.addEventListener('focusout', () => closeFullDown(200));
+							</xmp>
+							<h3 class="g-h3">테마</h3>
+							<h4 class="g-h4">HTML</h4>
+							<xmp>
+<!-- 다크테마로 시작할 경우: theme-dark -->
+<header class="page-header"></header>
+<main class="page-body">
+	<div id="content" class="content">
+		<section data-theme="dark">SECTION 1</section>
+		<section data-theme="light">SECTION 2</section>
+		<section data-theme="dark">SECTION 3</section>
+		<section data-theme="light">SECTION 4</section>
+	</div>
+</main>
+							</xmp>
+							<h4 class="g-h4">SCSS</h4>
+							<xmp>
+.page-header {
+	.logo {
+		display: block;
+		width: 216rem;
+		height: 26rem;
+		background:
+			url('../images/demo/img-demo-logo-bk.svg') no-repeat 0 0 / contain,
+			url('../images/demo/img-demo-logo-wh.svg') no-repeat 0 1000rem / contain;
+	}
+	.util {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 16rem;
+
+		.icn {
+			background-position: 0 0, 0 1000rem;
+
+			&.icn-32-demo-util-sigin-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-sigin-bk.svg),
+					url(../images/demo/icn-32-demo-util-sigin-wh.svg);
+			}
+
+			&.icn-32-demo-util-search-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-search-bk.svg),
+					url(../images/demo/icn-32-demo-util-search-wh.svg);
+			}
+
+			&.icn-32-demo-util-menu-bk {
+				background-image:
+					url(../images/demo/icn-32-demo-util-menu-bk.svg),
+					url(../images/demo/icn-32-demo-util-menu-wh.svg);
+			}
+		}
+	}
+
+	// Theme Dark
+	&.theme-dark {
+		.logo {
+			background-position: 0 1000rem, 0 0;
+		}
+		.gnb {
+			.dep1-link {
+				color: #fff;
+			}
+		}
+		.util {
+			.icn {
+				background-position: 0 1000rem, 0 0;
+			}
+		}
+	}
+}
+							</xmp>
+							<h4 class="g-h4">Script</h4>
+							<xmp>
+// Theme
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelectorAll('section[data-theme]').forEach(section => {
+	ScrollTrigger.create({
+		trigger: section,
+		start: "top top+=60",   // 헤더 높이 만큼 오프셋 (예: 60px)
+		end: "bottom top",
+		onEnter: () => {
+			if (section.dataset.theme === 'dark') {
+				document.querySelector('.page-header').classList.add('theme-dark');
+			} else {
+				document.querySelector('.page-header').classList.remove('theme-dark');
+			}
+		},
+		onLeaveBack: () => {
+			// 뒤로 스크롤해서 구간 벗어날 때
+			if (section.dataset.theme === 'dark') {
+				document.querySelector('.page-header').classList.remove('theme-dark');
+			} else {
+				document.querySelector('.page-header').classList.add('theme-dark');
+			}
+		}
+	});
+});
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section inner">
+						<div class="g-section-header">
+							<h2 class="g-h2">Modules</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">모듈명</h3>
+							<h4 class="g-h4">module-a</h4>
+							<h5 class="g-h5">상세구분</h5>
+							<ul class="g-desc">
+								<li>목록</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // Section -->
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

@@ -9,20 +9,6 @@
 .page.template-user {
 	// page-header
 	.page-header {
-		&::before {
-			content:'';
-			display: block;
-			position: absolute;
-			left: 0;
-			bottom: 100%;
-			width: 100%;
-			height: 320rem;
-			background-color: #fff;
-			border-bottom: 1px solid #ddd;
-			transform: translateY(0%);
-			transition: all 0.2s ease;
-		}
-
 		.inner {
 			min-width: 100%;
 		}
@@ -222,29 +208,29 @@
 
 			.icn {
 				background-position: 0 0, 0 1000rem;
-			}
 
-			.icn-32-demo-util-sigin-bk {
-				background-image:
-					url(../images/demo/icn-32-demo-util-sigin-bk.svg),
-					url(../images/demo/icn-32-demo-util-sigin-wh.svg);
-			}
+				&.icn-32-demo-util-sigin-bk {
+					background-image:
+						url(../images/demo/icn-32-demo-util-sigin-bk.svg),
+						url(../images/demo/icn-32-demo-util-sigin-wh.svg);
+				}
 
-			.icn-32-demo-util-search-bk {
-				background-image:
-					url(../images/demo/icn-32-demo-util-search-bk.svg),
-					url(../images/demo/icn-32-demo-util-search-wh.svg);
-			}
+				&.icn-32-demo-util-search-bk {
+					background-image:
+						url(../images/demo/icn-32-demo-util-search-bk.svg),
+						url(../images/demo/icn-32-demo-util-search-wh.svg);
+				}
 
-			.icn-32-demo-util-menu-bk {
-				background-image:
-					url(../images/demo/icn-32-demo-util-menu-bk.svg),
-					url(../images/demo/icn-32-demo-util-menu-wh.svg);
+				&.icn-32-demo-util-menu-bk {
+					background-image:
+						url(../images/demo/icn-32-demo-util-menu-bk.svg),
+						url(../images/demo/icn-32-demo-util-menu-wh.svg);
+				}
 			}
 		}
 
 		// Theme
-		&.is-dark {
+		&.theme-dark {
 			.logo {
 				background-position: 0 1000rem, 0 0;
 			}
@@ -261,6 +247,20 @@
 		}
 
 		// 풀다운메뉴
+		&::before {
+			content:'';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 100%;
+			width: 100%;
+			height: 320rem;
+			background-color: #fff;
+			border-bottom: 1px solid #ddd;
+			transform: translateY(0%);
+			transition: all 0.2s ease;
+		}
+
 		&.is-active {
 			&::before {
 				transform: translateY(100%);
