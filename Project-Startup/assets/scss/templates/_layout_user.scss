@@ -444,6 +444,93 @@
 					}
 				}
 			}
+
+			&.module-b {
+				padding-top: 200rem;
+				.content-header {
+					position: relative;
+					z-index: 10;
+					display: block;
+					@include outer;
+					overflow: hidden;
+
+					.page-h1 {
+						@include font-set(500, 24);
+						color: $color-primary;
+						transition: color 0.3s ease;
+					}
+					.page-explain {
+						margin-top: 20rem;
+						@include font-set(500, 60);
+						letter-spacing: -3rem;
+						color: #000;
+						transition: color 0.2s ease;
+					}
+
+					&.white {
+						.page-h1,
+						.page-explain {
+							color: #fff;
+						}
+					}
+
+					.breadcrumb {
+						margin-top: 24rem;
+						ol {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: 4rem;
+							li {
+								@include font-set(500, 16);
+							}
+							a {
+								position: relative;
+								display: flex;
+								align-items: center;
+								gap: 4rem;
+								&.home::before {
+									content:'';
+									display: block;
+									width: 20rem;
+									height: 20rem;
+									background: url('../images/demo/icn-20-demo-breadcrumb-home-wh.svg') no-repeat center center;
+								}
+								&::after {
+									content:'';
+									display: block;
+									width: 20rem;
+									height: 20rem;
+									background: url('../images/demo/icn-20-demo-breadcrumb-split-wh.svg') no-repeat center center;
+								}
+							}
+						}
+					}
+				}
+
+				.content-visual {
+					position: relative;
+					z-index: 1;
+					margin-top: 30rem;
+					@include outer;
+					// transition: all 0.3s ease;
+				}
+
+				.content-body {
+					padding-top: 100rem;
+					padding-bottom: 100rem;
+
+					.content-title {
+						margin-bottom: 50rem;
+
+						.page-h2 {
+							@include font-set(700, 48);
+							color: #000;
+							text-align: center;
+						}
+					}
+				}
+			}
 		}
 	}
 }
