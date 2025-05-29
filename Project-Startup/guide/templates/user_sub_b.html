@@ -12,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
 
-	<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
@@ -20,41 +19,23 @@
 
 	<!-- 페이지 스크립트 영역 -->
 	<script>
-		const lenis = new Lenis({
-			duration: 1.2,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // 자연스러운 감속
-			smooth: true,
-		});
-
-		function raf(time) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-
-		requestAnimationFrame(raf);
-	</script>
-	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			// Theme
-			gsap.registerPlugin(ScrollToPlugin);
-			gsap.registerPlugin(ScrollTrigger);
-
+			let darkCount = 0;
 			document.querySelectorAll('[data-theme="dark"]').forEach(section => {
 				const theme = section.dataset.theme;
 
 				// 내려갈 때 (top 기준)
 				ScrollTrigger.create({
 					trigger: section,
-					start: "top top+=60",
-					end: "bottom top+=60",
+					start: "top 0",
+					end: "bottom ",
 					onEnter: () => applyTheme(theme, "정+"),
 					onLeave: () => removeTheme(theme, "정-"),
 					onEnterBack: () => applyTheme(theme, "역+"),
 					onLeaveBack: () => removeTheme(theme, "역-"),
 				});
 			});
-
-			let darkCount = 0;
 
 			function applyTheme(theme, direction) {
 				if (darkCount === 0) {
@@ -99,7 +80,7 @@
 					targets: [".content-header"],
 					className: "white"
 				},
-				markers: true // 디버깅할 때만
+				// markers: true // 디버깅할 때만
 			});
 		});
 	</script>
