@@ -344,11 +344,11 @@
 					color: #fff;
 					text-align: center;
 
-					.page-h1 {
+					.h1 {
 						@include font-set(700, 60);
 						color: #fff;
 					}
-					.page-explain {
+					.h1-explain {
 						@include font-set(300, 20);
 						color: #fff;
 					}
@@ -436,7 +436,7 @@
 					.content-title {
 						margin-bottom: 50rem;
 
-						.page-h2 {
+						.h2 {
 							@include font-set(700, 48);
 							color: #000;
 							text-align: center;
@@ -454,12 +454,12 @@
 					@include outer;
 					overflow: hidden;
 
-					.page-h1 {
+					.h1 {
 						@include font-set(500, 24);
 						color: $color-primary;
 						transition: color 0.3s ease;
 					}
-					.page-explain {
+					.h1-explain {
 						margin-top: 20rem;
 						@include font-set(500, 60);
 						letter-spacing: -3rem;
@@ -468,8 +468,8 @@
 					}
 
 					&.white {
-						.page-h1,
-						.page-explain {
+						.h1,
+						.h1-explain {
 							color: #fff;
 						}
 					}
@@ -523,7 +523,7 @@
 					.content-title {
 						margin-bottom: 50rem;
 
-						.page-h2 {
+						.h2 {
 							@include font-set(700, 48);
 							color: #000;
 							text-align: center;
