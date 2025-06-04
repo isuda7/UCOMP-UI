@@ -121,8 +121,9 @@ lenis.start()
 							<h3 class="g-h3">내부스크롤</h3>
 							<xmp style="height: auto;" class="lenis-ignore">
 document.addEventListener("DOMContentLoaded", function() {
-	const lenisIgnore = document.querySelectorAll('.lenis-ignore');
-	scrollBoxes.forEach(box => {
+	const lenisIgnores = document.querySelectorAll('.lenis-ignore');
+
+	lenisIgnores.forEach(box => {
 		box.addEventListener('wheel', e => {
 			e.stopPropagation();
 		}, { passive: false });

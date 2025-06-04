@@ -108,9 +108,9 @@ function setLenisScroll() {
 
 // Lenis 적용안함
 function setLenisIgnore(){
-	const scrollBoxes = document.querySelectorAll('.lenis-ignore');
+	const lenisIgnores = document.querySelectorAll('.lenis-ignore');
 
-	scrollBoxes.forEach(box => {
+	lenisIgnores.forEach(box => {
 	box.addEventListener('wheel', e => {
 		e.stopPropagation();
 	}, { passive: false });
