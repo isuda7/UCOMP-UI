@@ -90,8 +90,11 @@ function setScrollStatus(){
 }
 
 /* 부드러운 스크롤 디바이스 설정 */
+let lenis;
 function setLenisScroll() {
-	let lenis = new Lenis({
+	if (lenis) lenis.destroy(); // 재설정 대응
+
+	lenis = new Lenis({
 		duration: 1.2,
 		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 		smooth: true,
@@ -101,6 +104,25 @@ function setLenisScroll() {
 		requestAnimationFrame(raf);
 	}
 	requestAnimationFrame(raf);
+}
+
+// Lenis 적용안함
+function setLenisIgnore(){
+	const scrollBoxes = document.querySelectorAll('.lenis-ignore');
+
+	scrollBoxes.forEach(box => {
+	box.addEventListener('wheel', e => {
+		e.stopPropagation();
+	}, { passive: false });
+
+	box.addEventListener('touchstart', e => {
+		e.stopPropagation();
+	}, { passive: false });
+
+	box.addEventListener('touchmove', e => {
+		e.stopPropagation();
+	}, { passive: false });
+	});
 }
 
 /*-------------------------------------------------------------------
@@ -116,6 +138,7 @@ function InputClearHandler(id) {
 	$(id).val('').focus();
 }
 
+
 /*-------------------------------------------------------------------
 	@@ 초기실행
 -------------------------------------------------------------------*/
@@ -127,6 +150,7 @@ function initUI() {
 	setDeviceStatus(); // 디바이스 설정
 	setScrollStatus(); // 스크롤 상태 설정
 	setLenisScroll(); // 부드러운 스크롤 디바이스 설정
+	setLenisIgnore(); // Lenis 내부스크롤 대응
 
 	// Layout
 
