@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta name="keywords" content="사이트명" />
 	<meta name="description" content="사이트명" />
-	<title>User Sub B | Ucomp</title>
+	<title>User Sub A | Ucomp</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.template.css" />
 
@@ -20,8 +20,6 @@
 	<!-- 페이지 스크립트 영역 -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			setLenisScroll();
-
 			// Theme
 			let darkCount = 0;
 			document.querySelectorAll('[data-theme="dark"]').forEach(section => {
@@ -52,38 +50,6 @@
 					document.querySelector('.page-header').classList.remove('theme-dark');
 				}
 			}
-
-			// Scroll Parallex
-			// pin 처리
-			ScrollTrigger.create({
-				trigger: ".content-header",
-				start: "top 200",
-				end: "+=600", // 고정할 거리
-				pin: true,
-				scrub: 1
-			});
-
-			// parallax 효과
-			gsap.to(".content-visual", {
-				paddingLeft: 0,
-				paddingRight: 0,
-				ease: "none",
-				scrollTrigger: {
-					trigger: "body",
-					start: "0 top", // 스크롤 시작 지점에서 바로 발동
-					end: "+=500",
-					scrub: true,
-				}
-			});
-			ScrollTrigger.create({
-				trigger: ".content-visual",
-				start: "top 300",
-				toggleClass: {
-					targets: [".content-header"],
-					className: "white"
-				},
-				// markers: true // 디버깅할 때만
-			});
 		});
 	</script>
 </head>
@@ -102,33 +68,25 @@
 		<!-- // page-skip -->
 
 		<!-- page-header -->
-		<header class="page-header" data-include="./include_header.html"></header>
+		<header class="page-header theme-dark" data-include="./include_header.html"></header>
 		<!-- //page-header -->
 
 		<!-- page-body -->
 		<main class="page-body">
 			<!-- content -->
-			<div id="content" class="content module-b">
+			<div id="content" class="content module-a">
 				<!-- 본문영역 -->
 				<!-- content-header -->
-				<div class="content-header">
+				<div class="content-header" data-theme="dark">
 					<div class="inner">
-						<h1 class="h1">진흥원 소개</h1>
-						<p class="h1-explain">홈페이지에 방문해주신 여러분께 <br>깊은 감사의 말씀을 드립니다.</p>
 					</div>
 				</div>
 				<!-- // content-header -->
-				<div class="content-visual" data-theme="dark">
-					<img src="../../assets/images/demo/visual-sub-02-pc.jpg" alt="" />
-				</div>
 				<!-- content-body -->
 				<div class="content-body">
-					<div class="inner">
-						<div class="content-title">
-							<h2 class="h2">회사소개</h2>
-						</div>
-						<div style="height: 800rem; background-color: #eee;"></div>
-					</div>
+					<section class="main-sec module-a type-a">
+
+					</section>
 				</div>
 				<!-- // content-body -->
 				<!-- //본문영역 -->

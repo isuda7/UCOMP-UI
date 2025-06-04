@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>책장 넘기기 (짝수-홀수 페이지 맞춤)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f0f0f0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+    .book {
+      position: relative;
+      width: 800px;
+      height: 500px;
+      display: flex;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      perspective: 2000px;
+      background: #ccc;
+      user-select: none;
+    }
+    .page {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .left-page {
+      border-right: none;
+      z-index: 1;
+    }
+    .right-page {
+      border-left: none;
+      z-index: 1;
+    }
+    .flip-page {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      transform-style: preserve-3d;
+      z-index: 5;
+      pointer-events: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-size: 28px;
+      box-sizing: border-box;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+    .front {
+      z-index: 2;
+    }
+    .back {
+      transform: rotateY(180deg);
+      background: #e0e0e0;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 10;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #999;
+      background: white;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    <div class="page left-page" id="leftContent"></div>
+
+    <div class="flip-page" id="flipPage">
+      <div class="face front" id="flipFront"></div>
+      <div class="face back" id="flipBack"></div>
+    </div>
+
+    <div class="page right-page" id="rightContent"></div>
+
+    <div class="buttons">
+      <button id="prev">이전</button>
+      <button id="next">다음</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const leftContent = document.getElementById('leftContent');
+    const rightContent = document.getElementById('rightContent');
+    const flipPage = document.getElementById('flipPage');
+    const flipFront = document.getElementById('flipFront');
+    const flipBack = document.getElementById('flipBack');
+
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+
+    // 원본 페이지 텍스트 (홀수개도 가능)
+    const rawPages = [
+      "페이지 1",
+      "페이지 2",
+      "페이지 3",
+      "페이지 4",
+      "페이지 5",
+      "페이지 6"
+    ];
+
+    // 홀수면 뒤에 공백 페이지 추가 (짝수 맞춤)
+    const padded = [...rawPages];
+    if (padded.length % 2 !== 0) padded.push("");
+
+    // 페이지 쌍으로 분할 (짝수 왼쪽, 홀수 오른쪽)
+    // 첫 페이지는 공백/페이지 1
+    const pages = [];
+    pages.push(["", padded[0]]);
+    for (let i = 1; i < padded.length; i += 2) {
+      pages.push([padded[i], padded[i + 1] || ""]);
+    }
+
+    let index = 0; // pages 배열 인덱스
+
+    // 현재 페이지 텍스트 업데이트
+    function updateStatic() {
+      const [left, right] = pages[index];
+      leftContent.textContent = left;
+      rightContent.textContent = right;
+    }
+
+    // 넘김 애니메이션
+    function flip(direction) {
+      const isNext = direction === 'next';
+      const newIndex = index + (isNext ? 1 : -1);
+
+      if (newIndex < 0 || newIndex >= pages.length) return;
+
+      const [currLeft, currRight] = pages[index];
+      const [nextLeft, nextRight] = pages[newIndex];
+
+      if (isNext) {
+        // 오른쪽 페이지 넘김: 회전 중심은 왼쪽 가장자리
+        flipPage.style.left = '50%';
+        flipPage.style.transformOrigin = 'left';
+
+        flipFront.textContent = currRight;
+        flipBack.textContent = nextLeft;
+      } else {
+        // 왼쪽 페이지 넘김: 회전 중심은 오른쪽 가장자리
+        flipPage.style.left = '0';
+        flipPage.style.transformOrigin = 'right';
+
+        flipFront.textContent = currLeft;
+        flipBack.textContent = nextRight;
+      }
+
+      gsap.set(flipPage, { rotationY: 0, zIndex: 10 });
+
+      gsap.to(flipPage, {
+        duration: 1,
+        rotationY: isNext ? -180 : 180,
+        ease: "power2.inOut",
+        onComplete: () => {
+          index = newIndex;
+          updateStatic();
+          gsap.set(flipPage, { rotationY: 0, zIndex: 5 });
+        }
+      });
+    }
+
+    nextBtn.addEventListener('click', () => flip('next'));
+    prevBtn.addEventListener('click', () => flip('prev'));
+
+    updateStatic();
+  </script>
+</body>
+</html>
