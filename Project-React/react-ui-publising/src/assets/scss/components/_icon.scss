@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 아이콘
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+/* 기본 */
+.icn {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	background: no-repeat center center / contain;
+}
+
+// 추가하고 싶은 크기를 배열에 나열
+$icn-sizes: (12, 14, 16, 20, 24, 28, 32);
+
+@each $size in $icn-sizes {
+	[class*='icn-#{$size}'] {
+		width: #{$size}rem;
+		height: #{$size}rem;
+	}
+}
+
+/* Demo */
+.icn-14-demo-info-wh {
+	background-image: url('../../images/demo/icn-14-demo-info-wh.svg');
+}
+.icn-16-demo-info-gr {
+	background-image: url('../../images/demo/icn-16-demo-info-gr.svg');
+}
+.icn-20-demo-remove-dk {
+	background-image: url('../../images/demo/icn-20-demo-remove-dk.svg');
+}
+.icn-20-demo-srch-bk {
+	background-image: url('../../images/demo/icn-20-demo-srch-bk.svg');
+}
+.icn-32-demo-close-bk {
+	background-image: url('../../images/demo/icn-32-demo-close-bk.svg');
+}
+.icn-32-demo-close-wh {
+	background-image: url('../../images/demo/icn-32-demo-close-wh.svg');
+}

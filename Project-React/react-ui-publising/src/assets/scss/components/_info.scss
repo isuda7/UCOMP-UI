@@ -1,0 +1,85 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 데이터 기본
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+/* info-summary */
+.info-summary {
+	/* module-a */
+	&.module-a {
+		gap: 20rem 20rem;
+		padding: 24rem 30rem;
+		background-color: #f4f4f4;
+		border-radius: 8rem;
+		@include font-set(16, 400);
+		color: #000;
+
+		.info-title {
+			margin-bottom: 10rem;
+			@include font-set(20, 700);
+		}
+		.info-content {
+			.data-para + .data-bul {
+				margin-top: 8rem;
+			}
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+	}
+}
+
+/* info-tip */
+.info-tip {
+	padding: 16rem 20rem;
+	border-radius: 4rem;
+	background-color: #f8f8f8;
+}
+
+
+/* info-helper */
+.info-helper {
+	/* module-a */
+	&.module-a {
+		.info-title {
+			margin-bottom: 10rem;
+			strong {
+				display: flex;
+				align-items: center;
+				gap: 8rem;
+				@include font-set(18, 500)
+			}
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+		padding: 20rem 24rem;
+		background-color: #f8f8f8;
+		.info-title {
+			margin-bottom: 12rem;
+			padding-bottom: 8rem;
+			border-bottom: 1px solid #ddd;
+			strong {
+				display: flex;
+				align-items: center;
+				gap: 8rem;
+				@include font-set(18, 500)
+			}
+		}
+	}
+}
+/* //info-helper */
+
+/*-------------------------------------------------------------------
+	@@ 옵션
+-------------------------------------------------------------------*/
+.info-helper.horizontal,
+.info-summary.horizontal {
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+	분류그룹 : 체크박스, 라디오
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ Group
+-------------------------------------------------------------------*/
+.frm-chk-group,
+.frm-rdo-group {
+
+	// Direction
+	&.horizontal {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&.vertical {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	// Size
+	&.module-a {
+		min-height: 40rem;
+
+		&.horizontal {
+			gap: 8rem 16rem;
+		}
+
+		&.vertical {
+			gap: 8rem 16rem;
+		}
+	}
+
+	&.module-b {
+		min-height: 40rem;
+
+		&.horizontal {
+			gap: 8rem 8rem;
+		}
+
+		&.vertical {
+			gap: 8rem 8rem;
+
+			.frm-chk,
+			.frm-rdo {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ Elements
+-------------------------------------------------------------------*/
+.frm-chk,
+.frm-rdo {
+
+	/* module-a */
+	&.module-a {
+		--icn-size: 20rem;
+
+		display: inline-flex;
+		align-items: flex-start;
+		position: relative;
+		min-height: 22rem;
+
+		>input {
+
+			// Normal
+			& {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+
+				+label {
+					position: relative;
+					display: flex;
+					width: 100%;
+					font-size: 14rem;
+					line-height: 22rem;
+
+					&::before {
+						content: '';
+						flex: none;
+						position: relative;
+						z-index: 1;
+						display: inline-flex;
+						width: var(--icn-size);
+						height: var(--icn-size);
+						top: 1px;
+						vertical-align: top;
+						background: no-repeat center 0 / contain, no-repeat center var(--icn-size) / contain;
+					}
+
+					>span {
+						display: block;
+						width: 100%;
+						margin-left: 8rem;
+					}
+
+					// Checkbox
+					&.frm-chk-label::before {
+						background-image:
+							url('../../images/demo/icn-20-demo-chk-nor.svg'),
+							url('../../images/demo/icn-20-demo-chk-sel.svg');
+					}
+
+					// Radio
+					&.frm-rdo-label::before {
+						background-image:
+							url('../../images/demo/icn-20-demo-rdo-nor.svg'),
+							url('../../images/demo/icn-20-demo-rdo-sel.svg');
+					}
+				}
+			}
+
+			// Checked
+			&:checked {
+				+label {
+					&::before {
+						background-position: center var(--icn-size), center 0rem;
+					}
+				}
+			}
+
+			// Disabled
+			&:disabled {
+				+label {
+					opacity: 0.5;
+				}
+			}
+		}
+
+	}
+
+	/* module-b */
+	&.module-b {
+		display: inline-flex;
+		align-items: flex-start;
+		position: relative;
+		font-size: 16rem;
+
+		>input {
+
+			// Normal
+			& {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+
+				+label {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 44rem;
+					padding: 4rem 15rem;
+					border: 1px solid #ddd;
+					border-radius: 4rem;
+					font-weight: 500;
+					line-height: 24rem;
+
+					>span {
+						display: block;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+
+			// Checked
+			&:checked {
+				+label {
+					border-color: $color-primary;
+					color: $color-primary;
+				}
+			}
+
+			// Disabled
+			&:disabled {
+				+label {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ switch
+-------------------------------------------------------------------*/
+/* 스타일 */
+.frm-switch {
+	&.module-a {
+		display: inline-flex;
+		position: relative;
+		vertical-align: top;
+
+		label {
+			display: inline-flex;
+			width: 80px;
+		}
+
+		label:before,
+		label:after {
+			content: '';
+		}
+
+		label:before {
+			display: inline-block;
+			width: 100%;
+			height: 30px;
+			background-color: #f0f0f0;
+			border-radius: 15px;
+			vertical-align: top;
+		}
+
+		input,
+		label:after {
+			position: absolute;
+			left: 2px;
+			top: 50%;
+			z-index: 1;
+			width: 40px;
+			height: 26px;
+			line-height: 26px;
+			text-align: center;
+			border-radius: 13px;
+			overflow: hidden;
+			background-color: #aaa;
+			color: #fff;
+			font-size: 12px;
+			transform: translateY(-50%);
+			transition: all 0.3s;
+		}
+
+		input {
+			z-index: 0;
+			border: 0;
+			height: 24px;
+		}
+
+		input:checked,
+		input:checked+label:after {
+			left: calc(100% - 42px);
+		}
+
+		input:checked+label:after {
+			background-color: #2496ee;
+		}
+
+		input+label:after {
+			content: 'OFF';
+		}
+
+		input:checked+label:after {
+			content: 'ON';
+		}
+
+		input[disabled]+label:before {
+			background-color: #ddd;
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+		display: inline-flex;
+		align-items: flex-start;
+		position: relative;
+		font-size: 16rem;
+		font-weight: 500;
+		line-height: 24rem;
+
+		>input {
+
+			// Normal
+			& {
+				position: absolute;
+				width: 20rem;
+				height: 20rem;
+				background: #fff;
+				border-radius: 50%;
+
+				+.frm-rdo-label {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: 1px solid #ddd;
+					height: 40rem;
+					padding: 4rem 15rem;
+					border-radius: 4rem;
+
+					.frm-chk-txt {
+						display: inline-block;
+					}
+				}
+			}
+
+			// Checked
+			&:checked {
+				&~.frm-rdo-label {
+					border-color: $color-primary;
+					color: $color-primary;
+				}
+
+				+.frm-rdo-txt {
+					display: inline-block;
+				}
+			}
+
+			// Disabled
+			&:disabled {
+				+.frm-rdo-label {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

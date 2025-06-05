@@ -1,0 +1,104 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : Accordions
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+/* 기본 (부트스트랩) */
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+.collapse:not(.show) {
+	display: none;
+}
+
+/* 기본 (사용자정의) */
+.accordion-button {
+	.icn {
+		transform: rotate(180deg); // 펼쳐짐
+		transition: all 0.35s ease;
+
+	}
+	&.collapsed .icn {
+		transform: rotate(0deg); // 닫힘
+
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+.accordion {
+	/* module-a */
+	&.module-a {
+		.accordion-item + .accordion-item {
+			border-top: 1px solid #ddd;
+		}
+		.accordion-button {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 8rem 20rem;
+		}
+		.accordion-body {
+			padding: 8rem 20rem;
+			border-top: 1px solid #ddd;
+			background-color: #f8f8f8;
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+		.accordion-item + .accordion-item {
+			margin-top: 8rem;
+		}
+		.accordion-header {
+			border: 1px solid #ddd;
+			border-radius: 8rem;
+		}
+		.accordion-button {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 8rem 20rem;
+		}
+		.accordion-body {
+			padding: 8rem 20rem;
+		}
+	}
+
+	/* module-c */
+	&.module-c {
+		.accordion-item {
+			border: 1px solid #ddd;
+			border-radius: 8rem;
+		}
+		.accordion-item + .accordion-item {
+			margin-top: 8rem;
+		}
+		.accordion-header {
+		}
+		.accordion-button {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 8rem 20rem;
+		}
+		.accordion-body {
+			padding: 8rem 20rem;
+			border-radius: 0 0 8rem 8rem;
+			background-color: #f8f8f8;
+		}
+	}
+}

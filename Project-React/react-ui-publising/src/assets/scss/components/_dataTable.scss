@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+	분류그룹 : 표
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+.tbl {
+	/* module-a */
+	&.module-a {
+		position: relative;
+		border: 1px solid #444;
+		border-width: 1px 0 1px 0;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #fff;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #fff;
+		}
+		>table {
+			margin: -1px 0;
+
+			th,
+			td {
+				padding: 10px 15px;
+				height: 40px;
+				text-align: left;
+				border: 1px solid #ddd;
+			}
+
+			thead th {
+				background-color: #f7f7f7;
+				text-align: center;
+				border-bottom: 0;
+			}
+
+			tbody th {
+				background-color: #f7f7f7;
+			}
+
+			.depth2 {
+				background-color: #f7f7f7;
+			}
+		}
+	}
+}
+
+/* Table */

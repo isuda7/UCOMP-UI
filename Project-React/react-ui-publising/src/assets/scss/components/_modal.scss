@@ -1,0 +1,262 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 팝업
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 기본
+-------------------------------------------------------------------*/
+.modal {
+	// modal
+	& {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1100;
+		display: none;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		outline: 0;
+
+		.modal-dialog {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			transition: transform .3s ease;
+			.btn-close {
+				position: absolute;
+				top: 10rem;
+				right: 10rem;
+			}
+		}
+
+		.modal-content {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			min-width: 280rem;
+			min-height: 150rem;
+			width: auto;
+			max-width: 100%;
+			border-radius: 16px;
+			pointer-events: auto;
+			box-shadow: 2px 2px 10px 0px rgba(0,0,0, 0.2);
+			transition: transform .3s ease;
+		}
+
+		.modal-header {
+			position: relative;
+			flex:none;
+			background-color: #fff;
+		}
+
+		.modal-close {
+			position: absolute;
+			top: 20rem;
+			right: 20rem;
+			width: 36rem;
+			height: 36rem;
+		}
+
+		.modal-body {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			flex-basis: auto;
+			overflow: auto;
+			background-color: #fff;
+			> div {
+				flex: none;
+			}
+		}
+		.modal-footer {
+			flex:none;
+		}
+
+		// 인터렉션
+		&.show .modal-content {
+			transform: none !important;
+		}
+		&.modal-static .modal-dialog {
+			transform: scale(1.02);
+		}
+	}
+
+	// modal-backdrop
+	&-backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		width: 100vw;
+		height: 100vh;
+		background-color: #000;
+		opacity: 0;
+		&.show {
+			opacity: 0.5;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+/* 방향 */
+.modal {
+	&.normal {
+		.modal-dialog {
+			justify-content: flex-start;
+			align-items: center;
+			padding: 20rem;
+		}
+		.modal-content {
+			transform: translate(0, 30px);
+		}
+	}
+	&.full {
+		.modal-dialog {
+		   justify-content: center;
+		   justify-content: flex-start;
+		   padding: 0;
+		}
+		.modal-content {
+			height: 100%;
+			border-radius: 0;
+			transform: translate(0, 0);
+		}
+	}
+	&.center {
+		.modal-dialog {
+			justify-content: center;
+			align-items: center;
+			padding: 20rem;
+		}
+		.modal-content {
+			width: 640rem;
+			transform: translate(0, 30px);
+		}
+	}
+	&.right {
+		.modal-dialog {
+			justify-content: flex-start;
+			align-items: flex-end;
+		}
+		.modal-content {
+			height: 100%;
+			border-radius: 0;
+			transform: translate(110%, 0);
+		}
+	}
+	&.left {
+		.modal-dialog {
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		.modal-content {
+			height: 100%;
+			border-radius: 0;
+			transform: translate(-110%, 0);
+		}
+	}
+	&.bottom {
+		.modal-dialog {
+			justify-content: center;
+			justify-content: flex-end;
+		}
+		.modal-content {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			max-height: calc(100% - 80rem);
+			transform: translate(0, 110%);
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 모듈 - Alert, Confirm
+-------------------------------------------------------------------*/
+.modal.alert-modal {
+	.modal-content {
+		width: 320rem;
+		min-height: 180rem;
+	}
+	.modal-body {
+		justify-content: center;
+		align-items: center;
+		.msg-sec {
+			display: flex;
+			padding: 30rem;
+			text-align: center;
+			.msg-tit {
+				font-size: 18rem;
+				font-weight: 700;
+				& + .msg-con {
+					margin-top: 16rem;
+				}
+				&:empty + .msg-con {
+					margin-top: 0;
+				}
+			}
+			.msg-con {
+				font-size: 16rem;
+				font-weight: 400;
+				color: #444;
+			}
+		}
+	}
+	.modal-footer {
+		display: flex;
+		justify-content: center;
+		.btn {
+			flex: 1 1 auto;
+			border-radius: 0;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 모듈 - Basic
+-------------------------------------------------------------------*/
+.modal.basic-modal {
+	&.module-a {
+		.modal-header {
+			padding: 20rem;
+			.modal-title {
+				padding-right: 56rem;
+				font-size: 24rem;
+				line-height: 36rem;
+				font-weight: 700;
+			}
+			.modal-close {
+				position: absolute;
+				top: 20rem;
+				right: 20rem;
+				width: 36rem;
+				height: 36rem;
+			}
+		}
+		.modal-body {
+			padding: 10rem 20rem;
+		}
+		.modal-footer {
+			display: flex;
+			justify-content: center;
+			gap: 10rem;
+			padding: 20rem;
+			background-color: #fff;
+			.btn {
+				flex: 1 1 auto;
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------------
+	@@ 모듈 - Custom
+-------------------------------------------------------------------*/

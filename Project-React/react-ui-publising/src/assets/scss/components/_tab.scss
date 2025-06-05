@@ -1,0 +1,146 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 탭 메뉴
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+/* 기본 */
+.tab-list {
+	position: relative;
+	display: flex;
+	.tab-link:disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
+.tab-pane {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+/* 정렬 */
+.tab-nav {
+	&.fluid {
+		.tab-item {
+			width: 100%;
+		}
+	}
+	&.center {
+		.tab-list {
+			justify-content: center;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ 모듈
+-------------------------------------------------------------------*/
+/* tab-nav */
+.tab-nav {
+	/* module-a */
+	&.module-a {
+		.tab-list {
+			&::before {
+				content:'';
+				display: block;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 10;
+				width: 100%;
+				height: 1px;
+				background-color: $color-primary;
+			}
+		}
+		.tab-item {
+			+ .tab-item {
+				margin-left: -1px;
+			}
+		}
+		.tab-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 48rem;
+			padding:0rem 20rem;
+			border: 1px solid #ddd;
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 500;
+			&.active {
+				background-color: $color-primary;
+				border-color: $color-primary;
+				color: #fff;
+			}
+		}
+	}
+
+	/* module-b */
+	&.module-b {
+		.tab-list {
+			height: 48rem;
+			gap: 2rem;
+			border-bottom: 1px solid #ddd;
+		}
+		.tab-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 48rem;
+			padding:0rem 20rem;
+			border-bottom: 2px solid transparent;
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 500;
+			&.active {
+				border-color: $color-primary;
+			}
+		}
+	}
+
+	/* module-c */
+	&.module-c {
+		.tab-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 48rem;
+			padding:0rem 20rem;
+			border-radius: 4rem;
+			border: 1px solid transparent;
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 500;
+			color: #444;
+			&.active {
+				padding:0rem 19rem;
+				border:2px solid $color-primary;
+				background-color: $color-primary;
+				color: #fff;
+			}
+		}
+	}
+}
+
+/* tab-content */
+.tab-content {
+	/* module-a */
+	&.module-a {
+		padding: 20rem 0;
+	}
+	/* module-b */
+	&.module-b {
+		padding: 20rem 0;
+	}
+	/* module-c */
+	&.module-c {
+		padding: 20rem 20rem;
+	}
+}

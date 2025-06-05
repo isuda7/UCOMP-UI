@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 토스트
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+/* 기본 */
+.dropdown {
+	display: inline-flex;
+	position: relative;
+}
+.dropdown-menu {
+	display: none;
+	&.show {
+		display: block;
+		z-index: 10;
+	}
+}
+
+/* 강조 */
+
+/*-------------------------------------------------------------------
+	@@ 유형
+-------------------------------------------------------------------*/
+.dropdown {
+	/* module-a */
+	&.module-a {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 5rem 0;
+			border-radius: 4rem;
+			background-color: #fff;
+			.dropdown-item {
+				display: block;
+				padding: 5rem 16rem;
+			}
+		}
+	}
+	/* module-b */
+	&.module-b {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 0 0;
+			border-radius: 4rem;
+			background-color: #fff;
+			> li + li {
+				border-top: 1px solid #ddd;
+			}
+			.dropdown-item {
+				display: block;
+				padding: 10rem 16rem;
+			}
+		}
+	}
+	/* module-c */
+	&.module-c {
+		.dropdown-menu {
+			width: 100%;
+			border:1px solid #ddd;
+			padding: 5rem 16rem;
+			border-radius: 4rem;
+			background-color: #fff;
+			> li + li {
+				border-top: 1px solid #ddd;
+			}
+			.dropdown-item {
+				display: block;
+				padding: 5rem 0;
+			}
+		}
+	}
+}
