@@ -1,104 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>책장 넘기기 - 연속 페이지 방식</title>
-  <style>
-    body {
-      margin: 0;
-      background: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      user-select: none;
-      font-family: "Noto Sans KR", sans-serif;
-    }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>책장 넘기기 개선 — 효과만 수정</title>
+	<style>
+		/* 초안 body와 기본 설정 유지 */
+		body {
+			margin: 0;
+			background: #222;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			user-select: none;
+		}
 
-    .book {
-      position: relative;
-      width: 600px;
-      height: 400px;
-      perspective: 2000px;
-      cursor: pointer;
-    }
+		.book {
+			display: flex;
+			justify-content: flex-end;
+			position: relative;
+			width: 1000px;
+			height: 600px;
+			perspective: 2000px;
+		}
 
-    .page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, #fff 0%, #f7f7f7 50%, #e1e1e1 100%);
-      box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
-      transform-style: preserve-3d;
-      transform-origin: left;
-      transition: transform 1s ease, box-shadow 1s ease, background 1s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-      font-weight: bold;
-      color: #333;
-      backface-visibility: hidden;
-      user-select: none;
-      border-left: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      box-sizing: border-box;
-      z-index: 0;
-    }
+		.sheet {
+			position: absolute;
+			width: 500px;
+			height: 100%;
+			transform-style: preserve-3d;
+			transform-origin: left;
+			transition: transform 1s ease;
+			cursor: pointer;
 
-    /* 뒤집힌 페이지 스타일 */
-    .page.flipped {
-      transform: rotateY(-180deg);
-      background: linear-gradient(120deg, #f0f0f0 0%, #dcdcdc 50%, #c0c0c0 100%);
-      box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.2);
-      z-index: 10;
-    }
-  </style>
+			/* 배경 그라데이션 + 그림자 효과만 수정한 부분 */
+			background: linear-gradient(120deg, #fff 0%, #f7f7f7 50%, #e1e1e1 100%);
+			box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
+		}
+
+		.sheet .sheet-page {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: white;
+			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
+			backface-visibility: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 30px;
+			font-weight: bold;
+			color: #333;
+		}
+
+		.sheet:nth-child(even) .sheet-page {
+			transform: rotateY(180deg);
+		}
+
+		/* 플립 됐을 때 */
+		.flipped {
+			transform: rotateY(-180deg);
+			background: linear-gradient(120deg, #f0f0f0 0%, #dcdcdc 50%, #c0c0c0 100%);
+			box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.2);
+		}
+	</style>
 </head>
+
 <body>
 
-  <div class="book" id="book">
-    <div class="page" data-index="0">페이지 1</div>
-    <div class="page" data-index="1">페이지 2</div>
-    <div class="page" data-index="2">페이지 3</div>
-    <div class="page" data-index="3">페이지 4</div>
-    <div class="page" data-index="4">페이지 5</div>
-    <div class="page" data-index="5">페이지 6</div>
-  </div>
+	<div class="book" id="book">
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 1</div>
+		</div>
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 2</div>
+		</div>
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 3</div>
+		</div>
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 4</div>
+		</div>
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 5</div>
+		</div>
+		<div class="sheet" data-index="0">
+			<div class="sheet-page">페이지 6</div>
+		</div>
+	</div>
 
-  <script>
-    const pages = [...document.querySelectorAll('.page')];
-    let currentPage = 0; // 현재 책 넘긴 페이지 수 (0이면 처음 상태)
+<script>
+  const sheets = [...document.querySelectorAll('.sheet')];
+  let current = 0;
 
-    // 페이지 상태 업데이트 함수
-    function updatePages() {
-      pages.forEach((page, i) => {
-        if (i < currentPage) {
-          page.classList.add('flipped');  // 넘긴 페이지 뒤집기
-          page.style.zIndex = i + 1;       // 넘긴 페이지는 뒤로 보내기
-        } else {
-          page.classList.remove('flipped'); // 앞으로 넘길 페이지는 원상태
-          page.style.zIndex = pages.length - i; // 앞으로 보일 페이지는 위로 올리기
-        }
-      });
-    }
-
-    updatePages();
-
-    // 책 영역 클릭 이벤트 (오른쪽 클릭시 넘기기, 왼쪽 클릭시 뒤로 넘기기)
-    document.getElementById('book').addEventListener('click', (e) => {
-      const isRight = e.clientX > window.innerWidth / 2;
-
-      if (isRight && currentPage < pages.length) {
-        currentPage++;
-        updatePages();
-      } else if (!isRight && currentPage > 0) {
-        currentPage--;
-        updatePages();
+  function resetZIndex() {
+    sheets.forEach((sheet, i) => {
+      if (i < current) {
+        sheet.style.zIndex = i + 1;
+      } else {
+        sheet.style.zIndex = sheets.length - i;
       }
     });
-  </script>
+  }
+
+  resetZIndex();
+
+  const book = document.getElementById('book');
+
+  book.addEventListener('click', (e) => {
+    const isRight = e.clientX > window.innerWidth / 2;
+
+    if (isRight) {
+      if (current + 1 < sheets.length) {
+        const sheet1 = sheets[current];
+        const sheet2 = sheets[current + 1];
+
+        sheet1.style.zIndex = sheets.length + 10;
+        sheet2.style.zIndex = sheets.length + 9;
+
+        sheet1.classList.add('flipped');
+        sheet2.classList.add('flipped');
+
+        current += 2;
+
+        setTimeout(resetZIndex, 300);
+      }
+    } else {
+      if (current >= 2) {
+        current -= 2;
+
+        const sheet1 = sheets[current];
+        const sheet2 = sheets[current + 1];
+
+        sheet1.style.zIndex = sheets.length + 9;
+        sheet2.style.zIndex = sheets.length + 10;
+
+        sheet1.classList.remove('flipped');
+        sheet2.classList.remove('flipped');
+
+        setTimeout(resetZIndex, 300);
+      }
+    }
+  });
+</script>
 
 </body>
+
 </html>
