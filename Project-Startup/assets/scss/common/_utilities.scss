@@ -186,39 +186,50 @@
 	@Colors
 -------------------------------------------------------------------*/
 $colors: (
+	// 그레이
+	gray: $color-gray,
+	dark: $color-dark,
+	black: $color-black,
+
 	// 강조
 	primary: $color-primary,
 	secondary: $color-secondary,
-	point-a: $color-point-a,
-	info: $color-info,
 
 	// 상태
-	success: $color-success,
-	fail: $color-fail,
-	complete: $color-complete,
-	error: $color-error,
-	warning: $color-warning,
-	caution: $color-warning,
-	danger: $color-danger,
+	positive: $color-positive,
+	nagative: $color-nagative,
 
 	// 아이템
 	item1: $color-item1,
 	item2: $color-item2,
 	item3: $color-item3,
-
 );
 
 @each $name, $color in $colors {
-	.bg-#{$name} {
+	// Basic
+	.bgc-#{$name} {
 		background-color: $color;
+	}
+
+	.bdc-#{$name} {
+		border-color: $color;
 	}
 
 	.txt-#{$name} {
 		color: $color;
 	}
 
+	// Component
+	.fill-#{$name} {
+		@include fill-set($color);
+	}
+
 	.line-#{$name} {
-		border-color: $color;
+		@include line-set($color);
+	}
+
+	.ghost-#{$name} {
+		@include ghost-set($color);
 	}
 }
 
@@ -293,4 +304,51 @@ $colors: (
 
 .col.col-12 {
 	width: calc(100%/12 * 12);
+}
+
+/*-------------------------------------------------------------------
+	@Styles
+-------------------------------------------------------------------*/
+.fill-normal {
+	@include fill-set(#f8f8f8);
+	color: #333;
+}
+.fill-dark {
+	@include fill-set(#444);
+}
+.fill-black {
+	@include fill-set(#000);
+}
+.fill-primary {
+	@include fill-set($color-primary);
+}
+.fill-secondary {
+	@include fill-set($color-secondary);
+}
+.line-dark {
+	@include line-set(#444);
+}
+.line-black {
+	@include line-set(#000);
+}
+.line-primary {
+	@include line-set($color-primary);
+}
+.line-secondary {
+	@include line-set($color-secondary);
+}
+.ghost-normal {
+	@include ghost-set(#666);
+}
+.ghost-black {
+	@include ghost-set(#000);
+}
+.ghost-dark {
+	@include ghost-set(#444);
+}
+.ghost-primary {
+	@include ghost-set($color-primary);
+}
+.ghost-secondary {
+	@include ghost-set($color-secondary);
 }
