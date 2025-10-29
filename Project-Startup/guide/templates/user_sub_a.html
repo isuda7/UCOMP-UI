@@ -28,8 +28,8 @@
 				// 내려갈 때 (top 기준)
 				ScrollTrigger.create({
 					trigger: section,
-					start: "top 0",
-					end: "bottom ",
+					start: "top 1",
+					end: "bottom 100",
 					onEnter: () => applyTheme(theme, "정+"),
 					onLeave: () => removeTheme(theme, "정-"),
 					onEnterBack: () => applyTheme(theme, "역+"),
