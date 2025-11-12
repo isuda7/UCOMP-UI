@@ -1,5 +1,4 @@
-@charset "utf-8";
-@import url('./layout.css');
+@use '../settings/variables' as *;@import url('./layout.css');
 @import url('./ui.css');
 @import url('./theme_orange.css');
 @import url('./theme_blue.css');

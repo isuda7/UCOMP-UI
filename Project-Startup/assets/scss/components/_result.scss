@@ -1,4 +1,4 @@
-@charset "utf-8";
+@use '../common/variables' as *;
 /*-------------------------------------------------------------------
 	분류그룹 : 결과
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
@@ -39,13 +39,13 @@
 
 		&.is-successed {
 			em {
-				color:  $color-success;
+				color:  $color-positive;
 			}
 		}
 
 		&.is-failed {
 			em {
-				color:  $color-fail;
+				color:  $color-nagative;
 			}
 		}
 	}

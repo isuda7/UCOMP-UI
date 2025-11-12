@@ -1,45 +1,41 @@
-@charset 'utf-8';
-
 // Commons
-@import './common/responsive';
-@import './common/variables';
-@import './common/base';
-@import './common/utilities';
-@import './common/layout';
-@import './common/librarys.min';
+@use './common/base' as *;
+@use './common/utilities' as *;
+@use './common/layout' as *;
+@use './common/librarys.min' as *;
 
 // Components Basic
-@import './components/button';
-@import './components/icon';
-@import './components/label';
-@import './components/chip';
-@import './components/banner';
-@import './components/bullet';
-@import './components/pagination';
-@import './components/progress';
-@import './components/rating';
-@import './components/table';
-@import './components/form';
-@import './components/input';
-@import './components/checkbox';
+@use './components/button' as *;
+@use './components/icon' as *;
+@use './components/label' as *;
+@use './components/chip' as *;
+@use './components/banner' as *;
+@use './components/bullet' as *;
+@use './components/pagination' as *;
+@use './components/progress' as *;
+@use './components/rating' as *;
+@use './components/table' as *;
+@use './components/form' as *;
+@use './components/input' as *;
+@use './components/checkbox' as *;
 
 // Components Content
-@import './components/section';
-@import './components/info';
-@import './components/board';
-@import './components/legal';
-@import './components/post';
-@import './components/result';
+@use './components/section' as *;
+@use './components/info' as *;
+@use './components/board' as *;
+@use './components/legal' as *;
+@use './components/post' as *;
+@use './components/result' as *;
 
 // Components Scripted
-@import './components/accordion';
-@import './components/dropdown';
-@import './components/modal';
-@import './components/popover';
-@import './components/tab';
-@import './components/toast';
-@import './components/tooltip';
+@use './components/accordion' as *;
+@use './components/dropdown' as *;
+@use './components/modal' as *;
+@use './components/popover' as *;
+@use './components/tab' as *;
+@use './components/toast' as *;
+@use './components/tooltip' as *;
 
 // Pages
-@import './contents/main';
-@import './contents/common';
+@use './contents/main' as *;
+@use './contents/common' as *;
