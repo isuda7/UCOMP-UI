@@ -24,11 +24,11 @@
 	&.module-a {
 		padding: 16rem 20rem;
 		.post-title {
-			@include font-set(700, 18);
+			@include set-font(700, 18);
 		}
 		.post-summary {
 			margin-top: 4rem;
-			@include font-set(400, 16);
+			@include set-font(400, 16);
 			@include ellipsis3;
 		}
 		.post-meta {
@@ -36,7 +36,7 @@
 			align-items: center;
 			gap: 8rem;
 			margin-top: 8rem;
-			@include font-set(400, 14);
+			@include set-font(400, 14);
 			color: #666;
 			.split {
 				display: block;
@@ -70,12 +70,12 @@
 		}
 
 		.post-title {
-			@include font-set(700, 18);
+			@include set-font(700, 18);
 			@include ellipsis2;
 		}
 		.post-summary {
 			margin-top: 4rem;
-			@include font-set(400, 16);
+			@include set-font(400, 16);
 			@include ellipsis3;
 		}
 		.post-meta {
@@ -84,7 +84,7 @@
 			gap: 8rem;
 			margin-top: auto;
 			padding-top: 8rem;
-			@include font-set(400, 14);
+			@include set-font(400, 14);
 			color: #666;
 			.split {
 				display: block;
@@ -141,7 +141,7 @@
 			height: 80rem;
 		}
 		.nodata-para {
-			@include font-set(500, 16);
+			@include set-font(500, 16);
 			color: #333;
 		}
 	}

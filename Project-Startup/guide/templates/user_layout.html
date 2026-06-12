@@ -67,19 +67,36 @@
 							<h3 class="g-h3">Page Layout</h3>
 							<h4 class="g-h4">HTML</h4>
 							<xmp>
+<!-- page -->
 <div class="page">
 	<!-- page-header -->
 	<header class="page-header"></header>
 	<!-- //page-header -->
 
 	<!-- page-body -->
-	<main class="page-body"></main>
+	<main class="page-body">
+		<!-- content -->
+		<div class="content">
+			<div class="content-header"></div>
+			<div class="content-body">
+				<!-- section -->
+				<section class="sec">
+					<div class="sec-header"></div>
+					<div class="sec-body"></div>
+				</section>
+				<!-- //section -->
+			</div>
+			<div class="content-footer"></div>
+		</div>
+		<!-- //content -->
+	</main>
 	<!-- // page-body -->
 
 	<!-- page-footer -->
 	<footer class="page-footer"></footer>
 	<!-- // page-footer -->
 </div>
+<!-- // page -->
 							</xmp>
 							<h4 class="g-h4">SCSS</h4>
 							<xmp>
@@ -399,7 +416,7 @@ html {
 			&-link {
 				display: block;
 				padding: 2rem 10rem;
-				@include font-set(500, 16);
+				@include set-font(500, 16);
 				color: #333;
 				&[aria-current="page"] {
 					color: $color-primary;
@@ -466,7 +483,7 @@ html {
 			&-link {
 				display: block;
 				padding: 2rem 10rem;
-				@include font-set(500, 16);
+				@include set-font(500, 16);
 				color: #333;
 				&[aria-current="page"] {
 					color: $color-primary;

@@ -1,6 +1,7 @@
 @use "sass:math";
+
 //-------------------------------------------------------------------
-//    Variables
+//    Default Variables
 //-------------------------------------------------------------------
 // 웹폰트
 $font-primary: 'Pretendard', 'sans-serif';
@@ -17,31 +18,36 @@ $mo-content-width: 320rem;
 // IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음, 띠의 상하여백 동일한 비율 1.7)
 $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
-// 컬러 시스템
-$color-tit: #222; // 제목 임시값
-$color-body: #444; // 내용 임시값 (body 기본값으로 사용)
-$color-info: #999; // 안내 임시값
-
-// 컬러 그레이
+// Pallet Colors
 $color-gray: #666; // 기타 임시값
 $color-dark: #333; // 기타 임시값
 $color-black: #000; // 기타 임시값
 
-// 컬러 강조
+// Content Colors
+$color-tit: #222; // 제목 임시값
+$color-body: #444; // 내용 임시값 (body 기본값으로 사용)
+$color-info: #999; // 안내 임시값
+
+// Accent Colors
 $color-primary: #ba141a; // 첫번째 임시값
 $color-secondary: #00ccaa; // 두번째 임시값
 
-// 컬러 상태
+// State Colors
 $color-positive: rgb(84, 47, 221); // 성공 임시값
 $color-nagative: #ff0000; // 실패 임시값
 
-// 컬러 아이템
+// Item Colors
 $color-item1: green; // item1 임시값
 $color-item2: burlywood; // item2 임시값
 $color-item3: coral; // item3 임시값
 
 //-------------------------------------------------------------------
-//    Responsive
+//    Custom Variables
+//-------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------
+//    Breakpoint Mixins (반응형 분기처리)
 //-------------------------------------------------------------------
 $media-tablet-xl: 1280px;
 $media-tablet-xs: 1023px;
@@ -81,7 +87,7 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 }
 
 //-------------------------------------------------------------------
-//    Common
+//    Utility Mixins (인자값이 없는 유틸 Mixins)
 //-------------------------------------------------------------------
 // 여백/너비 설정
 @mixin outer {
@@ -100,41 +106,6 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-// 폰트규칙
-@mixin font-set($font-weight, $font-size, $ratio: 1.4) {
-	$line-height: $font-size * $ratio;
-	$rounded: math.ceil($line-height);
-
-	@if ($rounded % 2 != 0) {
-	  $rounded: $rounded + 1;
-	}
-
-	font-size: $font-size + rem;
-	font-weight: $font-weight;
-	line-height: $rounded + rem;
-}
-
-// Options
-@mixin fill-set($activeColor) {
-	color: #fff;
-	background-color: $activeColor;
-	border-color: $activeColor;
-}
-@mixin line-set($activeColor) {
-	color: $activeColor;
-	background-color: #fff;
-	border-color: $activeColor;
-}
-@mixin underline-set($activeColor) {
-	color: $activeColor;
-	text-decoration: underline;
-}
-@mixin ghost-set($activeColor) {
-	color: $activeColor;
-	background-color: transparent;
-	border-color: transparent;
 }
 
 /* 말줄임 */
@@ -161,4 +132,42 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+}
+
+//-------------------------------------------------------------------
+//    Set Mixins (인자값을 받는 설정 Mixins)
+//-------------------------------------------------------------------
+// 폰트규칙
+@mixin set-font($font-weight, $font-size, $ratio: 1.4) {
+	$line-height: $font-size * $ratio;
+	$rounded: math.ceil($line-height);
+
+	@if ($rounded % 2 != 0) {
+	  $rounded: $rounded + 1;
+	}
+
+	font-size: $font-size + rem;
+	font-weight: $font-weight;
+	line-height: $rounded + rem;
+}
+
+// Options
+@mixin set-fill($activeColor) {
+	color: #fff;
+	background-color: $activeColor;
+	border-color: $activeColor;
+}
+@mixin set-line($activeColor) {
+	color: $activeColor;
+	background-color: #fff;
+	border-color: $activeColor;
+}
+@mixin set-underline($activeColor) {
+	color: $activeColor;
+	text-decoration: underline;
+}
+@mixin set-ghost($activeColor) {
+	color: $activeColor;
+	background-color: transparent;
+	border-color: transparent;
 }

@@ -26,7 +26,7 @@
 		border-radius: inherit;
 		transform: translateX(var(--active-value));
 		transition: all 0.2s ease;
-		> span:not(.blind) {
+		> span:not(.sr-only) {
 			width: var(--active-value);
 			text-align: center;
 			color: #fff;
@@ -44,7 +44,7 @@
 		border-radius: inherit;
 		transform: translateX(calc(var(--default-value) * -1));
 		transition: all 0.2s ease;
-		> span:not(.blind) {
+		> span:not(.sr-only) {
 			width: var(--default-value);
 			text-align: center;
 			color: #000;

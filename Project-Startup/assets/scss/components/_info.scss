@@ -14,12 +14,12 @@
 		padding: 24rem 30rem;
 		background-color: #f4f4f4;
 		border-radius: 8rem;
-		@include font-set(400, 16);
+		@include set-font(400, 16);
 		color: #000;
 
 		.info-title {
 			margin-bottom: 10rem;
-			@include font-set(700, 20);
+			@include set-font(700, 20);
 		}
 		.info-content {
 			.data-para + .bul {
@@ -51,7 +51,7 @@
 				display: flex;
 				align-items: center;
 				gap: 8rem;
-				@include font-set(500, 18)
+				@include set-font(500, 18)
 			}
 		}
 	}
@@ -68,7 +68,7 @@
 				display: flex;
 				align-items: center;
 				gap: 8rem;
-				@include font-set(500, 18)
+				@include set-font(500, 18)
 			}
 		}
 	}

@@ -28,7 +28,7 @@
 			justify-content: space-between;
 			align-items: flex-end;
 			.board-count {
-				@include font-set(400, 16);
+				@include set-font(400, 16);
 				.count {
 					font-weight: 500;
 					color: $color-primary;
@@ -61,11 +61,11 @@
 				border-top: 1px solid #ddd;
 				.board-tit {
 					padding: 20rem 20rem;
-					@include font-set(700, 18);
+					@include set-font(700, 18);
 				}
 				.board-con {
 					padding: 20rem 20rem;
-					@include font-set(400, 18);
+					@include set-font(400, 18);
 				}
 			}
 		}

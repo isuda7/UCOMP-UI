@@ -6,8 +6,8 @@
 /*-------------------------------------------------------------------
     @General
 -------------------------------------------------------------------*/
-/* System */
-.blind {
+/* Only Display */
+.sr-only {
 	position: fixed;
 	overflow: hidden;
 	border: 0;
@@ -19,31 +19,18 @@
 	clip-path: inset(50%);
 }
 
-.only-pc {
+.pc-only {
 	display: block;
 	@include media-mobile-xl {
 		display: none !important;
 	}
 }
 
-.only-mobile {
+.mo-only {
 	display: none;
 	@include media-mobile-xl {
 		display: none !important;
 	}
-}
-
-.is-scroll-hidden {
-	overflow: hidden;
-}
-
-.is-scroll-hidden-ios {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
 }
 
 /* Bootstrap Transition */
@@ -54,105 +41,12 @@
 	}
 }
 
-/* 가변너비 */
+/* Layout */
 .fluid {
 	width: 100%;
+	min-width: auto;
+	max-width: none;
 	flex: 1 1 auto;
-}
-
-/* Margin */
-.mar-0 {
-	margin: 0 !important;
-}
-
-.mar-t0 {
-	margin-top: 0 !important;
-}
-
-.mar-r0 {
-	margin-right: 0 !important;
-}
-
-.mar-b0 {
-	margin-bottom: 0 !important;
-}
-
-.mar-l0 {
-	margin-left: 0 !important;
-}
-
-/* Padding */
-.pad-0 {
-	padding: 0 !important
-}
-
-.pad-t0 {
-	padding-top: 0 !important
-}
-
-.pad-r0 {
-	padding-right: 0 !important
-}
-
-.pad-b0 {
-	padding-bottom: 0 !important
-}
-
-.pad-l0 {
-	padding-left: 0 !important
-}
-
-/* Border */
-.line-0 {
-	border-width: 0 !important;
-}
-
-.line-t0 {
-	border-top-width: 0 !important;
-}
-
-.line-r0 {
-	border-right-width: 0 !important;
-}
-
-.line-b0 {
-	border-bottom-width: 0 !important;
-}
-
-.line-l0 {
-	border-left-width: 0 !important;
-}
-
-/* Align - Inline */
-.align-t {
-	vertical-align: top !important;
-}
-
-.align-m {
-	vertical-align: middle !important;
-}
-
-.align-b {
-	vertical-align: bottom !important;
-}
-
-.align-l {
-	text-align: left !important;
-}
-
-.align-c {
-	text-align: center !important;
-}
-
-.align-r {
-	text-align: right !important;
-}
-
-.align-j {
-	text-align: justify;
-	-moz-text-align-last: justify;
-	-webkit-text-align-last: justify;
-	text-align-last: justify;
 }
 
 /* 말줄임 */
@@ -179,61 +73,6 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
-}
-
-/*-------------------------------------------------------------------
-	@Colors
--------------------------------------------------------------------*/
-$colors: (
-	// 그레이
-	// gray: $color-gray,
-	// dark: $color-dark,
-	// black: $color-black,
-
-	// 강조
-	primary: $color-primary,
-	secondary: $color-secondary,
-
-	// 상태
-	positive: $color-positive,
-	nagative: $color-nagative,
-
-	// 아이템
-	item1: $color-item1,
-	item2: $color-item2,
-	item3: $color-item3,
-);
-
-@each $name, $color in $colors {
-	// Basic
-	.bgc-#{$name} {
-		background-color: $color;
-	}
-
-	.bdc-#{$name} {
-		border-color: $color;
-	}
-
-	.txt-#{$name} {
-		color: $color;
-	}
-
-	// Component
-	.fill-#{$name} {
-		@include fill-set($color);
-	}
-
-	.line-#{$name} {
-		@include line-set($color);
-	}
-
-	.underline-#{$name} {
-		@include underline-set($color);
-	}
-
-	.ghost-#{$name} {
-		@include ghost-set($color);
-	}
 }
 
 /*-------------------------------------------------------------------
@@ -307,4 +146,175 @@ $colors: (
 
 .col.col-12 {
 	width: calc(100%/12 * 12);
+}
+
+
+/*-------------------------------------------------------------------
+	@Inline Styles
+-------------------------------------------------------------------*/
+/* Margin */
+.m-0 {
+	margin: 0 !important;
+}
+
+.mt-0 {
+	margin-top: 0 !important;
+}
+
+.mr-0 {
+	margin-right: 0 !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mar-l0 {
+	margin-left: 0 !important;
+}
+
+/* Padding */
+.p-0 {
+	padding: 0 !important
+}
+
+.pt-0 {
+	padding-top: 0 !important
+}
+
+.pr-0 {
+	padding-right: 0 !important
+}
+
+.pb-0 {
+	padding-bottom: 0 !important
+}
+
+.pl-0 {
+	padding-left: 0 !important
+}
+
+/* Border */
+.bw-0 {
+	border-width: 0 !important;
+}
+
+.btw-0 {
+	border-top-width: 0 !important;
+}
+
+.brw-0 {
+	border-right-width: 0 !important;
+}
+
+.bbw-0 {
+	border-bottom-width: 0 !important;
+}
+
+.blw-0 {
+	border-left-width: 0 !important;
+}
+
+/* Align */
+.va-t {
+	vertical-align: top !important;
+}
+
+.va-m {
+	vertical-align: middle !important;
+}
+
+.va-b {
+	vertical-align: bottom !important;
+}
+
+.ta-l {
+	text-align: left !important;
+}
+
+.ta-c {
+	text-align: center !important;
+}
+
+.ta-r {
+	text-align: right !important;
+}
+
+.ta-j {
+	text-align: justify;
+	-moz-text-align-last: justify;
+	-webkit-text-align-last: justify;
+	text-align-last: justify;
+}
+
+/* Font (size, weight) */
+.fs-20 {
+	font-size: 20rem !important;
+}
+
+.fs-18 {
+	font-size: 18rem !important;
+}
+
+.fs-16 {
+	font-size: 16rem !important;
+}
+
+.fs-14 {
+	font-size: 14rem !important;
+}
+
+.fs-12 {
+	font-size: 12rem !important;
+}
+
+.fs-10 {
+	font-size: 10rem !important;
+}
+
+.fs-20 {
+	font-size: 20rem !important;
+}
+
+.fw-700 {
+	font-weight: 700 !important;
+}
+
+.fw-500 {
+	font-weight: 500 !important;
+}
+
+.fw-400 {
+	font-weight: 400 !important;
+}
+
+.fw-300 {
+	font-weight: 300 !important;
+}
+
+$colors: (
+	// 그레이
+	gray: $color-gray,
+	dark: $color-dark,
+	black: $color-black,
+
+	// 강조
+	primary: $color-primary,
+	secondary: $color-secondary,
+
+	// 상태
+	positive: $color-positive,
+	nagative: $color-nagative,
+
+	// 아이템
+	item1: $color-item1,
+	item2: $color-item2,
+	item3: $color-item3,
+);
+
+@each $name, $color in $colors {
+	.fc-#{$name} {
+		color: $color;
+	}
+
 }
